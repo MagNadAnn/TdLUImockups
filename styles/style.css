@@ -147,6 +147,11 @@ blockquote {
     font-size: 1.125em;
 }
 
+blockquote.white {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 blockquote:before,
 blockquote:after {
     font-family: 'Kalam', cursive;
@@ -154,6 +159,11 @@ blockquote:after {
     position: absolute;
     font-size: 4em;
     color: #7da237;
+}
+
+blockquote.white:before,
+blockquote.white:after {
+    color: #ffffff;
 }
 
 blockquote:before {
@@ -172,11 +182,17 @@ blockquote > * {
     font-style: italic;
 }
 
+blockquote.white > * {
+    color: #ffffff;
+}
+
 cite {
     font-size: 0.75em;
     font-weight: bold;
     color: #7da237;
 }
+
+
 
 /*
 ------------------------------------------------------------------------------------
@@ -223,6 +239,7 @@ columns
 .columns {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: -0.5em;
 }
 
@@ -239,7 +256,9 @@ columns
     position: relative;
 }
 
-@media (min-width: 1024px) {
+.column_1-1 { width: calc(100% - 1em); }
+
+@media (min-width: 800px) {
     .column_1-2 { width: calc(50% - 1em); }
 }
 

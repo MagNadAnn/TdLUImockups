@@ -101,7 +101,7 @@
 
                                     <div class="chimney chimney_top-bar">
 
-                                        <ul class="list menu menu-site">
+                                        <ul class="menu menu-site">
                                             <li class="menu__item">
                                                 <a href="#" class="menu__link">
                                                     <i class="fas fa-home"></i>
@@ -517,8 +517,9 @@
             </section>
 
             <section class="fw-section tuile tuile_media hero">
-                <div class="vignette__wrap vignette_photo block_trame block_trame_rayure black hero__photo"><img
-                        src="img/photo_07_bandeau_1920.jpg" class="vignette__image" /></div>
+                <div class="vignette__wrap vignette_photo block_trame block_trame_rayure black hero__photo">
+                    <img src="img/photo_07_bandeau_1920.jpg" class="vignette__image" />
+                </div>
                 <div class="hero__container section__container">
                     <div class="chimney">
                         <ul class="list tuile__list tuile__list_mono tuile__liste_h tuile__liste_v-center">
@@ -577,10 +578,16 @@
             </section>
 
             <section class="fw-section CTA__wrap CTA_rapport block_trame block_trame_champ white">
-                <div class="chimney">
+                <div class="chimney section__container">
                     <div class="columns">
-                        <div class="column column_1-2 block_v-center flex-order_2 section__container">
-                            <h3>Télécharger notre dernier rapport annuel !</h3>
+                        <div class="column column_1-5 block_v-center flex-order_1">
+                            <div
+                                class="vignette__wrap  vignette_photo block_trame block_trame_rayure black vignette_deco CTA_rapport__vignette">
+                                <img src="img/rapport.jpg" class="vignette__image" />
+                            </div>
+                        </div>
+                        <div class="column column_1-2 block_v-center flex-order_2 CTA_rapport__container">
+                            <h2 class="CTA__title">Télécharger notre dernier<br>rapport annuel !</h2>
                             <p>Notre rapport 2019 vous offre une vision unique Lorem ipsum dolor sit amet,
                                 consectetuer
                                 adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
@@ -589,56 +596,50 @@
                                 suscipit
                                 lobortis nisl ut aliquip ex ea commodo consequat.
                             </p>
-                            <p class="button__wrap text_center">
+                            <p class="button__wrap">
                                 <a href="#" class="button primary">
                                     <span class="button__icon"><i class="fas fa-download"></i></span>
                                     <span class="button__label">Télécharger</span>
                                 </a>
                             </p>
                         </div>
-                        <div class="column column_1-4 block_v-center flex-order_1">
-                            <div
-                                class="vignette__wrap  vignette_photo block_trame block_trame_rayure black vignette_deco CTA_rapport__vignette">
-                                <img src="img/rapport.jpg" class="vignette__image" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="fw-section CTA__wrap CTA_soutien block_trame block_trame_champ black">
+            <section class="fw-section CTA__wrap CTA_soutien hero">
+                <div class="vignette__wrap vignette_photo block_trame block_trame_rayure black hero__photo">
+                    <img src="img/photo_09_bandeau_1920.jpg" class="vignette__image" />
+                </div>
                 <div class="chimney">
-                    <div class="columns">
-                        <div class="column column_1-2 block_v-center flex-order_2">
-                            <div class="CTA_soutien__content box">
-                                <h3 class="CTA_soutien__title">Soutenir Terre de Liens<br />c'est préserver notre avenir
+                    <div class="hero__container section__container CTA_soutien__container">
+                        <div class="columns">
+                            <div class="column column_1-2">
+                                <h2 class="CTA__title text_white">Soutenir<br />Terre de Liens<br />c'est
+                                    préserver notre
+                                    avenir
                                     !
-                                </h3>
-                                <blockquote>
+                                </h2>
+                                <h5 class="CTA__subtitle text_white">Notre force, c’est vous :<br>Adhérez à
+                                    Terre de Liens et participez au changement !</h5>
+                            </div>
+                            <div class="column column_1-2">
+                                <blockquote class="white">
                                     <p>Nous n’héritons pas de la terre de nos parents<br />nous l’empruntons à nos
                                         enfants.
                                     </p>
                                     <cite>Antoine de Saint-Exupéry</cite>
                                 </blockquote>
-                                <p>L’association Terre de Liens, reconnue d’utilité publique, est un mouvement citoyen
+                                <p class="text_white">L’association Terre de Liens, reconnue d’utilité
+                                    publique, est un mouvement citoyen
                                     qui
                                     œuvre pour préserver les terres agricoles, faciliter l’accès des paysans à la terre
                                     et
                                     developper une agriculture biologique paysanne.
                                 </p>
                             </div>
-                            <div
-                                class="vignette__wrap vignette_photo block_trame block_trame_rayure white vignette_deco CTA_soutien__vignette_1">
-                                <img src="img/photo_09_2-3_400.jpg" class="vignette__image" />
-                            </div>
-                        </div>
-                        <div
-                            class="column column_1-3 block_v-bottom flex-order_3 section__container CTA_soutien__container">
-                            <div class="CTA_soutien__aside">
-                                <h5>Notre force,<br />c’est vous :</h5>
-                                <p>Adhérez à Terre de Liens et participez au changement !
-                                </p>
-                                <ul class="list list_v">
+                            <div class="column column_1-1">
+                                <ul class="list list_h CTA_soutien__buttons">
                                     <li class="button__wrap text_center">
                                         <a href="#" class="button secundary">
                                             <span class="button__icon"><i class="fas fa-address-card"></i></span>
@@ -658,10 +659,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div
-                                class="vignette__wrap vignette_photo block_trame block_trame_rayure white vignette_deco CTA_soutien__vignette_2">
-                                <img src="img/photo_04_carre_300.jpg" class="vignette__image" />
                             </div>
                         </div>
                     </div>
@@ -706,7 +703,8 @@
                                     <div class="form-line form-line_multi">
                                         <div class="form-line_multi__item form-line_multi__field">
                                             <label class="form-label form-label_dark form-label_top"
-                                                for="type-select">Votre région</label>
+                                                for="type-select">Votre
+                                                région</label>
                                             <div class="form-item_field__wrap">
                                                 <select name="type" id="type-select"
                                                     class="form-item form-item_little form-item_field form-item_select empty">
@@ -770,7 +768,7 @@
                 </div>
             </section>
             <section class="fw-section bottom-bar_2">
-                <ul class="list menu menu-intersites">
+                <ul class="menu menu-intersites">
                     <li class="menu__item">
                         <a href="#" class="menu__link">Mentions légales</a>
                     </li>

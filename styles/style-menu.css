@@ -149,6 +149,8 @@ Global settings
 */
 
 .menu {
+    display: flex;
+    list-style: none;
     margin: 0 !important;
     padding: 0 !important;
     font-size: 0.875em;
@@ -251,6 +253,15 @@ MENU CORPORATE
 @media (min-width: 800px) {
     .menu-corporate > li > .button.secundary {
         background-color: transparent !important;
+    }
+
+    .menu-corporate > li > .button.secundary:hover,
+    .menu-corporate > li > .button.secundary:focus {
+        background-color: #42767a !important;
+    }
+
+    .menu-corporate > li > .button.secundary:active {
+        background-color: #0098a6 !important;
     }
 
     .menu-corporate > li {
