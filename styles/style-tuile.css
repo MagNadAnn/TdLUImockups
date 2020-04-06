@@ -1,0 +1,165 @@
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Global settings
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.tuile__link {
+    padding: 0;
+    background-color: transparent !important;
+    cursor: pointer;
+    width: 100%;
+}
+
+.tuile__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tuile__content > *,
+.tuile__content > .tuile__intro > * {
+    color: #85170f !important;
+}
+
+
+.tuile__title {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.75em;
+}
+
+.tuile__intro > * {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.875em;
+}
+
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Tuile image
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.tuile_media {
+    position: relative;
+}
+
+.tuile_media__container {
+    z-index: 3;
+}
+
+@media (min-width: 700px) {
+
+    .tuile_media__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 2em;
+        box-sizing: border-box;
+    }
+
+    .tuile_media__content {
+        position: relative;
+        display: block;
+        max-width: 25em;
+        padding: 1.5em 2em 1.75em;
+        margin: 0 auto;
+        box-sizing: border-box;
+        transition: all 0.2s;
+    }
+
+    .tuile__link.tuile_media__content,
+    .tuile__link.tuile_media__content:visited,
+    .tuile__link .tuile_media__content,
+    .tuile__link:visited .tuile_media__content {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .tuile__link.tuile_media__content:hover,
+    .tuile__link.tuile_media__content:focus,
+    .tuile__link:hover .tuile_media__content,
+    .tuile__link:focus .tuile_media__content {
+        background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    .tuile__link.tuile_media__content:active,
+    .tuile__link:active .tuile_media__content {
+        background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    .tuile_media__content > .button__wrap > .button_read-more {
+        position: absolute;
+        bottom: -0.75em;
+        left: calc(50% - 0.75em);
+    }
+}
+
+@media (max-width: 699px) {
+
+    .tuile_media__content {
+        position: relative;
+        padding: 1em 0 0;
+    }
+
+    .tuile_media__content:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        transform: rotate(45deg);
+        font-size: 1.5em;
+        background-color: #fff;
+        z-index: 2;
+    }
+
+    .tuile_media__content:before {
+        bottom: 100%;
+        left: 1em;
+        margin-bottom: -0.5em;
+    }
+
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Tuile text-media
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.tuile_text-media_v__content {
+    position: relative;
+    padding: 1em 0 0;
+}
+
+.tuile_text-media__content:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    transform: rotate(45deg);
+    font-size: 1.5em;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.tuile_text-media_v__content:before {
+    bottom: 100%;
+    left: 1em;
+    margin-bottom: -0.5em;
+}

@@ -1,0 +1,256 @@
+.button {
+    background-color: cornflowerblue;
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Généralités
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+/*
+-----------------------------
+BUTTON-WRAP
+*/
+
+.button__wrap {
+    margin: 1em 0;
+}
+
+.button__wrap:last-child {
+    margin-bottom: 0;
+}
+
+.button__wrap.text_center {
+    text-align: center;
+}
+
+/*
+-----------------------------
+BUTTON
+*/
+
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 0.75em 1.25em;
+
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.125em;
+    font-family: "VeneerTwo", "Source Sans Pro", sans-serif;
+    letter-spacing: 0.05em;
+    
+    border-style: solid;
+    border-width: 0.2em;
+
+    transition: all 0.2s;
+}
+
+.button__icon {
+    transition: all 0.2s;
+}
+
+.button__label {
+    font-size: 1.25em;
+}
+
+.button.secundary {
+    border-width: 0.1em;
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Button icon
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.button_icon {
+    font-size: 1.5em;
+    background-color: transparent !important;
+    padding: 0;
+    border: none !important;
+}
+
+.button_icon > .button__icon {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+
+    border-style: solid;
+    border-width: 2px;
+}
+
+.button_icon > .button__icon > i {
+    position: absolute;
+    top: calc(50% - 0.5em);
+    left: calc(50% - 0.5em);
+    width: 1em;
+    transition: all 0.2s;
+}
+
+.button_icon.button_icon_little {
+    font-size: 1em;
+}
+
+/*
+-----------------------------
+BUTTON READ MORE
+*/
+
+a:hover .button.primary.button_read-more > .button__icon > i,
+a:focus .button.primary.button_read-more > .button__icon > i {
+    transform: rotate(45deg);
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Style
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+/*
+-----------------------------
+PRIMARY
+*/
+
+.button.primary,
+.button.primary.button_icon > .button__icon {
+    color: white;
+    background-color: #579ea5;
+    border-color: #579ea5;
+}
+
+.button.primary:hover,
+.button.primary:focus,
+.button.primary.button_icon:hover > .button__icon,
+.button.primary.button_icon:focus > .button__icon {
+    background-color: #42767a;
+    border-color: #42767a;
+}
+
+.button.primary:active,
+.button.primary.button_icon:active > .button__icon {
+    background-color: #0098a6;
+    border-color: #0098a6;
+}
+
+/*
+-----------------------------
+SECUNDARY
+*/
+
+.button.secundary,
+.button.secundary.button_icon > .button__icon {
+    color: #42767a;
+    background-color: #ffffff;  
+    border-color: #579ea5;
+}
+
+.button.secundary:hover,
+.button.secundary:focus,
+.button.secundary.button_icon:hover > .button__icon,
+.button.secundary.button_icon:focus > .button__icon {
+    color: #ffffff;
+    border-color: #579ea5;
+    background-color: #579ea5;
+}
+
+.button.secundary:active,
+.button.secundary.button_icon:active > .button__icon {
+    color: #ffffff;
+    background-color: #0098a6;
+    border-color: #0098a6;
+}
+
+/*
+-----------------------------
+READ MORE
+*/
+
+.button_read-more > .button__icon {
+    background-color: #c99318 !important;
+    border-color: #c99318 !important;
+}
+a:active .button_read-more > .button__icon {
+    background-color: #a41515 !important;
+    border-color: #a41515 !important;
+}
+
+/*
+-----------------------------
+INFO bleu
+*/
+
+/*
+-----------------------------
+SUCCESS vert
+*/
+
+.button.success,
+.button.success.button_icon > .button__icon {
+    color: #ffffff;
+    background-color: #7da237;  
+    border-color: #7da237;
+}
+
+.button.success:hover,
+.button.success:focus,
+.button.success.button_icon:hover > .button__icon,
+.button.success.button_icon:focus > .button__icon {
+    color: #ffffff;
+    border-color: #567e36;
+    background-color: #567e36;
+}
+
+.button.success:active,
+.button.success.button_icon:active > .button__icon {
+    color: #ffffff;
+    background-color: #466b32;
+    border-color: #466b32;
+}
+
+/*
+-----------------------------
+WARNING jaune
+*/
+
+/*
+-----------------------------
+DANGER rouge
+*/
+
+.button.danger,
+.button.danger.button_icon > .button__icon {
+    color: #ffffff;
+    background-color: #a41515;  
+    border-color: #a41515;
+}
+
+.button.danger:hover,
+.button.danger:focus,
+.button.danger.button_icon:hover > .button__icon,
+.button.danger.button_icon:focus > .button__icon {
+    color: #ffffff;
+    border-color: #85170f;
+    background-color: #85170f;
+}
+
+.button.danger:active,
+.button.danger.button_icon:active > .button__icon {
+    color: #ffffff;
+    background-color: #75160c;
+    border-color: #75160c;
+}

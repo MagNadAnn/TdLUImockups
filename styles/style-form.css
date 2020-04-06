@@ -1,0 +1,352 @@
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Généralités
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+button {
+    border-radius: 0;
+}
+
+@media (min-width: 500px) {
+    .form__wrap {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 499px) {
+    .form__wrap {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Form-line
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.form-line {
+    position: relative;
+}
+
+@media (min-width: 500px) {
+    .form-line {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 499px) {
+    .form-line {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
+
+/* form-line_multi */
+
+.form-line_multi {
+    display: flex;
+    align-items: center;
+    align-items: stretch;
+}
+
+.form-line_multi > .form-label {
+    margin: 0 0.25rem;
+}
+
+.form-line_multi__item {
+    position: relative;
+}
+
+.form-line_multi__field {
+    flex-grow: 1;
+    background-color: #ffffff;
+}
+
+.form-line_multi__button {
+    background-color: #579ea5;
+    font-size: 0.66em;
+}
+
+.form-line_multi__button_icon > .button {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+@media (max-width: 499px) {
+
+    .form-line_multi {
+        flex-direction: column;
+    }
+
+    .form-line_multi__item {
+        margin: 1.25em 0 0;
+    }
+
+    .form-line_multi__field {
+        width: 100%;
+    }
+
+}
+
+/* form-line_CGV */
+
+.form-line_CGV {
+    margin-top: 0.5em;
+}
+
+@media (min-width: 500px) {
+    .form-line_CGV {
+        align-items: flex-start;
+    }
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Form-label
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.form-label {
+    font-size: 0.75em;
+}
+
+.form-label_top {
+    position: absolute;
+    bottom: 100%;
+    padding-bottom: 0.25em;
+}
+
+.form-label_bottom {
+    position: absolute;
+}
+
+@media (min-width: 500px) {
+    .form-label_bottom {
+        top: 100%;
+        padding-top: 0.25em;
+    }
+}
+
+@media (max-width: 499px) {
+    .form-label_bottom {
+        bottom: 100%;
+        padding-bottom: 0.25em;
+    }
+}
+
+.form-label_block {
+    line-height: 1.1em;
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Form-item
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.form-item {
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 0;
+}
+
+.button.form-item {
+    padding-top: 0.70em;
+    padding-bottom: 0.70em;
+}
+
+.form-item_field {
+    border-right: none;
+    border-left: none;
+    border-top: #f5f5f5 solid 0.2em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.2em;
+    width: 100%;
+    transition: all 0.2s;
+    text-overflow: ellipsis;
+}
+
+.form-item_select {
+    width: 115%;
+}
+
+.form-item_select > option {
+    font-size: 1rem;
+}
+
+.form-item_field__wrap {
+    overflow: hidden;
+}
+
+.form-item_field__wrap::after { 
+	/* Le pointeur du select */
+	content: '';
+	position: absolute;
+	top: 50%; 
+	margin-top: -3px;
+	right: .75em;  
+	display: block; 
+	width: 0; height: 0;
+	border-color: transparent;
+	border-top-color: #579ea5; 
+	border-width: 6px;
+	border-style: solid;
+	pointer-events: none;
+}
+
+.form-item_field:active {}
+
+.form-item_button {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+}
+
+.form-item_select.empty,
+::placeholder {
+    font-size: 0.875em;
+    opacity: 1;
+}
+
+.form-item_select.empty {
+    padding: 0.6em 0.25em;
+}
+
+@media (min-width: 500px) {
+    .form-item {
+        min-height: 2.7em;
+    }
+}
+
+@media (max-width: 499px) {
+    .form-item {
+        min-height: 2.7em;
+    }
+}
+
+/* form-item CHECKBOX */
+
+.form-item_check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+.form-item_check {
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0;
+}
+
+.form-item_check:checked {}
+
+.form-item_check:checked:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: calc(0.25rem - 1px);
+}
+
+/* form-item RADIO */
+
+.form-item_check_radio {
+    border-radius: 50%;
+}
+
+.form-item_check_radio:checked:before {
+    border-radius: 50%;
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Forms spéciaux
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+/*
+-----------------------------
+SEARCH FORM
+*/
+
+.search-form > .form-line_multi {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+}
+
+@media (max-width: 499px) {
+    .search-form .form-line_multi__item {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+STYLE
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.form-label {
+    color: #579ea5;
+}
+
+.form-label_dark {
+    color: #ffffff;
+}
+
+.form-item_field {
+    border-bottom-color: #579ea5;
+    background-color: #f5f5f5;
+}
+
+.form-item_field:active {
+    border-bottom-color: #1e626b;
+}
+
+.form-line_multi__button > .button {
+    border-width: 0.2em;
+}
+
+.form-item_select.empty,
+::placeholder {
+    color: #999b9e;
+}
+
+.form-item_check {
+    background: #ffffff;
+    border-color: #579ea5;
+}
+
+.form-item_check:checked {
+    background: #ffffff;
+}
+
+.form-item_check:checked:before {
+    background-color: #579ea5;
+}
