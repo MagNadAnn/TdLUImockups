@@ -362,7 +362,7 @@ CAROUSEL
 */
 .carousel__wrap {
     position: relative;
-    margin-bottom: 5em;
+    margin: 1em 0 4em;
 }
 
 .carousel {
@@ -428,9 +428,6 @@ CAROUSEL
 }
 
 .carousel__nav__dots {
-    position: absolute;
-    width: 100%;
-    top: 100%;
     padding: 0;
     justify-content: center;
 }
