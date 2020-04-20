@@ -74,7 +74,7 @@ Tuile list
 
 .tuile__item {
     flex-grow: 1;
-    margin: 0.5em;
+    margin: 0.5em !important;
 }
 
 .tuile__list_mono {
