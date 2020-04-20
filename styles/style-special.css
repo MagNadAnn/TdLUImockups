@@ -194,111 +194,6 @@ box
     background-color: #a41515;
 }
 
-/*
------------------------------
-Mixins text
-*/
-
-.text_little {
-    display:inline-block;
-    font-size: 0.75em;
-}
-
-.text_little_inline {
-    font-size: 0.75em;
-}
-
-.text_center {
-    text-align: center;
-}
-
-.text_color {
-    color: #7da237;
-}
-
-.text_white {
-    color: #ffffff;
-}
-
-.text_on-photo {
-    text-shadow: 0 0 4em #311102,1px 1px 2em #311102,1px 1px 1em #311102,-1px -1px 1px rgba(0,0,0,0.5),1px 1px 1px rgba(0,0,0,0.5);
-    position: relative;
-    z-index: 3;
-}
-
-.text_on-photo,
-.text_on-photo > *{
-    color: #ffffff !important;
-}
-
-/*
------------------------------
-Mixins block
-*/
-
-[class*="block_v"] {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.block_v-center {
-    justify-content: center;
-}
-
-.block_v-bottom {
-    justify-content: flex-end;
-}
-
-@media (min-width: 800px) {
-    .flex-order_1 { order: 1; }
-    .flex-order_2 { order: 2; }
-    .flex-order_3 { order: 3; }
-}
-
-.block_trame > * {
-    position: relative;
-    z-index: 2;
-}
-
-.block_trame::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.2;
-    transition: all 0.2s ease-in-out;
-}
-
-.block_trame_rayure.white::before {
-    background: url("./../img/motif_rayure_white.png") repeat;
-    opacity: 0.25;
-}
-
-.block_trame_rayure.black::before{
-    background: url("./../img/motif_rayure_black.png") repeat;
-    opacity: 0.15;
-}
-
-.block_trame_champ.white::before {
-    background: url("./../img/motif_champ_white.png") repeat;
-    opacity: 0.6;
-}
-
-.block_trame_champ.black::before{
-    background: url("./../img/motif_champ_black.png") repeat;
-    opacity: 0.15;
-}
-
-@media (min-width: 499px) {
-    .block_margin-big-screens {
-        padding: 0 10%;
-    }
-}
 
 /*
 -----------------------------
@@ -308,6 +203,7 @@ Breadcrumbs
 .breadcrumb {
     padding: 1em 0;
     font-size: 0.875em;
+    flex-wrap: wrap;
 }
 
 .breadcrumb__item {
@@ -342,6 +238,14 @@ Breadcrumbs
     background-color: transparent;
 }
 
+@media (max-width: 799px) {
+
+    .breadcrumb__item:first-child {
+        display: none;
+    }
+
+}
+
 /*
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
@@ -371,6 +275,43 @@ SECTION
 .section__title {
     text-align: center;
     text-transform: uppercase;
+}
+
+/*
+-----------------------------
+PAGE-HEADER
+*/
+
+.page-title {
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+
+    .page-header__container {
+        padding-top: 0;
+    }
+
+    .page-title {
+        font-size: 4em;
+    }
+
+}
+
+
+@media (max-width: 799px) {
+
+    .page-header__container {
+        padding-top: 1em;
+        padding-left: 2.5em;
+        border-left: solid 2.5em #a41515;
+        margin-left: -2em;
+    }
+
+    .page-title {
+        font-size: 2.5em;
+    }
+
 }
 
 
@@ -460,6 +401,10 @@ HERO
 }
 
 @media (max-width: 799px) {
+
+    .hero {
+        min-height: 12.5em;
+    }
 
     .hero > .vignette__wrap > .vignette__image {
         width: 240%;
@@ -551,11 +496,6 @@ HERO HEADER-SITE
     line-height: 1.125em;
     font-weight: normal;
     color: #ffffff;
-}
-
-.hero_header-site__argument {
-    display: none;
-    font-size: 1.25em;
 }
 
 .hero_header-site__search-form {
@@ -653,7 +593,7 @@ HERO HEADER-SITE
 
     .is-shrinked.hero_header-site {
         display: none;
-    }
+    }   
 
 }
 
@@ -773,4 +713,115 @@ CTA soutien
     .CTA_soutien__container {
         margin-top: -2em;
     }  
+}
+
+
+/*
+-----------------------------
+Mixins text
+*/
+
+.text_little {
+    display:inline-block;
+    font-size: 0.75em;
+}
+
+.text_little_inline {
+    font-size: 0.75em;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_color {
+    color: #7da237;
+}
+
+.text_white {
+    color: #ffffff;
+}
+
+.text_on-photo {
+    text-shadow: 0 0 4em #311102,1px 1px 2em #311102,1px 1px 1em #311102,-1px -1px 1px rgba(0,0,0,0.5),1px 1px 1px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 3;
+}
+
+.text_on-photo,
+.text_on-photo > *{
+    color: #ffffff !important;
+}
+
+/*
+-----------------------------
+Mixins block
+*/
+
+[class*="block_v"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.block_v-center {
+    justify-content: center;
+}
+
+.block_v-bottom {
+    justify-content: flex-end;
+}
+
+@media (min-width: 800px) {
+    .flex-order_1 { order: 1; }
+    .flex-order_2 { order: 2; }
+    .flex-order_3 { order: 3; }
+}
+
+.block_trame > * {
+    position: relative;
+    z-index: 2;
+}
+
+.block_trame::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+    transition: all 0.2s ease-in-out;
+}
+
+.block_trame_rayure.white::before {
+    background: url("./../img/motif_rayure_white.png") repeat;
+    opacity: 0.25;
+}
+
+.block_trame_rayure.black::before{
+    background: url("./../img/motif_rayure_black.png") repeat;
+    opacity: 0.15;
+}
+
+.block_trame_champ.white::before {
+    background: url("./../img/motif_champ_white.png") repeat;
+    opacity: 0.6;
+}
+
+.block_trame_champ.black::before{
+    background: url("./../img/motif_champ_black.png") repeat;
+    opacity: 0.15;
+}
+
+@media (min-width: 500px) {
+    .block_margin-big-screens {
+        padding: 0 10%;
+    }
 }

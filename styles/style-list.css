@@ -57,6 +57,7 @@ Tuile list
 
 .tuile__list {
     margin: 0 -0.5em;
+    flex-wrap: wrap;
 }
 
 .tuile__list_mono {}
@@ -74,6 +75,10 @@ Tuile list
 .tuile__item {
     flex-grow: 1;
     margin: 0.5em;
+}
+
+.tuile__list_mono {
+    flex-wrap: nowrap;
 }
 
 @media (min-width: 700px) {
