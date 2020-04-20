@@ -71,6 +71,8 @@ Form-line
 .form-line_multi__field {
     flex-grow: 1;
     background-color: #ffffff;
+    display: flex;
+    align-items: flex-end;
 }
 
 .form-line_multi__button {
@@ -167,8 +169,8 @@ Form-item
 }
 
 .button.form-item {
-    padding-top: 0.70em;
-    padding-bottom: 0.70em;
+    padding-top: 0.90em;
+    padding-bottom: 0.50em;
 }
 
 .form-item_field {
@@ -192,6 +194,7 @@ Form-item
 
 .form-item_field__wrap {
     overflow: hidden;
+    width: 100%;
 }
 
 .form-item_field__wrap::after { 
