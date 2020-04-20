@@ -296,7 +296,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="single">
 
             <section class="fw-section hero hero_header-site is-shrinked">
                 <div
@@ -355,7 +355,6 @@
                         </form>
                     </div>
                 </div>
-
             </section>
 
             <section class="fw-section page-header">
@@ -523,29 +522,31 @@
             <section class="fw-section">
                 <div class="chimney">
                     <div class="section__container">
-                        <p>Vous avez ce projet en tête, peut-être même qu’une idée, mais ce qui compte et
-                            eget risus varius blandit sit amet non magna. Sed posuere consectetur est at
-                            lobortis. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non
-                            commodo luctus, nisi erat porttitor ligula.</p>
-                        <h5>Commodo pellentasque sicuram</h5>
-                        <p>Avec Terre de Liens vous allez être mis en relation avec maecenas faucibus mollis
-                            interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at
-                            lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-                            Donec sed odio dui.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                            auctor. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-                        <h5>Maecenas lorem ipsum vivamus rutrum</h5>
-                        <p>Nous vous offrons maecenas faucibus mollis interdum. Maecenas sed diam eget
-                            risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed posuere consectetur est at lobortis. Integer posuere erat a
-                            ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.Vivamus sagittis
-                            lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna
-                            mollis ornare vel eu leo.</p>
-                        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at
-                            lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-                            Donec sed odio dui.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                            auctor. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                        <div class="block_columns">
+                            <p>Vous avez ce projet en tête, peut-être même qu’une idée, mais ce qui compte et
+                                eget risus varius blandit sit amet non magna. Sed posuere consectetur est at
+                                lobortis. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non
+                                commodo luctus, nisi erat porttitor ligula.</p>
+                            <h5>Commodo pellentasque sicuram</h5>
+                            <p>Avec Terre de Liens vous allez être mis en relation avec maecenas faucibus mollis
+                                interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem
+                                ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at
+                                lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                                Donec sed odio dui.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                auctor. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                            <h5>Maecenas lorem ipsum vivamus rutrum</h5>
+                            <p>Nous vous offrons maecenas faucibus mollis interdum. Maecenas sed diam eget
+                                risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed posuere consectetur est at lobortis. Integer posuere erat a
+                                ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.Vivamus sagittis
+                                lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna
+                                mollis ornare vel eu leo.</p>
+                            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at
+                                lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                                Donec sed odio dui.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                auctor. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                        </div>
                     </div>
                     <div class="section__container">
                         <h2 class="section__title">Paroles de bénévoles</h2>
@@ -641,19 +642,188 @@
 
                     <div class="section__container">
                         <h2 class="section__title">Questions fréquentes</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        <ul>
-                            <li class="is-visible">
-                                <button>
-                                    <p>Pharetra Ligula Purus Ridiculus Cras ?</p>
-                                    <p class="button__wrap">
-                                        <span class="button button_round button_s secundary">
-                                            <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
-                                        </span>
-                                    </p>
+                        <ul class="list list_v accordeon">
+                            <li class="accordeon__item is-expanded">
+                                <button class="accordeon__button button button_basic primary">
+                                    <span class="accordeon__title button__label">Pharetra Ligula Purus Ridiculus Cras
+                                        ?</span>
+                                    <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
                                 </button>
-                                <div>
+                                <div class="accordeon__content">
+                                    <div class="block_columns">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet orci
+                                            dui.
+                                            Fusce velit turpis, aliquet non eleifend vitae, finibus a nulla. Vestibulum
+                                            ut
+                                            pretium neque. Donec velit sem, ultrices et lorem sit amet, imperdiet tempus
+                                            nunc. Aenean in mollis ex. Proin sem mauris, porta quis lorem a, consectetur
+                                            auctor ligula. Donec nibh ipsum, commodo ac feugiat vitae, iaculis sagittis
+                                            elit. Proin tempus, nisl nec viverra ultrices, orci magna rutrum dolor, in
+                                            convallis ligula lorem vulputate ex.</p>
+                                        <p>Sed fringilla mi dolor, ut vestibulum enim hendrerit volutpat. Praesent non
+                                            odio
+                                            ullamcorper, pellentesque sapien ut, venenatis massa. In et quam sit amet
+                                            felis
+                                            molestie cursus. Fusce convallis ut est vel interdum. Fusce vitae dui
+                                            dictum,
+                                            accumsan sem in, feugiat tortor. Sed lacinia faucibus elit, nec lacinia
+                                            purus
+                                            feugiat vel. Nulla non pellentesque sem. Vestibulum at lorem justo.
+                                            Pellentesque
+                                            sagittis sodales consectetur. Curabitur pellentesque gravida augue, vehicula
+                                            faucibus velit fringilla mollis.</p>
+                                        <p>Mauris porttitor, sem id dictum auctor, augue tellus pharetra lacus, ac
+                                            tincidunt
+                                            lorem libero eget nisl. Curabitur sed eleifend lacus. Aenean sed lacus a dui
+                                            viverra sodales. Orci varius natoque penatibus et magnis dis parturient
+                                            montes,
+                                            nascetur ridiculus mus. Aenean urna dui, dictum ut nunc id, ultricies tempor
+                                            elit. Mauris porttitor consequat metus ut lobortis. Ut euismod massa sit
+                                            amet
+                                            nunc tristique, at ultricies risus scelerisque. Aliquam quis neque vel est
+                                            convallis interdum ut nec urna. Maecenas laoreet consectetur tellus.
+                                            Maecenas
+                                            ornare diam vel pretium vehicula.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordeon__item is-shrinked">
+                                <button class="accordeon__button button button_basic secundary">
+                                    <span class="accordeon__title button__label">Pharetra Ligula Purus Ridiculus Cras
+                                        ?</span>
+                                    <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordeon__content">
+                                    <div class="block_columns">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet orci
+                                            dui.
+                                            Fusce velit turpis, aliquet non eleifend vitae, finibus a nulla. Vestibulum
+                                            ut
+                                            pretium neque. Donec velit sem, ultrices et lorem sit amet, imperdiet tempus
+                                            nunc. Aenean in mollis ex. Proin sem mauris, porta quis lorem a, consectetur
+                                            auctor ligula. Donec nibh ipsum, commodo ac feugiat vitae, iaculis sagittis
+                                            elit. Proin tempus, nisl nec viverra ultrices, orci magna rutrum dolor, in
+                                            convallis ligula lorem vulputate ex.</p>
+                                        <p>Sed fringilla mi dolor, ut vestibulum enim hendrerit volutpat. Praesent non
+                                            odio
+                                            ullamcorper, pellentesque sapien ut, venenatis massa. In et quam sit amet
+                                            felis
+                                            molestie cursus. Fusce convallis ut est vel interdum. Fusce vitae dui
+                                            dictum,
+                                            accumsan sem in, feugiat tortor. Sed lacinia faucibus elit, nec lacinia
+                                            purus
+                                            feugiat vel. Nulla non pellentesque sem. Vestibulum at lorem justo.
+                                            Pellentesque
+                                            sagittis sodales consectetur. Curabitur pellentesque gravida augue, vehicula
+                                            faucibus velit fringilla mollis.</p>
+                                        <p>Mauris porttitor, sem id dictum auctor, augue tellus pharetra lacus, ac
+                                            tincidunt
+                                            lorem libero eget nisl. Curabitur sed eleifend lacus. Aenean sed lacus a dui
+                                            viverra sodales. Orci varius natoque penatibus et magnis dis parturient
+                                            montes,
+                                            nascetur ridiculus mus. Aenean urna dui, dictum ut nunc id, ultricies tempor
+                                            elit. Mauris porttitor consequat metus ut lobortis. Ut euismod massa sit
+                                            amet
+                                            nunc tristique, at ultricies risus scelerisque. Aliquam quis neque vel est
+                                            convallis interdum ut nec urna. Maecenas laoreet consectetur tellus.
+                                            Maecenas
+                                            ornare diam vel pretium vehicula.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordeon__item is-shrinked">
+                                <button class="accordeon__button button button_basic secundary">
+                                    <span class="accordeon__title button__label">Aenean Cras Fusce Commodo ?</span>
+                                    <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordeon__content">
+                                    <div class="block_columns">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet orci
+                                            dui.
+                                            Fusce velit turpis, aliquet non eleifend vitae, finibus a nulla. Vestibulum
+                                            ut
+                                            pretium neque. Donec velit sem, ultrices et lorem sit amet, imperdiet tempus
+                                            nunc. Aenean in mollis ex. Proin sem mauris, porta quis lorem a, consectetur
+                                            auctor ligula. Donec nibh ipsum, commodo ac feugiat vitae, iaculis sagittis
+                                            elit. Proin tempus, nisl nec viverra ultrices, orci magna rutrum dolor, in
+                                            convallis ligula lorem vulputate ex.</p>
+                                        <p>Sed fringilla mi dolor, ut vestibulum enim hendrerit volutpat. Praesent non
+                                            odio
+                                            ullamcorper, pellentesque sapien ut, venenatis massa. In et quam sit amet
+                                            felis
+                                            molestie cursus. Fusce convallis ut est vel interdum. Fusce vitae dui
+                                            dictum,
+                                            accumsan sem in, feugiat tortor. Sed lacinia faucibus elit, nec lacinia
+                                            purus
+                                            feugiat vel. Nulla non pellentesque sem. Vestibulum at lorem justo.
+                                            Pellentesque
+                                            sagittis sodales consectetur. Curabitur pellentesque gravida augue, vehicula
+                                            faucibus velit fringilla mollis.</p>
+                                        <p>Mauris porttitor, sem id dictum auctor, augue tellus pharetra lacus, ac
+                                            tincidunt
+                                            lorem libero eget nisl. Curabitur sed eleifend lacus. Aenean sed lacus a dui
+                                            viverra sodales. Orci varius natoque penatibus et magnis dis parturient
+                                            montes,
+                                            nascetur ridiculus mus. Aenean urna dui, dictum ut nunc id, ultricies tempor
+                                            elit. Mauris porttitor consequat metus ut lobortis. Ut euismod massa sit
+                                            amet
+                                            nunc tristique, at ultricies risus scelerisque. Aliquam quis neque vel est
+                                            convallis interdum ut nec urna. Maecenas laoreet consectetur tellus.
+                                            Maecenas
+                                            ornare diam vel pretium vehicula.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordeon__item is-shrinked">
+                                <button class="accordeon__button button button_basic secundary">
+                                    <span class="accordeon__title button__label">Dapibus Vestibulum Tellus Porta Sem ?
+                                    </span>
+                                    <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordeon__content">
+                                    <div class="block_columns">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet orci
+                                            dui.
+                                            Fusce velit turpis, aliquet non eleifend vitae, finibus a nulla. Vestibulum
+                                            ut
+                                            pretium neque. Donec velit sem, ultrices et lorem sit amet, imperdiet tempus
+                                            nunc. Aenean in mollis ex. Proin sem mauris, porta quis lorem a, consectetur
+                                            auctor ligula. Donec nibh ipsum, commodo ac feugiat vitae, iaculis sagittis
+                                            elit. Proin tempus, nisl nec viverra ultrices, orci magna rutrum dolor, in
+                                            convallis ligula lorem vulputate ex.</p>
+                                        <p>Sed fringilla mi dolor, ut vestibulum enim hendrerit volutpat. Praesent non
+                                            odio
+                                            ullamcorper, pellentesque sapien ut, venenatis massa. In et quam sit amet
+                                            felis
+                                            molestie cursus. Fusce convallis ut est vel interdum. Fusce vitae dui
+                                            dictum,
+                                            accumsan sem in, feugiat tortor. Sed lacinia faucibus elit, nec lacinia
+                                            purus
+                                            feugiat vel. Nulla non pellentesque sem. Vestibulum at lorem justo.
+                                            Pellentesque
+                                            sagittis sodales consectetur. Curabitur pellentesque gravida augue, vehicula
+                                            faucibus velit fringilla mollis.</p>
+                                        <p>Mauris porttitor, sem id dictum auctor, augue tellus pharetra lacus, ac
+                                            tincidunt
+                                            lorem libero eget nisl. Curabitur sed eleifend lacus. Aenean sed lacus a dui
+                                            viverra sodales. Orci varius natoque penatibus et magnis dis parturient
+                                            montes,
+                                            nascetur ridiculus mus. Aenean urna dui, dictum ut nunc id, ultricies tempor
+                                            elit. Mauris porttitor consequat metus ut lobortis. Ut euismod massa sit
+                                            amet
+                                            nunc tristique, at ultricies risus scelerisque. Aliquam quis neque vel est
+                                            convallis interdum ut nec urna. Maecenas laoreet consectetur tellus.
+                                            Maecenas
+                                            ornare diam vel pretium vehicula.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordeon__item is-shrinked">
+                                <button class="accordeon__button button button_basic secundary">
+                                    <span class="accordeon__title button__label">Dolor Fringilla Commodo Etiam ?</span>
+                                    <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
+                                </button>
+                                <div class="accordeon__content">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet orci dui.
                                         Fusce velit turpis, aliquet non eleifend vitae, finibus a nulla. Vestibulum ut
                                         pretium neque. Donec velit sem, ultrices et lorem sit amet, imperdiet tempus
@@ -678,46 +848,6 @@
                                         ornare diam vel pretium vehicula.</p>
                                 </div>
                             </li>
-                            <li class="">
-                                <button>
-                                    <p>Pharetra Ligula Purus Ridiculus Cras ?</p>
-                                    <p class="button__wrap">
-                                        <span class="button button_round button_s secundary">
-                                            <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
-                                        </span>
-                                    </p>
-                                </button>
-                            </li>
-                            <li class="">
-                                <button>
-                                    <p>Aenean Cras Fusce Commodo ?</p>
-                                    <p class="button__wrap">
-                                        <span class="button button_round button_s secundary">
-                                            <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
-                                        </span>
-                                    </p>
-                                </button>
-                            </li>
-                            <li class="">
-                                <button>
-                                    <p>Dapibus Vestibulum Tellus Porta Sem ?</p>
-                                    <p class="button__wrap">
-                                        <span class="button button_round button_s secundary">
-                                            <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
-                                        </span>
-                                    </p>
-                                </button>
-                            </li>
-                            <li class="">
-                                <button>
-                                    <p>Dolor Fringilla Commodo Etiam ?</p>
-                                    <p class="button__wrap">
-                                        <span class="button button_round button_s secundary">
-                                            <span class="button__icon"><i class="fas fa-chevron-down"></i></span>
-                                        </span>
-                                    </p>
-                                </button>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -734,8 +864,8 @@
                             <div class="tuile__intro">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
                             </div>
-                            <p class="button__wrap">
-                                <a href="#" class="button button_basic primary">
+                            <p class="button__wrap text_center">
+                                <a href="#" class="button button_basic primary button_s">
                                     <span class="button__label">Postuler</span>
                                 </a>
                             </p>
@@ -756,7 +886,7 @@
                             </ul>
                         </nav>
                         <ul class="list tuile__list tuile__list_mono tuile__liste_h">
-                            <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-3">
+                            <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                 <a class="tuile__link">
                                     <div class="vignette__wrap vignette_photo block_trame block_trame_rayure black">
                                         <img src="img/photo_05_carre_400.jpg" class="vignette__image" />
@@ -782,7 +912,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-3">
+                            <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                 <a class="tuile__link">
                                     <div class="vignette__wrap vignette_photo block_trame block_trame_rayure black">
                                         <img src="img/photo_03_carre_400.jpg" class="vignette__image" /></div>
@@ -803,7 +933,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-3">
+                            <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                 <a class="tuile__link">
                                     <div class="vignette__wrap vignette_photo block_trame block_trame_rayure black">
                                         <img src="img/photo_04_carre_400.jpg" class="vignette__image" /></div>
@@ -818,6 +948,32 @@
                                                 d’agglomération
                                                 Hérault
                                                 Méditerranée mettent en oeuvre un projet pour favoriser...
+                                            </p>
+                                        </div>
+                                        <p class="button__wrap">
+                                            <span class="button button_round button_s primary button_read-more">
+                                                <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
+                                <a class="tuile__link">
+                                    <div class="vignette__wrap vignette_photo block_trame block_trame_rayure black">
+                                        <img src="img/photo_05_carre_400.jpg" class="vignette__image" />
+                                    </div>
+                                    <div class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <h4 class="tuile__title">Agir sur son territoire - le Vade Mecum de
+                                            Terre de
+                                            Liens
+                                            Rhône-Alpes
+                                        </h4>
+                                        <div class="tuile__intro">
+                                            <p>Recueil de fiches pratiques pour les bénévoles donnant un aperçu
+                                                des
+                                                pratiques d'animation citoyennes pratiquées en Rhône-Alpes.
+                                                (2013)...
                                             </p>
                                         </div>
                                         <p class="button__wrap">

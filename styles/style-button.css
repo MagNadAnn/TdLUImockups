@@ -19,12 +19,12 @@ BUTTON-WRAP
     margin: 2em 0;
 }
 
-@media (min-width: 700px) {
+.button__wrap:first-child {
+    margin-top: 0;
+}
 
-    .button__wrap:last-child {
-        margin-bottom: 0;
-    }
-
+.button__wrap:last-child {
+    margin-bottom: 0;
 }
 
 .button__wrap.text_center {
@@ -146,6 +146,11 @@ Button round
 -----------------------------
 BUTTON READ MORE
 */
+
+.button__wrap > .button_read-more.button_s {
+    top: -0.75em;
+    position: relative;
+}
 
 a:hover .button.primary.button_read-more > .button__icon > i,
 a:focus .button.primary.button_read-more > .button__icon > i {

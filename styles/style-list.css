@@ -60,9 +60,15 @@ Tuile list
     flex-wrap: wrap;
 }
 
-.tuile__list_mono {}
+@media (min-width: 800px) {
 
-@media (max-width: 999px) {
+    .tuile__list_mono {
+        flex-wrap: nowrap;
+    }
+
+}
+
+@media (max-width: 799px) {
     .tuile__list_mono {
         flex-wrap: wrap;
     }
@@ -75,10 +81,6 @@ Tuile list
 .tuile__item {
     flex-grow: 1;
     margin: 0.5em !important;
-}
-
-.tuile__list_mono {
-    flex-wrap: nowrap;
 }
 
 @media (min-width: 700px) {

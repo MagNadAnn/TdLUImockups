@@ -21,6 +21,7 @@ PARAGRAPHS
 p {
     margin: 0.5em 0;
     color: #33383d;
+    line-height: 1.5em;
 }
 
 /*
@@ -50,6 +51,7 @@ a:active {
 button {
     border: none;
     padding: 0;
+    cursor: pointer;
 }
 
 /*
@@ -135,6 +137,14 @@ blockquote {
     padding: 1em 2em;
     background-color: rgba(0, 0, 0, 0.05);
     font-size: 1.125em;
+}
+
+blockquote:first-child {
+    margin-top: 0;
+}
+
+blockquote:last-child {
+    margin-bottom: 0;
 }
 
 blockquote.white {

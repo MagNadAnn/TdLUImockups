@@ -358,11 +358,51 @@ FOOTER
 
 /*
 -----------------------------
+ACCORDEON
+*/
+
+.accordeon__item {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+.accordeon__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.accordeon__title {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 1em;
+}
+
+.accordeon__content {
+    background-color: #f5f5f5;
+    padding: 2em;
+    transition: all 0.2 ease-in-out;
+}
+
+.is-shrinked > .accordeon__content {
+    height: 0;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    opacity: 0;
+}
+
+/*
+-----------------------------
 CAROUSEL
 */
+
 .carousel__wrap {
     position: relative;
-    margin: 1em 0 4em;
+    margin: 2em 0;
 }
 
 .carousel {
@@ -400,10 +440,11 @@ CAROUSEL
     display: flex;
     width: 210%;
     left: 15%;
+    margin: 0;
 }
 
 .carousel__item {
-    padding: 1em 2em;
+    padding: 0 2em;
     width: calc(100% / 3);
     box-sizing: border-box;
 }
@@ -428,7 +469,6 @@ CAROUSEL
 }
 
 .carousel__nav__dots {
-    padding: 0;
     justify-content: center;
 }
 
@@ -472,7 +512,7 @@ HERO
 
     .hero {
         font-size: 1.5em;
-        min-height: 30em;
+        min-height: 20em;
     }
 
     .hero__container {
@@ -859,12 +899,20 @@ Mixins text
 Mixins block
 */
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
 
     .block_columns {
         columns: 2;
         column-gap : 4rem;
         margin: 2em 0;
+    }
+
+    .block_columns:first-child {
+        margin-top: 0;
+    }
+
+    .block_columns:last-child {
+        margin-bottom: 0;
     }
 
 }
