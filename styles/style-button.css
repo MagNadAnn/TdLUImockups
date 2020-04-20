@@ -42,7 +42,7 @@ BUTTON
     text-align: center;
     text-decoration: none;
     line-height: 1.125em;
-    font-family: "VeneerTwo", "Source Sans Pro", sans-serif;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.05em;
     
     border-style: solid;
@@ -76,6 +76,7 @@ Button icon
     background-color: transparent !important;
     padding: 0;
     border: none !important;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .button_icon > .button__icon {
@@ -97,6 +98,12 @@ Button icon
     left: calc(50% - 0.5em);
     width: 1em;
     transition: all 0.2s;
+}
+
+.button_icon > .button__label {
+    font-size: 0.75em;
+    letter-spacing: 0;
+    line-height: 1em;
 }
 
 .button_icon.button_icon_little {

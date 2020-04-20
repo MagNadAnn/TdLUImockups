@@ -77,6 +77,21 @@ Vignette
 
 /*
 -----------------------------
+veil
+*/
+
+.veil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.75;
+}
+
+/*
+-----------------------------
 tag
 */
 
@@ -109,7 +124,7 @@ tag
     color: #33383d;
     background-color: #ffffff;
     text-transform: uppercase;
-    font-family: "VeneerTwo", "Source Sans Pro", sans-serif;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.025em;
     font-weight: normal;
 }
@@ -519,7 +534,8 @@ HERO HEADER-SITE
 .hero_header-site__title {
     text-transform: uppercase;
     color: #ffffff;
-    margin: 0.125em 0;
+    margin: 0.125em 0 0;
+    line-height: 1em;
 }
 
 .hero_header-site__baseline {
