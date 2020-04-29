@@ -61,7 +61,20 @@ TITLES
 
 h1, h2, h3, h4, h5 {
     line-height: 1.125em;
-    margin: 1em 0;
+    margin: 0.75em 0;
+}
+
+.h1:first-child
+.h2:first-child,
+.h3:first-child,
+.h4:first-child,
+.h5:first-child,
+.h6:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 799px) {
+    h1, h2, h3, h4, h5, h6 { text-align: left; }
 }
 
 h1, h2, h4 {
@@ -72,6 +85,10 @@ h1, h2, h4 {
 
 h2 {
     color: #b34818;
+}
+
+@media (min-width: 800px) {
+    h2 { text-align: center; }
 }
 
 @media (min-width: 500px) {

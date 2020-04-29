@@ -279,15 +279,6 @@ SECTION
     margin-bottom: 0;
 }
 
-.section__title {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.section__title:first-child {
-    margin-top: 0;
-}
-
 /*
 -----------------------------
 PAGE-HEADER
@@ -303,12 +294,8 @@ PAGE-HEADER
         padding-top: 0;
     }
 
-    .page-header__title {
-        font-size: 4em;
-    }
-
     .page-header__intro {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
 }
@@ -323,12 +310,26 @@ PAGE-HEADER
         margin-left: -3em;
     }
 
+    .page-header__intro {
+        font-size: 1.25em;
+    }
+
+}
+
+@media (min-width: 600px) {
+
+    .page-header__title {
+        font-size: 4em;
+    }
+    
+}
+
+@media (max-width: 599px) {
+
     .page-header__title {
         font-size: 2.5em;
     }
-
     
-
 }
 
 
@@ -779,6 +780,7 @@ CTA
 }
 
 .CTA__title {
+    text-align: center;
     font-size: 2.5em;
     margin: 0;
 }
