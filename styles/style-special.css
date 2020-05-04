@@ -56,6 +56,15 @@ Vignette
     }
 }
 
+@media (max-width: 799px) {
+    .column > .vignette__wrap,
+    [class*="block_v"] > .vignette__wrap {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 499px) {
     .vignette_deco {
         width: 50%;
@@ -428,14 +437,12 @@ CAROUSEL
 
 .carousel__wrap {
     position: relative;
-    margin: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .carousel {
     position: relative;
-    margin: 0 5em;
-    /* border-left: 0.25em solid #579ea5; */
-    /* border-right: 0.25em solid #579ea5; */
     overflow: hidden;
 }
 
@@ -444,7 +451,6 @@ CAROUSEL
     content: "";
     position: absolute;
     height: 100%;
-    width: 8em;
     top: 0;
     z-index: 2;
 }
@@ -470,7 +476,6 @@ CAROUSEL
 }
 
 .carousel__item {
-    padding: 0 2em;
     width: calc(100% / 3);
     box-sizing: border-box;
 }
@@ -484,18 +489,77 @@ CAROUSEL
 .caroussel__nav__arrow {
     position: absolute;
     top: calc(50% - 1em);
+    z-index: 2;
 }
 
-.caroussel__nav__previous {
-    left: 0;
-}
-
-.caroussel__nav__next {
-    right: 0;
-}
+.caroussel__nav__previous { left: 0.25em; }
+.caroussel__nav__next { right: 0.25em; }
 
 .carousel__nav__dots {
     justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.carousel__nav__dot:not(.is-active) {
+    opacity: 0.3;
+}
+
+@media (min-width: 800px) {
+    
+    .carousel:before,
+    .carousel:after {
+        width: 8em;
+    }
+
+    .carousel__item {
+        padding: 0 2em;
+    }
+
+}
+
+@media (max-width: 799px) {
+
+    .carousel:before,
+    .carousel:after {
+        width: 4em;
+    }
+
+    .carousel__item {
+        padding: 0 1em;
+    }
+
+}
+
+@media (min-width: 700px) {
+
+    .carousel__wrap {
+        margin-left:  0;
+        margin-right:  0;
+    }
+
+    .carousel {
+        margin: 0 5em;
+    }
+
+    .carousel:before,
+    .carousel:after {
+        width: 8em;
+    }
+
+}
+
+@media (max-width: 699px) {
+
+    .carousel__wrap {
+        margin-left: -3em;
+        margin-right: -3em;
+        overflow: hidden;
+    }
+
+    .carousel {
+        font-size: 0.75em;
+    }
+
 }
 
 
