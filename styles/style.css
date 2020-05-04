@@ -83,6 +83,10 @@ h1, h2, h4 {
     font-weight: normal;
 }
 
+h1 {
+    color: #33383d;
+}
+
 h2 {
     color: #b34818;
 }
