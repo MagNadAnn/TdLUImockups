@@ -54,6 +54,10 @@ Tuile image
     z-index: 3;
 }
 
+.tuile_media__content_fluid {
+    max-width: none !important;
+}
+
 @media (min-width: 700px) {
 
     .tuile_media__container {
@@ -99,7 +103,7 @@ Tuile image
         background-color: rgba(255, 255, 255, 1) !important;
     }
 
-    .tuile_media__content > .button__wrap > .button_read-more {
+    .tuile_media__content > .button__wrap {
         position: absolute;
         bottom: -0.75em;
         left: calc(50% - 0.75em);

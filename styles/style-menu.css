@@ -20,7 +20,7 @@ https://codepen.io/bradtraversy/pen/vMGBjQ
 
     #main-nav__toggler {
         position: fixed;
-        top: 0.25em;
+        top: 5em;
         left: 0.25em;
         z-index: 51;
         cursor: pointer;
@@ -33,7 +33,7 @@ https://codepen.io/bradtraversy/pen/vMGBjQ
 
     #main-nav__hamburger {
         position: fixed;
-        top: 0.25em;
+        top: 5em;
         left: 0.25em;
         z-index: 50;
         width: 60px;
@@ -148,6 +148,19 @@ Global settings
 ------------------------------------------------------------------------------------
 */
 
+@media (max-width: 799px) {
+
+    .main-nav__logo {
+        position: fixed;
+        top: 0.25em;
+        left: 0.25em;
+        width: 4.5em;
+        z-index: 51;
+        background-color: transparent !important;
+    }
+
+}
+
 .menu {
     display: flex;
     list-style: none;
@@ -239,6 +252,107 @@ TOP BAR LOGO
 
 .top-bar__logo > img {
     width: 100%;
+}
+
+
+/*
+-----------------------------
+MENU APP
+*/
+
+
+.menu-app__wrap { display: none; }
+.menu-app__wrap.is-visible { display: block; }
+
+.menu-app__wrap {
+    width: 100%;
+    background-color: #7da237;
+    padding: 1em 0 3em;
+}
+
+.menu-app__wrap > .fw-section > .chimney_top-bar {
+    display: block;
+}
+
+.menu-app__title {
+    margin: 0.5em;
+    font-size: 2em;
+    line-height: 1em;
+    color: #ffffff;
+}
+
+.menu-app {
+    position: relative;
+    padding-bottom: 1em;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.menu-app > .menu__item {
+    position: relative;
+    width: calc((100% / 4) - 1em);
+    margin: 0.5em;;
+}
+
+.menu-app__link {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.1s ease-in-out;
+}
+
+.menu-app__link:hover,
+.menu-app__link:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.menu-app__link:active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.menu-app__icon {
+    position: relative;
+    width: 4em;
+    min-width: 4em;
+    height: 4em;
+    color: #567e36;
+}
+
+.menu-app__icon > img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-app__icon > i {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 0.5em;
+}
+
+.menu-app__label {
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+.menu-app__label__title {
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.menu-app__label__description {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: none;
+    margin: 0;
 }
 
 /*
@@ -372,7 +486,7 @@ MENU SITE
 
 .menu-site > .menu__item > .menu__link {
     font-size: 1.875em;
-    font-family: "VeneerTwo", "Source Sans Pro", sans-serif;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.025em;
     font-weight: normal;
     text-transform: uppercase;
@@ -384,11 +498,12 @@ MENU SITE
 .menu__item.menu__secundary > .menu__link {
     padding: 0.25em 0.5em;
     margin: 0.25em;
+    font-size: 1.75em;
 }
 
 @media (min-width: 800px) {
     .menu-site {
-        font-size: calc(0.70 * 100%);
+        font-size: calc(0.75 * 100%);
     }
 }
 
@@ -476,13 +591,12 @@ BOTTOM BAR 2
     background-color: #85170f;
 }
 
+ /*
+-----------------------------
+TOP BARS
+*/
 
 @media (min-width: 800px) {
-
-    /*
-    -----------------------------
-    TOP BARS
-    */
 
     .top-bar {
         position: relative;
@@ -492,7 +606,7 @@ BOTTOM BAR 2
         z-index: 3;
     }
 
-    .top-bar.top-bar.block_trame > * {
+    .top-bar.block_trame > * {
         z-index: initial;
     }
 
