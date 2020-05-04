@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Centre de Ressource</title>
+    <title>Accueil</title>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -574,7 +574,7 @@
                         <span class="tag warning"><i class="fas fa-heart"></i> Le dossier du mois</span>
                     </div>
                     <div class="chimney">
-                        <a class="tuile__link tuile__content tuile_media__content">
+                        <a class="tuile__link tuile__content tuile_media__content tuile_media__content_hero">
                             <h4 class="tuile__title">Arpenter 1 - Evaluer l'utilité sociale et environnementale
                             </h4>
                             <div class="tuile__intro">
@@ -582,7 +582,7 @@
                                     environnementale (MUSE) de Terre de Liens. Cette dynamique...</p>
                             </div>
                             <p class="button__wrap">
-                                <span class="button button_round button_s primary button_read-more">
+                                <span class="button button_round button_s button_read-more">
                                     <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
                                 </span>
                             </p>
@@ -595,13 +595,16 @@
                 <div class="chimney">
                     <div class="section__container CTA__container">
                         <h3 class="CTA__title">Soyez au courant<br />des dernières publications ! </h3>
-                        <p>Incrivez-vous à notre newsletter et ne ratez pas une publication.</p>
-                        <p>Vous restez informé-e, nous restons motivé-es !
-                        </p>
+                        <div class="CTA__content">
+                            <p>Incrivez-vous à notre newsletter et ne ratez pas une publication.</p>
+                            <h6>Vous restez informé-e, nous restons motivé-es !
+                            </h6>
+                        </div>
                         <form class="form__wrap">
                             <div class="form-line form-line_multi">
                                 <div class="form-line_multi__item form-line_multi__field">
-                                    <label class="form-label form-label_top" for="search">Votre adresse email</label>
+                                    <label class="form-label form-label_top" for="search">Votre adresse
+                                        email</label>
                                     <input class="form-item form-item_field" placeholder="Saisir votre adresse email..."
                                         name="search" />
                                 </div>
@@ -624,7 +627,7 @@
                     <div class="chimney">
                         <ul class="list tuile__list tuile__list_mono tuile__liste_h tuile__liste_v-center">
                             <li class="tuile tuile__item">
-                                <a class="tuile__link tuile__content tuile_media__content">
+                                <a class="tuile__link tuile__content tuile_media__content tuile_media__content_hero">
                                     <h4 class="tuile__title">Chemins de terre n°10 </h4>
                                     <div class="tuile__intro">
                                         <p>Publication semestrielle de Terre de Liens à destination de ses membres. Au
@@ -640,7 +643,7 @@
                                 </a>
                             </li>
                             <li class="tuile tuile__item">
-                                <a class="tuile__link tuile__content tuile_media__content">
+                                <a class="tuile__link tuile__content tuile_media__content tuile_media__content_hero">
                                     <h4 class="tuile__title">Comment mesurer l'impact d'un projet alimentaire ?</h4>
                                     <div class="tuile__intro">
                                         <p>Guide d'accompagnement à l'attention des porteurs de projet associatifs et
@@ -655,7 +658,7 @@
                                 </a>
                             </li>
                             <li class="tuile tuile__item">
-                                <a class="tuile__link tuile__content tuile_media__content">
+                                <a class="tuile__link tuile__content tuile_media__content tuile_media__content_hero">
                                     <h4 class="tuile__title">Améliorer l'offre alimentaire bio et locale pour la
                                         restauration
                                         collective
@@ -690,15 +693,18 @@
                         </div>
                         <div class="column column_1-2 CTA_rapport__container">
                             <div class="block_v-center">
-                                <h2 class="CTA__title">Télécharger notre dernier<br>rapport annuel !</h2>
-                                <p>Notre rapport 2019 vous offre une vision unique Lorem ipsum dolor sit amet,
-                                    consectetuer
-                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                    aliquam
-                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                                    suscipit
-                                    lobortis nisl ut aliquip ex ea commodo consequat.
-                                </p>
+                                <h2 class="CTA__title text_left">Télécharger notre dernier<br>rapport annuel !</h2>
+                                <div class="CTA__content">
+                                    <p>Notre rapport 2019 vous offre une vision unique Lorem ipsum dolor sit amet,
+                                        consectetuer
+                                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam
+                                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                                        ullamcorper
+                                        suscipit
+                                        lobortis nisl ut aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
                                 <p class="button__wrap">
                                     <a href="#" class="button button_basic primary">
                                         <span class="button__icon"><i class="fas fa-download"></i></span>
@@ -719,7 +725,7 @@
                     <div class="hero__container section__container CTA_soutien__container">
                         <div class="columns">
                             <div class="column column_1-2">
-                                <h2 class="CTA__title text_white">Soutenir<br />Terre de Liens<br />c'est
+                                <h2 class="CTA__title text_left text_white">Soutenir<br />Terre de Liens<br />c'est
                                     préserver notre
                                     avenir
                                     !
@@ -728,35 +734,38 @@
                                     Terre de Liens et participez au changement !</h5>
                             </div>
                             <div class="column column_1-2">
-                                <blockquote class="white">
-                                    <p>Nous n’héritons pas de la terre de nos parents<br />nous l’empruntons à nos
-                                        enfants.
+                                <div class="CTA__content">
+                                    <blockquote class="white">
+                                        <p>Nous n’héritons pas de la terre de nos parents<br />nous l’empruntons à nos
+                                            enfants.
+                                        </p>
+                                        <cite>Antoine de Saint-Exupéry</cite>
+                                    </blockquote>
+                                    <p class="text_white">L’association Terre de Liens, reconnue d’utilité
+                                        publique, est un mouvement citoyen
+                                        qui
+                                        œuvre pour préserver les terres agricoles, faciliter l’accès des paysans à la
+                                        terre
+                                        et
+                                        developper une agriculture biologique paysanne.
                                     </p>
-                                    <cite>Antoine de Saint-Exupéry</cite>
-                                </blockquote>
-                                <p class="text_white">L’association Terre de Liens, reconnue d’utilité
-                                    publique, est un mouvement citoyen
-                                    qui
-                                    œuvre pour préserver les terres agricoles, faciliter l’accès des paysans à la terre
-                                    et
-                                    developper une agriculture biologique paysanne.
-                                </p>
+                                </div>
                             </div>
                             <div class="column column_1-1">
                                 <ul class="list list_h CTA_soutien__buttons">
-                                    <li class="button__wrap text_center">
+                                    <li>
                                         <a href="#" class="button button_basic secundary">
                                             <span class="button__icon"><i class="fas fa-address-card"></i></span>
                                             <span class="button__label">J'adhère</span>
                                         </a>
                                     </li>
-                                    <li class="button__wrap text_center">
+                                    <li>
                                         <a href="#" class="button button_basic secundary">
                                             <span class="button__icon"><i class="fas fa-hand-holding-heart"></i></span>
                                             <span class="button__label">Je fais un don</span>
                                         </a>
                                     </li>
-                                    <li class="button__wrap text_center">
+                                    <li>
                                         <a href="#" class="button button_basic secundary">
                                             <span class="button__icon"><i class="fas fa-piggy-bank"></i></span>
                                             <span class="button__label">Epargne solidaire</span>

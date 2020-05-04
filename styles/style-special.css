@@ -8,6 +8,30 @@ Micro components
 
 /*
 -----------------------------
+embed-youtube-resize
+*/
+
+.embed-youtube-resize {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.embed-youtube-resize iframe,  
+.embed-youtube-resize object,  
+.embed-youtube-resize embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*
+-----------------------------
 Vignette
 */
 
@@ -342,6 +366,7 @@ FOOTER
     font-size: 0.875em;
 }
 
+.footer-site__title,
 .footer-site__content > *,
 .footer-site__content > * > a {
     color: #ffffff;
@@ -490,14 +515,7 @@ HERO
     height: 100%;
 }
 
-.hero .tuile_media__content {
-    position: relative;
-    display: block;
-    max-width: 25em;
-    padding: 1.5em 2em 1.75em;
-    margin: 0 auto;
-    box-sizing: border-box;
-    transition: all 0.2s;
+.tuile_media__content_hero {
     z-index: 3;
 }
 
@@ -557,6 +575,13 @@ HERO
         flex-direction: row;
     }
 
+}
+
+@media (max-width: 699px) {
+    .tuile_media__content_hero {
+        padding: 1.5em 2em 1.75em;
+        box-sizing: border-box;
+    }
 }
 
 /* adaptation liées aux tuile_media */
@@ -782,15 +807,21 @@ CTA
 .CTA__title {
     text-align: center;
     font-size: 2.5em;
-    margin: 0;
+    margin: 0.5rem 0;
 }
 
 .CTA__subtitle {
     font-size: 1.5em;
-    margin: 0.5em 0 0;
+    margin: 1rem 0;
 }
 
+.CTA__content {
+    margin: 0.5rem 0 1rem;
+    padding: 1px 0;
+}
 
+.CTA__content:first-child { margin-top: 0; }
+.CTA__content:last-child { margin-bottom: 0; }
 
 
 /*

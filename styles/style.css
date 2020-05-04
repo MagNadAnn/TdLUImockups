@@ -64,12 +64,12 @@ h1, h2, h3, h4, h5 {
     margin: 0.75em 0;
 }
 
-.h1:first-child
-.h2:first-child,
-.h3:first-child,
-.h4:first-child,
-.h5:first-child,
-.h6:first-child {
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
     margin-top: 0;
 }
 
@@ -106,10 +106,6 @@ h3 {
     font-weight: normal;
 }
 
-h3:first-child {
-    margin: 0;
-}
-
 @media (min-width: 500px) {
     h3 { font-size: 2.5em; }
 }
@@ -123,7 +119,7 @@ h5 {
     letter-spacing: 0.03em;
     font-size: 1.75em;
     margin: 1em 0 0.5em;
-    color: #b34818;
+    color: #33383d;
 }
 
 h6 {
@@ -131,6 +127,7 @@ h6 {
     font-weight: bold;
     font-size: 1em;
     margin: 1em 0;
+    color: #33383d;
 }
 
 /*

@@ -16,7 +16,7 @@ BUTTON-WRAP
 */
 
 .button__wrap {
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 .button__wrap:first-child {
@@ -48,11 +48,11 @@ BUTTON
 }
 
 .button_s {
-    font-size: 1em;
+    font-size: 1em !important;
 }
 
 .button_xs {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
 }
 
 .button__icon {
@@ -143,13 +143,17 @@ Button round
 BUTTON READ MORE
 */
 
-.button__wrap > .button_read-more.button_s {
-    top: -0.75em;
-    position: relative;
+.button_read-more {
+    color: #ffffff !important;
+    display: block;
 }
 
-a:hover .button.primary.button_read-more > .button__icon > i,
-a:focus .button.primary.button_read-more > .button__icon > i {
+.button__wrap > .button_read-more {
+    top: -0.75em;
+}
+
+a:hover .button_read-more > .button__icon > i,
+a:focus .button_read-more > .button__icon > i {
     transform: rotate(45deg);
 }
 
