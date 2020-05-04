@@ -888,6 +888,10 @@ HERO HEADER-SITE
     .is-expanded .hero_header-site__baseline {
         font-size: 2em;
     }
+
+    .is-expanded .hero_header-site__search-form {
+        font-size: calc(0.011 * 100vw);
+    }
 }
 
 @media (min-width: 800px)  and (max-width: 1199px) {
@@ -899,6 +903,11 @@ HERO HEADER-SITE
     .is-expanded .hero_header-site__baseline {
         font-size: calc(0.035 * 100vw);
     }
+
+    .is-expanded .hero_header-site__search-form {
+        font-size: calc(0.016 * 100vw);
+    }
+    
 
 }
 
@@ -931,7 +940,6 @@ HERO HEADER-SITE
     }
 
     .is-expanded .hero_header-site__search-form {
-        font-size: calc(0.011 * 100vw);
         margin: 0.5em 0;
     }
 

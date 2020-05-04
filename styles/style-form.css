@@ -16,6 +16,10 @@ button {
         margin-bottom: 2em;
         font-size: 1.5em;
     }
+
+    .form__wrap.form_s {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 499px) {
