@@ -19,12 +19,16 @@ BUTTON-WRAP
     margin: 1em 0;
 }
 
-.button__wrap:first-child {
-    margin-top: 0;
-}
+@media (min-width: 700px) {
 
-.button__wrap:last-child {
-    margin-bottom: 0;
+    .button__wrap:first-child {
+        margin-top: 0;
+    }
+
+    .button__wrap:last-child {
+        margin-bottom: 0;
+    }
+
 }
 
 /*

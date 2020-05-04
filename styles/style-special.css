@@ -56,15 +56,6 @@ Vignette
     }
 }
 
-@media (max-width: 799px) {
-    .column > .vignette__wrap,
-    [class*="block_v"] > .vignette__wrap {
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 @media (max-width: 499px) {
     .vignette_deco {
         width: 50%;
@@ -156,7 +147,7 @@ tag
 
 .tag {
     display: inline-block;
-    padding: 0.0625em 0.25em 0.125em;
+    padding: 0.125em 0.25em 0.0625em;
     margin: 0.25em 0.25em 0.25em 0;
     color: #33383d;
     background-color: #ffffff;
@@ -687,7 +678,7 @@ HERO
 }
 
 .hero__container {
-    padding-top: 4em;
+    padding-top: 5em;
 }
 
 .hero__container > .tag__wrap {
@@ -718,7 +709,7 @@ HERO
 
     .hero__container > .tag__wrap {
         position: absolute;
-        top: 1em;
+        top: 0.75em;
         left: 0;
     }
 }
@@ -1019,9 +1010,13 @@ CTA soutien
 }
 
 .CTA_soutien__container {
-    padding-bottom: 2em;
     position: relative;
     z-index: 3;
+    text-align: left;
+}
+
+.CTA_soutien__title,
+.CTA_soutien__subtitle {
     text-align: left;
 }
 
@@ -1071,9 +1066,14 @@ Mixins text
     text-align: center;
 }
 
-.text_left {
-    text-align: left;
+@media (min-width: 800px) {
+
+    .text_left {
+        text-align: left;
+    }
+
 }
+
 
 .text_color {
     color: #7da237;

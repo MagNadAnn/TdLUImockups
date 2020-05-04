@@ -75,7 +75,7 @@ h6:first-child {
 }
 
 @media (max-width: 799px) {
-    h1, h2, h3, h4, h5, h6 { text-align: left; }
+    h1, h2, h3, h4, h5, h6 { text-align: center; }
 }
 
 h1, h2, h4 {
@@ -90,10 +90,7 @@ h1 {
 
 h2 {
     color: #b34818;
-}
-
-@media (min-width: 800px) {
-    h2 { text-align: center; }
+    text-align: center;
 }
 
 @media (min-width: 500px) {
