@@ -183,8 +183,7 @@ MENU ITEM
 */
 
 .menu__item {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
 .menu__item_separator {
@@ -198,6 +197,7 @@ MENU LINK
 
 .menu__link {
     text-decoration: none;
+    display: inline-block
 }
 
 @media (min-width: 800px) {
