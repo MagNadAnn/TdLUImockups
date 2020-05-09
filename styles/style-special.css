@@ -261,6 +261,12 @@ h4.fiche__entry__title > i {
         z-index: 2;
     }
 
+    .fiche__video__wrap {
+        margin: -2.5em 0 0;
+        position: relative;
+        z-index: 2;
+    }
+
     .fiche__miniature__wrap  > .vignette_deco {
         position: relative !important;
         width: 100%;
@@ -938,12 +944,16 @@ CAROUSEL
 
 .carousel__nav__dots {
     justify-content: center;
+}
+
+.carousel__nav__dot {
     transition: all 0.2s ease-in-out;
 }
 
-.carousel__nav__dot:not(.is-active) {
-    opacity: 0.3;
-}
+.carousel__nav__dot:not(.is-active) { opacity: 0.3; }
+.carousel__nav__dot:not(.is-active):hover,
+.carousel__nav__dot:not(.is-active):focus { opacity: 0.5; }
+.carousel__nav__dot:not(.is-active):active { opacity: 0.8; }
 
 @media (min-width: 800px) {
     
