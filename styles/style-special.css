@@ -418,23 +418,24 @@ Breadcrumbs
 }
 
 .breadcrumb__link {
-
+    display: inline-block;
+    padding: 0 0.2em;
 }
 
-.breadcrumb__link:link,
-.breadcrumb__link:visited {
+a.breadcrumb__link:link,
+a.breadcrumb__link:visited {
     text-decoration: none;
     color: #579ea5;
 }
 
-.breadcrumb__link:hover,
-.breadcrumb__link:focus {
+a.breadcrumb__link:hover,
+a.breadcrumb__link:focus {
     text-decoration: underline;
     color: #579ea5;
     background-color: transparent;
 }
 
-.breadcrumb__link:active {
+a.breadcrumb__link:active {
     text-decoration: underline;
     color: #579ea5;
     background-color: transparent;
