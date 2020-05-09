@@ -66,6 +66,16 @@ Tuile image
     max-width: none !important;
 }
 
+.tuile_media > .tuile__link:hover .vignette__image,
+.tuile_media > .tuile__link.vignette__image,
+.tuile_media > .tuile__link.vignette__image {
+    width: 104%;
+    margin-left: -2%;
+    margin-top: -2%;
+    transform-origin: center center;
+    transform: rotate(1deg);
+}
+
 @media (min-width: 700px) {
 
     .tuile_media__container {

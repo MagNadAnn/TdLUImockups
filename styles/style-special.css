@@ -209,7 +209,10 @@ a:focus .vignette_photo::after {
     display: block;
     position: relative;
     width: 100%;
+    margin-left: 0;
+    margin-top: 0;
     z-index: 0;
+    transition: all 0.2s ease-out;
 }
 
 /*
@@ -321,6 +324,21 @@ veil
     height: 100%;
     background-color: #ffffff;
     opacity: 0.75;
+}
+
+/*
+-----------------------------
+exergue
+*/
+
+.exergue {
+    font-size: 2em;
+    color: #a86e00;
+    border-style: solid;
+    border-width: 0 0.125em;
+    padding: 0.5em 1.5em;
+    margin: 2em -1.5em;
+    border-color: #db9500;
 }
 
 /*
@@ -575,7 +593,7 @@ SECTION
 */
 
 .section__container {
-    padding-bottom: 5em;
+    padding-bottom: 4em;
 }
 
 .section__container:first-child {
@@ -603,14 +621,18 @@ PAGE-HEADER
     text-align: center;
 }
 
+.page__intro {
+    text-align: center;
+}
+
 @media (min-width: 800px) {
 
     .page-header__container {
         padding-top: 0;
     }
 
-    .page-header__intro {
-        font-size: 2em;
+    .page__intro {
+        font-size: 1.5em;
     }
 
 }
@@ -626,40 +648,42 @@ PAGE-HEADER
         margin-left: -3em;
     }
 
-    .page-header__intro {
+    .page__intro {
         font-size: 1.25em;
     }
 
 }
 
-@media (min-width: 600px) {
+.page__title:first-child {
+    margin-top: 0.75em !important;
+}
 
-    .page-header__title {
+.page__title {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .page__title {
         font-size: 4em;
+    }
+}
+
+@media (max-width: 599px) { .page__title { font-size: 2.5em; } }
+
+.page__subtitle {
+    color: #567e36 !important;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 600px) { 
+    .page__subtitle {
+        margin-top: -1.5em;
         margin-left: 10%;
         margin-right: 10%;
     }
-
 }
 
-@media (max-width: 599px) { .page-header__title { font-size: 2.5em; } }
-
-.page-header__subtitle {
-    color: #567e36 !important;
-    margin-bottom: 1.5em;
-}
-
-@media (min-width: 600px) {
-    
-    .page-header__subtitle {
-        margin-top: -1.5em;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
-}
-
-@media (max-width: 599px) { .page-header__subtitle { margin-top: -0.75em; } }
+@media (max-width: 599px) { .page__subtitle { margin-top: -0.75em; } }
 
 
 
@@ -1531,6 +1555,10 @@ Mixins block
 
     .block_columns:last-child {
         margin-bottom: 0;
+    }
+
+    .block_columns > *:first-child {
+        margin-top: 0;
     }
 
 }
