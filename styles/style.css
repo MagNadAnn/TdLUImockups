@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Source Sans Pro", sans-serif;
+    color: #33383d;
 }
 
 /*
@@ -20,7 +21,6 @@ PARAGRAPHS
 
 p {
     margin: 0.5em 0;
-    color: #33383d;
     line-height: 1.5em;
 }
 
@@ -85,7 +85,6 @@ h1, h2, h4 {
 }
 
 h1 {
-    color: #33383d;
 }
 
 h2 {
@@ -104,7 +103,6 @@ h2 {
 h3 {
     font-family: 'Kalam', cursive;
     margin: 1em 0 0.5em;
-    color: #33383d;
     font-weight: normal;
 }
 
@@ -116,12 +114,15 @@ h3 {
     h3 { font-size: calc(0.08 * 100vw); }
 }
 
+h4 {
+    font-size: 1.75em;
+}
+
 h5 {
     font-family: 'Kalam', cursive;
     letter-spacing: 0.03em;
-    font-size: 1.75em;
+    font-size: 1.5em;
     margin: 1em 0 0.5em;
-    color: #33383d;
 }
 
 h6 {
@@ -129,7 +130,6 @@ h6 {
     font-weight: bold;
     font-size: 1em;
     margin: 1em 0;
-    color: #33383d;
 }
 
 /*
@@ -320,6 +320,94 @@ columns
     .column_7-9 { width: calc((100% / 9 * 7) - 1em); }
     .column_8-9 { width: calc((100% / 9 * 8) - 1em); }
 }
+
+/*
+-----------------------------
+aside system
+*/
+
+.aside__wrap {
+    display: flex;
+}
+
+@media (min-width: 700px) {
+    .aside__trigger {
+        display: none;
+    }
+}
+
+@media (max-width: 699px) {
+    .aside__trigger {
+        position: fixed;
+        z-index: 5;
+        top: 18em;
+    }
+}
+
+.aside__panel {
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #579ea5;
+}
+
+@media (min-width: 700px) {
+    .aside__panel {
+        width: 15em;
+    }
+}
+
+@media (max-width: 699px) {
+    .aside__panel {
+        display: none;
+        width: 100vw;
+        max-height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 52;
+        box-sizing: border-box;
+    }
+
+    .aside__panel.is-visible {
+        display: block;
+    }
+}
+
+.aside__section-header {
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aside__section-header > * {
+    margin: 0;
+}
+
+.aside__header {
+    font-size: 1.25em;
+    background-color: #42767a;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.aside__content {
+    padding: 0 1em 1em;
+    margin: 0;
+}
+
+@media (min-width: 700px) {
+    .aside__leftover-space {
+        width: calc(100% - 15em);
+    }
+}
+
+.filters__wrap.form__wrap {
+    margin-top: 0;
+}
+
 
 /*
 -----------------------------

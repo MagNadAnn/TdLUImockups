@@ -80,10 +80,18 @@ Button basic
 */
 
 .button_basic {
-    padding: 0.75em 1.25em;
+    padding: 0.75em 1.25em 0.65em;
 
     border-style: solid;
     border-width: 0.2em;
+}
+
+.button_basic.button_s {
+    padding: 0.5em 0.875em 0.45em;
+}
+
+.button_basic.button_xs {
+    padding: 0.35em 0.625em 0.325em;
 }
 
 /*
@@ -98,6 +106,11 @@ Button icon
     background-color: transparent !important;
     padding: 0.5em;
 }
+
+.button_icon.button_tight {
+    padding: 0;
+}
+
 
 /*
 ------------------------------------------------------------------------------------
@@ -233,9 +246,16 @@ READ MORE
 */
 
 .button_read-more > .button__icon {
-    background-color: #c99318 !important;
-    border-color: #c99318 !important;
+    background-color: #db9500 !important;
+    border-color: #db9500 !important;
 }
+
+a:hover .button_read-more > .button__icon,
+a:focus .button_read-more > .button__icon {
+    background-color: #a86e00 !important;
+    border-color: #a86e00 !important;
+}
+
 a:active .button_read-more > .button__icon {
     background-color: #a41515 !important;
     border-color: #a41515 !important;
