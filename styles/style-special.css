@@ -22,6 +22,7 @@ Couleurs
 .bg-yellow_dark { background-color: #a86e00 !important; }
 
 .bg-charcoal { background-color: #33383d !important; }
+.bg-white { background-color: #ffffff !important; }
 .bg-pearl { background-color: #f5f5f5 !important; }
 .bg-cream {background-color: #eae6cf !important;}
 
@@ -206,6 +207,82 @@ a:focus .vignette_photo::after {
     z-index: 0;
 }
 
+/*
+-----------------------------
+fiche
+*/
+
+.fiche__header {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+@media (min-width: 800px) {
+    .fiche__header {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+.fiche__entry__wrap {
+    margin: 1em 0;
+}
+
+.fiche__entry__title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+@media (min-width: 800px) {
+
+    .fiche__miniature__wrap {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: -3em;
+        z-index: 2;
+    }
+
+    .fiche__miniature__wrap  > .vignette_deco {
+        position: relative !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 799px) {
+    .fiche__miniature__wrap {
+        padding: 2em 0 0;
+    }
+}
+
+
+/*
+-----------------------------
+download button
+*/
+
+.download__wrap {
+    width: 100%;
+    padding: 1em 10%;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}
+
+@media (min-width: 800px) {
+    .download__wrap {
+        position: absolute;
+        bottom: -3.5em;
+    }
+}
+
+@media (max-width: 799px) {
+    .download__wrap {
+        position: relative;
+        margin-top: -3.5em;
+    }
+}
+
 
 /*
 -----------------------------
@@ -277,20 +354,20 @@ tag
     top: 0;
     left: 0;
     margin-top: 5%;
+    z-index: 3;
+}
+
+.tag__wrap > .tag__list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 3;
 }
 
 .tag__list {
     margin-left: 0;
     margin-right: 0;
     padding: 0;
-}
-
-.tag__list:not(.list_h) {
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .tag__item {
@@ -301,20 +378,28 @@ tag
     display: inline-block;
     padding: 0.125em 0.25em 0.0625em;
     margin: 0.25em 0.25em 0.25em 0;
-    color: #33383d;
+    color: #7da237;
     background-color: #ffffff;
     text-transform: uppercase;
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.025em;
     font-weight: normal;
+    text-decoration: none;
 }
+
+a.tag { color: #ffffff; }
+
+a.tag:link { background-color: #579ea5; }
+a.tag:hover, a.tag:focus { background-color: #42767a; }
+a.tag:active { background-color: #0098a6; }
 
 .tag_nouveau {
     font-size: 1em;
 }
 
 .tag.info {
-    color: #579ea5;
+    color: #ffffff;
+    background-color: #579ea5;
 }
 
 .tag.success {
@@ -409,11 +494,14 @@ Breadcrumbs
 }
 
 .breadcrumb__item {
+    display: flex;
+    text-align: left;
+    margin: 0 !important;
 }
 
 .breadcrumb__item:not(:first-child):before {
     content: ">";
-    margin: 0 0.25em 0 0.5em;
+    margin: 0 0.5em;
     color: #579ea5;
 }
 
@@ -483,6 +571,10 @@ SECTION
 PAGE-HEADER
 */
 
+.page-header {
+    padding: 0;
+}
+
 .page-header__container {
     text-align: center;
 }
@@ -504,6 +596,7 @@ PAGE-HEADER
 
     .page-header__container {
         padding-top: 1em !important;
+        padding-bottom: 3em;
         padding-left: 2.5em;
         border-left: solid 2.5em #a41515;
         margin-left: -3em;
@@ -515,11 +608,19 @@ PAGE-HEADER
 
 }
 
-@media (min-width: 600px) { .page-header__title { font-size: 4em; } }
+@media (min-width: 600px) {
+
+    .page-header__title {
+        font-size: 4em;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
 @media (max-width: 599px) { .page-header__title { font-size: 2.5em; } }
 
 .page-header__subtitle {
-    font-size: 1.5em;
     color: #567e36 !important;
     margin-bottom: 1.5em;
 }
@@ -884,6 +985,7 @@ HERO
 .hero {
     position: relative;
     overflow: hidden;
+    padding: 0;
     background-color: #db9500;
 }
 
@@ -1363,6 +1465,10 @@ Mixins text
 Mixins block
 */
 
+.block_padding {
+    padding: 2em;
+}
+
 .block_no-border {
     border: none;
 }
@@ -1440,7 +1546,7 @@ Mixins block
 
 .block_trame_champ.white::before {
     background: url("./../img/motif_champ_white.png") repeat;
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .block_trame_champ.black::before{

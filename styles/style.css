@@ -233,6 +233,7 @@ FULL WIDTH SECTION
 .fw-section {
     width: 100%;
     position: relative;
+    padding: 1px 0;
 }
 
 /*
@@ -240,11 +241,15 @@ FULL WIDTH SECTION
 CHIMNEY
 */
 
-.chimney {
+[class*="chimney"] {
     width: calc(100% - 6em);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+}
+
+.chimney_fluid {
+    max-width: none;
 }
 
 /*
@@ -328,6 +333,7 @@ aside system
 
 .aside__wrap {
     display: flex;
+    padding: 0;
 }
 
 @media (min-width: 700px) {
