@@ -1,3 +1,8 @@
+.placeholeder-carte {
+    display: block;
+    width: 100%;
+}
+
 /*
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
@@ -6,22 +11,22 @@ Couleurs
 ------------------------------------------------------------------------------------
 */
 
-.bg-blue_light { background-color: #579ea5 !important; }
-.bg-blue_dark { background-color: #42767a !important; }
-.bg-blue_bright { background-color: #0098a6 !important; }
+.bg-blue_light { background-color: #579ea5 !important; color: #ffffff; }
+.bg-blue_dark { background-color: #42767a !important; color: #ffffff; }
+.bg-blue_bright { background-color: #0098a6 !important; color: #ffffff; }
 
-.bg-green_light { background-color: #7da237 !important; }
-.bg-green_medium { background-color: #567e36 !important; }
-.bg-green_dark { background-color: #466b32 !important; }
+.bg-green_light { background-color: #7da237 !important; color: #ffffff; }
+.bg-green_medium { background-color: #567e36 !important; color: #ffffff; }
+.bg-green_dark { background-color: #466b32 !important; color: #ffffff; }
 
-.bg-red_light { background-color: #a41515 !important; }
-.bg-red_medium { background-color: #85170f !important; }
-.bg-red_dark { background-color: #75160c !important; }
+.bg-red_light { background-color: #a41515 !important; color: #ffffff; }
+.bg-red_medium { background-color: #85170f !important; color: #ffffff; }
+.bg-red_dark { background-color: #75160c !important; color: #ffffff; }
 
 .bg-yellow_light { background-color: #db9500 !important; }
 .bg-yellow_dark { background-color: #a86e00 !important; }
 
-.bg-charcoal { background-color: #33383d !important; }
+.bg-charcoal { background-color: #33383d !important; color: #ffffff; }
 .bg-white { background-color: #ffffff !important; }
 .bg-pearl { background-color: #f5f5f5 !important; }
 .bg-cream {background-color: #eae6cf !important;}
@@ -229,8 +234,21 @@ fiche
 }
 
 .fiche__entry__title {
+    
+}
+
+h6.fiche__entry__title {
     margin-bottom: 0;
     text-align: left;
+}
+
+h4.fiche__entry__title {
+    text-align: center;
+}
+
+h4.fiche__entry__title > i {
+    display: block;
+    margin: 0.5em 0;
 }
 
 @media (min-width: 800px) {
@@ -625,7 +643,16 @@ PAGE-HEADER
     margin-bottom: 1.5em;
 }
 
-@media (min-width: 600px) { .page-header__subtitle { margin-top: -1.5em; } }
+@media (min-width: 600px) {
+    
+    .page-header__subtitle {
+        margin-top: -1.5em;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+}
+
 @media (max-width: 599px) { .page-header__subtitle { margin-top: -0.75em; } }
 
 
@@ -1479,11 +1506,14 @@ Mixins block
 
 @media (min-width: 800px) {
 
-    .block_columns {
-        columns: 2;
+    [class*="block_columns"] {
         column-gap : 4rem;
-        margin: 2em 0;
+        margin: 3em 0 4em;
     }
+
+    .block_columns { columns: 2; }
+
+    .block_columns_3 { columns: 3; }
 
     .block_columns:first-child {
         margin-top: 0;
