@@ -277,7 +277,7 @@ SECTIONS
 }
 
 @media (min-width: 1024px) {
-    .fh-section { height: 100vh; }
+    .fh-section { min-height: 100vh; }
 }
 
 @media (max-width: 799px) {
