@@ -44,6 +44,16 @@ Micro components
 pastille number
 */
 
+.logo__wrap {
+    display: inline-block;
+    width: 10em;
+}
+
+/*
+-----------------------------
+pastille number
+*/
+
 .pastille-number__wrap {
     position: relative;
     margin-right: 1rem;
@@ -1045,7 +1055,6 @@ HERO
 
 .hero {
     position: relative;
-    overflow: hidden;
     padding: 0;
     background-color: #db9500;
 }
@@ -1053,6 +1062,7 @@ HERO
 .hero > .vignette__wrap {
     position: absolute;
     height: 100%;
+    z-index: 0;
 }
 
 .tuile_media__content_hero {
@@ -1164,14 +1174,15 @@ HERO HEADER-SITE
     position: relative;
 }
 
-.hero_header-site__container {
+.hero_header-site__container,
+.hero_header-site__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .is-expanded .hero_header-site__content {
     text-align: center;
+    align-items: center;
 }
 
 .hero_header-site__logo {
@@ -1201,12 +1212,12 @@ HERO HEADER-SITE
     color: #ffffff;
 }
 
-.hero_header-site__search-form {
+.hero_header-site__form_search {
     width: 100%;
     max-width: 35em;
 }
 
-.is-expanded .hero_header-site__search-form {
+.is-expanded .hero_header-site__form_search {
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -1224,7 +1235,7 @@ HERO HEADER-SITE
         font-size: 2em;
     }
 
-    .is-expanded .hero_header-site__search-form {
+    .is-expanded .hero_header-site__form_search {
         font-size: calc(0.011 * 100vw);
     }
 }
@@ -1239,7 +1250,7 @@ HERO HEADER-SITE
         font-size: calc(0.035 * 100vw);
     }
 
-    .is-expanded .hero_header-site__search-form {
+    .is-expanded .hero_header-site__form_search {
         font-size: calc(0.016 * 100vw);
     }
     
@@ -1253,7 +1264,7 @@ HERO HEADER-SITE
         margin-right: 1em;
     }
 
-    .is-shrinked .hero_header-site__search-form {
+    .is-shrinked .hero_header-site__form_search {
         width: 50%;
     }
 
@@ -1274,7 +1285,7 @@ HERO HEADER-SITE
         padding-bottom: 6em !important;
     }
 
-    .is-expanded .hero_header-site__search-form {
+    .is-expanded .hero_header-site__form_search {
         margin: 0.5em 0;
     }
 
@@ -1293,7 +1304,7 @@ HERO HEADER-SITE
         font-size: 2em;
     }
 
-    .is-shrinked .hero_header-site__search-form {
+    .is-shrinked .hero_header-site__form_search {
         font-size: 0.75em;
         margin: 0.5em 0;
     }

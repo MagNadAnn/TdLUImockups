@@ -261,13 +261,25 @@ Layout
 
 /*
 -----------------------------
-FULL WIDTH SECTION
+SECTIONS
 */
 
 .fw-section {
     width: 100%;
     position: relative;
     padding: 1px 0;
+}
+
+.fh-section {
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: cyan;
+}
+
+.fh-section:nth-child(odd) {
+    background-color: yellow;
 }
 
 /*

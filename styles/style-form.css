@@ -108,12 +108,10 @@ Form-line
 
 .form-line_multi__button {
     background-color: #579ea5;
-    font-size: 0.72em;
 }
 
-.form-line_multi__button_icon > .button {
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+.form-line_multi__button > .form-item_button {
+    border-width: 0 0 0.2em;
 }
 
 @media (max-width: 499px) {
@@ -192,7 +190,7 @@ Form-item
 ------------------------------------------------------------------------------------
 */
 
-.form-item {
+[class*="form-item"] {
     box-sizing: border-box;
     font-size: 1em;
     padding: 0.5em;
@@ -200,13 +198,13 @@ Form-item
 }
 
 @media (min-width: 500px) {
-    .form-item {
+    [class*="form-item"] {
         min-height: 2.7em;
     }
 }
 
 @media (max-width: 499px) {
-    .form-item {
+    [class*="form-item"] {
         min-height: 2.7em;
     }
 }
@@ -219,14 +217,9 @@ Form-item BUTTON
 ------------------------------------------------------------------------------------
 */
 
-.form-item_button {
-    padding-left: 1em !important;
-    padding-right: 1em !important;
-}
-
 .form-item_button.button {
-    padding-top: 0.90em;
-    padding-bottom: 0.50em;
+    font-size: 0.95em;
+    padding: 0.90em 1em 0.5em;
 }
 
 /*
@@ -248,52 +241,6 @@ Form-item FIELD
     text-overflow: ellipsis;
 }
 
-/*
-------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------
-Form-item SELECT
-------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------
-*/
-
-.form-item_select {
-    width: 115%;
-}
-
-.form-item_select > option {
-    font-size: 1rem;
-}
-
-.form-item_select__wrap {
-    overflow: hidden;
-    width: 100%;
-}
-
-.form-item_select__wrap::after { 
-	/* Le pointeur du select */
-	content: '';
-	position: absolute;
-	top: 50%; 
-	margin-top: -3px;
-	right: .75em;  
-	display: block; 
-	width: 0; height: 0;
-	border-color: transparent;
-	border-top-color: #579ea5; 
-	border-width: 6px;
-	border-style: solid;
-	pointer-events: none;
-}
-
-.form-item_select.empty,
-::placeholder {
-    font-size: 0.875em;
-    opacity: 1;
-}
-
-.form-item_select.empty {
-    padding: 0.6em 0.25em;
-}
 
 /*
 ------------------------------------------------------------------------------------
@@ -311,22 +258,29 @@ Form-item CHECKBOX & RADIO
 }
 
 .form-item_check {
+    position: relative;
+    height: 1em;
+    min-height: auto;
+    width: 1em;
+    border-style: solid;
+    border-width: 0.05em;
+    margin: 0;
+    top: 0.1em;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
 }
 
 .form-item_check {
-    position: relative;
-    height: 1em;
-    width: 1em;
-    border-style: solid;
-    border-width: 0.05em;
-    margin: 0;
-    top: 0.1em;
+    background: #ffffff;
+    border-color: #579ea5;
 }
 
 .form-item_check:checked {}
+
+.form-item_check:checked {
+    background: #ffffff;
+}
 
 .form-item_check:checked:before {
     content: '';
@@ -337,6 +291,10 @@ Form-item CHECKBOX & RADIO
     width: calc(0.5em - 1px);
     height: calc(0.5em - 1px);
     margin: 0.25em;
+}
+
+.form-item_check:checked:before {
+    background-color: #579ea5;
 }
 
 .form-item_check__label {
@@ -356,45 +314,85 @@ Form-item CHECKBOX & RADIO
 /*
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
-Form-item SELECT MULTI
+Form-item SELECT
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 */
 
-.form-item_select_multi {
+.form-item_select {
     position: relative;
     padding: 0.0625em 0.5em;
 }
 
-.form-item_select_multi__prompt.is-active {
-    color: #33383d !important;
+.form-item_select__arrow {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    padding: 0 1em;
+    color: #579ea5;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
 }
-.form-item_select_multi__prompt {
+
+.form-item_select.is-dropped > .form-item_select__arrow {
+    transform: rotate(-180deg);
+}
+
+.form-item_select__prompt,
+.form-item_select__prompt_multi {
     margin: 1px 0;
-    padding: 0;
-    height: 25px;
+    padding: 0.5em 0 0;
     outline: 0;
     border: 0 !important;
     background: 0 0 !important;
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: transparent;
     font-size: 100%;
     font-family: sans-serif;
     line-height: normal;
     border-radius: 0;
+    width: calc(100% - 2.5em);
+    min-height: auto;
+    text-overflow: ellipsis;
+}
+
+.form-item_select__prompt {
+    width: calc(100% - 2.5em);
+    color: #33383d;
+}
+
+.form-item_select__prompt_multi {
     width: 25px;
+    color: transparent;
+}
+
+.form-item_select__prompt_multi.is-active {
+    color: #33383d;
+    width: auto;
+}
+
+.form-item_select__prompt__wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto;
 }
 
 .form-item_select__drop {
+    display: none;
     position: absolute;
     top: calc(100% + 0.125em);
     left: 0;
-    z-index: 1010;
     width: 100%;
-    border: 1px solid #42767a;
+    padding: 0;
     box-sizing: border-box;
+    border: 1px solid #42767a;
     background: #fff;
+    z-index: 1010;
+}
+
+.form-item_select.is-dropped > .form-item_select__drop {
+    display: block;
 }
 
 .form-item_select__option__list {
@@ -414,6 +412,7 @@ Form-item SELECT MULTI
 
 .form-item_select__option__item {
     padding: 0.5em;
+    margin: 0;
     transition: all 0.2s ease-in-out;
 }
 
@@ -442,13 +441,13 @@ Forms spéciaux
 SEARCH FORM
 */
 
-.search-form > .form-line_multi {
+.form_search > .form-line_multi {
     flex-wrap: nowrap !important;
     flex-direction: row !important;
 }
 
 @media (max-width: 499px) {
-    .search-form .form-line_multi__item {
+    .form_search .form-line_multi__item {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }
@@ -479,24 +478,7 @@ STYLE
     border-bottom-color: #1e626b;
 }
 
-.form-line_multi__button > .button {
-    border-width: 0 0 0.2em;
-}
-
 .form-item_select.empty,
 ::placeholder {
     color: #999b9e;
-}
-
-.form-item_check {
-    background: #ffffff;
-    border-color: #579ea5;
-}
-
-.form-item_check:checked {
-    background: #ffffff;
-}
-
-.form-item_check:checked:before {
-    background-color: #579ea5;
 }

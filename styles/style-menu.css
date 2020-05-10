@@ -151,7 +151,7 @@ Global settings
 
 @media (max-width: 799px) {
 
-    .main-nav__logo {
+    .main-nav__logo.logo__wrap {
         position: fixed;
         top: 0.25em;
         left: 0.25em;
