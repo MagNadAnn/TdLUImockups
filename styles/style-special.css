@@ -1,3 +1,36 @@
+.placeholeder-carte {
+    display: block;
+    width: 100%;
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Couleurs
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.bg-blue_light { background-color: #579ea5 !important; color: #ffffff; }
+.bg-blue_dark { background-color: #42767a !important; color: #ffffff; }
+.bg-blue_bright { background-color: #0098a6 !important; color: #ffffff; }
+
+.bg-green_light { background-color: #7da237 !important; color: #ffffff; }
+.bg-green_medium { background-color: #567e36 !important; color: #ffffff; }
+.bg-green_dark { background-color: #466b32 !important; color: #ffffff; }
+
+.bg-red_light { background-color: #a41515 !important; color: #ffffff; }
+.bg-red_medium { background-color: #85170f !important; color: #ffffff; }
+.bg-red_dark { background-color: #75160c !important; color: #ffffff; }
+
+.bg-yellow_light { background-color: #db9500 !important; }
+.bg-yellow_dark { background-color: #a86e00 !important; }
+
+.bg-charcoal { background-color: #33383d !important; color: #ffffff; }
+.bg-white { background-color: #ffffff !important; }
+.bg-pearl { background-color: #f5f5f5 !important; }
+.bg-cream {background-color: #eae6cf !important;}
+
 /*
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
@@ -5,6 +38,35 @@ Micro components
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 */
+
+/*
+-----------------------------
+pastille number
+*/
+
+.pastille-number__wrap {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.pastille-number {
+    position: absolute;
+    display: inline-block;
+    font-size: 0.75rem;
+    min-width: 2em;
+    height: 2em;
+    padding: 0.25em;
+    box-sizing: border-box;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.25em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    background-color: #a41515;  
+    z-index: 2;
+    left: calc(100% + 0.5em);
+    top: calc(50% - 1.1em);
+}
 
 /*
 -----------------------------
@@ -40,6 +102,33 @@ Vignette
     overflow: hidden;
 }
 
+.vignette__wrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+    transition: all 0.2s ease-in-out;
+    background: url("./../img/motif_rayure_black.png") repeat;
+    opacity: 0.15;
+}
+
+a:hover > .vignette__wrap::before,
+a:focus > .vignette__wrap::before {
+    opacity: 0.1;
+}
+
+.vignette__wrap > *:not(.vignette__image) {
+    z-index: 2;
+}
+
+/* ---- vignette deco ----- */
+/* image de contenu non situé dans une tuile. Ces règles régente surtout son comportement sur petits écrans */
+
 @media (min-width: 800px) {
     .vignette_deco {
         position: absolute !important;
@@ -62,9 +151,13 @@ Vignette
     }
 }
 
+/* ----- vignette avatar ----- */
+
 .vignette_avatar {
     border-radius: 50%;
 }
+
+/* ----- vignette photo ----- */
 
 .vignette_photo {
     position: relative;
@@ -83,25 +176,140 @@ Vignette
 
 .vignette__wrap.vignette_photo::after {
     background: linear-gradient(rgba(206, 71, 10, 0) 0%, rgba(206, 71, 10, 0.1) 25%, rgba(206, 71, 10, 0.3) 75%, rgba(1, 50, 73, 0.3) 100%);
-    z-index: 2;
+    z-index: 1;
 }
 
-.tuile__link:hover > .vignette__wrap.vignette_photo::after,
-.tuile__link:focus > .vignette__wrap.vignette_photo::after {
+a:hover .vignette_photo::after,
+a:focus .vignette_photo::after {
     opacity: 0.5;
 }
 
-.tuile__link:hover > .block_trame_rayure::before,
-.tuile__link:focus > .block_trame_rayure::before {
-    opacity: 0.1;
+/* ----- vignette ratio ----- */
+
+[class*="vignette_ratio"] {
+    position: relative;
+    background-color: #579ea5;
+    overflow: hidden;
 }
+
+.vignette_ratio_1-1 { padding-top: 100%; }
+.vignette_ratio_3-4 { padding-top: 75%; }
+
+
+.vignette_ratio_1-1 > .vignette__image,
+.vignette_ratio_3-4 > .vignette__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ----- vignette image ----- */
 
 .vignette__image {
     display: block;
     position: relative;
     width: 100%;
-    z-index: 0 !important;
+    margin-left: 0;
+    margin-top: 0;
+    z-index: 0;
+    transition: all 0.2s ease-out;
 }
+
+/*
+-----------------------------
+fiche
+*/
+
+.fiche__header {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+@media (min-width: 800px) {
+    .fiche__header {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+.fiche__entry__wrap {
+    margin: 1em 0;
+}
+
+.fiche__entry__title {
+    
+}
+
+h6.fiche__entry__title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+h4.fiche__entry__title {
+    text-align: center;
+}
+
+h4.fiche__entry__title > i {
+    display: block;
+    margin: 0.5em 0;
+}
+
+@media (min-width: 800px) {
+
+    .fiche__miniature__wrap {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: -3em;
+        z-index: 2;
+    }
+
+    .fiche__video__wrap {
+        margin: -2.5em 0 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .fiche__miniature__wrap  > .vignette_deco {
+        position: relative !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 799px) {
+    .fiche__miniature__wrap {
+        padding: 2em 0 0;
+    }
+}
+
+
+/*
+-----------------------------
+download button
+*/
+
+.download__wrap {
+    width: 100%;
+    padding: 1em 10%;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}
+
+@media (min-width: 800px) {
+    .download__wrap {
+        position: absolute;
+        bottom: -3.5em;
+    }
+}
+
+@media (max-width: 799px) {
+    .download__wrap {
+        position: relative;
+        margin-top: -3.5em;
+    }
+}
+
 
 /*
 -----------------------------
@@ -120,6 +328,66 @@ veil
 
 /*
 -----------------------------
+exergue
+*/
+
+.exergue {
+    font-size: 2em;
+    color: #a86e00;
+    border-style: solid;
+    border-width: 0 0.125em;
+    padding: 0.5em 1.5em;
+    margin: 2em -1.5em;
+    border-color: #db9500;
+}
+
+/*
+-----------------------------
+pagination
+*/
+
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+}
+
+.pagination__link {
+    display: block;
+    padding: 0.25em;
+    min-width: 1.85em;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #579ea5;
+    border-width: 1px;
+    border-style: solid;
+}
+
+span.pagination__link {
+    border-color: transparent;
+}
+
+a.pagination__link {
+    border-color: #579ea5;
+}
+
+.pagination__keyword {
+    border-color: transparent;
+    background-color: rgba(87, 158, 165, 0.1);
+}
+
+.pagination__link.is-active {
+    background-color: #42767a;
+    color: #ffffff;
+    font-style: 1.15em;
+    font-weight: bold;
+}
+
+
+/*
+-----------------------------
 tag
 */
 
@@ -127,18 +395,21 @@ tag
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 1.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-top: 5%;
     z-index: 3;
 }
 
-.tag__list {
+.tag__wrap > .tag__list {
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.tag__list {
     margin-left: 0;
     margin-right: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .tag__item {
@@ -149,13 +420,20 @@ tag
     display: inline-block;
     padding: 0.125em 0.25em 0.0625em;
     margin: 0.25em 0.25em 0.25em 0;
-    color: #33383d;
+    color: #7da237;
     background-color: #ffffff;
     text-transform: uppercase;
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.025em;
     font-weight: normal;
+    text-decoration: none;
 }
+
+a.tag { color: #ffffff; }
+
+a.tag:link { background-color: #579ea5; }
+a.tag:hover, a.tag:focus { background-color: #42767a; }
+a.tag:active { background-color: #0098a6; }
 
 .tag_nouveau {
     font-size: 1em;
@@ -173,12 +451,35 @@ tag
 
 .tag.warning {
     color: #ffffff;
-    background-color: #c99318;
+    background-color: #db9500;
 }
 
 .tag.danger {
     color: #ffffff;
     background-color: #a41515;
+}
+
+.tag > .button_icon {
+    margin-left: 0.25em;
+}
+
+/*
+-----------------------------
+tag-icon
+*/
+
+.tag-icon__wrap {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    right: 0;
+    padding: 0.5em;
+}
+
+.tag-icon {
+    display: block;
+    font-size: 2em;
+    text-shadow: 0 0 20px rgba(1, 50, 73, 0.5);
 }
 
 /*
@@ -214,7 +515,7 @@ box
 
 .box.warning {
     color: #ffffff;
-    background-color: #c99318;
+    background-color: #db9500;
 }
 
 .box.danger {
@@ -235,32 +536,36 @@ Breadcrumbs
 }
 
 .breadcrumb__item {
+    display: flex;
+    text-align: left;
+    margin: 0 !important;
 }
 
 .breadcrumb__item:not(:first-child):before {
     content: ">";
-    margin: 0 0.25em 0 0.5em;
+    margin: 0 0.5em;
     color: #579ea5;
 }
 
 .breadcrumb__link {
-
+    display: inline-block;
+    padding: 0 0.2em;
 }
 
-.breadcrumb__link:link,
-.breadcrumb__link:visited {
+a.breadcrumb__link:link,
+a.breadcrumb__link:visited {
     text-decoration: none;
     color: #579ea5;
 }
 
-.breadcrumb__link:hover,
-.breadcrumb__link:focus {
+a.breadcrumb__link:hover,
+a.breadcrumb__link:focus {
     text-decoration: underline;
     color: #579ea5;
     background-color: transparent;
 }
 
-.breadcrumb__link:active {
+a.breadcrumb__link:active {
     text-decoration: underline;
     color: #579ea5;
     background-color: transparent;
@@ -288,7 +593,7 @@ SECTION
 */
 
 .section__container {
-    padding-bottom: 5em;
+    padding-bottom: 4em;
 }
 
 .section__container:first-child {
@@ -308,7 +613,15 @@ SECTION
 PAGE-HEADER
 */
 
+.page-header {
+    padding: 0;
+}
+
 .page-header__container {
+    text-align: center;
+}
+
+.page__intro {
     text-align: center;
 }
 
@@ -318,8 +631,8 @@ PAGE-HEADER
         padding-top: 0;
     }
 
-    .page-header__intro {
-        font-size: 2em;
+    .page__intro {
+        font-size: 1.5em;
     }
 
 }
@@ -329,32 +642,49 @@ PAGE-HEADER
 
     .page-header__container {
         padding-top: 1em !important;
+        padding-bottom: 3em;
         padding-left: 2.5em;
         border-left: solid 2.5em #a41515;
         margin-left: -3em;
     }
 
-    .page-header__intro {
+    .page__intro {
         font-size: 1.25em;
     }
 
 }
 
-@media (min-width: 600px) {
+.page__title:first-child {
+    margin-top: 0.75em !important;
+}
 
-    .page-header__title {
+.page__title {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .page__title {
         font-size: 4em;
     }
-    
 }
 
-@media (max-width: 599px) {
+@media (max-width: 599px) { .page__title { font-size: 2.5em; } }
 
-    .page-header__title {
-        font-size: 2.5em;
+.page__subtitle {
+    color: #567e36 !important;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 600px) { 
+    .page__subtitle {
+        margin-top: -1.5em;
+        margin-left: 10%;
+        margin-right: 10%;
     }
-    
 }
+
+@media (max-width: 599px) { .page__subtitle { margin-top: -0.75em; } }
+
 
 
 /*
@@ -559,9 +889,9 @@ TEMP BUBBLE
     bottom: calc(100% - 0.5em);
 }
 
-.temp-bubble__container.left:before { right: 2.5em; }
+.temp-bubble__container:before { left: 50% }
+.temp-bubble__container.left:before { left: calc(100% - 3.5em); }
 .temp-bubble__container.right:before { left: 2.5em; }
-.temp-bubble__container.center:before { left: 50% }
 
 .temp-bubble__title {
     padding: 1rem;
@@ -638,12 +968,16 @@ CAROUSEL
 
 .carousel__nav__dots {
     justify-content: center;
+}
+
+.carousel__nav__dot {
     transition: all 0.2s ease-in-out;
 }
 
-.carousel__nav__dot:not(.is-active) {
-    opacity: 0.3;
-}
+.carousel__nav__dot:not(.is-active) { opacity: 0.3; }
+.carousel__nav__dot:not(.is-active):hover,
+.carousel__nav__dot:not(.is-active):focus { opacity: 0.5; }
+.carousel__nav__dot:not(.is-active):active { opacity: 0.8; }
 
 @media (min-width: 800px) {
     
@@ -712,7 +1046,8 @@ HERO
 .hero {
     position: relative;
     overflow: hidden;
-    background-color: #c99318;
+    padding: 0;
+    background-color: #db9500;
 }
 
 .hero > .vignette__wrap {
@@ -1007,7 +1342,6 @@ CTA
 */
 
 .CTA__wrap {
-    background-color: #eae6cf;
     text-align: center;
     overflow: hidden;
 }
@@ -1036,6 +1370,44 @@ CTA
 .CTA__content:first-child { margin-top: 0; }
 .CTA__content:last-child { margin-bottom: 0; }
 
+/* CTA thème 01 */
+
+.CTA_theme-01 {
+    background-color: #eae6cf;
+}
+
+.CTA_theme-01:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+    transition: all 0.2s ease-in-out;
+    background: url("./../img/motif_champ_white.png") repeat;
+    opacity: 0.6;
+}
+
+.CTA_theme-01 > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* CTA thème 02 */
+
+.CTA_theme-02 {
+    background-color: #579ea5;
+    color: #ffffff;
+}
+
+.CTA_theme-02 .form-label { color: #ffffff; }
+.CTA_theme-02 .button_basic.primary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+}
 
 /*
 -----------------------------
@@ -1154,13 +1526,28 @@ Mixins text
 Mixins block
 */
 
+.block_padding {
+    padding: 2em;
+}
+
+.block_no-border {
+    border: none;
+}
+
+.block_pos-relative {
+    position: relative;
+}
+
 @media (min-width: 800px) {
 
-    .block_columns {
-        columns: 2;
+    [class*="block_columns"] {
         column-gap : 4rem;
-        margin: 2em 0;
+        margin: 3em 0 4em;
     }
+
+    .block_columns { columns: 2; }
+
+    .block_columns_3 { columns: 3; }
 
     .block_columns:first-child {
         margin-top: 0;
@@ -1168,6 +1555,10 @@ Mixins block
 
     .block_columns:last-child {
         margin-bottom: 0;
+    }
+
+    .block_columns > *:first-child {
+        margin-top: 0;
     }
 
 }
@@ -1223,7 +1614,7 @@ Mixins block
 
 .block_trame_champ.white::before {
     background: url("./../img/motif_champ_white.png") repeat;
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .block_trame_champ.black::before{

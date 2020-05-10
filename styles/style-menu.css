@@ -20,15 +20,16 @@ https://codepen.io/bradtraversy/pen/vMGBjQ
 
     #main-nav__toggler {
         position: fixed;
-        top: 5em;
+        top: 6em;
         left: 0.25em;
         z-index: 51;
         cursor: pointer;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         box-sizing: border-box;
         opacity: 0;
-        margin: 10px;
+        margin: 5px;
+        padding: 15px;
     }
 
     #main-nav__hamburger {
@@ -182,8 +183,7 @@ MENU ITEM
 */
 
 .menu__item {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
 .menu__item_separator {
@@ -197,6 +197,7 @@ MENU LINK
 
 .menu__link {
     text-decoration: none;
+    display: inline-block
 }
 
 @media (min-width: 800px) {
