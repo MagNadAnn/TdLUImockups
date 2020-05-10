@@ -275,11 +275,7 @@ SECTIONS
     height: 100vh;
     box-sizing: border-box;
     margin: 0;
-    background-color: cyan;
-}
-
-.fh-section:nth-child(odd) {
-    background-color: yellow;
+    padding: 0;
 }
 
 /*
@@ -327,6 +323,7 @@ columns
 
 @media (min-width: 1024px) {
     .column_1-2 { width: calc(50% - 1em); }
+    .column_1-2.block_no-margin { width: 50%; }
 }
 
 @media (min-width: 800px) {
@@ -462,6 +459,10 @@ aside system
 .aside__content {
     padding: 0 1em 1em;
     margin: 0;
+}
+
+.aside__content > *:last-child {
+    margin-bottom: 0;
 }
 
 @media (min-width: 700px) {

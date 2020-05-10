@@ -11,7 +11,7 @@ button {
 }
 
 .form__wrap {
-    padding: 0 0.5em;
+    padding: 1px 0.5em;
     margin-left: -0.5em;
     margin-right: -0.5em;
 }
@@ -20,7 +20,7 @@ button {
     .form__wrap {
         margin-top: 2em;
         margin-bottom: 2em;
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     .form__wrap.form_s {
@@ -71,8 +71,8 @@ Form-line
 
 @media (min-width: 500px) {
     .form-line {
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
     }
 }
 
