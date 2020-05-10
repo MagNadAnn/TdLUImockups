@@ -149,6 +149,13 @@ Global settings
 ------------------------------------------------------------------------------------
 */
 
+@media (min-width: 800px) {
+
+    .main-nav__logo.logo__wrap {
+        display: none !important;
+    }
+}
+
 @media (max-width: 799px) {
 
     .main-nav__logo.logo__wrap {
@@ -156,6 +163,7 @@ Global settings
         top: 0.25em;
         left: 0.25em;
         width: 4.5em;
+        padding: 0;
         z-index: 51;
         background-color: transparent !important;
     }
