@@ -183,7 +183,6 @@ QUOTATIONS
 blockquote {
     position: relative;
     display: inline-block;
-    margin: 1em 0;
     padding: 1em 2em;
     background-color: rgba(0, 0, 0, 0.05);
     font-size: 1.125em;
@@ -198,7 +197,7 @@ blockquote:last-child {
 }
 
 blockquote.white {
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -272,10 +271,16 @@ SECTIONS
 
 .fh-section {
     position: relative;
-    height: 100vh;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+@media (min-width: 1024px) {
+    .fh-section { height: 100vh; }
+}
+
+@media (max-width: 799px) {
 }
 
 /*
@@ -317,6 +322,10 @@ columns
     margin: 0.5em;
     width: calc(100% - 1em);
     position: relative;
+}
+
+.column_1-2.block_no-margin {
+    width: 100%;
 }
 
 .column_1-1 { width: calc(100% - 1em); }

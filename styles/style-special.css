@@ -27,7 +27,7 @@ Couleurs
 .bg-yellow_dark { background-color: #a86e00 !important; }
 
 .bg-charcoal { background-color: #33383d !important; color: #ffffff; }
-.bg-white { background-color: #ffffff !important; }
+.bg-white { background-color: #ffffff !important; color: #33383d; }
 .bg-pearl { background-color: #f5f5f5 !important; }
 .bg-cream {background-color: #eae6cf !important;}
 
@@ -296,7 +296,8 @@ h4.fiche__entry__title > i {
 }
 
 @media (max-width: 799px) {
-    .fiche__miniature__wrap {
+    .fiche__miniature__wrap,
+    .fiche__video__wrap {
         padding: 2em 0 0;
     }
 }
@@ -660,11 +661,26 @@ PAGE-HEADER
 @media (max-width: 799px) {
 
     .page-header__container {
-        padding-top: 1em !important;
+        padding-top: 1em;
         padding-bottom: 3em;
-        padding-left: 2.5em;
+    }
+
+    .section__container.page-header__container {
+        padding-top: 1em;
+    }
+
+    .hero_header-site > .page-header__container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    main.tpl_main-nav .page-header__container {
         border-left: solid 2.5em #a41515;
-        margin-left: -3em;
+    }
+
+    .page-header__container [class*="chimney"] {
+        margin: 0 2em;
+        width: calc(100% - 4em);
     }
 
     .page__intro {
@@ -705,6 +721,8 @@ PAGE-HEADER
         margin-top: -1.5em;
         margin-left: 10%;
         margin-right: 10%;
+        width: 80%;
+        box-sizing: border-box;
     }
 }
 
@@ -1082,7 +1100,8 @@ HERO
     background-color: #db9500;
 }
 
-.hero > .vignette__wrap {
+.hero > .vignette__wrap,
+.hero > .page-header__container > .vignette__wrap {
     position: absolute;
     height: 100%;
     z-index: 0;
@@ -1117,12 +1136,14 @@ HERO
         justify-content: flex-end;
     }
 
-    .hero > .vignette__wrap > .vignette__image {
+    .hero > .vignette__wrap > .vignette__image,
+    .hero > .page-header__container > .vignette__wrap > .vignette__image {
         width: 170%;
         margin-left: -35%;
     }
 
-    .hero_v > .vignette__wrap > .vignette__image {
+    .hero_v > .vignette__wrap > .vignette__image,
+    .hero > .page-header__container > .vignette__wrap > .vignette__image {
         width: 120%;
         margin-left: -10%;
         margin-top: -5%;
@@ -1141,7 +1162,8 @@ HERO
         min-height: 12.5em;
     }
 
-    .hero > .vignette__wrap > .vignette__image {
+    .hero > .vignette__wrap > .vignette__image,
+    .hero > .page-header__container > .vignette__wrap > .vignette__image {
         width: 240%;
         margin-left: -80%;
     }
@@ -1257,11 +1279,6 @@ HERO HEADER-SITE
     max-width: 35em;
 }
 
-.is-expanded .hero_header-site__form_search {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
 @media (min-width: 1200px) {
     .hero_header-site > .chimney {
         max-width: 85%;
@@ -1370,6 +1387,15 @@ HERO HEADER-SITE
     }
 }
 
+@media (min-width: 500px) {
+
+    .is-expanded .hero_header-site__form_search {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
 @media (max-width: 499px) {
     .hero_header-site__vignette__wrap > .vignette__image {
         position: absolute;
@@ -1385,6 +1411,12 @@ HERO HEADER-SITE
 
     .hero_header-site__baseline {
         font-size: calc(0.07 * 100vw);
+    }
+
+    .hero_header-site__form_search {
+        margin-left: -3em;
+        margin-right: 0;
+        width: calc(100% + 3em);
     }
 }
 

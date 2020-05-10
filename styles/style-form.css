@@ -69,18 +69,9 @@ Form-line
     position: relative;
 }
 
-@media (min-width: 500px) {
-    .form-line {
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-    }
-}
-
-@media (max-width: 499px) {
-    .form-line {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-    }
+.form-line {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 /* form-line_multi */
@@ -152,6 +143,7 @@ Form-label
 
 .form-label {
     font-size: 0.75em;
+    text-align: left;
 }
 
 .form-label_top {
@@ -411,6 +403,7 @@ Form-item SELECT
 }
 
 .form-item_select__option__item {
+    text-align: left;
     padding: 0.5em;
     margin: 0;
     transition: all 0.2s ease-in-out;
