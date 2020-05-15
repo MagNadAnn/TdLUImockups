@@ -121,21 +121,6 @@ Vignette
     overflow: hidden;
 }
 
-.vignette__wrap::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.2;
-    transition: all 0.2s ease-in-out;
-    background: url("./../img/motif_rayure_black.png") repeat;
-    opacity: 0.15;
-}
-
 a:hover > .vignette__wrap::before,
 a:focus > .vignette__wrap::before {
     opacity: 0.1;
@@ -206,6 +191,21 @@ a:focus > .vignette__wrap::before {
 
 .vignette_photo {
     position: relative;
+}
+
+.vignette__wrap.vignette_photo::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+    transition: all 0.2s ease-in-out;
+    background: url("./../img/motif_rayure_black.png") repeat;
+    opacity: 0.15;
 }
 
 .vignette__wrap.vignette_photo::after {
