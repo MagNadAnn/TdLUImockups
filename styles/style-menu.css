@@ -287,15 +287,15 @@ MENU SOUS MENU
 
 .menu-submenu > .menu__item > .menu__link { color: #7da237; }
 
-.bg-green_light > .menu-submenu > .menu__item > .menu__link { color: #ffffff; }
+.temp-bubble__container.bg-green_light .menu-submenu > .menu__item > .menu__link { color: #ffffff; }
 
 .menu-submenu > .menu__item > .menu__link:hover,
 .menu-submenu > .menu__item > .menu__link:focus {
     background-color: rgba(125, 162, 55, 0.15);
 }
 
-.bg-green_light > .menu-submenu > .menu__item > .menu__link:hover,
-.bg-green_light > .menu-submenu > .menu__item > .menu__link:focus {
+.temp-bubble__container.bg-green_light .menu-submenu > .menu__item > .menu__link:hover,
+.temp-bubble__container.bg-green_light .menu-submenu > .menu__item > .menu__link:focus {
     background-color: rgba(255, 255, 255, 0.25);
 }
 

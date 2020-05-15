@@ -945,6 +945,8 @@ TEMP BUBBLE
     position: relative;
     border-radius: 0.25em;
     overflow: hidden;
+    border: solid 2px #7da237;
+    background-color: #ffffff;
     z-index: 2;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
 }
@@ -957,22 +959,10 @@ TEMP BUBBLE
 .temp-bubble.left:before { left: calc(100% - 3.5em); }
 .temp-bubble.right:before { left: 2.5em; }
 
-/* ----- temp bubble themes ----- */
-
-.temp-bubble__container {
-    border: solid 2px #7da237;
-    background-color: #ffffff;
-}
-
-.temp-bubble:before {
-    
-}
-
 /* ----- temp bubble scrollable ----- */
 
 .temp-bubble__scrollable__wrap {
     position: relative;
-    background-color: #567e36;
 }
 
 .temp-bubble__scrollable {
@@ -993,22 +983,33 @@ TEMP BUBBLE
 
 .temp-bubble__scrollable__wrap:before {
     top: 0;
-    background: linear-gradient(rgba(86, 126, 54, 1), rgba(86, 126, 54, 0));
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .temp-bubble__scrollable__wrap:after {
     bottom: 0;
-    background: linear-gradient(rgba(86, 126, 54, 0), rgba(86, 126, 54, 1));
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.temp-bubble__container.bg-green_light .temp-bubble__scrollable__wrap:before {
+    background: linear-gradient(rgba(125, 162, 55, 1), rgba(125, 162, 55, 0));
+}
+
+.temp-bubble__container.bg-green_light .temp-bubble__scrollable__wrap:after {
+    background: linear-gradient(rgba(125, 162, 55, 0), rgba(125, 162, 55, 1));
 }
 
 /* ----- temp bubble content ----- */
 
 .temp-bubble__title {
-    padding: 1rem;
-    font-size: 2em;
+    padding: 0.75em 0.5em 0.5em;
+    font-size: 1.5em;
     line-height: 1em;
-    color: #ffffff;
     margin: 0;
+}
+
+.temp-bubble__container.bg-green_light .temp-bubble__title {
+    color: #ffffff;
 }
 
 /*
