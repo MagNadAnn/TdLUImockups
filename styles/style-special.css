@@ -909,40 +909,99 @@ TABS
 TEMP BUBBLE
 */
 
-.temp-bubble__wrap {
-    position: relative;
-}
+/* ----- temp bubble generalities ----- */
 
-.temp-bubble__container { display: none; }
-.temp-bubble__container.is-visible { display: block; }
+.temp-bubble__wrap { position: relative; }
 
-.temp-bubble__container {
+.temp-bubble { display: none; }
+.temp-bubble.is-visible { display: block; }
+
+.temp-bubble {
     position: absolute;
-    top: calc(100% + 1em);
-    background-color: #7da237;
+    top: calc(100% + 0.75em);
     width: 100%;
     padding: 0;
     z-index: 5;
 }
 
-.temp-bubble__container.mobile { width: 320px; }
+.temp-bubble.mobile { width: 320px; }
 
-.temp-bubble__container.left { right: -2em; }
-.temp-bubble__container.right { left: -2em; }
+/* bubble form */
 
-.temp-bubble__container:before {
+.temp-bubble:before {
     content: "";
     position: absolute;
     width: 1em;
     height: 1em;
-    background-color: #7da237;
+    left: 50%;
     transform: rotate(45deg);
-    bottom: calc(100% - 0.5em);
+    top: -0.25em;
+    z-index: 0;
+    background-color: #7da237;
 }
 
-.temp-bubble__container:before { left: 50% }
-.temp-bubble__container.left:before { left: calc(100% - 3.5em); }
-.temp-bubble__container.right:before { left: 2.5em; }
+
+.temp-bubble__container {
+    position: relative;
+    border-radius: 0.25em;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+}
+
+/* bubble positioning */
+
+.temp-bubble.left { right: -2em; }
+.temp-bubble.right { left: -2em; }
+
+.temp-bubble.left:before { left: calc(100% - 3.5em); }
+.temp-bubble.right:before { left: 2.5em; }
+
+/* ----- temp bubble themes ----- */
+
+.temp-bubble__container {
+    border: solid 2px #7da237;
+    background-color: #ffffff;
+}
+
+.temp-bubble:before {
+    
+}
+
+/* ----- temp bubble scrollable ----- */
+
+.temp-bubble__scrollable__wrap {
+    position: relative;
+    background-color: #567e36;
+}
+
+.temp-bubble__scrollable {
+    height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.temp-bubble__scrollable__wrap:before,
+.temp-bubble__scrollable__wrap:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    left: 0;
+    z-index: 2;
+}
+
+.temp-bubble__scrollable__wrap:before {
+    top: 0;
+    background: linear-gradient(rgba(86, 126, 54, 1), rgba(86, 126, 54, 0));
+}
+
+.temp-bubble__scrollable__wrap:after {
+    bottom: 0;
+    background: linear-gradient(rgba(86, 126, 54, 0), rgba(86, 126, 54, 1));
+}
+
+/* ----- temp bubble content ----- */
 
 .temp-bubble__title {
     padding: 1rem;

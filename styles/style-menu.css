@@ -268,131 +268,35 @@ TOP BAR LOGO
 MENU SOUS MENU
 */
 
-.menu-sousmenu {
+.menu-submenu {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
-    padding: 1em !important;
 }
 
-.menu-sousmenu > .menu__item {
+.menu-submenu > .menu__item {
     font-size: 2em;
     text-align: center;
 }
 
-.menu-sousmenu > .menu__item > .menu__link {
-    color: #ffffff;
+.menu-submenu > .menu__item > .menu__link {
+    display: block;
 }
 
-/*
------------------------------
-MENU APP
-*/
+/* theme */
 
-.menu-app__wrap {
-    position: relative;
-    
-    background-color: #567e36;
+.menu-submenu > .menu__item > .menu__link { color: #7da237; }
+
+.bg-green_light > .menu-submenu > .menu__item > .menu__link { color: #ffffff; }
+
+.menu-submenu > .menu__item > .menu__link:hover,
+.menu-submenu > .menu__item > .menu__link:focus {
+    background-color: rgba(125, 162, 55, 0.15);
 }
 
-.menu-app__container {
-    height: 50vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.menu-app__wrap:before,
-.menu-app__wrap:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1em;
-    left: 0;
-    z-index: 2;
-}
-
-.menu-app__wrap:before {
-    top: 0;
-    background: linear-gradient(rgba(86, 126, 54, 1), rgba(86, 126, 54, 0));
-}
-
-.menu-app__wrap:after {
-    bottom: 0;
-    background: linear-gradient(rgba(86, 126, 54, 0), rgba(86, 126, 54, 1));
-}
-
-.menu-app {
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    padding: 1em !important;
-    box-sizing: border-box;
-}
-
-.menu-app > .menu__item {
-    position: relative;
-    width: calc(100% - 1em);
-    margin: 0.5em;;
-}
-
-.menu-app__link {
-    position: relative;
-    box-sizing: border-box;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: 0.1s ease-in-out;
-}
-
-.menu-app__link:hover,
-.menu-app__link:focus {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-.menu-app__link:active {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.menu-app__icon {
-    position: relative;
-    width: 4em;
-    min-width: 4em;
-    height: 4em;
-    color: #567e36;
-}
-
-.menu-app__icon > img {
-    width: 100%;
-    height: auto;
-}
-
-.menu-app__icon > i {
-    font-size: 2em;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    top: 0.5em;
-}
-
-.menu-app__label {
-    text-align: left;
-    margin-left: 0.5em;
-}
-
-.menu-app__label__title {
-    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
-    font-size: 1.5em;
-    margin: 0;
-}
-
-.menu-app__label__description {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1em;
-    line-height: 1em;
-    text-transform: none;
-    margin: 0;
+.bg-green_light > .menu-submenu > .menu__item > .menu__link:hover,
+.bg-green_light > .menu-submenu > .menu__item > .menu__link:focus {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 /*

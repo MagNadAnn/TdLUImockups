@@ -6,9 +6,9 @@ Global settings
 ------------------------------------------------------------------------------------
 */
 
-.tuile__link {
+a.tuile__link {
     padding: 0;
-    background-color: transparent !important;
+    background-color: transparent;
     cursor: pointer;
     width: 100%;
 }
@@ -206,4 +206,75 @@ Tuile text-media
     bottom: 100%;
     left: 1em;
     margin-bottom: -0.5em;
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Tuile icon-label
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.tuile_icon-label {
+    font-size: 1em !important;
+}
+
+.tuile_icon-label > a.tuile__link {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    padding: 0.5em;
+    transition: 0.1s ease-in-out;
+}
+
+.tuile_icon-label > .tuile__link:hover,
+.tuile_icon-label > .tuile__link:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.tuile_icon-label > .tuile__link:active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tuile_icon-label__icon {
+    position: relative;
+    width: 4em;
+    min-width: 4em;
+    height: 4em;
+    color: #567e36;
+}
+
+.tuile_icon-label__icon > img {
+    width: 100%;
+    height: auto;
+}
+
+.tuile_icon-label__icon > i {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 0.5em;
+}
+
+.tuile_icon-label__label {
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+.tuile_icon-label__label__title {
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.tuile_icon-label__label__description {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: none;
+    margin: 0;
 }
