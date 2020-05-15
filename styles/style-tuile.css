@@ -7,7 +7,6 @@ Global settings
 */
 
 a.tuile__link {
-    padding: 0;
     background-color: transparent;
     cursor: pointer;
     width: 100%;
@@ -56,6 +55,13 @@ Tuile image
 
 .tuile_media {
     position: relative;
+}
+
+
+.tuile_media > .tuile__link {
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .tuile_media__container {
@@ -166,6 +172,12 @@ Tuile text-media
 .tuile_text-media {
     position: relative;
     transition: background-color 0.2s ease-in-out;
+}
+
+.tuile_text-media > .tuile__link {
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .tuile_text-media_v__content {

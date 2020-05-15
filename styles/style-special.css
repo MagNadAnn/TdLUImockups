@@ -176,6 +176,32 @@ a:focus > .vignette__wrap::before {
     border-radius: 50%;
 }
 
+/* ----- vignette crédit ----- */
+
+.vignette__credit {
+    position: absolute;
+    transition: opacity 0.2s ease-in-out;
+    /* transform-origin: left bottom;
+    transform: rotate(-90deg);
+    left: 1.5em;
+    bottom: 0;
+    text-align: left; */
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 0.5em;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px #013249, -1px -1px 3px #013249;
+    background: linear-gradient(rgba(1, 50, 73, 0), rgba(1, 50, 73, 0.3));
+}
+
+.vignette__credit { opacity: 0; }
+*:hover > .vignette__wrap > .vignette__credit { opacity: 1; }
+
 /* ----- vignette photo ----- */
 
 .vignette_photo {
