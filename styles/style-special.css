@@ -117,6 +117,7 @@ Vignette
 */
 
 .vignette__wrap {
+    position: relative;
     width: 100%;
     overflow: hidden;
 }
@@ -189,10 +190,6 @@ a:focus > .vignette__wrap::before {
 
 /* ----- vignette photo ----- */
 
-.vignette_photo {
-    position: relative;
-}
-
 .vignette__wrap.vignette_photo::before {
     content: "";
     display: block;
@@ -235,6 +232,7 @@ a:focus .vignette_photo::after {
     position: relative;
     background-color: #579ea5;
     overflow: hidden;
+    z-index: 0 !important;
 }
 
 .vignette_ratio_1-1 { padding-top: 100%; }

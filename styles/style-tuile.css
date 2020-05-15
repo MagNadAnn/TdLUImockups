@@ -174,14 +174,52 @@ Tuile text-media
     transition: background-color 0.2s ease-in-out;
 }
 
+/*
+-----------------------------
+Tuile text-media tuile__link
+*/
+
 .tuile_text-media > .tuile__link {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
     padding: 0;
     box-sizing: border-box;
 }
 
-.tuile_text-media_v__content {
+
+.tuile_text-media__content {
     position: relative;
+}
+
+/*
+-----------------------------
+Tuile text-media horizontale
+*/
+
+.tuile_text-media_h > .tuile__link {
+    flex-direction: row;
+}
+
+.tuile_text-media_h > .tuile__link > .vignette__wrap {
+    max-width: 20em;
+}
+
+.tuile_text-media_h > .tuile__link > .tuile_text-media__content {
+    padding: 0 0 0 1em;
+    flex-grow: 1;
+}
+
+/*
+-----------------------------
+Tuile text-media verticale
+*/
+
+.tuile_text-media_v > .tuile__link {
+    flex-direction: column;
+}
+
+.tuile_text-media_v__content {
     padding: 1em 0 0;
 }
 
