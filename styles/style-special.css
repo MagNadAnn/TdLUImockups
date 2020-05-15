@@ -1222,13 +1222,13 @@ HERO
     }
 
     .hero > .vignette__wrap > .vignette__image,
-    .hero > .page-header__container > .vignette__wrap > .vignette__image {
+    .hero_header-site__vignette__wrap > .vignette__image {
         width: 170%;
         margin-left: -35%;
     }
 
     .hero_v > .vignette__wrap > .vignette__image,
-    .hero > .page-header__container > .vignette__wrap > .vignette__image {
+    .hero_header-site.is-shrinked .hero_header-site__vignette__wrap > .vignette__image {
         width: 120%;
         margin-left: -10%;
         margin-top: -5%;
@@ -1317,7 +1317,7 @@ FORM ID
 HERO HEADER-SITE
 */
 
-.hero_header-site > .chimney {
+.hero_header-site__chimney {
     position: relative;
 }
 
@@ -1341,7 +1341,7 @@ HERO HEADER-SITE
 }
 
 .hero_header-site__title {
-    margin: 0.125em 0 0;
+    margin: 0;
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.025em;
     font-weight: normal;
@@ -1359,13 +1359,21 @@ HERO HEADER-SITE
     color: #ffffff;
 }
 
+.hero_header-site.is-shrinked .hero_header-site__baseline {
+    font-size: 1em;   
+}
+
+.hero_header-site.is-shrinked .hero_header-site__argument {
+    display: none;
+}
+
 .hero_header-site__form_search {
     width: 100%;
     max-width: 35em;
 }
 
 @media (min-width: 1200px) {
-    .hero_header-site > .chimney {
+    .hero_header-site__chimney {
         max-width: 85%;
     }
 
@@ -1456,7 +1464,7 @@ HERO HEADER-SITE
 
 @media (max-width: 799px) {
 
-    .is-shrinked.hero_header-site {
+    .hero_header-site.is-shrinked {
         display: none;
     }   
 
