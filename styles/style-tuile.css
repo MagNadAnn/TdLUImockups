@@ -309,6 +309,12 @@ Tuile text-media horizontale
 
 @media (min-width: 700px) {
 
+    .tuile_text-media_h {
+        border-bottom: 0.25em solid #db9500;
+        padding: 0 !important;
+        margin: 0.5em !important;
+    }
+
     .tuile_text-media_h > .tuile__link {
         flex-direction: row;
     }
@@ -320,7 +326,6 @@ Tuile text-media horizontale
     .tuile_text-media_h > .tuile__link > .tuile_text-media__content {
         padding: 0 1em;
         flex-grow: 1;
-        border-bottom: 0.25em solid #db9500;
     }
 
     .tuile_text-media_h > .tuile__link > .tuile_text-media__content:before {

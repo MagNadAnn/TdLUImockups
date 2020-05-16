@@ -35,6 +35,17 @@ button {
     }
 }
 
+.form__wrap.inline {
+    display: flex;
+    flex-wrap: ;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.form__wrap.inline.center {
+    justify-content: center;
+}
+
 /*
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
@@ -67,11 +78,17 @@ Form-line
 
 .form-line {
     position: relative;
-}
-
-.form-line {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+}
+
+.form__wrap.form__wrap.inline > .form-line {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.form__wrap.form__wrap.inline > .form-line.grow {
+    flex-grow: 1;
 }
 
 /* form-line_multi */
@@ -103,6 +120,10 @@ Form-line
 
 .form-line_multi__button > .form-item_button {
     border-width: 0 0 0.2em;
+}
+
+.form-line_multi__check {
+    margin: 0 0.5em;
 }
 
 @media (max-width: 499px) {
@@ -257,7 +278,7 @@ Form-item CHECKBOX & RADIO
     border-style: solid;
     border-width: 0.05em;
     margin: 0;
-    top: 0.1em;
+    top: 0.2em;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
