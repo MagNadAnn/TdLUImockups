@@ -22,7 +22,7 @@
 
         <nav class="main-nav__wrap">
 
-            <a href="#" class="main-nav__logo small-screens">
+            <a href="#" class="main-nav__logo logo__wrap">
                 <img class="vignette__image" src="img/logo_TdL_cartouche_blanc-rouge_500.png" />
             </a>
 
@@ -144,7 +144,7 @@
 
                                 <div class="menu-recherche">
                                     <h1 class="site__title small-screens">Centre de ressources</h1>
-                                    <form class="form__wrap top-bar__3__form-wrap search-form">
+                                    <form class="form__wrap top-bar__3__form-wrap form_search">
                                         <div class="form-line form-line_multi">
                                             <div class="form-line_multi__item form-line_multi__field">
                                                 <label class="form-label form-label_dark form-label_bottom"
@@ -159,22 +159,27 @@
                                                 <label class="form-label form-label_dark form-label_top"
                                                     for="type-select">Type de
                                                     document</label>
-                                                <div class="form-item_select__wrap">
-                                                    <select name="type" id="type-select"
-                                                        class="form-item form-item_field form-item_select">
-                                                        <option value="Tous">Tous</option>
-                                                        <option value="type1">Type 1</option>
-                                                        <option value="type2">Type 2</option>
-                                                        <option value="type3">Type 3</option>
-                                                        <option value="type4">Type 4</option>
-                                                        <option value="type5">Type 5</option>
-                                                        <option value="type6">Type 6</option>
-                                                    </select>
+                                                <div class="form-item_field form-item_select">
+                                                    <button class="form-item_select__arrow"><i
+                                                            class="fas fa-chevron-down"></i></button>
+                                                    <input class="form-item_select__prompt" type="text"
+                                                        autocomplete="off"
+                                                        placeholder="Sélectionner un type de document">
+                                                    <div class="form-item_select__drop">
+                                                        <ul class="form-item_select__option__list">
+                                                            <li class="form-item_select__option__item">Type 1</li>
+                                                            <li class="form-item_select__option__item">Type 2</li>
+                                                            <li class="form-item_select__option__item">Type 3</li>
+                                                            <li class="form-item_select__option__item">Type 4</li>
+                                                            <li class="form-item_select__option__item">Type 5</li>
+                                                            <li class="form-item_select__option__item">Type 2</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div
                                                 class="form-line_multi__item form-line_multi__button form-line_multi__button_round">
-                                                <button class="button button_basic primary form-item">
+                                                <button class="form-item_button button button_basic primary">
                                                     <span class="button__icon">
                                                         <i class="fas fa-search"></i>
                                                     </span>
@@ -192,15 +197,15 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="archive tpl_main-nav">
 
             <section class="fw-section hero hero_header-site is-shrinked">
                 <div class="vignette__wrap hero_header-site__vignette__wrap vignette_photo">
                     <img src="img/photo_08_bandeau-maous_1920.jpg" class="vignette__image" />
                 </div>
-                <div class="chimney">
-                    <div class="hero_header-site__container section__container text_on-photo">
-                        <div class="hero_header-site__content">
+                <div class="chimney hero_header-site__chimney">
+                    <div class="hero_header-site__container section__container">
+                        <div class="hero_header-site__content text_on-photo">
                             <a href="#" class="hero_header-site__logo">
                                 <img src="img/logo_TdL_cartouche_blanc-rouge_500.png" />
                             </a>
@@ -212,7 +217,7 @@
 
                         </div>
 
-                        <form class="form__wrap hero_header-site__search-form search-form">
+                        <form class="form__wrap hero_header-site__form_search form_search">
                             <div class="form-line form-line_multi">
                                 <div class="form-line_multi__item form-line_multi__field">
                                     <label class="form-label form-label_dark form-label_bottom" for="search">1
@@ -225,22 +230,25 @@
                                     <label class="form-label form-label_dark form-label_top" for="type-select">Type
                                         de
                                         document</label>
-                                    <div class="form-item_select__wrap">
-                                        <select name="type" id="type-select"
-                                            class="form-item form-item_field form-item_select">
-                                            <option value="Tous" selected data-default>Tous</option>
-                                            <option value="type1">Type 1</option>
-                                            <option value="type2">Type 2</option>
-                                            <option value="type3">Type 3</option>
-                                            <option value="type4">Type 4</option>
-                                            <option value="type5">Type 5</option>
-                                            <option value="type6">Type 6</option>
-                                        </select>
+                                    <div class="form-item_field form-item_select">
+                                        <button class="form-item_select__arrow"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                        <input class="form-item_select__prompt" type="text" autocomplete="off"
+                                            placeholder="Sélectionner un type de document">
+                                        <div class="form-item_select__drop">
+                                            <ul class="form-item_select__option__list">
+                                                <li class="form-item_select__option__item">Type 1</li>
+                                                <li class="form-item_select__option__item">Type 2</li>
+                                                <li class="form-item_select__option__item">Type 3</li>
+                                                <li class="form-item_select__option__item">Type 4</li>
+                                                <li class="form-item_select__option__item">Type 5</li>
+                                                <li class="form-item_select__option__item">Type 2</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="form-line_multi__item form-line_multi__button form-line_multi__button_round">
-                                    <button class="button button_basic primary form-item">
+                                <div class="form-line_multi__item form-line_multi__button">
+                                    <button class="form-item_button button button_basic primary">
                                         <span class="button__icon">
                                             <i class="fas fa-search"></i>
                                         </span>
@@ -442,18 +450,17 @@
                                 <div class="form-line">
                                     <label class="form-label form-label_dark form-label_top" for="search">Sélectionner
                                         un éditeur</label>
-                                    <div class="form-item form-item_field form-item_select_multi">
+                                    <div class="form-item form-item_field form-item_select is-dropped">
                                         <ul class="list list_h tag__list">
-                                            <li class="tag__item">
-                                                <span class="tag">
-                                                    <span>Accueil paysan</span>
-                                                    <a class="button button_icon button_tight button_s primary">
-                                                        <i class="fal fa-times"></i>
-                                                    </a>
-                                                </span>
+                                            <li class="tag">
+                                                <span>Accueil paysan</span>
+                                                <a class="button button_icon button_tight button_s primary">
+                                                    <i class="fal fa-times"></i>
+                                                </a>
+
                                             </li>
-                                            <li class="search-field">
-                                                <input class="form-item_select_multi__prompt" type="text"
+                                            <li class="form-item_select__prompt__wrap">
+                                                <input class="form-item_select__prompt_multi" type="text"
                                                     autocomplete="off" value="Sélectionner un éditeur">
                                             </li>
                                         </ul>
@@ -510,24 +517,20 @@
                             <ul class="list tuile__list tuile__liste_h">
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
-                                                class="vignette__image" />
-                                            <div class="tag-icon__wrap">
-                                                <ul class="list">
-                                                    <li class="tag-icon"><i class="fas fa-file-pdf"></i></li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
+                                                    class="vignette__image" />
                                             </div>
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <ul class="tag__wrap bottom right">
+                                                <li class="tag tag_icon"><i class="fas fa-file-pdf"></i></li>
+                                            </ul>
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
+                                            <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">Monographie du GFA Socié'Terres de la Vallée de
                                                 l'Oust
                                             </p>
@@ -541,25 +544,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4">
-                                            <div class="tag-icon__wrap">
-                                                <ul class="list">
-                                                    <li class="tag-icon"><i class="fas fa-play"></i></li>
-                                                </ul>
-                                            </div>
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                    <li class="tag__item"><span class="tag">Structure
-                                                            ressource</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                        <div class="vignette__wrap">
+                                            <div class="vignette_ratio_3-4"></div>
+                                            <ul class="tag__wrap bottom right">
+                                                <li class="tag tag_icon"><i class="fas fa-play"></i></li>
+                                            </ul>
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                                <li class="tag">Structure ressource</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">La politique agricole et foncière de Ventalon en
                                                 Cévennes (48)
                                             </p>
@@ -573,23 +568,19 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/vueensemblebatiments.jpg" class="vignette__image" />
-                                            <div class="tag-icon__wrap">
-                                                <ul class="list">
-                                                    <li class="tag-icon"><i class="fas fa-book-open"></i></li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/vueensemblebatiments.jpg"
+                                                    class="vignette__image" />
                                             </div>
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <ul class="tag__wrap bottom right">
+                                                <li class="tag tag_icon"><i class="fas fa-book-open"></i></li>
+                                            </ul>
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">La bergerie de Villelongue dels Monts (66)</p>
                                             <p class="button__wrap">
                                                 <span class="button button_round button_s primary button_read-more">
@@ -601,18 +592,18 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/reunion-publique-sur-le-projet-de-reconquete-des-friches-saint-andre.JPG"
-                                                class="vignette__image" />
-                                            <div class="tag-icon__wrap">
-                                                <ul class="list">
-                                                    <li class="tag-icon"><i class="fas fa-volume"></i></li>
-                                                    <li class="tag-icon"><i class="fas fa-chart-network"></i></li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/reunion-publique-sur-le-projet-de-reconquete-des-friches-saint-andre.JPG"
+                                                    class="vignette__image" />
                                             </div>
+                                            <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
+                                            <ul class="tag__wrap list_h bottom right">
+                                                <li class="tag tag_icon"><i class="fas fa-volume"></i></li>
+                                                <li class="tag tag_icon"><i class="fas fa-chart-network"></i></li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">L’animation foncière à Saint-André (66)</p>
                                             <p class="button__wrap">
                                                 <span class="button button_round button_s primary button_read-more">
@@ -624,20 +615,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/diapositive1.JPG" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                    <li class="tag__item"><span class="tag">Audios</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/diapositive1.JPG" class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                                <li class="tag">Audios</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">L’aménagement foncier agricole et forestier de
                                                 Mouthoumet (11)</p>
                                             <p class="button__wrap">
@@ -650,18 +638,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/pci-pcm-nov-12-022.JPG" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/pci-pcm-nov-12-022.JPG"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">Le projet collectif d’appui à l’installation du
                                                 Pays
                                                 Corbière Minervois (11)</p>
@@ -675,21 +662,18 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
-                                                class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                    <li class="tag__item"><span class="tag">Guide</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                                <li class="tag">Guide</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">Monographie du GFA Socié'Terres de la Vallée de
                                                 l'Oust
                                             </p>
@@ -703,17 +687,14 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4">
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                        <div class="vignette__wrap">
+                                            <div class="vignette_ratio_3-4"></div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">La politique agricole et foncière de Ventalon en
                                                 Cévennes (48)
                                             </p>
@@ -727,18 +708,16 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/vueensemblebatiments.jpg" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/vueensemblebatiments.jpg"
+                                                    class="vignette__image" />
                                             </div>
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">La bergerie de Villelongue dels Monts (66)</p>
                                             <p class="button__wrap">
                                                 <span class="button button_round button_s primary button_read-more">
@@ -750,19 +729,16 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/reunion-publique-sur-le-projet-de-reconquete-des-friches-saint-andre.JPG"
-                                                class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/reunion-publique-sur-le-projet-de-reconquete-des-friches-saint-andre.JPG"
+                                                    class="vignette__image" />
                                             </div>
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">L’animation foncière à Saint-André (66)</p>
                                             <p class="button__wrap">
                                                 <span class="button button_round button_s primary button_read-more">
@@ -774,18 +750,16 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/diapositive1.JPG" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/diapositive1.JPG" class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">L’aménagement foncier agricole et forestier de
                                                 Mouthoumet (11)</p>
                                             <p class="button__wrap">
@@ -798,18 +772,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/pci-pcm-nov-12-022.JPG" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/pci-pcm-nov-12-022.JPG"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">Le projet collectif d’appui à l’installation du
                                                 Pays
                                                 Corbière Minervois (11)</p>
@@ -823,19 +796,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
-                                                class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">Monographie du GFA Socié'Terres de la Vallée de
                                                 l'Oust
                                             </p>
@@ -849,17 +820,14 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4">
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                        <div class="vignette__wrap">
+                                            <div class="vignette_ratio_3-4"></div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">La politique agricole et foncière de Ventalon en
                                                 Cévennes (48)
                                             </p>
@@ -873,18 +841,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/vueensemblebatiments.jpg" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/vueensemblebatiments.jpg"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">La bergerie de Villelongue dels Monts (66)</p>
                                             <p class="button__wrap">
                                                 <span class="button button_round button_s primary button_read-more">
@@ -896,19 +863,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/reunion-publique-sur-le-projet-de-reconquete-des-friches-saint-andre.JPG"
-                                                class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/reunion-publique-sur-le-projet-de-reconquete-des-friches-saint-andre.JPG"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">L’animation foncière à Saint-André (66)</p>
                                             <p class="button__wrap">
                                                 <span class="button button_round button_s primary button_read-more">
@@ -920,18 +885,16 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/diapositive1.JPG" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/diapositive1.JPG" class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">L’aménagement foncier agricole et forestier de
                                                 Mouthoumet (11)</p>
                                             <p class="button__wrap">
@@ -944,18 +907,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/pci-pcm-nov-12-022.JPG" class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/pci-pcm-nov-12-022.JPG"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">Le projet collectif d’appui à l’installation du
                                                 Pays
                                                 Corbière Minervois (11)</p>
@@ -969,19 +931,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4 vignette_photo">
-                                            <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
-                                                class="vignette__image" />
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                </ul>
+                                        <div class="vignette__wrap vignette_photo">
+                                            <div class="vignette_ratio_3-4">
+                                                <img src="img/vignettes/capture-decran-2020-05-06-a-145836.png"
+                                                    class="vignette__image" />
                                             </div>
+
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">Monographie du GFA Socié'Terres de la Vallée de
                                                 l'Oust
                                             </p>
@@ -995,25 +955,17 @@
                                 </li>
                                 <li class="tuile tuile_text-media tuile_text-media_v tuile__item tuile__item_1-4">
                                     <a class="tuile__link">
-                                        <div class="vignette__wrap vignette_ratio_3-4">
-                                            <div class="tag-icon__wrap">
-                                                <ul class="list">
-                                                    <li class="tag-icon"><i class="fas fa-play"></i></li>
-                                                </ul>
-                                            </div>
-                                            <div class="tag__wrap">
-                                                <ul class="list tag__list">
-                                                    <li class="tag__item"><span class="tag">Fiches
-                                                            expériences</span>
-                                                    </li>
-                                                    <li class="tag__item"><span class="tag">Structure
-                                                            ressource</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                        <div class="vignette__wrap">
+                                            <div class="vignette_ratio_3-4"></div>
+                                            <ul class="tag__wrap bottom right">
+                                                <li class="tag tag_icon"><i class="fas fa-play"></i></li>
+                                            </ul>
+                                            <ul class="tag__wrap list_v">
+                                                <li class="tag">Fiches expériences</li>
+                                                <li class="tag">Structure ressource</li>
+                                            </ul>
                                         </div>
-                                        <div
-                                            class="tuile__content tuile_text-media__content tuile_text-media_v__content">
+                                        <div class="tuile__content tuile_text-media__content">
                                             <p class="tuile__title">La politique agricole et foncière de Ventalon en
                                                 Cévennes (48)
                                             </p>
@@ -1069,13 +1021,13 @@
             </div>
 
             <section class="fw-section hero">
-                <div class="vignette__wrap vignette_photo hero__photo"><img src="img/photo_06_bandeau_1920.jpg"
-                        class="vignette__image" />
+                <div class="vignette__wrap vignette_photo hero__photo">
+                    <img src="img/photo_06_bandeau_1920.jpg" class="vignette__image" />
+                    <div class="tag__wrap">
+                        <span class="tag warning x-large"><i class="fas fa-heart"></i> Le dossier du mois</span>
+                    </div>
                 </div>
                 <div class="hero__container section__container">
-                    <div class="tag__wrap">
-                        <span class="tag warning"><i class="fas fa-heart"></i> Le dossier du mois</span>
-                    </div>
                     <div class="chimney">
                         <a class="tuile__link tuile__content tuile_media__content tuile_media__content_hero">
                             <h4 class="tuile__title">Arpenter 1 - Evaluer l'utilité sociale et environnementale
@@ -1112,7 +1064,7 @@
                                         name="search" />
                                 </div>
                                 <div class="form-line_multi__item form-line_multi__button">
-                                    <button class="button button_basic primary form-item">
+                                    <button class="form-item_button button button_basic primary">
                                         <span class="button__label">S'inscrire</span>
                                     </button>
                                 </div>
@@ -1257,28 +1209,32 @@
                             </div>
                             <div class="column column_1-6">
                                 <h6 class="footer-site__title">Votre agence<br />territoriale</h6>
-                                <form class="form__wrap search-form form_s">
+                                <form class="form__wrap form_search form_s">
                                     <div class="form-line form-line_multi">
                                         <div class="form-line_multi__item form-line_multi__field">
                                             <label class="form-label form-label_dark form-label_top"
                                                 for="type-select">Votre
                                                 région</label>
-                                            <div class="form-item_select__wrap">
-                                                <select name="type" id="type-select"
-                                                    class="form-item form-item_little form-item_field form-item_select empty">
-                                                    <option value="" selected data-default>Choisir...</option>
-                                                    <option value="type1">Région 1</option>
-                                                    <option value="type2">Région 2</option>
-                                                    <option value="type3">Région 3</option>
-                                                    <option value="type4">Région 4</option>
-                                                    <option value="type5">Région 5</option>
-                                                    <option value="type6">Région 6</option>
-                                                </select>
+                                            <div class="form-item_field form-item_select">
+                                                <button class="form-item_select__arrow"><i
+                                                        class="fas fa-chevron-down"></i></button>
+                                                <input class="form-item_select__prompt" type="text" autocomplete="off"
+                                                    placeholder="Sélectionner un type de document">
+                                                <div class="form-item_select__drop">
+                                                    <ul class="form-item_select__option__list">
+                                                        <li class="form-item_select__option__item">Type 1</li>
+                                                        <li class="form-item_select__option__item">Type 2</li>
+                                                        <li class="form-item_select__option__item">Type 3</li>
+                                                        <li class="form-item_select__option__item">Type 4</li>
+                                                        <li class="form-item_select__option__item">Type 5</li>
+                                                        <li class="form-item_select__option__item">Type 2</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div
                                             class="form-line_multi__item form-line_multi__button form-line_multi__button_round">
-                                            <button class="button button_basic primary form-item">
+                                            <button class="form-item_button button button_basic primary">
                                                 <span class="button__icon"><i class="fas fa-search"></i></span>
                                             </button>
                                         </div>

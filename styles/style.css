@@ -183,10 +183,11 @@ QUOTATIONS
 blockquote {
     position: relative;
     display: inline-block;
-    margin: 1em 0;
     padding: 1em 2em;
     background-color: rgba(0, 0, 0, 0.05);
     font-size: 1.125em;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 blockquote:first-child {
@@ -198,7 +199,7 @@ blockquote:last-child {
 }
 
 blockquote.white {
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -261,7 +262,7 @@ Layout
 
 /*
 -----------------------------
-FULL WIDTH SECTION
+SECTIONS
 */
 
 .fw-section {
@@ -270,16 +271,37 @@ FULL WIDTH SECTION
     padding: 1px 0;
 }
 
+.fh-section {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1024px) {
+    .fh-section { min-height: 100vh; }
+}
+
+@media (max-width: 799px) {
+}
+
 /*
 -----------------------------
 CHIMNEY
 */
 
 [class*="chimney"] {
-    width: calc(100% - 6em);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+}
+
+@media (min-width: 800px) {
+    [class*="chimney"] { width: calc(100% - 6em); }
+}
+
+@media (max-width: 799px) {
+    [class*="chimney"] { width: 80%; }
 }
 
 .chimney_fluid { max-width: none; }
@@ -311,10 +333,15 @@ columns
     position: relative;
 }
 
+.column_1-2.block_no-margin {
+    width: 100%;
+}
+
 .column_1-1 { width: calc(100% - 1em); }
 
 @media (min-width: 1024px) {
     .column_1-2 { width: calc(50% - 1em); }
+    .column_1-2.block_no-margin { width: 50%; }
 }
 
 @media (min-width: 800px) {
@@ -450,6 +477,10 @@ aside system
 .aside__content {
     padding: 0 1em 1em;
     margin: 0;
+}
+
+.aside__content > *:last-child {
+    margin-bottom: 0;
 }
 
 @media (min-width: 700px) {

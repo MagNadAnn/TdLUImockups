@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Fiche dossier thématique</title>
+    <title>Fiche dossier</title>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 
         <nav class="main-nav__wrap">
 
-            <a href="#" class="main-nav__logo small-screens">
+            <a href="#" class="main-nav__logo logo__wrap">
                 <img class="vignette__image" src="img/logo_TdL_cartouche_blanc-rouge_500.png" />
             </a>
 
@@ -144,7 +144,7 @@
 
                                 <div class="menu-recherche">
                                     <h1 class="site__title small-screens">Centre de ressources</h1>
-                                    <form class="form__wrap top-bar__3__form-wrap search-form">
+                                    <form class="form__wrap top-bar__3__form-wrap form_search">
                                         <div class="form-line form-line_multi">
                                             <div class="form-line_multi__item form-line_multi__field">
                                                 <label class="form-label form-label_dark form-label_bottom"
@@ -159,22 +159,27 @@
                                                 <label class="form-label form-label_dark form-label_top"
                                                     for="type-select">Type de
                                                     document</label>
-                                                <div class="form-item_select__wrap">
-                                                    <select name="type" id="type-select"
-                                                        class="form-item form-item_field form-item_select">
-                                                        <option value="Tous">Tous</option>
-                                                        <option value="type1">Type 1</option>
-                                                        <option value="type2">Type 2</option>
-                                                        <option value="type3">Type 3</option>
-                                                        <option value="type4">Type 4</option>
-                                                        <option value="type5">Type 5</option>
-                                                        <option value="type6">Type 6</option>
-                                                    </select>
+                                                <div class="form-item_field form-item_select">
+                                                    <button class="form-item_select__arrow"><i
+                                                            class="fas fa-chevron-down"></i></button>
+                                                    <input class="form-item_select__prompt" type="text"
+                                                        autocomplete="off"
+                                                        placeholder="Sélectionner un type de document">
+                                                    <div class="form-item_select__drop">
+                                                        <ul class="form-item_select__option__list">
+                                                            <li class="form-item_select__option__item">Type 1</li>
+                                                            <li class="form-item_select__option__item">Type 2</li>
+                                                            <li class="form-item_select__option__item">Type 3</li>
+                                                            <li class="form-item_select__option__item">Type 4</li>
+                                                            <li class="form-item_select__option__item">Type 5</li>
+                                                            <li class="form-item_select__option__item">Type 2</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div
                                                 class="form-line_multi__item form-line_multi__button form-line_multi__button_round">
-                                                <button class="button button_basic primary form-item">
+                                                <button class="form-item_button button button_basic primary">
                                                     <span class="button__icon">
                                                         <i class="fas fa-search"></i>
                                                     </span>
@@ -192,15 +197,15 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="single tpl_main-nav">
 
             <section class="fw-section hero hero_header-site is-shrinked">
                 <div class="vignette__wrap hero_header-site__vignette__wrap vignette_photo">
                     <img src="img/photo_08_bandeau-maous_1920.jpg" class="vignette__image" />
                 </div>
-                <div class="chimney">
-                    <div class="hero_header-site__container section__container text_on-photo">
-                        <div class="hero_header-site__content">
+                <div class="chimney hero_header-site__chimney">
+                    <div class="hero_header-site__container section__container">
+                        <div class="hero_header-site__content text_on-photo">
                             <a href="#" class="hero_header-site__logo">
                                 <img src="img/logo_TdL_cartouche_blanc-rouge_500.png" />
                             </a>
@@ -212,7 +217,7 @@
 
                         </div>
 
-                        <form class="form__wrap hero_header-site__search-form search-form">
+                        <form class="form__wrap hero_header-site__form_search form_search">
                             <div class="form-line form-line_multi">
                                 <div class="form-line_multi__item form-line_multi__field">
                                     <label class="form-label form-label_dark form-label_bottom" for="search">1
@@ -225,22 +230,25 @@
                                     <label class="form-label form-label_dark form-label_top" for="type-select">Type
                                         de
                                         document</label>
-                                    <div class="form-item_select__wrap">
-                                        <select name="type" id="type-select"
-                                            class="form-item form-item_field form-item_select">
-                                            <option value="Tous" selected data-default>Tous</option>
-                                            <option value="type1">Type 1</option>
-                                            <option value="type2">Type 2</option>
-                                            <option value="type3">Type 3</option>
-                                            <option value="type4">Type 4</option>
-                                            <option value="type5">Type 5</option>
-                                            <option value="type6">Type 6</option>
-                                        </select>
+                                    <div class="form-item_field form-item_select">
+                                        <button class="form-item_select__arrow"><i
+                                                class="fas fa-chevron-down"></i></button>
+                                        <input class="form-item_select__prompt" type="text" autocomplete="off"
+                                            placeholder="Sélectionner un type de document">
+                                        <div class="form-item_select__drop">
+                                            <ul class="form-item_select__option__list">
+                                                <li class="form-item_select__option__item">Type 1</li>
+                                                <li class="form-item_select__option__item">Type 2</li>
+                                                <li class="form-item_select__option__item">Type 3</li>
+                                                <li class="form-item_select__option__item">Type 4</li>
+                                                <li class="form-item_select__option__item">Type 5</li>
+                                                <li class="form-item_select__option__item">Type 2</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="form-line_multi__item form-line_multi__button form-line_multi__button_round">
-                                    <button class="button button_basic primary form-item">
+                                <div class="form-line_multi__item form-line_multi__button">
+                                    <button class="form-item_button button button_basic primary">
                                         <span class="button__icon">
                                             <i class="fas fa-search"></i>
                                         </span>
@@ -464,7 +472,7 @@
                                         name="search" />
                                 </div>
                                 <div class="form-line_multi__item form-line_multi__button">
-                                    <button class="button button_basic primary form-item">
+                                    <button class="form-item_button button button_basic primary">
                                         <span class="button__label">S'inscrire</span>
                                     </button>
                                 </div>
@@ -572,28 +580,32 @@
                             </div>
                             <div class="column column_1-6">
                                 <h6 class="footer-site__title">Votre agence<br />territoriale</h6>
-                                <form class="form__wrap search-form form_s">
+                                <form class="form__wrap form_search form_s">
                                     <div class="form-line form-line_multi">
                                         <div class="form-line_multi__item form-line_multi__field">
                                             <label class="form-label form-label_dark form-label_top"
                                                 for="type-select">Votre
                                                 région</label>
-                                            <div class="form-item_select__wrap">
-                                                <select name="type" id="type-select"
-                                                    class="form-item form-item_little form-item_field form-item_select empty">
-                                                    <option value="" selected data-default>Choisir...</option>
-                                                    <option value="type1">Région 1</option>
-                                                    <option value="type2">Région 2</option>
-                                                    <option value="type3">Région 3</option>
-                                                    <option value="type4">Région 4</option>
-                                                    <option value="type5">Région 5</option>
-                                                    <option value="type6">Région 6</option>
-                                                </select>
+                                            <div class="form-item_field form-item_select">
+                                                <button class="form-item_select__arrow"><i
+                                                        class="fas fa-chevron-down"></i></button>
+                                                <input class="form-item_select__prompt" type="text" autocomplete="off"
+                                                    placeholder="Sélectionner un type de document">
+                                                <div class="form-item_select__drop">
+                                                    <ul class="form-item_select__option__list">
+                                                        <li class="form-item_select__option__item">Type 1</li>
+                                                        <li class="form-item_select__option__item">Type 2</li>
+                                                        <li class="form-item_select__option__item">Type 3</li>
+                                                        <li class="form-item_select__option__item">Type 4</li>
+                                                        <li class="form-item_select__option__item">Type 5</li>
+                                                        <li class="form-item_select__option__item">Type 2</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div
                                             class="form-line_multi__item form-line_multi__button form-line_multi__button_round">
-                                            <button class="button button_basic primary form-item">
+                                            <button class="form-item_button button button_basic primary">
                                                 <span class="button__icon"><i class="fas fa-search"></i></span>
                                             </button>
                                         </div>

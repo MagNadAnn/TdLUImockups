@@ -6,23 +6,76 @@ Global settings
 ------------------------------------------------------------------------------------
 */
 
-.tuile__link {
-    padding: 0;
-    background-color: transparent !important;
+a.tuile__link {
+    background-color: transparent;
     cursor: pointer;
     width: 100%;
 }
+
+.tuile__link {
+    flex-direction: column;
+}
+
+/*
+-----------------------------
+Tuile content
+*/
 
 .tuile__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1em 0 0;
 }
 
-.tuile__content > *,
-.tuile__content > .tuile__intro > * {
+.tuile__content:before {
+    bottom: 100%;
+    left: 1em;
+    margin-bottom: -0.5em;
+}
+
+.tuile__content.large {
+    font-size: 1.25em;
+}
+
+/*
+-----------------------------
+Tuile contents
+*/
+
+.tuile__content > * {
     color: #85170f !important;
 }
+
+
+/* ----- tuile pre-title ----- */
+
+.tuile__pre-title {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 0 0.5em;
+    text-align: right;
+}
+
+@media (max-width: 699px) {
+    .tuile__pre-title {
+        flex-wrap: wrap;
+    }
+}
+
+.tuile__date {
+    color: #db9500;
+    font-size: 1rem;
+}
+
+@media (max-width: 699px) {
+    .tuile__date {
+        width: 100%;
+    }
+}
+
+/* ----- tuile titre ----- */
 
 .tuile__title {
     margin-top: 0;
@@ -32,6 +85,12 @@ h4.tuile__title {
     margin-bottom: 0.5em;
 }
 
+@media (max-width: 799px) {
+    h4.tuile__title {
+        text-align: left;
+    }
+}
+
 p.tuile__title {
     margin-bottom: 0em;
     font-size: 1.25em;
@@ -39,11 +98,15 @@ p.tuile__title {
     font-weight: bold;
 }
 
+/* ----- tuile intro ----- */
+
 .tuile__intro > * {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 0.875em;
+    color: #85170f !important;
 }
+
 
 
 /*
@@ -54,29 +117,13 @@ Tuile image
 ------------------------------------------------------------------------------------
 */
 
-.tuile_media {
-    position: relative;
-}
+@media (min-width: 800px) {
 
-.tuile_media__container {
-    z-index: 3;
-}
+    .tuile_media {
+        position: relative;
+    }
 
-.tuile_media__content_fluid {
-    max-width: none !important;
-}
-
-.tuile_media > .tuile__link:hover .vignette__image,
-.tuile_media > .tuile__link.vignette__image,
-.tuile_media > .tuile__link.vignette__image {
-    width: 104%;
-    margin-left: -2%;
-    margin-top: -2%;
-    transform-origin: center center;
-    transform: rotate(1deg);
-}
-
-@media (min-width: 700px) {
+    /* ----- tuile media container ----- */
 
     .tuile_media__container {
         position: absolute;
@@ -90,7 +137,26 @@ Tuile image
         align-items: center;
         padding: 2em;
         box-sizing: border-box;
+        z-index: 3;
     }
+
+    /* ----- tuile media link ----- */
+
+    .tuile_media > .tuile__link {
+        display: block;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .tuile_media > .tuile__link:hover .vignette__image {
+        width: 104%;
+        margin-left: -2%;
+        margin-top: -2%;
+        transform-origin: center center;
+        transform: rotate(1deg);
+    }
+
+    /* ----- tuile media content ----- */ 
 
     .tuile_media__content {
         position: relative;
@@ -100,6 +166,10 @@ Tuile image
         margin: 0 auto;
         box-sizing: border-box;
         transition: all 0.2s;
+    }
+
+    .tuile_media__content_fluid {
+        max-width: none !important;
     }
 
     .tuile__link.tuile_media__content,
@@ -128,31 +198,42 @@ Tuile image
     }
 }
 
-@media (max-width: 699px) {
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Tuile hero
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
 
-    .tuile_media__content {
-        position: relative;
-        padding: 1em 0 0;
-    }
+/* ----- tuile hero link ----- */
 
-    .tuile_media__content:before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 1em;
-        height: 1em;
-        transform: rotate(45deg);
-        font-size: 1.5em;
-        background-color: #fff;
-        z-index: 2;
-    }
+.tuile__hero > .tuile__link {
+    position: relative;
+    display: block;
+    max-width: 25em;
+    padding: 1.5em 2em 1.75em;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.9);
+}
 
-    .tuile_media__content:before {
-        bottom: 100%;
-        left: 1em;
-        margin-bottom: -0.5em;
-    }
+.tuile__hero > .tuile__link:hover,
+.tuile__hero > .tuile__link:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
 
+.tuile__hero > .tuile__link:active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* ----- tuile hero read more ----- */
+
+.tuile__hero > .tuile__link > .button_read-more {
+    position: absolute;
+    bottom: -0.75em;
+    left: calc(50% - 0.75em);
 }
 
 /*
@@ -168,12 +249,32 @@ Tuile text-media
     transition: background-color 0.2s ease-in-out;
 }
 
-.tuile_text-media_v__content {
-    position: relative;
-    padding: 1em 0 0;
+
+/*
+-----------------------------
+Tuile text-media tuile__link
+*/
+
+.tuile_text-media > .tuile__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.tuile_text-media__content:before {
+
+.tuile_text-media__content {
+    position: relative;
+}
+
+/*
+-----------------------------
+Tuile text-media fleche vers la vignette
+*/
+
+
+.tuile_text-media__content::before {
     content: "";
     display: block;
     position: absolute;
@@ -201,9 +302,126 @@ Tuile text-media
     background-color: #ffffff;
 }
 
+/*
+-----------------------------
+Tuile text-media horizontale
+*/
 
-.tuile_text-media_v__content:before {
-    bottom: 100%;
-    left: 1em;
-    margin-bottom: -0.5em;
+@media (min-width: 700px) {
+
+    .tuile_text-media_h {
+        border-bottom: 0.25em solid #db9500;
+        padding: 0 !important;
+        margin: 0.5em !important;
+    }
+
+    .tuile_text-media_h > .tuile__link {
+        flex-direction: row;
+    }
+
+    .tuile_text-media_h > .tuile__link > .vignette__wrap {
+        max-width: 40%;
+    }
+
+    .tuile_text-media_h > .tuile__link > .tuile_text-media__content {
+        padding: 0 1em;
+        flex-grow: 1;
+    }
+
+    .tuile_text-media_h > .tuile__link > .tuile_text-media__content:before {
+        top: 1em ;
+        right: 100%;
+        margin-right: -0.5em;
+        left: initial;
+        bottom: initial;
+    }
+
+    .list > .tuile_text-media_h {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0.5em;
+    }
+}
+
+/*
+-----------------------------
+Tuile text-media horizontale
+*/
+
+@media (min-width: 700px) {
+    .list > .tuile_text-media_v {
+        margin: 1em 0;
+        padding: 0.5em 0.5em 1em;
+    }
+}
+
+/*
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Tuile icon-label
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+*/
+
+.tuile_icon-label {
+    font-size: 1em !important;
+}
+
+.tuile_icon-label > a.tuile__link {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    padding: 0.5em;
+    transition: 0.1s ease-in-out;
+}
+
+.tuile_icon-label > .tuile__link:hover,
+.tuile_icon-label > .tuile__link:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.tuile_icon-label > .tuile__link:active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tuile_icon-label__icon {
+    position: relative;
+    width: 4em;
+    min-width: 4em;
+    height: 4em;
+    color: #567e36;
+}
+
+.tuile_icon-label__icon > img {
+    width: 100%;
+    height: auto;
+}
+
+.tuile_icon-label__icon > i {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 0.5em;
+}
+
+.tuile_icon-label__label {
+    text-align: left;
+    margin-left: 0.5em;
+}
+
+.tuile_icon-label__label__title {
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.tuile_icon-label__label__description {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: none;
+    margin: 0;
 }
