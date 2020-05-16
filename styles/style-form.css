@@ -333,7 +333,8 @@ Form-item FIELD
 }
 
 .bg-pearl .form-item_field {
-    background-color: #ffffff;
+    border-top-color: #ffffff;
+    
 }
 
 
