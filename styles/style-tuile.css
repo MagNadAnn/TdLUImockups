@@ -194,36 +194,11 @@ Tuile text-media tuile__link
 
 /*
 -----------------------------
-Tuile text-media horizontale
+Tuile text-media fleche vers la vignette
 */
 
-.tuile_text-media_h > .tuile__link {
-    flex-direction: row;
-}
 
-.tuile_text-media_h > .tuile__link > .vignette__wrap {
-    max-width: 20em;
-}
-
-.tuile_text-media_h > .tuile__link > .tuile_text-media__content {
-    padding: 0 0 0 1em;
-    flex-grow: 1;
-}
-
-/*
------------------------------
-Tuile text-media verticale
-*/
-
-.tuile_text-media_v > .tuile__link {
-    flex-direction: column;
-}
-
-.tuile_text-media_v__content {
-    padding: 1em 0 0;
-}
-
-.tuile_text-media__content:before {
+.tuile_text-media__content::before {
     content: "";
     display: block;
     position: absolute;
@@ -251,8 +226,44 @@ Tuile text-media verticale
     background-color: #ffffff;
 }
 
+/*
+-----------------------------
+Tuile text-media horizontale
+*/
 
-.tuile_text-media_v__content:before {
+.tuile_text-media_h > .tuile__link {
+    flex-direction: row;
+}
+
+.tuile_text-media_h > .tuile__link > .vignette__wrap {
+    max-width: 40%;
+}
+
+.tuile_text-media_h > .tuile__link > .tuile_text-media__content {
+    padding: 0 0 0 1em;
+    flex-grow: 1;
+}
+
+.tuile_text-media_h > .tuile__link > .tuile_text-media__content:before {
+    top: 1em ;
+    right: 100%;
+    margin-right: -0.5em;
+}
+
+/*
+-----------------------------
+Tuile text-media verticale
+*/
+
+.tuile_text-media_v > .tuile__link {
+    flex-direction: column;
+}
+
+.tuile_text-media_v > .tuile__link > .tuile_text-media__content {
+    padding: 1em 0 0;
+}
+
+.tuile_text-media_v > .tuile__link > .tuile_text-media__content:before {
     bottom: 100%;
     left: 1em;
     margin-bottom: -0.5em;

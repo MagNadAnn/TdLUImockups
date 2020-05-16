@@ -237,10 +237,10 @@ a:focus .vignette_photo::after {
 
 .vignette_ratio_1-1 { padding-top: 100%; }
 .vignette_ratio_3-4 { padding-top: 75%; }
+.vignette_ratio_1-2 { padding-top: 50%; }
 
 
-.vignette_ratio_1-1 > .vignette__image,
-.vignette_ratio_3-4 > .vignette__image {
+[class*="vignette_ratio"] > .vignette__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -435,34 +435,47 @@ tag
 */
 
 .tag__wrap {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.vignette__wrap > .tag__wrap {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 5%;
+    margin-top: 1em;
+    margin-bottom: 1em;
     z-index: 3;
 }
 
-.tag__wrap > .tag__list {
-    display: flex;
+.vignette__wrap > .tag__wrap.list_v {
     flex-direction: column;
     align-items: flex-start;
 }
 
-.tag__list {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-    flex-wrap: wrap;
+/* ----- tag wrap position ----- */
+
+.tag__wrap.right {
+    right: 0;
+    left: initial;
 }
 
-.tag__item {
-    margin: 0 !important;
+.tag__wrap.bottom {
+    bottom: 0;
+    top: initial;
 }
+
+/* ----- tag ----- */
 
 .tag {
     display: inline-block;
     padding: 0.125em 0.25em 0.0625em;
-    margin: 0.25em 0.25em 0.25em 0;
+    margin: 0.25em;
     color: #7da237;
     background-color: #ffffff;
     text-transform: uppercase;
@@ -472,15 +485,46 @@ tag
     text-decoration: none;
 }
 
+/* ----- tag sizes ----- */
+
+.tag__wrap.large,
+.tag.large {
+    font-size: 1.25em;
+}
+
+.tag__wrap.x-large,
+.tag.x-large {
+    font-size: 1.5em;
+}
+
+/* ----- cliquable tag ----- */
+
 a.tag { color: #ffffff; }
 
 a.tag:link { background-color: #579ea5; }
 a.tag:hover, a.tag:focus { background-color: #42767a; }
 a.tag:active { background-color: #0098a6; }
 
+/* ----- special tags ----- */
+
 .tag_nouveau {
     font-size: 1em;
 }
+
+.tag_icon {
+    display: block;
+    margin: 0.125em;
+    padding: 0.125em;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(1, 50, 73, 0.5);
+    background-color: transparent;
+}
+
+.tag_icon:first-child { margin-left: 0.5em; }
+.tag_icon:last-child { margin-right: 0.5em; }
+
+/* ----- tag's themes ----- */
 
 .tag.info {
     color: #ffffff;
@@ -502,27 +546,10 @@ a.tag:active { background-color: #0098a6; }
     background-color: #a41515;
 }
 
+/* ----- button icon in tag ----- */
+
 .tag > .button_icon {
     margin-left: 0.25em;
-}
-
-/*
------------------------------
-tag-icon
-*/
-
-.tag-icon__wrap {
-    position: absolute;
-    color: #fff;
-    bottom: 0;
-    right: 0;
-    padding: 0.5em;
-}
-
-.tag-icon {
-    display: block;
-    font-size: 2em;
-    text-shadow: 0 0 20px rgba(1, 50, 73, 0.5);
 }
 
 /*
