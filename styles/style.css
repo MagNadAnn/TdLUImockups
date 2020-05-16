@@ -186,6 +186,8 @@ blockquote {
     padding: 1em 2em;
     background-color: rgba(0, 0, 0, 0.05);
     font-size: 1.125em;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 blockquote:first-child {
@@ -289,10 +291,17 @@ CHIMNEY
 */
 
 [class*="chimney"] {
-    width: calc(100% - 6em);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+}
+
+@media (min-width: 800px) {
+    [class*="chimney"] { width: calc(100% - 6em); }
+}
+
+@media (max-width: 799px) {
+    [class*="chimney"] { width: 80%; }
 }
 
 .chimney_fluid { max-width: none; }

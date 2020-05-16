@@ -453,8 +453,7 @@ tag
     z-index: 3;
 }
 
-.vignette__wrap > .tag__wrap.list_v {
-    flex-direction: column;
+.tag__wrap.list_v {
     align-items: flex-start;
 }
 
@@ -487,14 +486,18 @@ tag
 
 /* ----- tag sizes ----- */
 
-.tag__wrap.large,
-.tag.large {
-    font-size: 1.25em;
-}
+@media (min-width: 700px) {
+    
+    .tag__wrap.large,
+    .tag.large {
+        font-size: 1.25em;
+    }
 
-.tag__wrap.x-large,
-.tag.x-large {
-    font-size: 1.5em;
+    .tag__wrap.x-large,
+    .tag.x-large {
+        font-size: 1.5em;
+    }
+
 }
 
 /* ----- cliquable tag ----- */
@@ -1210,31 +1213,61 @@ HERO
     background-color: #db9500;
 }
 
-.hero > .vignette__wrap,
-.hero > .page-header__container > .vignette__wrap {
+@media (min-width: 800px) {
+    .hero {
+        font-size: 1.5em;
+        min-height: 20em;
+    }
+}
+
+@media (max-width: 799px) {
+    .hero {
+        min-height: 12.5em;
+    }
+}
+
+/* ----- hero vignette----- */
+
+.hero .vignette__wrap {
     position: absolute;
     height: 100%;
     z-index: 0;
 }
 
-.tuile_media__content_hero {
-    z-index: 3;
+@media (min-width: 800px) {
+
+    .hero .vignette__image {
+        width: 170%;
+        margin-left: -35%;
+    }
+
+    /* hero_v (cf. page connexion) */
+    .hero_v .vignette__image {
+        width: 120%;
+        margin-left: -10%;
+        margin-top: -5%;
+    }
+
 }
 
+@media (max-width: 799px) {
+
+    .hero .vignette__image {
+        width: 240%;
+        margin-left: -80%;
+    }
+
+}
+
+/* ----- hero container ----- */
+
 .hero__container {
+    position: relative;
+    z-index: 3;
     padding-top: 5em;
 }
 
-.hero__container > .tag__wrap {
-    font-size: 1.5em;
-}
-
 @media (min-width: 800px) {
-
-    .hero {
-        font-size: 1.5em;
-        min-height: 20em;
-    }
 
     .hero__container {
         position: relative;
@@ -1246,84 +1279,6 @@ HERO
         justify-content: flex-end;
     }
 
-    .hero > .vignette__wrap > .vignette__image,
-    .hero_header-site__vignette__wrap > .vignette__image {
-        width: 170%;
-        margin-left: -35%;
-    }
-
-    .hero_v > .vignette__wrap > .vignette__image,
-    .hero_header-site.is-shrinked .hero_header-site__vignette__wrap > .vignette__image {
-        width: 120%;
-        margin-left: -10%;
-        margin-top: -5%;
-    }
-
-    .hero__container > .tag__wrap {
-        position: absolute;
-        top: 0.75em;
-        left: 0;
-    }
-}
-
-@media (max-width: 799px) {
-
-    .hero {
-        min-height: 12.5em;
-    }
-
-    .hero > .vignette__wrap > .vignette__image,
-    .hero > .page-header__container > .vignette__wrap > .vignette__image {
-        width: 240%;
-        margin-left: -80%;
-    }
-
-    .hero .tag__wrap {
-        position: relative;
-        margin-bottom: 1em;
-        margin-top: 0;
-        justify-content: center;
-        flex-direction: row;
-    }
-
-}
-
-@media (max-width: 699px) {
-    .tuile_media__content_hero {
-        padding: 1.5em 2em 1.75em;
-        box-sizing: border-box;
-    }
-}
-
-/* adaptation liées aux tuile_media */
-
-.hero .tuile__link.tuile_media__content,
-.hero .tuile__link.tuile_media__content:visited,
-.hero .tuile__link .tuile_media__content,
-.hero .tuile__link:visited .tuile_media__content {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.hero .tuile__link.tuile_media__content:hover,
-.hero .tuile__link.tuile_media__content:focus,
-.hero .tuile__link:hover .tuile_media__content,
-.hero .tuile__link:focus .tuile_media__content {
-    background-color: rgba(255, 255, 255, 1) !important;
-}
-
-.hero .tuile__link.tuile_media__content:active,
-.hero .tuile__link:active .tuile_media__content {
-    background-color: rgba(255, 255, 255, 1) !important;
-}
-
-.hero .tuile_media__content > .button_read-more {
-    position: absolute;
-    bottom: -0.75em;
-    left: calc(50% - 0.75em);
-}
-
-.hero .tuile_media__content:before {
-    display: none !important;
 }
 
 /*
@@ -1413,6 +1368,16 @@ HERO HEADER-SITE
     .is-expanded .hero_header-site__form_search {
         font-size: calc(0.011 * 100vw);
     }
+}
+
+@media (min-width: 800px) {
+
+    .hero_header-site.is-shrinked .hero_header-site__vignette__wrap > .vignette__image {
+        width: 120%;
+        margin-left: -10%;
+        margin-top: -5%;
+    }
+
 }
 
 @media (min-width: 800px)  and (max-width: 1199px) {
