@@ -304,9 +304,9 @@ CHIMNEY
     [class*="chimney"] { width: 80%; }
 }
 
-.chimney_fluid { max-width: none; }
-.chimney_s { max-width: 50em; }
-.chimney_xs { max-width: 37.5em; }
+.chimney.fluid { max-width: none; }
+.chimney.small { max-width: 50em; }
+.chimney.x-small { max-width: 37.5em; }
 
 /*
 -----------------------------

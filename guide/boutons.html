@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Offres foncières</title>
+    <title>Boutons - Guide UI</title>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +15,7 @@
     <link href="../styles/style-form.css" rel="stylesheet">
     <link href="../styles/style-button.css" rel="stylesheet">
     <link href="../styles/style-special.css" rel="stylesheet">
-    <link href="../styles/style-guide.css" rel="stylesheet">
-    <!-- SH files -->
-    <script type="text/javascript" src="../sh/sh_main.min.js"></script>
-    <script type="text/javascript" src="../sh/sh_css.min.js"></script>
-    <script type="text/javascript" src="../sh/sh_html.min.js"></script>
-    <link type="text/css" type="text/css" href="../sh/sh_stylesheet.css" rel="stylesheet">
+    <link href="style-guide.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,70 +24,92 @@
         <nav class="UGnav">Menu</nav>
         <main class="UGmain">
             <section class="fw-section">
-                <div class="chimney">
-                    <div class="section__container">
-                        <h1>Boutons</h1>
-                    </div>
+                <div class="UIpageheader vignette__wrap vignette_photo">
+                    <h1 class="UItitle1">Boutons, liens, etc.</h1>
                 </div>
-                <div class="chimney_fluid">
-                    <h2 id="button_basic" class="UIh2">Button basic</h2>
-                    <div>
-                        <a href="#" class="button button_basic primary">
-                            <span class="button__icon"><i class="fas fa-download"></i></span>
-                            <span class="button__label">Télécharger</span>
-                        </a>
-                    </div>
+                <div class="chimney small">
+                    <article class="UIarticle">
+                        <p>La possibilité de relier les pages les unes aux autres est la fonctionnalité qui est au
+                            coeur
+                            de la naissance du web au début des années 1990.</p>
+                        <p>Pour ce faire, les interfaces sont outillées de liens plus ou moins sofistiqués : du
+                            simple
+                            lien dans un texte, au <em>Call to action</em>, en passant par le lien proposé dans un
+                            menu
+                            et de nombreux types de boutons.</p>
+                    </article>
+                </div>
+                <div class="chimney fluid">
+
+                    <h2 id="button" class="UItitle2">Boutons</h2>
                     <div class="columns">
                         <div class="column column_1-2">
-                            <div class="UIcode__wrap">
-                                <h3 id="button_basic" class="UIh3">With &lt;a&gt; tag</h3>
-                                <pre class="UIcode UIcode_HTML">
-&lt;a href=&quot;#&quot; class=&quot;<strong>button button_basic primary</strong>&quot;&gt;
-    &lt;span class=&quot;<strong>button__icon</strong>&quot;&gt;&lt;i class=&quot;fas fa-download&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-    &lt;span class=&quot;<strong>button__label</strong>&quot;&gt;T&eacute;l&eacute;charger&lt;/span&gt;
-&lt;/a&gt;</pre>
-                            </div>
+                            <h3 id="button_basic" class="UItitle3">class="button_basic"</h3>
+                            <p class="codepen" data-height="265" data-theme-id="default" data-default-tab="result"
+                                data-user="MagNadAnn" data-slug-hash="MWazEEW"
+                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                data-pen-title="Bouton basique - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/MWazEEW">
+                                        Bouton basique - TdL UI guide</a> by Margot Nadot (<a
+                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode UIcode_variations">
+&lt;a&gt;&lt;/a&gt;
+&lt;button&gt;&lt;/button&gt;</pre>
                         </div>
                         <div class="column column_1-2">
-                            <pre class="UIcode UIcode_CSS">
-.button {
-    display: inline-block;
-    box-sizing: border-box;
-    font-size: 1.25em;
-    text-align: center;
-    text-decoration: none;
-    line-height: 1.125em;
-    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-}
-
-.button_basic {
-    padding: 0.75em 1.25em 0.65em;
-    border-style: solid;
-    border-width: 0.2em;
-}
-
-.button.primary.button_basic {
-    color: white;
-    background-color: #579ea5;
-    border-color: #579ea5;
-}
-
-.button__icon {
-    transition: all 0.2s;
-}
-                            </pre>
+                            <h3 id="button_basic" class="UItitle3">class="button_icon"</h3>
+                            <p class="codepen" data-height="265" data-theme-id="default" data-default-tab="result"
+                                data-user="MagNadAnn" data-slug-hash="rNOQpar"
+                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                data-pen-title="Bouton icon - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/rNOQpar">
+                                        Bouton icon - TdL UI guide</a> by Margot Nadot (<a
+                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode UIcode_variations">
+x-large
+large
+[sans classe de taille]
+small
+x-small</pre>
                         </div>
-                        <p class="codepen" data-height="234" data-theme-id="default" data-default-tab="result"
-                            data-user="MagNadAnn" data-slug-hash="MWazEEW"
-                            style="height: 234px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                            data-pen-title="MWazEEW">
-                            <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/MWazEEW">
-                                    MWazEEW</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
-                                on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                        <div class="column column_1-2">
+                            <h3 id="button_basic" class="UItitle3">class="button_round"</h3>
+                            <p class="codepen" data-height="265" data-theme-id="default" data-default-tab="result"
+                                data-user="MagNadAnn" data-slug-hash="GRpwOoe"
+                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                data-pen-title="Bouton  Round - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/GRpwOoe">
+                                        Bouton rond - TdL UI guide</a> by Margot Nadot (<a
+                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode UIcode_variations">
+primary
+secundary
+success
+warning
+danger</pre>
+                        </div>
+                        <div class="column column_1-2">
+                            <h3 id="button_basic" class="UItitle3">class="button_round button_read-more"</h3>
+                            <p class="codepen" data-height="265" data-theme-id="default" data-default-tab="result"
+                                data-user="MagNadAnn" data-slug-hash="mdeQpEV"
+                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                data-pen-title="Bouton read more - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/mdeQpEV">
+                                        Bouton read more - TdL UI guide</a> by Margot Nadot (<a
+                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                        </div>
                     </div>
                 </div>
             </section>

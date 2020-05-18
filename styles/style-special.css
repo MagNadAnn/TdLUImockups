@@ -13,18 +13,21 @@ Couleurs
 
 .bg-blue_light { background-color: #579ea5 !important; color: #ffffff; }
 .bg-blue_dark { background-color: #42767a !important; color: #ffffff; }
-.bg-blue_bright { background-color: #0098a6 !important; color: #ffffff; }
+.bg-blue_bright { background-color: #00c3d6 !important; color: #ffffff; }
 
 .bg-green_light { background-color: #7da237 !important; color: #ffffff; }
 .bg-green_medium { background-color: #567e36 !important; color: #ffffff; }
 .bg-green_dark { background-color: #466b32 !important; color: #ffffff; }
+.bg-green_bright { background-color: #82c700 !important; color: #ffffff; }
 
 .bg-red_light { background-color: #a41515 !important; color: #ffffff; }
 .bg-red_medium { background-color: #85170f !important; color: #ffffff; }
 .bg-red_dark { background-color: #75160c !important; color: #ffffff; }
+.bg-red_bright { background-color: #e10000 !important; color: #ffffff; }
 
 .bg-yellow_light { background-color: #db9500 !important; }
 .bg-yellow_dark { background-color: #a86e00 !important; }
+.bg-yellow_bright { background-color: #ffad00 !important; }
 
 .bg-charcoal { background-color: #33383d !important; color: #ffffff; }
 .bg-white { background-color: #ffffff !important; color: #33383d; }

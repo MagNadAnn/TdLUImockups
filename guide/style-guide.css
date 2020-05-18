@@ -20,20 +20,37 @@
     background-color:white;
 }
 
-.UIh2 {
-    font-size: 2em;
-    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
-    letter-spacing: 0.025em;
-    font-weight: normal;
-    color: #ffffff;
-    background-color: black;
+.UIpageheader {
+    background-image: url('img/background-h1.jpg');
 }
 
-.UIh3 {
-    font-size: 1em;
+.UIarticle {
+    margin: 3em 0 4em;
+}
+
+[class*="UItitle"] {
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.025em;
     font-weight: normal;
+    text-align: center;
+    margin: 0.75em 0 !important;
+}
+
+.UItitle1 {
+    position: relative;
+    font-size: 6em;
+    color: #ffffff;
+    text-shadow: 0 0 1em rgba(1, 50, 73, 0.75);
+}
+
+.UItitle2 {
+    font-size: 4em;
+    color: #ffffff;
+    background-color: #7da237;
+}
+
+.UItitle3 {
+    font-size: 2em; 
     color: #555555;
 }
 
@@ -68,6 +85,15 @@
     content: "HTML";
 }
 
+.UIcode_variations::before {
+    content: "Variations affichées dans les exemples ci-dessus";
+}
+
 .UIcode_CSS::before {
     content: "CSS";
+}
+
+.codepen,
+.cp_embed_wrapper {
+    width: 100%;
 }
