@@ -665,27 +665,6 @@ Macro-component
 
 /*
 -----------------------------
-SECTION
-*/
-
-.section__container {
-    padding-bottom: 4em;
-}
-
-.section__container:first-child {
-    padding-top: 4em;
-}
-
-.section__container > *:first-child {
-    margin-top: 0;
-}
-
-.section__container > *:last-child {
-    margin-bottom: 0;
-}
-
-/*
------------------------------
 PAGE-HEADER
 */
 

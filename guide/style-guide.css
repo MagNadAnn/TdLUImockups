@@ -11,21 +11,30 @@
 }
 
 .UGnav {
+    position: relative;
     width: 15em;
+    height: 100%;
+    overflow-y: auto;
     background-color:cyan;
 }
 
 .UGmain {
+    position: relative;
     width: calc(100% - 15em);
+    height: 100%;
+    overflow-y: auto;
     background-color:white;
 }
 
+.UGmain [class*="chimney"] { margin: 0 3em; }
+
 .UIpageheader {
+    padding: 2em 0;
     background-image: url('img/background-h1.jpg');
 }
 
 .UIarticle {
-    margin: 3em 0 4em;
+    margin: 2em 0;
 }
 
 [class*="UItitle"] {
@@ -33,7 +42,7 @@
     letter-spacing: 0.025em;
     font-weight: normal;
     text-align: center;
-    margin: 0.75em 0 !important;
+    margin: 0.75em 0;
 }
 
 .UItitle1 {
@@ -45,6 +54,8 @@
 
 .UItitle2 {
     font-size: 4em;
+    padding: 0.25em;
+    margin: 0;
     color: #ffffff;
     background-color: #7da237;
 }
@@ -96,4 +107,39 @@
 .codepen,
 .cp_embed_wrapper {
     width: 100%;
+}
+
+.UIsommaire__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.UIsommaire__wrap > * {
+    margin: 0 !important;
+}
+
+.UIsommaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-position: inside;
+    padding-left: 1em;
+    font-size: 1.25em;
+}
+
+.UIsommaire > li {
+    position: relative;
+    bottom: 0.125em;
+    padding: 0 1em;
+    margin: 0;
+}
+
+*:not(.section__container):not(.column):not(li):first-child {
+    margin-top: 0;
+}
+
+*:not(.section__container):not(.column):not(li):last-child {
+    margin-bottom: 0;
 }

@@ -1,6 +1,18 @@
 /*
 --------------------
-BASE
+BUTTON RESET
+--------------------
+*/
+
+button {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/*
+--------------------
+BUTTON
 --------------------
 */
 
@@ -100,8 +112,8 @@ THEME (necessary)
 .button.secundary.button_round:hover > .button__icon,
 .button.secundary.button_round:focus > .button__icon {
     color: #ffffff;
-    border-color: #579ea5;
-    background-color: #579ea5;
+    border-color: #42767a;
+    background-color: #42767a;
 }
 
 .button.secundary.button_basic:active,
@@ -137,9 +149,9 @@ THEME (necessary)
 }
 
 .button.success.button_icon { color: #7da237; }
-.button.primary.button_icon:hover,
-.button.primary.button_icon:focus { color: #466b32; }
-.button.primary.button_icon:active { color: #82c700; }
+.button.success.button_icon:hover,
+.button.success.button_icon:focus { color: #466b32; }
+.button.success.button_icon:active { color: #82c700; }
 
 /* Warning */
 
@@ -167,9 +179,9 @@ THEME (necessary)
 }
 
 .button.warning.button_icon { color: #db9500; }
-.button.primary.button_icon:hover,
-.button.primary.button_icon:focus { color: #a86e00; }
-.button.primary.button_icon:active { color: #ffad00; }
+.button.warning.button_icon:hover,
+.button.warning.button_icon:focus { color: #a86e00; }
+.button.warning.button_icon:active { color: #ffad00; }
 
 /* Danger */
 
