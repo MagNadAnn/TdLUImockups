@@ -56,12 +56,15 @@ a > svg {
     margin-left: 0.25em;
 }
 
+[class*="bg-d"] a { color: #ffffff}
+[class*="bg-d"] a:hover, [class*="bg-d"] a:focus { color: #579ea5; background-color: #ffffff; }
+[class*="bg-d"] a:active { color: #ffffff}
+
 /*
 --------------------
 TITLES H1, H2, H3, H4, H5, H6
 --------------------
 */
-
 
 h1, h2, h3, h4, h5 {
     line-height: 1.125em;
@@ -142,14 +145,11 @@ h6 {
 
 /*
 --------------------
-ESPACEMENTS
+UL, OL, DT, LI
 --------------------
 */
 
-*:not(.section__container):not(.column):not(li):first-child {
-    margin-top: 0;
+li {
+    margin: 0.5em 0;
 }
 
-*:not(.section__container):not(.column):not(li):last-child {
-    margin-bottom: 0;
-}

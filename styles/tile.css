@@ -1,0 +1,233 @@
+/*
+--------------------
+TILES (liste de tuile)
+--------------------
+*/
+
+.tiles {
+    margin: 0 -0.5em;
+    flex-wrap: wrap;
+}
+
+.tiles:first-child { margin-top: -0.5em; }
+.tiles:last-child { margin-bottom: -0.5em; }
+
+/*
+--------------------
+TILES MONO
+--------------------
+*/
+
+@media (min-width: 800px) {
+    .tiles_mono { flex-wrap: nowrap; }
+}
+
+@media (max-width: 799px) {
+    .tiles_mono { flex-wrap: wrap; }
+}
+
+
+/*
+-----------------------------
+TILES > TILE (une tuile dans une liste)
+*/
+
+.tiles > .tile {
+    flex-grow: 1;
+    margin: 0.5em;
+}
+
+.tile_1-1 { width: calc(100% * (1 / 1) - 1em); }
+
+@media (min-width: 700px) {
+    .tile_1-2 { max-width: calc(100% * (1 / 2) - 1em); }
+    .tile_1-3 { max-width: calc(100% * (1 / 3) - 1em); }
+    .tile_2-3 { max-width: calc(100% * (2 / 3) - 1em); }
+}
+
+@media (min-width: 800px) {
+    .tile_1-4 { max-width: calc(100% * (1 / 4) - 1em); }
+    .tile_3-4 { max-width: calc(100% * (3 / 4) - 1em); }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .tile_1-4 { max-width: calc(100% * (1 / 2) - 1em); }
+}
+
+/*
+--------------------
+TILE LINK
+--------------------
+*/
+
+a.tile__link {
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+/*
+--------------------
+TILE CONTENT
+--------------------
+*/
+
+.tile__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 0 0;
+}
+
+.tile__content:before {
+    bottom: 100%;
+    left: 1em;
+    margin-bottom: -0.5em;
+}
+
+/*
+--------------------
+TILE CONTENTS
+--------------------
+*/
+
+.tile__content > * {
+    color: #85170f;
+}
+
+/* ----- TILE PRE-TITLE ----- */
+
+.tile__pre-title {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 0 0.5em;
+    text-align: right;
+}
+
+@media (max-width: 699px) {
+    .tile__pre-title { flex-wrap: wrap; }
+}
+
+/* TILE DATE */
+
+.tile__date {
+    color: #db9500;
+    font-size: 1rem;
+}
+
+@media (max-width: 699px) {
+    .tile__date {
+        width: 100%;
+    }
+}
+
+/* ----- TILE TITLE ----- */
+
+.tile__title {
+    margin-top: 0;
+}
+
+h4.tile__title {
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 799px) {
+    h4.tile__title { text-align: left; }
+}
+
+p.tile__title {
+    margin-bottom: 0em;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+
+/* ----- tuile intro ----- */
+
+.tile__intro > * {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.875em;
+    color: #85170f !important;
+}
+
+/*
+--------------------
+TILE type MEDIA
+--------------------
+*/
+
+@media (min-width: 800px) {
+
+    .tile_media {
+        position: relative;
+    }
+
+    /* ----- tuile media link ----- */
+
+    .tile_media > .tile__link {
+        display: block;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ----- tuile media vignette ----- */
+
+    .tile_media > .tile__link:hover .vignette__image {
+        width: 104%;
+        margin-left: -2%;
+        margin-top: -2%;
+        transform-origin: center center;
+        transform: rotate(1deg);
+    }
+
+    /* ----- tuile media container ----- */
+
+    .tile_media > .tile__link > .tile__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 2em;
+        box-sizing: border-box;
+        z-index: 3;
+    }
+
+    /* ----- tuile media content ----- */ 
+
+    .tile_media .tile__content {
+        position: relative;
+        display: block;
+        max-width: 25em;
+        padding: 1.5em 2em 1.75em;
+        margin: 0 auto;
+        box-sizing: border-box;
+        transition: all 0.2s;
+    }
+
+    .tile_media > .tile__link .tile__content,
+    .tile_media > .tile__link:visited .tile__content {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .tile_media > .tile__link:hover .tile__content,
+    .tile_media > .tile__link:focus .tile__content {
+        background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    .tile_media > .tile__link:active .tile__content {
+        background-color: rgba(255, 255, 255, 1) !important;
+    }
+
+    .tile_media .tile__content > .button {
+        position: absolute;
+        bottom: -0.75em;
+        left: calc(50% - 0.75em);
+    }
+}

@@ -1,3 +1,9 @@
+/*
+--------------------
+UI LAYOUT
+--------------------
+*/
+
 .UGwrap {
     position: absolute;
     top: 0;
@@ -26,12 +32,24 @@
     background-color:white;
 }
 
-.UGmain [class*="chimney"] { margin: 0 3em; }
+.UGmain .chimney.fluid { margin: 0 3em; }
+
+/*
+--------------------
+UI PAGE HEADER
+--------------------
+*/
 
 .UIpageheader {
     padding: 2em 0;
     background-image: url('img/background-h1.jpg');
 }
+
+/*
+--------------------
+UI ARTICLE
+--------------------
+*/
 
 .UIarticle {
     margin: 2em 0;
@@ -41,13 +59,19 @@
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
     letter-spacing: 0.025em;
     font-weight: normal;
-    text-align: center;
     margin: 0.75em 0;
 }
+
+/*
+--------------------
+UI TITLES
+--------------------
+*/
 
 .UItitle1 {
     position: relative;
     font-size: 6em;
+    text-align: center;
     color: #ffffff;
     text-shadow: 0 0 1em rgba(1, 50, 73, 0.75);
 }
@@ -56,14 +80,27 @@
     font-size: 4em;
     padding: 0.25em;
     margin: 0;
+    text-align: center;
     color: #ffffff;
     background-color: #7da237;
 }
 
 .UItitle3 {
     font-size: 2em; 
+    text-align: center;
     color: #555555;
 }
+
+.UItitle4 {
+    font-size: 1.5em; 
+    color: #555555;
+}
+
+/*
+--------------------
+UI CODE
+--------------------
+*/
 
 .UIcode__wrap {
     padding: 1em;
@@ -90,24 +127,19 @@
     box-sizing: border-box;
     background-color: #555555;
     color: #ffffff;
-}
-
-.UIcode_HTML::before {
-    content: "HTML";
-}
-
-.UIcode_variations::before {
-    content: "Variations affichées dans les exemples ci-dessus";
-}
-
-.UIcode_CSS::before {
-    content: "CSS";
+    content: attr(title);
 }
 
 .codepen,
 .cp_embed_wrapper {
     width: 100%;
 }
+
+/*
+--------------------
+UI SOMMAIRE
+--------------------
+*/
 
 .UIsommaire__wrap {
     display: flex;
@@ -135,6 +167,12 @@
     padding: 0 1em;
     margin: 0;
 }
+
+/*
+--------------------
+ESPACEMENTS
+--------------------
+*/
 
 *:not(.section__container):not(.column):not(li):first-child {
     margin-top: 0;

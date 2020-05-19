@@ -25,6 +25,10 @@ SECTIONS
     padding: 4em 0;
 }
 
+.section__container + .section__container {
+    padding-top: 0;
+}
+
 /*
 --------------------
 CHIMNEY
@@ -52,3 +56,17 @@ CHIMNEY
 .chimney.fluid { max-width: none; }
 .chimney.small { max-width: 50em; }
 .chimney.x-small { max-width: 37.5em; }
+
+/*
+--------------------
+ESPACEMENTS
+--------------------
+*/
+
+*:not(.section__container):not(.column):not(li):first-child {
+    margin-top: 0;
+}
+
+*:not(.section__container):not(.column):not(li):last-child {
+    margin-bottom: 0;
+}
