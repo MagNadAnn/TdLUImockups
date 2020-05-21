@@ -1,0 +1,102 @@
+/*
+--------------------
+MENU
+--------------------
+*/
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0.875em;
+    align-items: center;
+}
+
+@media (max-width: 799px) {
+    .menu {
+        flex-direction: column;
+    }
+}
+
+/* ----- menu item ----- */
+
+.menu__item {
+    margin: 0;
+}
+
+.menu__item_separator {
+    flex-grow: 1;
+}
+
+/* ----- menu link ----- */
+
+.menu__link {
+    text-decoration: none;
+    display: inline-block
+}
+
+@media (min-width: 800px) {
+    .menu__link {
+        padding: 0.75em;
+    }
+}
+
+@media (max-width: 799px) {
+    .menu__link {
+        padding: 0.5rem;
+    }
+}
+
+.menu__link:hover,
+.menu__link:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu__link:focus {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #579ea5;
+}
+
+.menu__link_no-click {
+    display: inline-block;
+    background-color: transparent !important;
+}
+
+
+/*
+--------------------
+SOUS-MENU
+--------------------
+*/
+
+.menu-submenu {
+    flex-direction: column;
+    align-items: stretch;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+}
+
+.menu-submenu > .menu__item {
+    font-size: 2em;
+    text-align: center;
+}
+
+.menu-submenu > .menu__item > .menu__link {
+    display: block;
+}
+
+/* theme */
+
+.menu-submenu > .menu__item > .menu__link { color: #7da237; }
+
+.bg-green_light > .menu-submenu > .menu__item > .menu__link { color: #ffffff; }
+
+.menu-submenu > .menu__item > .menu__link:hover,
+.menu-submenu > .menu__item > .menu__link:focus {
+    background-color: rgba(125, 162, 55, 0.15);
+}
+
+.bg-green_light > .menu-submenu > .menu__item > .menu__link:hover,
+.bg-green_light > .menu-submenu > .menu__item > .menu__link:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+}

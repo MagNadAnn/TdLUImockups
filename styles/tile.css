@@ -4,28 +4,14 @@ TILES (liste de tuile)
 --------------------
 */
 
-.tiles {
+.list.tiles {
     margin: 0 -0.5em;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .tiles:first-child { margin-top: -0.5em; }
 .tiles:last-child { margin-bottom: -0.5em; }
-
-/*
---------------------
-TILES MONO
---------------------
-*/
-
-@media (min-width: 800px) {
-    .tiles_mono { flex-wrap: nowrap; }
-}
-
-@media (max-width: 799px) {
-    .tiles_mono { flex-wrap: wrap; }
-}
-
 
 /*
 -----------------------------
@@ -37,21 +23,25 @@ TILES > TILE (une tuile dans une liste)
     margin: 0.5em;
 }
 
+.list_v > .tile {
+    width: calc(100% - 1em);
+}
+
 .tile_1-1 { width: calc(100% * (1 / 1) - 1em); }
 
 @media (min-width: 700px) {
-    .tile_1-2 { max-width: calc(100% * (1 / 2) - 1em); }
-    .tile_1-3 { max-width: calc(100% * (1 / 3) - 1em); }
-    .tile_2-3 { max-width: calc(100% * (2 / 3) - 1em); }
+    .tile_1-2 { width: calc(100% * (1 / 2) - 1em); }
+    .tile_1-3 { width: calc(100% * (1 / 3) - 1em); }
+    .tile_2-3 { width: calc(100% * (2 / 3) - 1em); }
 }
 
 @media (min-width: 800px) {
-    .tile_1-4 { max-width: calc(100% * (1 / 4) - 1em); }
-    .tile_3-4 { max-width: calc(100% * (3 / 4) - 1em); }
+    .tile_1-4 { width: calc(100% * (1 / 4) - 1em); }
+    .tile_3-4 { width: calc(100% * (3 / 4) - 1em); }
 }
 
 @media (min-width: 600px) and (max-width: 799px) {
-    .tile_1-4 { max-width: calc(100% * (1 / 2) - 1em); }
+    .tile_1-4 { width: calc(100% * (1 / 2) - 1em); }
 }
 
 /*
@@ -61,9 +51,14 @@ TILE LINK
 */
 
 a.tile__link {
-    background-color: transparent;
-    cursor: pointer;
+    position: relative;
+    display: block;
     width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1em;
+    box-sizing: border-box;
+    transition: 0.1s ease-in-out;
 }
 
 /*
@@ -76,7 +71,6 @@ TILE CONTENT
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1em 0 0;
 }
 
 .tile__content:before {
@@ -85,22 +79,22 @@ TILE CONTENT
     margin-bottom: -0.5em;
 }
 
+.tile__content.large {
+    font-size: 1.25em;
+}
+
 /*
 --------------------
 TILE CONTENTS
 --------------------
 */
 
-.tile__content > * {
-    color: #85170f;
-}
-
 /* ----- TILE PRE-TITLE ----- */
 
 .tile__pre-title {
-    flex-direction: row-reverse;
-    justify-content: space-between;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;    
     margin: 0 0 0.5em;
     text-align: right;
 }
@@ -137,7 +131,7 @@ h4.tile__title {
 }
 
 p.tile__title {
-    margin-bottom: 0em;
+    margin-bottom: 0.25em;
     font-size: 1.25em;
     line-height: 1.25em;
     font-weight: bold;
@@ -160,21 +154,22 @@ TILE type MEDIA
 
 @media (min-width: 800px) {
 
-    .tile_media {
+    .tile_image {
         position: relative;
     }
 
     /* ----- tuile media link ----- */
 
-    .tile_media > .tile__link {
+    .tile_image > .tile__link {
         display: block;
         padding: 0;
         box-sizing: border-box;
+        background-color: transparent !important;
     }
 
     /* ----- tuile media vignette ----- */
 
-    .tile_media > .tile__link:hover .vignette__image {
+    .tile_image > .tile__link:hover .vignette__image {
         width: 104%;
         margin-left: -2%;
         margin-top: -2%;
@@ -184,7 +179,7 @@ TILE type MEDIA
 
     /* ----- tuile media container ----- */
 
-    .tile_media > .tile__link > .tile__container {
+    .tile_image > .tile__link > .tile__container {
         position: absolute;
         top: 0;
         left: 0;
@@ -201,7 +196,7 @@ TILE type MEDIA
 
     /* ----- tuile media content ----- */ 
 
-    .tile_media .tile__content {
+    .tile_image .tile__content {
         position: relative;
         display: block;
         max-width: 25em;
@@ -211,23 +206,262 @@ TILE type MEDIA
         transition: all 0.2s;
     }
 
-    .tile_media > .tile__link .tile__content,
-    .tile_media > .tile__link:visited .tile__content {
+    .tile_image > .tile__link .tile__content,
+    .tile_image > .tile__link:visited .tile__content {
         background-color: rgba(255, 255, 255, 0.9) !important;
     }
 
-    .tile_media > .tile__link:hover .tile__content,
-    .tile_media > .tile__link:focus .tile__content {
+    .tile_image > .tile__link:hover .tile__content,
+    .tile_image > .tile__link:focus .tile__content {
         background-color: rgba(255, 255, 255, 1) !important;
     }
 
-    .tile_media > .tile__link:active .tile__content {
+    .tile_image > .tile__link:active .tile__content {
         background-color: rgba(255, 255, 255, 1) !important;
     }
 
-    .tile_media .tile__content > .button {
+    .tile_image  .tile__content > * {
+        color: #85170f;
+    }
+
+    .tile_image .tile__content > .button {
         position: absolute;
         bottom: -0.75em;
         left: calc(50% - 0.75em);
     }
+}
+
+/*
+--------------------
+TILE type TEXT-MEDIA
+--------------------
+*/
+
+[class*=tile_text-image] {
+    position: relative;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+/* ----- Tuile text-media link ----- */
+
+[class*=tile_text-image] > .tile__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent !important;
+}
+
+[class*=tile_text-image]:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bg-pearl [class*=tile_text-image]:hover {
+    background-color: #ffffff;
+}
+
+/* ----- Tuile text-media content ----- */
+
+[class*=tile_text-image] .tile__content {
+    position: relative;
+    padding: 1em 0 0;
+}
+
+[class*=tile_text-image] .tile__content > * {
+    color: #85170f;
+}
+
+/* ----- Tuile text-media fleche vers la vignette ----- */
+
+
+[class*=tile_text-image] .tile__content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    transform: rotate(45deg);
+    font-size: 1.5em;
+    background-color: #ffffff;
+    z-index: 2;
+    transition: background-color 0.2s ease-in-out;
+}
+
+[class*=tile_text-image] > .tile__link:hover > .tile__content:before {
+    background-color: #f5f5f5;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bg-pearl [class*=tile_text-image] .tile__content:before {
+    background-color: #f5f5f5;
+}
+
+.bg-pearl [class*=tile_text-image] > .tile__link:hover > .tile__content:before {
+    background-color: #ffffff;
+}
+
+/* ----- Tuile text-media horizontale ----- */
+
+@media (min-width: 700px) {
+
+    .tile_text-image_h {
+        border-bottom: 0.25em solid #db9500;
+        padding: 0;
+        margin: 0.5em;
+    }
+
+    .list > .tile_text-image_h {
+        margin: 0;
+        padding: 0.5em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* tile link */
+
+    .tile_text-image_h > .tile__link {
+        flex-direction: row;
+    }
+
+    /* vignette */
+
+    .tile_text-image_h > .tile__link > .vignette {
+        max-width: 40%;
+    }
+
+    /* tile content */
+
+    .tile_text-image_h > .tile__link > .tile__content {
+        padding: 0 1em;
+        flex-grow: 1;
+    }
+
+    /* tile fleche vers la vignette */
+
+    .tile_text-image_h > .tile__link > .tile__content:before {
+        top: 1em ;
+        right: 100%;
+        margin-right: -0.5em;
+        left: initial;
+        bottom: initial;
+    }
+
+}
+
+/* ----- Tuile text-media horizontale ----- */
+
+@media (min-width: 700px) {
+    .list > .tile_text-image_v {
+        margin: 1em 0;
+        padding: 0.5em 0.5em 1em;
+    }
+
+    .tile_text-image_v > .tile__link{
+        flex-direction: column;
+    }
+}
+
+/*
+--------------------
+TILE type HERO
+--------------------
+*/
+
+/* ----- tile hero link ----- */
+
+.tile_hero > .tile__link {
+    position: relative;
+    display: block;
+    max-width: 25em;
+    padding: 1.5em 2em 1.75em;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.tile_hero > .tile__link:hover,
+.tile_hero > .tile__link:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tile_hero > .tile__link:active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* ----- tile hero content ----- */
+
+.tile_hero > .tile__content > * {
+    color: #85170f;
+}
+
+/* ----- tile hero read-more ----- */
+
+.tile_hero > .tile__link > .button_read-more {
+    position: absolute;
+    bottom: -0.75em;
+    left: calc(50% - 0.75em);
+}
+
+/*
+--------------------
+TILE type ICON-LABEL
+--------------------
+*/
+
+/* ----- tuile icon link ----- */
+
+.tile_icon-label > a.tile__link {
+    display: flex !important;
+    align-items: center;
+    height: 100%;
+    padding: 0.5em 1em 0.5em 0.5em;
+}
+
+/* ----- tuile icon icon ----- */
+
+.tile_icon-label .tile__icon {
+    position: relative;
+    width: 4em;
+    min-width: 4em;
+    height: 4em;
+}
+
+.tile_icon-label .tile__icon > img {
+    width: 100%;
+    height: auto;
+}
+
+.tile_icon-label .tile__icon > i,
+.tile_icon-label .tile__icon > svg {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 0.5em;
+}
+
+/* ----- tuile icon content ----- */
+
+.tile_icon-label .tile__content {
+    text-align: left;
+    margin-left: 0.5em;
+    padding: 0;
+}
+
+.tile_icon-label .tile__title {
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.tile_icon-label .tile__intro {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: none;
+    margin: 0;
 }

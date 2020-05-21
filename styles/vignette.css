@@ -131,10 +131,7 @@ VIGNETTE RATIO
 */
 
 [class*="vignette__ratio"] {
-    position: relative;
     background-color: #579ea5;
-    overflow: hidden;
-    z-index: 0 !important;
 }
 
 .vignette__ratio_1-1 { padding-top: 100%; }
@@ -146,6 +143,18 @@ VIGNETTE RATIO
     position: absolute;
     top: 0;
     left: 0;
+}
+
+/*
+--------------------
+VIGNETTE IMAGE WRAP
+--------------------
+*/
+
+.vignette__image-wrap {
+    position: relative;
+    overflow: hidden;
+    z-index: 0 !important;
 }
 
 /*
