@@ -1246,52 +1246,6 @@ CTA soutien
     }  
 }
 
-
-/*
------------------------------
-Mixins text
-*/
-
-.text_little {
-    display:inline-block;
-    font-size: 0.75em;
-}
-
-.text_little_inline {
-    font-size: 0.75em;
-}
-
-.text_center {
-    text-align: center;
-}
-
-@media (min-width: 800px) {
-
-    .text_left {
-        text-align: left;
-    }
-
-}
-
-.text_color {
-    color: #7da237;
-}
-
-.text_white {
-    color: #ffffff;
-}
-
-.text_on-photo {
-    text-shadow: 0 0 4em #311102,1px 1px 2em #311102,1px 1px 1em #311102,-1px -1px 1px rgba(0,0,0,0.5),1px 1px 1px rgba(0,0,0,0.5);
-    position: relative;
-    z-index: 3;
-}
-
-.text_on-photo,
-.text_on-photo > *{
-    color: #ffffff !important;
-}
-
 /*
 -----------------------------
 Mixins block
