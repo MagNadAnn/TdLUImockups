@@ -10,13 +10,15 @@
     <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
     <link href="../styles/global.css" rel="stylesheet">
     <link href="style-guide.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon/favicon_04/favicon-32x32.png" />
+    <!-- <link rel="icon" type="image/png" href="../img/favicon/favicon_05/favicon-32x32.png" /> -->
 </head>
 
 <body>
 
     <div class="UGwrap">
         <nav class="UGnav bg-l-cream bg-trame_champs_light">
-            <a href="index.php" class="UItitle3 UGnavTitle1 text_red">
+            <a href="index.php" class="UItitle3 UGnavTitle1">
                 <span class="logo"><img src="../img/logo_TdL_cartouche_blanc-rouge_500.png"></span>
                 <span>UI style guide</span>
                 <span class="text_little">Sites et applications<br>de Terre de Liens</span>
