@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vignettes - Guide UI</title>
+
 <?php include 'guide-menu.php'; ?>
         <main class="UGmain">
             <section class="fw-section">
@@ -35,7 +41,9 @@
     &lt;div class=&quot;<strong>vignette__image-wrap</strong>&quot;&gt;
         &lt;img class=&quot;<strong>vignette__image</strong>&quot; /&gt;
     &lt;p class=&quot;<strong>vignette__credit</strong>&quot;&gt;
-    <em>&lt;ul class=&quot;tags&quot;&gt; (facultatif)</em></pre>
+    &lt;ul class=&quot;<a href="tag">tags</a>&quot;&gt;<em>*</em>
+
+<em>* facultatif</em></pre>
                             <h4 class="UItitle4">Crédit</h4>
                             <p>Il est important d'afficher un crédit à tout visuel affiché sur le site.</p>
                             <p>Pour cela on insère dans la balise <em>vignette</em> une balise <em>&lt;p
@@ -164,8 +172,8 @@ vignette__ratio_2-1 <em>vignette deux fois plus longue que haute</em></pre>
                     <div class="chimney small">
                         <article class="UIarticle">
                             <h4 class="UItitle4">Tags</h4>
-                            <p>Les <em>vignettes</em> sont très utilisées pour les <a href="tile.html">tuiles</a>. C'est
-                                pourquoi elles sont conçu de manière à abriter également les <a href="tag.html">tags</a>
+                            <p>Les <em>vignettes</em> sont très utilisées pour les <a href="tile">tuiles</a>. C'est
+                                pourquoi elles sont conçu de manière à abriter également les <a href="tag">tags</a>
                                 liés à la tuile.</p>
                             <p>Le contenant avec la balise tag est automatiquement placé <strong>en haut à
                                     gauche</strong> de la
@@ -176,7 +184,7 @@ vignette__ratio_2-1 <em>vignette deux fois plus longue que haute</em></pre>
                                     class="text_color">tag</strong>.</p>
                             <h4 class="UItitle4">Vignettes sans image</h4>
                             <p>Dans une liste de tuile, une vignette sans image possède néanmoins un ratio. Son
-                                emplacement est occupé par un aplat bleu, <a href="button.html">de la couleur des liens
+                                emplacement est occupé par un aplat bleu, <a href="button">de la couleur des liens
                                     et des boutons</a>.</p>
                             <p>Dans ce cas, évidemment, on n'affiche pas de crédit.</p>
                             <h4 class="UItitle4">Survol</h4>

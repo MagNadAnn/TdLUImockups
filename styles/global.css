@@ -1891,13 +1891,37 @@ MIXINS TEXT
 
 /*
 --------------------
-TEXT LITTLE
+TEXT SIZE
 --------------------
 */
 
-.text_little {
+.text_size.small {
     font-size: 0.75em;
 }
+
+.text_size.x-small {
+    font-size: 0.5em;
+}
+
+.text_size.large {
+    font-size: 1.5em;
+}
+
+.text_size.x-large {
+    font-size: 2em;
+}
+
+/*
+--------------------
+TEXT TYPO
+--------------------
+*/
+
+.text_cursive {
+    font-family: 'Kalam', cursive;
+    font-weight: normal;
+}
+
 
 /*
 --------------------

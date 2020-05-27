@@ -2,21 +2,10 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
     <title>Styles de texte - Guide UI</title>
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap"
-        rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
-    <link href="../styles/global.css" rel="stylesheet">
-    <link href="style-guide.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../img/favicon/favicon_05/favicon-32x32.png" />
-</head>
 
-<body>
+<?php include 'guide-menu.php'; ?>
 
-    <div class="UGwrap">
-        <nav class="UGnav">Menu</nav>
         <main class="UGmain">
             <section class="fw-section">
                 <div class="UIpageheader vignette vignette_photo">
@@ -26,9 +15,10 @@
                     <h3 class="UItitle3">Sommaire</h3>
                     <ol class="UIsommaire">
                         <li><a href="#base">Styles de base</a></li>
-                        <li><a href="#mixin-text">Mixins texte</a></li>
+                        <li><a href="#mixin-text">Mixins de texte</a></li>
                     </ol>
                 </nav>
+
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
@@ -77,7 +67,7 @@ blockquote, cite</pre>
             </section>
 
             <section class="fw-section">
-                <h2 id="mixin-text" class="UItitle2">Mixins texte</h2>
+                <h2 id="mixin-text" class="UItitle2">Mixins de texte</h2>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
@@ -91,7 +81,7 @@ blockquote, cite</pre>
                         <div class="columns">
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">Text little</h3>
+                                    <h3 class="UItitle3">class="text_size"</h3>
                                     <p class="codepen" data-height="265" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="xxwNLQP"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -103,29 +93,12 @@ blockquote, cite</pre>
                                     </p>
                                     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                                     <pre class="UIcode" title="Classes à utiliser">
-text_little</pre>
-                                </div>
-                            </div>
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">Text align</h3>
-                                    <p>Sur mobile, <em>text_left</em> et <em>text_right</em> sont annulées pour revenir
-                                        à leur alignement hérité (souvent le centrage) pour s'adapter élégamment à la
-                                        mise en une seule colonne.</p>
-                                    <p class="codepen" data-height="265" data-theme-id="default"
-                                        data-default-tab="result" data-user="MagNadAnn" data-slug-hash="QWjRMXy"
-                                        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                                        data-pen-title="Text align - TdL UI guide">
-                                        <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/QWjRMXy">
-                                                Text align - TdL UI guide</a> by Margot Nadot (<a
-                                                href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
-                                            on <a href="https://codepen.io">CodePen</a>.</span>
-                                    </p>
-                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                                    <pre class="UIcode" title="Classes à utiliser">
-text_left
-text_center
-text_right</pre>
+text_size
+
+x-small
+small
+large
+x-large</pre>
                                 </div>
                             </div>
                             <div class="column column_1-2">
@@ -158,7 +131,30 @@ text_pearl
 text_white</pre>
                                 </div>
                             </div>
-                            <div class="column column_1-2">
+                            <div class="column column_1-1">
+                                <div class="bg-l-pearl block_padding">
+                                    <h3 class="UItitle3">Text align</h3>
+                                    <p>Sur mobile, <em>text_left</em> et <em>text_right</em> sont annulées pour revenir
+                                        à leur alignement hérité (souvent le centrage) pour s'adapter élégamment à la
+                                        mise en une seule colonne.</p>
+                                    <p class="codepen" data-height="265" data-theme-id="default"
+                                        data-default-tab="result" data-user="MagNadAnn" data-slug-hash="QWjRMXy"
+                                        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                        data-pen-title="Text align - TdL UI guide">
+                                        <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/QWjRMXy">
+                                                Text align - TdL UI guide</a> by Margot Nadot (<a
+                                                href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                            on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                    <pre class="UIcode" title="Classes à utiliser">
+text_left
+text_center
+text_right</pre>
+                                </div>
+                            </div>
+                            
+                            <div class="column column_1-1">
                                 <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3">class="text_on-photo"</h3>
                                     <p>Mise en scène ici dans un <a href="hero.html">hero</a>.</p>

@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mixin de blocs - Guide UI</title>
+
 <?php include 'guide-menu.php'; ?>
 
         <main class="UGmain">
