@@ -6,65 +6,15 @@ Layout
 ------------------------------------------------------------------------------------
 */
 
-.site__wrap {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
 
-/*
------------------------------
-aside system
-*/
 
-.aside__wrap {
-    display: flex;
-    padding: 0;
-}
 
-@media (min-width: 700px) {
-    .aside__trigger {
-        display: none;
-    }
-}
 
-@media (max-width: 699px) {
-    .aside__trigger {
-        position: fixed;
-        z-index: 5;
-        top: 18em;
-    }
-}
 
 .aside__panel {
     box-sizing: border-box;
     color: #ffffff;
     background-color: #579ea5;
-}
-
-@media (min-width: 700px) {
-    .aside__panel {
-        width: 15em;
-    }
-}
-
-@media (max-width: 699px) {
-    .aside__panel {
-        display: none;
-        width: 100vw;
-        max-height: 100vh;
-        overflow-y: auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 52;
-        box-sizing: border-box;
-    }
-
-    .aside__panel.is-visible {
-        display: block;
-    }
 }
 
 .aside__section-header {
@@ -95,30 +45,6 @@ aside system
     margin-bottom: 0;
 }
 
-@media (min-width: 700px) {
-    .aside__leftover-space {
-        width: calc(100% - 15em);
-    }
-}
-
 .filters__wrap.form__wrap {
     margin-top: 0;
-}
-
-
-/*
------------------------------
-small and big screens specificities
-*/
-
-@media (min-width: 800px) {
-    .small-screens {
-        display: none;
-    }
-}
-
-@media (max-width: 799px) {
-    .big-screens {
-        display: none;
-    }
 }
