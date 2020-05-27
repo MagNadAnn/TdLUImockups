@@ -332,14 +332,105 @@ ESPACEMENTS
 
 /*
 --------------------
-BUTTON RESET
+COLUMNS
 --------------------
 */
 
-button {
-    border: none;
-    padding: 0;
-    cursor: pointer;
+.columns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -0.5em;
+}
+
+@media (max-width: 799px) {
+    .columns {
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+}
+
+/*
+--------------------
+COLUMN
+--------------------
+*/
+
+.column {
+    margin: 0.5em;
+    width: calc(100% - 1em);
+    position: relative;
+}
+
+/*
+--------------------
+COLUMN  SIZES
+--------------------
+*/
+
+.column_1-1 { width: calc(100% - 1em); }
+.column_1-1.block_no-margin { width: 100%;}
+
+@media (min-width: 1024px) {
+    .column_1-2 { width: calc(50% - 1em); }
+    .column_1-2.block_no-margin { width: 50%; }
+}
+
+@media (min-width: 800px) {
+    .column_1-3 { width: calc((100% / 3 * 1) - 1em); }
+    .column_2-3 { width: calc((100% / 3 * 2) - 1em); }
+}
+
+@media (min-width: 800px) {
+    .column_1-4 { width: calc(25% - 1em); }
+    .column_3-4 { width: calc(75% - 1em); }
+}
+
+@media (min-width: 1200px) {
+    .column_1-5 { width: calc(20% - 1em); }
+    .column_2-5 { width: calc(40% - 1em); }
+    .column_3-5 { width: calc(60% - 1em); }
+    .column_4-5 { width: calc(80% - 1em); }
+}
+
+@media (max-width: 1199px) and (min-width: 800px) {
+    .column_1-5 { width: calc((100% / 3 * 1) - 1em); }
+    .column_2-5 { width: calc((100% / 3 * 1) - 1em); }
+    .column_3-5 { width: calc((100% / 3 * 2) - 1em); }
+    .column_4-5 { width: calc((100% / 3 * 2) - 1em); }
+}
+
+@media (max-width: 799px) and (min-width: 600px) {
+    .column_1-5 { width: calc((100% / 2 * 1) - 1em); }
+    .column_2-5 { width: calc((100% / 2 * 1) - 1em); }
+    .column_3-5 { width: calc((100% / 2 * 2) - 1em); }
+    .column_4-5 { width: calc((100% / 2 * 2) - 1em); }
+}
+
+@media (min-width: 1200px) {
+    .column_1-6 { width: calc((100% / 6 * 1) - 1em); }
+    .column_5-6 { width: calc((100% / 6 * 5) - 1em); }
+}
+
+@media (min-width: 700px) and (max-width: 1199px)  {
+    .column_1-6 { width: calc((100% / 3 * 1) - 1em); }
+    .column_5-6 { width: calc((100% / 3 * 2) - 1em); }
+}
+
+@media (min-width: 800px) {
+    .column_1-8 { width: calc(12.5% - 1em); }
+    .column_3-8 { width: calc(37.5% - 1em); }
+    .column_5-8 { width: calc(62.5% - 1em); }
+    .column_7-8 { width: calc(87.5% - 1em); }
+}
+
+@media (min-width: 800px) {
+    .column_1-9 { width: calc((100% / 9 * 1) - 1em); }
+    .column_2-9 { width: calc((100% / 9 * 2) - 1em); }
+    .column_4-9 { width: calc((100% / 9 * 4) - 1em); }
+    .column_5-9 { width: calc((100% / 9 * 5) - 1em); }
+    .column_7-9 { width: calc((100% / 9 * 7) - 1em); }
+    .column_8-9 { width: calc((100% / 9 * 8) - 1em); }
 }
 
 /*
@@ -349,6 +440,18 @@ BUTTON
 ==========================================================
 ==========================================================
 */
+
+/*
+--------------------
+BUTTON RESET
+--------------------
+*/
+
+button {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 
 /*
 --------------------
@@ -1248,7 +1351,7 @@ VIGNETTE type PHOTO
     z-index: 1;
     opacity: 0.2;
     transition: all 0.2s ease-in-out;
-    background: url("https://previews.dropbox.com/p/thumb/AAzSmF0YvrAH418mom_USYM6TH-H8WtgMlen4i90ftpge85dRfAKU69O58cw9ooXrqtPffBUD82DZZ2zpXvZ7FjERqRoVcbLuduq5R-PhsJlCRvT4bjim8ekT6RYag4fbNfw41a_yhVjwOYWI9I-sktllfaxZ4MBbxdqSgLXQigELOV7b90cY1HDlGhF-I_kcHZ-wLCbQ8nrgBpuFAhL7kMTY97Axf0GGKS16JmZLKSmo9LA5RwxgMXpIjqBwm1zK1-OGnIr4UWtqWQWHYPfEUT7nxNY1BSJaqFJ5OSskDBatUIoIXX05QmjM3bPIuNcsLo5AW2vXQPr0XoKogbazO4m/p.png") repeat;
+    background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_rayure_black.png") repeat;
     opacity: 0.15;
 }
 
@@ -1610,12 +1713,23 @@ BACKGROUNDS
 [class*="bg-d"]:before { opacity: 0.2; }
 
 .bg-trame_champs_light:before {
-    background: url("https://previews.dropbox.com/p/thumb/AAy7E1Oj7oNQcPojbBOjLmw8f-0DIBQJtcmxEGDpEgz3PGMsQRnjr2rvniXkAdj-dlRYbg9JwMefhjkmYb_zHk5EzyA97rL6JnXBhKSnNHvk-cM40Tc3hX6-kpGfZcwU8osmX1ExUN_2i7LilEs41O60eZRhHpEgHJc7gHkgiy7PYCP95aY2s95lo72y6AALH_QkDGvjFBeTgdV8n1EFQ42_sS_0DZkFuTINc6WD2FadVtOOGnfVkFaVWeXY5fHcnsIQnWKDXEF6xsp_3HIU4A6Zq5R6esefmsa7I7lvlVUhdBTm00fR_wmh6fnfzBj9lQajRF_W460x3S258UsbkmHY/p.png?fv_content=true&size_mode=5") repeat;
+    background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_champ_white.png") repeat;
 }
 
 .bg-trame_champs_dark:before {
-    background: url("https://previews.dropbox.com/p/thumb/AAzPRDTHoqCqKlmpQlt_7t39tI5bGOcttzFoj-tYapN0NUowdV_bwkunnENhTqCBJMuY0Eb3-t5FRxZaEl7o5T8-0m9yVo-Nrr92rWdb4izlOzgYxAgG7xRlFR9VSIF-tBy3fRaW18KNbeCiodKht13E15vSsn0URAeOKBMHT5inP2ZyojPmMgbY1dWvvIYKUJQkLuJvy6wv3hUJpABZj590OxRIGQEb0zNw278wPzX979FibWvaYrZeRZ0nCLt6lWHO48-tHCYrlM_2KpyZSZAoiPHZErNY-leTEurWAx_ezTp_lvC_J1SAwRur5ezgF1hKClwbZmFFcSOL_CutnJVX/p.png?fv_content=true&size_mode=5") repeat;
+    background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_champ_black.png") repeat;
 }
+
+.bg-trame_rayures_light:before {
+    background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_rayure_white.png") repeat;
+    opacity: 0.25;
+}
+
+.bg-trame_rayures_dark:before{
+    background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_rayure_black.png") repeat;
+    opacity: 0.15;
+}
+
 
 /*
 ==========================================================
@@ -1695,11 +1809,18 @@ HERO
     }
 }
 
+.hero_v > .hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* ----- hero vignette----- */
 
 .hero .vignette {
     position: absolute;
     height: 100%;
+    overflow: hidden;
     z-index: 0;
     background-color: #db9500;
 }
@@ -1715,13 +1836,13 @@ HERO
 
 @media (min-width: 800px) {
 
-    .hero .vignette {
+    .hero .vignette__image-wrap {
         width: 170%;
         margin-left: -35%;
     }
 
     /* hero_v (cf. page connexion) */
-    .hero_v .vignette {
+    .hero_v .vignette__image-wrap {
         width: 120%;
         margin-left: -10%;
         margin-top: -5%;
@@ -1731,7 +1852,7 @@ HERO
 
 @media (max-width: 799px) {
 
-    .hero .vignette {
+    .hero .vignette__image-wrap {
         width: 240%;
         margin-left: -80%;
     }
@@ -1763,7 +1884,7 @@ HERO
 /*
 ==========================================================
 ==========================================================
-MIXIN TEXT
+MIXINS TEXT
 ==========================================================
 ==========================================================
 */
@@ -1863,6 +1984,134 @@ LOGO
 .logo > svg {
     display: block;
     width: 100%;
+}
+
+/*
+==========================================================
+==========================================================
+MIXINS BLOCK
+==========================================================
+==========================================================
+*/
+
+/*
+--------------------
+BLOCK V
+--------------------
+pour centrer des contenus verticalement
+*/
+
+[class*="block_v"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.block_v-center {
+    justify-content: center;
+}
+
+.block_v-bottom {
+    justify-content: flex-end;
+}
+
+/*
+--------------------
+BLOCK PADDING
+--------------------
+*/
+
+.block_padding {
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.block_padding > *:first-child {
+    margin-top: 0;
+}
+
+.block_padding > *:last-child {
+    margin-bottom: 0;
+}
+
+/*
+--------------------
+BLOCK NO BORDER
+--------------------
+*/
+
+.block_no-border {
+    border: none;
+}
+
+/*
+--------------------
+BLOCK NO MARGIN
+--------------------
+*/
+
+.block_no-margin {
+    margin: 0;
+}
+
+/*
+--------------------
+BLOCK MARGIN BIG SCREEN
+--------------------
+*/
+
+@media (min-width: 800px) {
+
+    .block_margin-big-screens_right {
+        padding-right: 10% !important;
+    }
+
+    .block_margin-big-screens_left {
+        padding-left: 10% !important;
+    }
+
+}
+
+/*
+--------------------
+BLOCK POSITION RELATIVE
+--------------------
+*/
+
+.block_pos-relative {
+    position: relative;
+}
+
+/*
+--------------------
+BLOCK TEXT-COLUMNS
+--------------------
+*/
+
+@media (min-width: 800px) {
+
+    [class*="block_text-columns"] {
+        column-gap : 4rem;
+        margin: 3em 0 4em;
+    }
+
+    .block_text-columns { columns: 2; }
+
+    .block_text-columns_3 { columns: 3; }
+
+    .block_text-columns:first-child {
+        margin-top: 0;
+    }
+
+    .block_text-columns:last-child {
+        margin-bottom: 0;
+    }
+
+    .block_text-columns > *:first-child {
+        margin-top: 0;
+    }
+
 }
 
 /*

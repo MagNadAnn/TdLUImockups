@@ -19,7 +19,7 @@
     <div class="UGwrap">
         <nav class="UGnav bg-l-cream bg-trame_champs_light">
             <a href="index.php" class="UItitle3 UGnavTitle1">
-                <span class="logo"><img src="../img/logo_TdL_cartouche_blanc-rouge_500.png"></span>
+                <span class="logo"><img src="../img/logo/logo_TdL_cartouche_blanc-rouge_500.png"></span>
                 <span>UI style guide</span>
                 <span class="text_little">Sites et applications<br>de Terre de Liens</span>
             </a>
