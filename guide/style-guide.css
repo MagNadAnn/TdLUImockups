@@ -21,7 +21,6 @@ UI LAYOUT
     width: 15em;
     height: 100%;
     overflow-y: auto;
-    background-color:cyan;
 }
 
 .UGmain {
@@ -195,4 +194,69 @@ ESPACEMENTS
 
 *:not(.section__container):not(.column):not(li):last-child {
     margin-bottom: 0;
+}
+
+/*
+--------------------
+UI NAV
+--------------------
+*/
+
+.UGnav {
+    text-align: center;
+}
+
+.UGnavTitle1,
+.UGnavTitle2 {
+    line-height: 1em;
+}
+
+.UGnavTitle1 {
+    display: block;
+    padding: 1rem;
+    margin: 0 0 1rem 0 !important;
+    text-decoration: none;
+    color: #a41515;
+}
+
+.UGnavTitle1 > span {
+    display: block;
+    margin: 0.1em auto;
+}
+
+.UGnavTitle2 {
+    padding: 0.5rem 1rem;
+    margin: 0 !important;
+}
+
+.UGnavTitle2:before,
+.UGnavTitle2:after {
+    content: " ― "
+}
+
+.UGnavMenu {
+    margin: 0 !important;
+}
+
+.UGnavMenu > li {
+    width: 100%;
+    margin: 0;
+}
+
+.UGnavMenu > li > a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.UGnavMenu > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #33383d;
+}
+
+.UGnavMenu > li > a:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #33383d;
 }

@@ -1,9 +1,9 @@
-<?php include 'vars.php'; ?>
+<?php include 'guide-menu.php'; ?>
 
         <main class="UGmain">
             <section class="fw-section">
                 <div class="UIpageheader vignette vignette_photo">
-                    <h1 class="UItitle1">Mixin blocs</h1>
+                    <h1 class="UItitle1">Mixin de blocs</h1>
                 </div>
                 <nav class="UIsommaire__wrap bg-l-pearl block_padding">
                     <h3 class="UItitle3">Sommaire</h3>

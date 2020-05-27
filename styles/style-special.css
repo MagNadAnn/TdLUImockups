@@ -24,23 +24,6 @@ Micro components
 pastille number
 */
 
-.logo__wrap {
-    display: inline-block;
-    width: 10rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-}
-
-.logo__wrap:hover,
-.logo__wrap:focus {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-/*
------------------------------
-pastille number
-*/
-
 .pastille-number__wrap {
     position: relative;
     margin-right: 1rem;
