@@ -20,7 +20,8 @@
             </a>
             <p class="UItitle4 UGnavTitle2">Composants</p>
             <ul class="list list_v UGnavMenu">
-                <li><a href="text">Styles de texte</a></li>    
+                <li><a href="layout">Layout</a></li>
+                <li><a href="text">Styles de texte</a></li>
                 <li><a href="button">Boutons, liens, etc.</a></li> 
                 <li><a href="mixin-block">Mixins de blocs</a></li>
                 <li><a href="vignette">Vignettes</a></li>

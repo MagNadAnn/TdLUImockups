@@ -259,15 +259,65 @@ LAYOUT
 
 /*
 --------------------
-SITE-WRAP
+SITE
 --------------------
 */
 
-.site-wrap {
+.site {
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
+}
+
+/*
+--------------------
+MAIN NAV SITE
+--------------------
+*/
+
+/*
+--------------------
+TPL
+--------------------
+*/
+
+/*
+à utiliser sur les pages où la navigation principale est utilisée (c'est à dire quasiment toutes les pages).
+*/
+
+@media (max-width: 799px) {
+
+    main.tpl_main-nav .page-header__container {
+        border-left: solid 2.5em #a41515;
+    }
+
+}
+
+/*
+--------------------
+FOOTER SITE
+--------------------
+*/
+
+.footer-site {
+    font-size: 0.875em;
+}
+
+.footer-site__title,
+.footer-site__content > *,
+.footer-site__content > * > a {
+    color: #ffffff;
+}
+
+@media (min-width: 700px) {
+    .footer-site__title {
+        min-height: 2.5em;
+    }
+}
+
+.footer-site__content.list_simple > li > a {
+    text-decoration: none;
 }
 
 /*
@@ -307,27 +357,36 @@ CHIMNEY
 --------------------
 */
 
-[class*="chimney"] {
+.chimney {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
 }
 
-@media (max-width: 1199px) and (min-width: 800px) {
-    [class*="chimney"] { margin: 0 3em; }
-}
-
-@media (min-width: 800px) {
-    [class*="chimney"] {width: calc(100% - 6em); }
-}
-
-@media (max-width: 799px) {
-    [class*="chimney"] { width: 80%; }
-}
-
 .chimney.fluid { max-width: none; }
 .chimney.small { max-width: 50em; }
 .chimney.x-small { max-width: 37.5em; }
+
+@media (max-width: 1199px) and (min-width: 50em) {
+    .chimney { margin: 0 3em; }
+}
+
+
+@media (min-width: 50em) {
+
+    [class*="chimney"] { width: calc(100% - 6em); }
+    
+    .chimney.small { max-width: 50em; margin-left: auto; margin-right: auto; }
+
+    .chimney.x-small { max-width: 37.5em; margin-left: auto; margin-right: auto; }
+
+}
+
+@media (max-width: 799px) {
+    .chimney { width: 80%; }
+}
+
+
 
 /*
 --------------------
@@ -459,6 +518,12 @@ ASIDE SYSTEM
     }
 }
 
+/*
+--------------------
+ASIDE PANEL
+--------------------
+*/
+
 .aside__panel {
     position: relative;
     box-sizing: border-box;
@@ -467,6 +532,12 @@ ASIDE SYSTEM
 .aside__panel.right {
     order: 2;
 }
+
+/*
+--------------------
+ASIDE PANEL CONTAINER & CONTENT
+--------------------
+*/
 
 @media (min-width: 700px) {
 
@@ -490,12 +561,15 @@ ASIDE SYSTEM
     }
 }
 
-@media (min-width: 700px) {
-    .aside__leftover-space {
-        flex-grow: 2;
-    }
-}
+/*
+--------------------
+ASIDE TRIGGER
+--------------------
+*/
 
+.aside__trigger > .button {
+    padding: 0.5em;
+}
 
 @media (min-width: 700px) {
     .aside__trigger {
@@ -513,6 +587,18 @@ ASIDE SYSTEM
 
 @media (max-width: 699px) {
     .aside__trigger {
+    }
+}
+
+/*
+--------------------
+ASIDE LEFTOVER SPACE
+--------------------
+*/
+
+@media (min-width: 700px) {
+    .aside__leftover-space {
+        flex-grow: 2;
     }
 }
 
@@ -593,7 +679,8 @@ BUTTON
 
 /* ----- Label (optionnal) ----- */
 
-.button__label {
+.button__label,
+input.button {
   font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
 }
 
@@ -680,6 +767,11 @@ THEME (necessary)
     background-color: #00c3d6;
     border-color: #00c3d6;
 }
+
+.button.secundary.button_icon { color: #ffffff; }
+.button.secundary.button_icon:hover,
+.button.secundary.button_icon:focus { color: #ffffff; }
+.button.secundary.button_icon:active { color: #ffffff; }
 
 /* Success */
 
@@ -859,6 +951,25 @@ a:hover .button_read-more > .button__icon > svg,
 a:focus .button_read-more > .button__icon > i,
 a:focus .button_read-more > .button__icon > svg {
     transform: rotate(45deg);
+}
+
+/*
+--------------------
+READ MORE'S VARIATION
+--------------------
+*/
+
+.button_expand:hover,
+.button_expand:focus {
+    transform: rotate(90deg) !important;
+}
+
+.is-expanded .button_expand {
+    transform: rotate(0deg);
+}
+
+.is-shrinked .button_expand {
+    transform: rotate(180deg);
 }
 
 
@@ -2161,17 +2272,13 @@ BLOCK PADDING
 --------------------
 */
 
+.block_no-padding {
+    padding: 0 !important;
+}
+
 .block_padding {
-    padding: 2em;
+    padding: 2em !important;
     box-sizing: border-box;
-}
-
-.block_padding > *:first-child {
-    margin-top: 0;
-}
-
-.block_padding > *:last-child {
-    margin-bottom: 0;
 }
 
 /*
@@ -2181,7 +2288,7 @@ BLOCK NO BORDER
 */
 
 .block_no-border {
-    border: none;
+    border: none !important;
 }
 
 /*
@@ -2256,7 +2363,7 @@ BLOCK TEXT-COLUMNS
 /*
 ==========================================================
 ==========================================================
-NEXT
+POPIN & VEIL
 ==========================================================
 ==========================================================
 */
@@ -2309,7 +2416,7 @@ POPIN CONTAINER
         z-index: 90;
         box-sizing: border-box;
 
-        background-color: red;
+        background-color: #ffffff;
 
         width: 60vw;
         max-width: 800px;
@@ -2328,7 +2435,7 @@ POPIN CONTAINER
         z-index: 90;
         box-sizing: border-box;
 
-        background-color: red;
+        background-color: #ffffff;
 
         left: 5vw;
         top: 5vh;
@@ -2367,7 +2474,7 @@ POPIN CONTENT
 
 /*
 --------------------
-CLOSE
+POPIN CLOSE
 --------------------
 */
 
@@ -2392,11 +2499,11 @@ CLOSE
 
 /*
 --------------------
-VEIL
+POPIN VEIL
 --------------------
 */
 
-.veil {
+.popin__veil {
     display: none;
     position: absolute;
     z-index: 89;
@@ -2409,28 +2516,28 @@ VEIL
     transition: all 0.2s ease-in-out;
 }
 
-.popin.is-visible > .veil {
+.popin.is-visible > .popin__veil {
     display: block;
 }
 
 @media (min-width: 700px) {
-    .popin.popin_small-screens.is-visible > .veil {
+    .popin.popin_small-screens.is-visible > .popin__veil {
         display: none;
     }
 }
 
 @media (max-width: 699px) {
-    .popin.popin_big-screens.is-visible > .veil {
+    .popin.popin_big-screens.is-visible > .popin__veil {
         display: none;
     }
 }
 
-.veil:hover,
-.veil:focus {
+.popin__veil:hover,
+.popin__veil:focus {
     opacity: 0.5;
 }
 
-.veil:active {
+.popin__veil:active {
     opacity: 0.5;
     background-color: #ffffff;
 }
@@ -2439,10 +2546,73 @@ VEIL
 /*
 ==========================================================
 ==========================================================
+PANEL
+==========================================================
+==========================================================
+*/
+
+/*
+--------------------
+PANEL
+--------------------
+*/
+
+.panel {
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #579ea5;
+}
+
+.panel__section-header {
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel__section-header > * {
+    margin: 0;
+}
+
+.panel__section-content {
+    position: relative;
+    padding: 0 1em 1em;
+    margin: 0;
+    overflow: hidden;
+}
+
+.panel__section.is-expanded > .panel__section-content {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-top: 1em;
+}
+
+.panel__section.is-shrinked >.panel__section-content {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.panel__section-content > * {
+    background-color: transparent !important;
+}
+
+.panel__header {
+    font-size: 1.25em;
+    background-color: #42767a;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+/*
+==========================================================
+==========================================================
 NEXT
 ==========================================================
 ==========================================================
 */
+
 
 /*
 ==========================================================
@@ -2459,3 +2629,36 @@ NEXT
 ==========================================================
 ==========================================================
 */
+
+/*
+==========================================================
+==========================================================
+SMALL COMPONENTS
+==========================================================
+==========================================================
+*/
+
+/*
+--------------------
+NUMBER STICKER
+--------------------
+*/
+
+.number-sticker {
+    position: absolute;
+    display: inline-block;
+    font-size: 0.75rem;
+    min-width: 2em;
+    height: 2em;
+    padding: 0.25em;
+    box-sizing: border-box;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.25em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    background-color: #a41515;  
+    z-index: 2;
+    left: calc(100% - 1em);
+    top: calc(100% - 1em);
+}

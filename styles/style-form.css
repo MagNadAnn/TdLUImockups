@@ -61,7 +61,7 @@ fieldset dans un formulaire de base
 
 .form-fieldset {
     padding: 0.75em 1em !important;
-    background-color: #f5f5f5;
+    background-color: rgba(0, 0, 0, 0.04);
     border: none;
 }
 
@@ -393,6 +393,7 @@ Form-item CHECKBOX & RADIO
 
 .form-item_check__label {
     margin-left: 0.25rem;
+    cursor: pointer;
 }
 
 /* form-item RADIO */

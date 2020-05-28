@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
     <link href="../styles/global.css" rel="stylesheet">
+    <link href="../styles/style-form.css" rel="stylesheet">
     <link href="../style-guide.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon/favicon_04/favicon-32x32.png" />
     <!-- <link rel="icon" type="image/png" href="img/favicon/favicon_05/favicon-32x32.png" /> -->
@@ -20,7 +21,7 @@
             <div class="aside__trigger">
                 <button class="button button_basic primary">
                     <span class="button__icon"><i class="fas fa-cog"></i></span>
-                    <span class="button__label pastille-number__wrap">Trigger</span>
+                    <span class="number-sticker">3</span>
                 </button>
             </div>
             <div class="aside__panel__container popin__container">
@@ -29,49 +30,51 @@
                         <span class="button__icon"><i class="fas fa-times"></i></span>
                     </button>
                 </div>
-                <div class="aside__panel__content popin__content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed vulputate massa. Sed
-                        mattis ornare luctus. Donec vehicula aliquet augue, nec tempus ligula ultrices sed.
-                        Suspendisse purus nisl, porta ut libero vitae, ultrices rhoncus dolor. Etiam rutrum
-                        fermentum libero quis viverra. Pellentesque aliquam tempor pretium. Vivamus ligula ante,
-                        ornare non leo ut, eleifend vehicula nisi. Integer volutpat arcu vitae tortor viverra, eget
-                        dictum lectus varius. Pellentesque vestibulum eu magna a fringilla.
-                    </p>
-                    <p>
-                        In rhoncus, lacus ut consectetur sodales, ligula ipsum dapibus arcu, at placerat lorem dolor
-                        non sapien. Aliquam a ex scelerisque, pellentesque elit ut, ultricies tortor. Quisque at
-                        tristique diam, vel commodo leo. Maecenas in risus facilisis, mattis sem nec, efficitur
-                        risus. Cras varius dui eget augue mollis, non faucibus felis placerat. Proin at eros tellus.
-                        Aliquam fringilla, leo eu laoreet aliquam, ipsum quam accumsan ipsum, eu posuere ante nisl
-                        at nulla. Fusce vel iaculis lectus.
-                    </p>
-                    <p>
-                        Donec scelerisque metus consectetur libero tincidunt, ut interdum neque tempor. Mauris
-                        accumsan suscipit libero, in feugiat risus mattis ut. Nam non faucibus orci. Donec congue
-                        imperdiet mauris sit amet suscipit. Sed eu rhoncus diam, eu tincidunt tellus. Vestibulum ut
-                        libero cursus, commodo orci efficitur, sollicitudin nunc. Duis at nisi lobortis, varius
-                        magna in, dictum nunc. Ut quam diam, feugiat tempus ex nec, finibus ultricies nunc.
-                    </p>
-                    <p>
-                        Mauris vitae dui nec dolor semper vulputate. Phasellus nisl nunc, mollis vel turpis non,
-                        hendrerit laoreet est. Aenean malesuada rhoncus nulla venenatis fermentum. Donec eleifend
-                        auctor tellus, vel fermentum ante hendrerit vitae. Nulla ullamcorper accumsan leo, vitae
-                        convallis dolor interdum at. Morbi iaculis libero libero, quis ullamcorper ante ultricies
-                        ut. Aenean fermentum ligula tellus. Aenean quis sollicitudin lorem, ac tincidunt leo. Nullam
-                        consectetur vehicula sem, et tincidunt felis porta non. Sed rutrum nisi sem, ac porta dolor
-                        varius sit amet. Sed ac velit vel dolor condimentum imperdiet. Cras tempor, elit eu accumsan
-                        molestie, metus nibh pulvinar orci, vitae iaculis urna enim id ligula. Aenean lacinia,
-                        turpis et pharetra porta, sem enim sagittis lacus, pellentesque tempor nunc sem eu mauris.
-                    </p>
-                    <p>
-                        Vivamus sed tempus sem, eu dictum orci. Sed risus nibh, tempor vitae hendrerit quis, lacinia
-                        vitae magna. Nam malesuada erat ut purus dictum tristique. Nunc commodo lacus urna, in
-                        dignissim sem euismod vel. Aenean in convallis sapien. Nullam lacinia neque at metus
-                        lacinia, a interdum dolor suscipit. Proin venenatis ac eros eu egestas. Nullam nunc arcu,
-                        elementum nec congue quis, ornare eu urna. Sed pellentesque lorem tellus, id auctor ligula
-                        bibendum quis.
-                    </p>
+                <div class="aside__panel__content popin__content panel">
+                    <section class="panel__section-header panel__header">
+                        <h4>Filtres</h4>
+                        <input type="button" value="Effacer" class="button button_basic x-small secundary">
+                    </section>
+                    <section class="panel__section is-expanded">
+                        <div class="panel__section-header">
+                            <h6>Type de ressources</h6>
+                            <button class="button button_icon x-small secundary button_expand"><i
+                                    class="fas fa-chevron-up"></i></button>
+                        </div>
+                        <div class="panel__section-content">
+                            <fieldset class="form-fieldset block_no-border block_no-padding">
+                                <div class="checkbox__wrap">
+                                    <input type="checkbox" class="form-item_check" id="u_util_typederessources_alias0">
+                                    <label class="form-item_check__label"
+                                        for="u_util_typederessources_alias0">Infographies et
+                                        schémas</label>
+                                </div>
+                                <div class="checkbox__wrap">
+                                    <input type="checkbox" class="form-item_check" id="u_util_typederessources_alias1">
+                                    <label class="form-item_check__label"
+                                        for="u_util_typederessources_alias1">Publications
+                                        périodiques</label>
+                                </div>
+                                <div class="checkbox__wrap">
+                                    <input type="checkbox" class="form-item_check" id="u_util_typederessources_alias2">
+                                    <label class="form-item_check__label" for="u_util_typederessources_alias2">Fiches
+                                        mémo</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </section>
+                    <section class="panel__section">
+                        <div class="panel__section-header">
+                            <h6>Présentation</h6>
+                        </div>
+                        <div class="panel__section-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed vulputate massa. Sed
+                                mattis ornare luctus. Donec vehicula aliquet augue, nec tempus ligula ultrices sed.
+                                Suspendisse purus nisl, porta ut libero vitae, ultrices rhoncus dolor. Etiam rutrum
+                                fermentum libero quis viverra.</p>
+                        </div>
+                    </section>
+
                 </div>
             </div>
             <button class="veil"></button>

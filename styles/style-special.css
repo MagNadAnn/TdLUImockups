@@ -13,35 +13,6 @@ Micro components
 
 /*
 -----------------------------
-pastille number
-*/
-
-.pastille-number__wrap {
-    position: relative;
-    margin-right: 1rem;
-}
-
-.pastille-number {
-    position: absolute;
-    display: inline-block;
-    font-size: 0.75rem;
-    min-width: 2em;
-    height: 2em;
-    padding: 0.25em;
-    box-sizing: border-box;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 1.25em;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: bold;
-    background-color: #a41515;  
-    z-index: 2;
-    left: calc(100% + 0.5em);
-    top: calc(50% - 1.1em);
-}
-
-/*
------------------------------
 embed-youtube-resize
 */
 
@@ -373,10 +344,6 @@ PAGE-HEADER
         padding-bottom: 0;
     }
 
-    main.tpl_main-nav .page-header__container {
-        border-left: solid 2.5em #a41515;
-    }
-
     .page-header__container [class*="chimney"] {
         margin: 0 2em;
         width: calc(100% - 4em);
@@ -434,32 +401,6 @@ PAGE-HEADER
 .page__surtitle {
     margin-top: 2em;
     margin-bottom: -2em;
-}
-
-
-/*
------------------------------
-FOOTER
-*/
-
-.footer-site__wrap {
-    font-size: 0.875em;
-}
-
-.footer-site__title,
-.footer-site__content > *,
-.footer-site__content > * > a {
-    color: #ffffff;
-}
-
-@media (min-width: 700px) {
-    .footer-site__title {
-        min-height: 2.5em;
-    }
-}
-
-.footer-site__content.list_simple > li > a {
-    text-decoration: none;
 }
 
 /*
