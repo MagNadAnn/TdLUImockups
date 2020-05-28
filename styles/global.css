@@ -417,6 +417,15 @@ COLUMN  SIZES
 }
 
 @media (min-width: 800px) {
+    .column_1-7 { width: calc((100% / 7 * 1) - 1em); }
+    .column_2-7 { width: calc((100% / 7 * 2) - 1em); }
+    .column_3-7 { width: calc((100% / 7 * 3) - 1em); }
+    .column_4-7 { width: calc((100% / 7 * 4) - 1em); }
+    .column_5-7 { width: calc((100% / 7 * 5) - 1em); }
+    .column_6-7 { width: calc((100% / 7 * 6) - 1em); }
+}
+
+@media (min-width: 800px) {
     .column_1-8 { width: calc(12.5% - 1em); }
     .column_3-8 { width: calc(37.5% - 1em); }
     .column_5-8 { width: calc(62.5% - 1em); }
@@ -443,51 +452,67 @@ ASIDE SYSTEM
     padding: 0;
 }
 
-@media (min-width: 700px) {
-    .aside__trigger {
-        display: none;
-    }
-}
-
 @media (max-width: 699px) {
-    .aside__trigger {
-        position: fixed;
-        z-index: 5;
-        top: 18em;
+    .aside {
+        flex-direction: column;
+        align-items: stretch;
     }
 }
 
 .aside__panel {
+    position: relative;
     box-sizing: border-box;
 }
 
+.aside__panel.right {
+    order: 2;
+}
+
 @media (min-width: 700px) {
-    .aside__panel {
+
+    .aside__panel__container {
+        width: 0;
+    }
+
+    .aside__panel.is-visible .aside__panel__container {
+        width: 15em;
+        display: block;
+    }
+
+    .aside__panel__content {
         width: 15em;
     }
 }
 
 @media (max-width: 699px) {
-    .aside__panel {
-        display: none;
-        width: 100vw;
-        max-height: 100vh;
-        overflow-y: auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 52;
-        box-sizing: border-box;
-    }
-
-    .aside__panel.is-visible {
+    .aside__panel.is-visible > .aside__panel__container.popin {
         display: block;
     }
 }
 
 @media (min-width: 700px) {
     .aside__leftover-space {
-        width: calc(100% - 15em);
+        flex-grow: 2;
+    }
+}
+
+
+@media (min-width: 700px) {
+    .aside__trigger {
+        position: absolute;
+        top: 1em;
+        /* display: none; */
+    }
+
+    .aside__panel.left.is-visible > .aside__trigger { left: 100%; }
+    .aside__panel.right.is-visible > .aside__trigger { right: 100%; }
+
+    .aside__panel.left > .aside__trigger { left: calc(100% + 1em); }
+    .aside__panel.right > .aside__trigger { right: calc(100% + 1em); }
+}
+
+@media (max-width: 699px) {
+    .aside__trigger {
     }
 }
 
@@ -511,15 +536,15 @@ BIG AND SMALL SCREENS EXCLUSIVITIES
 --------------------
 */
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     .small-screens {
-        display: none;
+        display: none !important;
     }
 }
 
-@media (max-width: 799px) {
+@media (max-width: 699px) {
     .big-screens {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -2227,6 +2252,197 @@ BLOCK TEXT-COLUMNS
     }
 
 }
+
+/*
+==========================================================
+==========================================================
+NEXT
+==========================================================
+==========================================================
+*/
+
+/*
+--------------------
+POPIN
+--------------------
+*/
+
+
+@media (min-width: 700px) {
+    .popin:not(.popin_small-screens).is-visible {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+}
+
+@media (max-width: 699px) {
+    .popin:not(.popin_big-screens).is-visible {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+}
+
+/*
+--------------------
+POPIN CONTAINER
+--------------------
+*/
+
+.popin > .popin__container {
+    display: none;
+}
+
+@media (min-width: 700px) {
+
+    .popin:not(.popin_small-screens) > .popin__container {
+        position: absolute;
+        z-index: 90;
+        box-sizing: border-box;
+
+        background-color: red;
+
+        width: 60vw;
+        max-width: 800px;
+        height: 60vh;
+    }
+
+    .popin:not(.popin_small-screens).is-visible > .popin__container {
+        display: block;
+    }
+}
+
+@media (max-width: 699px) {
+
+    .popin:not(.popin_big-screens) > .popin__container {
+        position: absolute;
+        z-index: 90;
+        box-sizing: border-box;
+
+        background-color: red;
+
+        left: 5vw;
+        top: 5vh;
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .popin:not(.popin_big-screens).is-visible > .popin__container {
+        display: block;
+    }
+}
+
+/*
+--------------------
+POPIN CONTENT
+--------------------
+*/
+
+@media (min-width: 700px) {
+    .popin:not(.popin_small-screens) > .popin__container > .popin__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 699px) {
+    .popin:not(.popin_big-screens) > .popin__container > .popin__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+/*
+--------------------
+CLOSE
+--------------------
+*/
+
+.popin__close {
+    position: absolute;
+    z-index: 2;
+    bottom: calc(100% - 0.75em);
+    left: calc(100% - 0.75em);
+}
+
+@media (min-width: 700px) {
+    .popin_small-screens > .popin__container > .popin__close {
+        display: none;
+    }
+}
+
+@media (max-width: 699px) {
+    .popin_big-screens > .popin__container > .popin__close {
+        display: none;
+    }
+}
+
+/*
+--------------------
+VEIL
+--------------------
+*/
+
+.veil {
+    display: none;
+    position: absolute;
+    z-index: 89;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eae6cf;
+    opacity: 0.75;
+    transition: all 0.2s ease-in-out;
+}
+
+.popin.is-visible > .veil {
+    display: block;
+}
+
+@media (min-width: 700px) {
+    .popin.popin_small-screens.is-visible > .veil {
+        display: none;
+    }
+}
+
+@media (max-width: 699px) {
+    .popin.popin_big-screens.is-visible > .veil {
+        display: none;
+    }
+}
+
+.veil:hover,
+.veil:focus {
+    opacity: 0.5;
+}
+
+.veil:active {
+    opacity: 0.5;
+    background-color: #ffffff;
+}
+
+
+/*
+==========================================================
+==========================================================
+NEXT
+==========================================================
+==========================================================
+*/
 
 /*
 ==========================================================
