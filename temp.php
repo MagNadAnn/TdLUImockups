@@ -98,6 +98,8 @@ fluid<em>*</em>
                             <p class="bg-d-red_light block_padding">⚠️ La flasse <strong>fluid</strong> se règlera sur
                                 la largeur du bouton. D'autres réglages de largeurs seront à réaliser par vos soins.
                             </p>
+                        </div>
+                        <div class="bg-l-pearl block_padding">
                             <p class="codepen" data-height="400" data-theme-id="default" data-default-tab="html,result"
                                 data-user="MagNadAnn" data-slug-hash="gOaNypX"
                                 style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -117,6 +119,7 @@ bubble__title
 bubble__content</pre>
                         </div>
                     </div>
+                </div>
             </section>
 
             <section class="fw-section">

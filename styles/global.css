@@ -608,11 +608,11 @@ ESPACEMENTS
 --------------------
 */
 
-*:not(.section__container):not(.column):not(li):first-child {
+*:not(.section__container):not(.column):not(li):first-child:not(.form-fieldset):not(.form-line):first-child {
     margin-top: 0;
 }
 
-*:not(.section__container):not(.column):not(li):last-child {
+*:not(.section__container):not(.column):not(li):last-child:not(.form-fieldset):not(.form-line):last-child {
     margin-bottom: 0;
 }
 
@@ -652,6 +652,7 @@ button {
     border: none;
     padding: 0;
     cursor: pointer;
+    border-radius: 0;
 }
 
 /*
@@ -679,9 +680,9 @@ BUTTON
 
 /* ----- Label (optionnal) ----- */
 
-.button__label,
-input.button {
-  font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+.button__label {
+    font-size: 1.25em;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
 }
 
 /* ----- Wrap (optionnal) ----- */
@@ -881,6 +882,13 @@ BASIC'S VARIATIONS
 
 .button_basic.x-small {
     padding: 0.35em 0.625em 0.325em;
+}
+
+input.button_basic {
+    font-size: 1.5em;
+    padding: 0.625em 1.042em 0.542em;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    line-height: 0.9375em;
 }
 
 /*
@@ -3209,6 +3217,602 @@ Exception/variation basée sur la class .list
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
+
+/*
+==========================================================
+==========================================================
+FORM
+==========================================================
+==========================================================
+*/
+
+/*
+--------------------
+FORM
+--------------------
+*/
+
+.form {
+    padding: 1px 0.5em;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+@media (min-width: 500px) {
+    .form {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 499px) {
+    .form {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+/*
+--------------------
+FORM TITLES
+--------------------
+*/
+
+.form h4 {
+    line-height: 1em;
+    margin: 0.25em 0 !important;
+}
+
+/*
+--------------------
+FORM SMALL
+--------------------
+*/
+
+@media (min-width: 500px) {
+    .form.small {
+        font-size: 1em;
+    }
+}
+
+
+/*
+--------------------
+FORM INLINE
+--------------------
+Pour des formulaire compacts qui tiennent sur une ligne, par exemple un petit menu de recherche.
+*/
+
+.form.inline {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.form.inline.center {
+    justify-content: center;
+}
+
+/*
+--------------------
+FORM FIELDSET
+--------------------
+*/
+
+.form-fieldset {
+    width: 100%;
+    margin: 1em -1em;
+    padding: 0.75em 1em !important;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: none;
+}
+
+.form-line > .form-fieldset {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.form-fieldset > legend {
+    background-color: #42767a;
+    padding: 0 0.5em;
+    color: #ffffff;
+}
+
+/* ----- aside fieldset ----- */
+
+.aside .form-fieldset {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+/* ----- fieldset inline ----- */
+/* pour mettre plusieurs checkbox ou radio les uns à côté des autres */
+
+.form-fieldset.list {
+    flex-wrap: wrap;
+}
+
+.form-line > .form-fieldset.list {
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+
+@media (max-width: 699px) {
+    .form-fieldset.list > .form-check-wrap {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/*
+--------------------
+FORM LINE
+--------------------
+*/
+
+.form-line {
+    position: relative;
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+}
+
+.column > .form-line {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+.form.inline > .form-line {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+@media (max-width: 699px) {
+    .form.inline > .form-line {
+        flex-grow: 1;
+        width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    .form.inline > .form-line.grow {
+        min-width: 20em;
+    }
+}
+
+/*
+-----------------+---
+FORM LINE MULTI-FIELD
+--------------------
+*/
+
+.form-line.list {
+    align-items: center;
+    align-items: stretch;
+}
+
+@media (max-width: 499px) {
+    .form-line.list {
+        flex-direction: column;
+    }
+}
+
+.form-line.list.nowrap {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+}
+
+/* ----- FORM LINE ITEM ----- */
+
+[class*="form-line__item"] {
+    position: relative;
+}
+
+@media (max-width: 499px) {
+    [class*="form-line__item"] {
+        margin: 1.25em 0 0;
+    }
+}
+
+/* ----- FORM LINE ITEM FIELD ----- */
+
+.form-line__item_field {
+    flex-grow: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: 499px) {
+    .form-line__item_field {
+        width: 100%;
+    }
+}
+
+.bg-pearl .form-line__item_field,
+.form-fieldset .form-line__item_field {
+    background-color: #ffffff;
+    
+}
+
+/* ----- FORM LINE ITEM BUTTON ----- */
+
+.form-line__item_button {
+    background-color: #579ea5;
+}
+
+.form-line__item_button > .form-button {
+    border-width: 0 0 0.2em;
+}
+
+.form-line_multi__check {
+    margin: 0 0.5em;
+}
+
+
+/*
+--------------------
+FORM LABEL
+--------------------
+*/
+
+[class*="form-label"] {
+    font-size: 0.75em;
+    text-align: left;
+    color: #579ea5;
+}
+
+.form.text_white [class*="form-label"] {
+    color: #ffffff;
+}
+
+/* ----- FORM LABEL TOP ----- */
+
+.form-label_top {
+    position: absolute;
+    bottom: 100%;
+    padding-bottom: 0.25em;
+}
+
+/* ----- FORM LABEL BOTTOM ----- */
+
+.form-label_bottom {
+    position: absolute;
+}
+
+@media (min-width: 500px) {
+    .form-label_bottom {
+        top: 100%;
+        padding-top: 0.25em;
+    }
+}
+
+@media (max-width: 499px) {
+    .form-label_bottom {
+        bottom: 100%;
+        padding-bottom: 0.25em;
+    }
+}
+
+/*
+--------------------
+FORM INPUT
+--------------------
+*/
+
+.form-input {
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 0;
+}
+
+@media (min-width: 500px) {
+    .form-input {
+        min-height: 2.7em;
+    }
+}
+
+@media (max-width: 499px) {
+    .form-input {
+        min-height: 2.7em;
+    }
+}
+
+/*
+--------------------
+FORM INPUT BUTTON
+--------------------
+*/
+
+.form-button.button_basic {
+    font-size: 0.95em;
+}
+
+input.form-button.button_basic {
+    font-size: 1.1875em;
+    padding: 0.6em 1em 0.52em;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    line-height: 0.9em;
+}
+
+.form-line.list .form-button.button {
+    padding: 0.90em 1em 0.5em;
+}
+
+/*
+--------------------
+FORM INPUT FIELD
+--------------------
+*/
+
+.form-field {
+    box-sizing: border-box;
+    border-right: none;
+    border-left: none;
+    border-bottom-style: solid;
+    border-bottom-width: 0.2em;
+    width: 100%;
+    transition: all 0.2s;
+    text-overflow: ellipsis;
+
+    border-top: #f5f5f5 solid 0.2em;
+    border-bottom-color: #579ea5;
+    background-color: #f5f5f5;
+}
+
+.bg-pearl .form-field {
+    border-top-color: #ffffff;
+    background-color: #ffffff;
+}
+
+.form-fieldset .form-field {
+    background-color: #ffffff;
+}
+
+.form-field:active {
+    border-bottom-color: #1e626b;
+}
+
+::placeholder {
+    color: #999b9e;
+}
+
+/*
+--------------------
+FORM INPUT CHECKBOX & RADIO
+--------------------
+*/
+
+.form-check-wrap {
+    line-height: 1.25em;
+    margin: 0.5em;
+    text-indent: -1.5rem;
+    padding-left: 1.5rem;
+}
+
+.form-check {
+    position: relative;
+    height: 1em;
+    min-height: auto;
+    width: 1em;
+    border-style: solid;
+    border-width: 0.05em;
+    margin: 0;
+    top: 0.2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+.form-check {
+    background: #ffffff;
+    border-color: #579ea5;
+}
+
+.form-check:checked {
+    background: #ffffff;
+}
+
+.form-check:checked:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(0.5em - 1px);
+    height: calc(0.5em - 1px);
+    margin: 0.25em;
+}
+
+.form-check:checked:before {
+    background-color: #579ea5;
+}
+
+.form-check__label {
+    margin-left: 0.25rem;
+    cursor: pointer;
+}
+
+/* ----- RADIO'S VARIATION ----- */
+
+.form-check[type="radio"] {
+    border-radius: 50%;
+}
+
+.form-check[type="radio"]:checked:before {
+    border-radius: 50%;
+}
+
+/*
+--------------------
+FORM INPUT SELECT
+--------------------
+*/
+
+.form-select {
+    position: relative;
+    padding: 0.0625em 0.5em;
+}
+
+.form-select__arrow {
+    position: absolute;
+    z-index: 1;
+    bottom: calc(50% - 0.5em);
+    right: 0;
+    padding: 0 1em;
+    color: #579ea5;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-select.is-dropped > .form-select__arrow {
+    transform: rotate(-180deg);
+}
+
+.form-select__prompt {
+    padding: 0.5em 0;
+    outline: 0;
+    border: 0 !important;
+    background: 0 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    line-height: normal;
+    border-radius: 0;
+    width: calc(100% - 2.5em);
+    min-height: auto;
+    text-overflow: ellipsis;
+}
+
+.form-select__prompt {
+    width: calc(100% - 2.5em);
+    color: #33383d;
+}
+
+.form-select__prompt__wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto;
+}
+
+.form-select__drop {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.125em);
+    left: 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid #42767a;
+    background: #fff;
+    z-index: 1010;
+}
+
+.form-select.is-dropped > .form-select__drop {
+    display: block;
+}
+
+.form-select__option__list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 240px;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #33383d;
+    list-style: none;
+}
+
+.form-select__option__item {
+    text-align: left;
+    padding: 0.5em;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-select__option__item:hover,
+.form-select__option__item:focus {
+    background-color: #f5f5f5;
+}
+
+.bg-pearl .form-select__option__item:hover,
+.bg-pearl .form-select__option__item:focus {
+    background-color: #ffffff;
+}
+
+.form-select__option__item > em {
+    font-style: normal;
+    font-weight: bold;
+    color: #0098a6;
+    text-decoration: underline;
+}
+
+/*
+--------------------
+FORM BIN
+--------------------
+*/
+
+/*
+-----------------------------
+fieldset autre part, dans un parneau de tri par exemple
+
+
+*:not(.form-line) > .form-fieldset {
+    padding: 0.5em 1em;
+    margin: 1em -1em;
+    border: #42767a solid 1px;
+}
+
+.form-line_multi > .form-label {
+    margin: 0 0.25rem;
+}
+
+/* form-line_CGV
+
+.form-line_CGV {
+    margin-top: 0.5em;
+}
+
+@media (min-width: 500px) {
+    .form-line_CGV {
+        align-items: flex-start;
+    }
+}
+
+
+
+.form-label_block {
+    line-height: 1.1em;
+}
+
+@media (max-width: 499px) {
+    .form-line > .form-button {
+        width: 100%;
+    }
+}
+
+
+*/
+
+
+/*
+==========================================================
+==========================================================
+NEXT
+==========================================================
+==========================================================
+*/
 
 /*
 ==========================================================

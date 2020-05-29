@@ -10,13 +10,175 @@
     <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
     <link href="../styles/global.css" rel="stylesheet">
     <link href="../styles/style-form.css" rel="stylesheet">
-    <link href="../style-guide.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon/favicon_04/favicon-32x32.png" />
     <!-- <link rel="icon" type="image/png" href="img/favicon/favicon_05/favicon-32x32.png" /> -->
 </head>
 
 <body>
 
+    <main style="width: 80vw; margin: 0 auto;">
+        <form class="form">
+            <ul class="form-line list">
+                <li class="form-line__item_field">
+                    <label class="form-label form-label_bottom" for="search">1 238 documents disponibles</label>
+                    <input class="form-input form-field" placeholder="Rechercher une publication, un document..."
+                        name="search">
+                </li>
+                <li class="form-line__item_field">
+                    <label class="form-label form-label_top" for="type-select">Type de document</label>
+                    <div class="form-field form-select">
+                        <button class="form-select__arrow"><i class="fas fa-chevron-down"
+                                aria-hidden="true"></i></button>
+                        <input class="form-select__prompt" type="text" autocomplete="off"
+                            placeholder="Sélectionner un type de document">
+                        <div class="form-select__drop">
+                            <ul class="form-select__option__list">
+                                <li class="form-select__option__item">Type 1</li>
+                                <li class="form-select__option__item">Type 2</li>
+                                <li class="form-select__option__item">Type 3</li>
+                                <li class="form-select__option__item">Type 4</li>
+                                <li class="form-select__option__item">Type 5</li>
+                                <li class="form-select__option__item">Type 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line__item form-line__item_button">
+                    <button class="form-button button button_basic primary">
+                        <span class="button__icon">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </form>
+        <form class="form">
+            <div class="form-line">
+                <label class="form-label form-label_top" for="search">1 238 documents disponibles</label>
+                <input class="form-input form-field" placeholder="Rechercher une publication, un document..."
+                    name="search">
+            </div>
+            <div class="form-line">
+                <label class="form-label form-label_top" for="search">1 238 documents disponibles</label>
+                <input class="form-input form-field" placeholder="Rechercher une publication, un document..."
+                    name="search">
+            </div>
+            <fieldset class="form-fieldset">
+                <legend>Titre du fieldset</legend>
+                <div class="form-line">
+                    <label class="form-label form-label_top" for="search">1 238 documents disponibles</label>
+                    <input class="form-input form-field" placeholder="Rechercher une publication, un document..."
+                        name="search">
+                </div>
+                <div class="form-line">
+                    <label class="form-label form-label_top" for="search">1 238 documents disponibles</label>
+                    <input class="form-input form-field" placeholder="Rechercher une publication, un document..."
+                        name="search">
+                </div>
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <legend>Titre du fieldset</legend>
+                <div class="form-check-wrap">
+                    <input type="checkbox" class="form-input form-check" id="checkbox">
+                    <label class="form-check__label" for="checkbox">Infographies et
+                        schémas</label>
+                </div>
+                <div class="form-check-wrap">
+                    <input type="radio" class="form-input form-check" id="radio">
+                    <label class="form-check__label" for="radio">Infographies et
+                        schémas</label>
+                </div>
+            </fieldset>
+            <div class="form-line">
+                <label class="form-label form-label_top" for="search">1 238 documents disponibles</label>
+                <input class="form-input form-field" placeholder="Rechercher une publication, un document..."
+                    name="search">
+            </div>
+            <h4>Intertitre</h4>
+            <div class="columns">
+                <div class="column column_1-2">
+                    <div class="form-line">
+                        <label class="form-label form-label_top" for="search">1 238 documents disponibles</label>
+                        <input class="form-input form-field" placeholder="Rechercher une publication, un document..."
+                            name="search">
+                    </div>
+                </div>
+                <div class="column column_1-2">
+                    <div class="form-line">
+                        <label class="form-label form-label_top" for="type-select">Type de document</label>
+                        <div class="form-input form-field form-select">
+                            <button class="form-select__arrow"><i class="fas fa-chevron-down"
+                                    aria-hidden="true"></i></button>
+                            <input class="form-select__prompt" type="text" autocomplete="off"
+                                placeholder="Sélectionner un type de document">
+                            <div class="form-select__drop">
+                                <ul class="form-select__option__list">
+                                    <li class="form-select__option__item">Type 1</li>
+                                    <li class="form-select__option__item">Type 2</li>
+                                    <li class="form-select__option__item">Type 3</li>
+                                    <li class="form-select__option__item">Type 4</li>
+                                    <li class="form-select__option__item">Type 5</li>
+                                    <li class="form-select__option__item">Type 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column column_1-2">
+                    <div class="form-line">
+                        <label class="form-label form-label_top" for="type-select">Type de document</label>
+                        <div class="form-input form-field form-select is-dropped">
+                            <button class="form-select__arrow"><i class="fas fa-chevron-down"
+                                    aria-hidden="true"></i></button>
+                            <input class="form-select__prompt" type="text" autocomplete="off"
+                                placeholder="Sélectionner un type de document">
+                            <div class="form-select__drop">
+                                <ul class="form-select__option__list">
+                                    <li class="form-select__option__item">Type 1</li>
+                                    <li class="form-select__option__item">Type 2</li>
+                                    <li class="form-select__option__item">Type 3</li>
+                                    <li class="form-select__option__item">Type 4</li>
+                                    <li class="form-select__option__item">Type 5</li>
+                                    <li class="form-select__option__item">Type 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column column_1-2">
+                    <div class="form-line">
+                        <button class="form-button button button_basic primary">
+                            <span class="button__icon">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </span>
+                            <span class="button__label">search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-line">
+                <input class="form-button button button_basic primary" type="button" value="search">
+            </div>
+            <div class="form-line">
+                <button class="form-button button button_basic primary">
+                    <span class="button__icon">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </span>
+                    <span class="button__label">search</span>
+                </button>
+            </div>
+        </form>
+        <button class="button button_basic primary">
+            <span class="button__icon">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </span>
+            <span class="button__label">search</span>
+        </button>
+        <input class="button button_basic primary" type="button" value="search">
+    </main>
+
+    <!-- carousel -->
+    <!--
     <main>
         <div class="carousel">
             <div class="carousel__container">
@@ -65,6 +227,7 @@
             </nav>
         </div>
     </main>
+-->
 
     <!-- accordeons -->
     <!--
@@ -563,21 +726,21 @@
                         </div>
                         <div class="panel__section-content">
                             <fieldset class="form-fieldset block_no-border block_no-padding">
-                                <div class="checkbox__wrap">
-                                    <input type="checkbox" class="form-item_check" id="u_util_typederessources_alias0">
-                                    <label class="form-item_check__label"
+                                <div class="form-check-wrap">
+                                    <input type="checkbox" class="form-input_check" id="u_util_typederessources_alias0">
+                                    <label class="form-input_check__label"
                                         for="u_util_typederessources_alias0">Infographies et
                                         schémas</label>
                                 </div>
-                                <div class="checkbox__wrap">
-                                    <input type="checkbox" class="form-item_check" id="u_util_typederessources_alias1">
-                                    <label class="form-item_check__label"
+                                <div class="form-check-wrap">
+                                    <input type="checkbox" class="form-input_check" id="u_util_typederessources_alias1">
+                                    <label class="form-input_check__label"
                                         for="u_util_typederessources_alias1">Publications
                                         périodiques</label>
                                 </div>
-                                <div class="checkbox__wrap">
-                                    <input type="checkbox" class="form-item_check" id="u_util_typederessources_alias2">
-                                    <label class="form-item_check__label" for="u_util_typederessources_alias2">Fiches
+                                <div class="form-check-wrap">
+                                    <input type="checkbox" class="form-input_check" id="u_util_typederessources_alias2">
+                                    <label class="form-input_check__label" for="u_util_typederessources_alias2">Fiches
                                         mémo</label>
                                 </div>
                             </fieldset>
