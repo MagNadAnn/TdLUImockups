@@ -2557,7 +2557,7 @@ BUBBLE
 }
 
 .bubble { display: none; }
-.bubble.is-expanded { display: block; }
+.bubble.is-visible { display: block; }
 
 .bubble {
     position: absolute;
@@ -2570,11 +2570,13 @@ BUBBLE
     .bubble {
         top: calc(100% + 0.75em);
         width: 20em;
+        left: calc(50% - 10em);
     }
 
     .bubble.fluid {
         width: auto;
         min-width: 100%;
+        left: initial;
     }
 
 }
