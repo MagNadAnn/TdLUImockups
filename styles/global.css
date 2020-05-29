@@ -1004,6 +1004,7 @@ LIST
     padding: 0.5em 0;
     display: flex;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .list_v {
@@ -2363,7 +2364,7 @@ BLOCK TEXT-COLUMNS
 /*
 ==========================================================
 ==========================================================
-POPIN & VEIL
+AFFICHAGES TEMPORAIRES
 ==========================================================
 ==========================================================
 */
@@ -2544,6 +2545,166 @@ POPIN VEIL
 
 
 /*
+--------------------
+BUBBLE
+--------------------
+*/
+
+@media (min-width: 700px) {
+    .bubble-wrap {
+        position: relative;
+    }
+}
+
+.bubble { display: none; }
+.bubble.is-expanded { display: block; }
+
+.bubble {
+    position: absolute;
+    padding: 0;
+    z-index: 5;
+}
+
+@media (min-width: 700px) {
+
+    .bubble {
+        top: calc(100% + 0.75em);
+        width: 20em;
+    }
+
+    .bubble.fluid {
+        width: auto;
+        min-width: 100%;
+    }
+
+}
+
+@media (max-width: 699px) {
+    .bubble {
+        width: 80vw;
+        left: 10vw;
+        margin-top: 1rem;
+    }
+}
+
+
+/*
+--------------------
+BUBBLE SHAPE
+--------------------
+*/
+
+@media (min-width: 700px) {
+
+    .bubble:before {
+        content: "";
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        left: calc(50% - 0.5em);
+        transform: rotate(45deg);
+        top: -0.25em;
+        z-index: 0;
+        background-color: #7da237;
+    }
+}
+
+
+.bubble__container {
+    position: relative;
+    border-radius: 0.25em;
+    overflow: hidden;
+    border: solid 2px #7da237;
+    background-color: #ffffff;
+    z-index: 2;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+}
+
+/*
+--------------------
+BUBBLE POSITION
+--------------------
+*/
+
+@media (min-width: 700px) {
+
+    .bubble.left { right: -2em; }
+    .bubble.right { left: -2em; }
+
+    .bubble.left:before { left: calc(100% - 3.5em); }
+    .bubble.right:before { left: 2.5em; }
+
+}
+
+/*
+--------------------
+SCROLLABLE BUBBLE
+--------------------
+*/
+
+.bubble__scrollable-wrap {
+    position: relative;
+}
+
+.bubble__scrollable {
+    height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.bubble__scrollable-wrap:before,
+.bubble__scrollable-wrap:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.5em;
+    left: 0;
+    z-index: 2;
+}
+
+/* ----- theme ----- */
+
+.bubble__scrollable-wrap:before {
+    top: 0;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.bubble__scrollable-wrap:after {
+    bottom: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.bubble__container.bg-green_light .bubble__scrollable-wrap:before {
+    background: linear-gradient(rgba(125, 162, 55, 1), rgba(125, 162, 55, 0));
+}
+
+.bubble__container.bg-green_light .bubble__scrollable-wrap:after {
+    background: linear-gradient(rgba(125, 162, 55, 0), rgba(125, 162, 55, 1));
+}
+
+/*
+--------------------
+BUBBLE CONTENT
+--------------------
+*/
+
+.bubble__title {
+    padding: 1rem 0.75rem 0.75rem;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 0;
+}
+
+.bubble__container.bg-green_light .bubble__title {
+    color: #ffffff;
+}
+
+.bubble__content {
+    padding: 1rem 0.75rem 0.75rem;
+}
+
+
+/*
 ==========================================================
 ==========================================================
 PANEL
@@ -2608,11 +2769,139 @@ PANEL
 /*
 ==========================================================
 ==========================================================
-NEXT
+MENUS
 ==========================================================
 ==========================================================
 */
 
+/*
+--------------------
+MENU
+--------------------
+*/
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0.875em;
+    align-items: center;
+}
+
+@media (max-width: 799px) {
+    .menu {
+        flex-direction: column;
+    }
+}
+
+/* ----- menu item ----- */
+
+.menu > li {
+    margin: 0;
+}
+
+.menu > li.separator {
+    flex-grow: 1;
+}
+
+/* ----- menu link ----- */
+
+.menu__link {
+    text-decoration: none;
+    display: inline-block
+}
+
+@media (min-width: 800px) {
+    .menu__link {
+        padding: 0.75em;
+    }
+}
+
+@media (max-width: 799px) {
+    .menu__link {
+        padding: 0.5rem;
+    }
+}
+
+.menu__link:hover,
+.menu__link:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu__link:focus {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #579ea5;
+}
+
+.menu__link_no-click {
+    display: inline-block;
+    background-color: transparent !important;
+}
+
+
+/*
+--------------------
+SOUS-MENU
+--------------------
+*/
+
+.menu-submenu {
+    flex-direction: column;
+    align-items: stretch;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+}
+
+.bubble__scrollable > .menu-submenu {
+    padding: 0.5em 0 !important;
+}
+
+.menu-submenu > li {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.menu-submenu > li.tile {
+    font-size: 1em;
+    text-align: left;
+}
+
+.menu-submenu > li > .menu__link {
+    display: block;
+    padding: 0.75rem 1rem;
+}
+
+/* theme */
+
+.menu-submenu > li > .menu__link { color: #7da237; }
+
+.bg-green_light > .menu-submenu > li > .menu__link { color: #ffffff; }
+
+.menu-submenu > li > .menu__link:hover,
+.menu-submenu > li > .menu__link:focus {
+    background-color: rgba(125, 162, 55, 0.15);
+}
+
+.bg-green_light > .menu-submenu > li > .menu__link:hover,
+.bg-green_light > .menu-submenu > li > .menu__link:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/*
+--------------------
+MENU BUTTONS
+--------------------
+Exception/variation basée sur la class .list
+*/
+
+.menu-buttons {
+    align-items: center;
+}
+
+.menu-buttons > li {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
 
 /*
 ==========================================================

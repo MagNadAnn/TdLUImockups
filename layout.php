@@ -43,8 +43,9 @@
                             <p>Le but du traitement de la balise body et de la classe <strong>site-wrap</strong> est de
                                 ménager une base stable et saine pour le layout.</p>
                             <ul>
-                                <li></li>
-                                <li>La balise <strong>main</strong></li>
+                                <li>La balise <strong>&lt;nav class=&quot;main-nav-site&quot;&gt;</strong> qui contient les 3 barres de menus en haut de la page</li>
+                                <li>La balise <strong>&lt;main&gt;</strong> qui contient le contenu original de la page.</li>
+                                <li>La balise <strong>&lt;footer class=&quot;footer-site&quot;&gt;</strong> qui contient classiquement le footer, c'est à dire 2 barres de menu, l'une contextuelle en fonction des sites, l'autre inter-sites.</li>
                             </ul>
                         </article>
                     </div>

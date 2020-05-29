@@ -155,8 +155,7 @@ danger</pre>
                             </div>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
-                                    <h3 id="button_read-more" class="UItitle3">class="button_round
-                                        button_read-more"</h3>
+                                    <h3 id="button_read-more" class="UItitle3">class="button_read-more"</h3>
                                     <p class="codepen" data-height="265" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="mdeQpEV"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -167,6 +166,30 @@ danger</pre>
                                             on <a href="https://codepen.io">CodePen</a>.</span>
                                     </p>
                                     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                    <pre class="UIcode" title="Classe à utiliser">
+button
+button_round
+button_read-more</pre>
+                                </div>
+                            </div>
+                            <div class="column column_1-1">
+                                <div class="bg-l-pearl block_padding">
+                                    <h3 id="button_expand" class="UItitle3">class="button_expand"</h3>
+                                        <p>Ce bouton est contenu dans un composant qui a deux états : <strong class="text_color">shrinked</strong> ou <strong class="text_color">expanded</strong>. En fonction de l'état de son container, le bouton pointe vers le haut ou le bas.</p>
+                                        <p>Il est construit sur la base d'un <strong>button_icon</strong>.</p>
+                                        <p class="codepen" data-height="265" data-theme-id="default" data-default-tab="html,result" data-user="MagNadAnn" data-slug-hash="gOaNqKY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bouton expand - TdL UI guide">
+                                            <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/gOaNqKY">
+                                            Bouton expand - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                            on <a href="https://codepen.io">CodePen</a>.</span>
+                                        </p>
+                                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                        <pre class="UIcode" title="Classe à utiliser pour le composant autour">
+is-shrinked
+is-expanded</pre>
+                                        <pre class="UIcode" title="Classe à utiliser pour le bouton">
+button
+button_icon
+button_expand</pre>
                                 </div>
                             </div>
                         </div>
