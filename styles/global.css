@@ -955,12 +955,16 @@ a:focus .button_read-more > .button__icon > svg {
 
 /*
 --------------------
-READ MORE'S VARIATION
+EXPAND VARIATION
 --------------------
 */
 
 .button_expand:hover,
-.button_expand:focus {
+.button_expand:focus,
+a:hover span.button_expand,
+a:focus span.button_expand,
+button:hover span.button_expand,
+button:focus span.button_expand {
     transform: rotate(90deg) !important;
 }
 
@@ -2703,6 +2707,295 @@ BUBBLE CONTENT
 
 .bubble__content {
     padding: 1rem 0.75rem 0.75rem;
+}
+
+/*
+--------------------
+ACCORDEON
+--------------------
+*/
+
+
+.list.accordeon {
+    align-items: stretch;
+}
+
+.accordeon > li {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+.accordeon__button.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    border-width: 2px;
+}
+
+.accordeon__title {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 1em;
+}
+
+.accordeon__button > .button__icon {
+    transition: all 0.2s ease-in-out;
+    margin-left: 1em;
+}
+
+.accordeon__container {
+    transition: all 0.2 ease-in-out;
+}
+
+.accordeon__content {
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 2em;;
+}
+
+.is-shrinked > .accordeon__container {
+    height: 0;
+    opacity: 0;
+}
+
+.is-shrinked > .button.accordeon__button {
+    color: #579ea5;
+    background-color: #ffffff;
+}
+
+.is-shrinked > .button.accordeon__button:hover,
+.is-shrinked > .button.accordeon__button:focus {
+    color: #ffffff;
+}
+
+
+/*
+--------------------
+TABS
+--------------------
+*/
+
+.tabs-wrap {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.tabs {
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    bottom: 100%;
+    padding: 0;
+}
+
+.tabs > li {
+    position: relative;
+    bottom: 100%;
+    margin: 0 !important;
+}
+
+.tab__link {
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+    border-bottom: 0.25em rgba(87, 158, 165, 0.3) solid;
+}
+
+.tab__link.is-active {
+    font-weight: bold;
+    border-bottom-color: #579ea5;
+}
+
+.tab__container {
+    border: 1px #579ea5 solid;
+}
+
+
+@media (min-width: 1200px) {
+
+    .tabs-wrap {
+        margin-left: -3em;
+        margin-right: -3em;
+    }
+
+    .tab__container {
+        padding: 3em;
+    }
+    
+}
+
+@media (max-width: 1199px) {
+
+    .tabs-wrap {
+        margin-left: -1.5em;
+        margin-right: -1.5em;
+    }
+
+    .tab__container {
+        padding: 1.5em;
+    }
+}
+
+@media (min-width: 500px) {
+
+    .tabs > li {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 499px) {
+
+    .tabs {
+        flex-wrap: wrap;
+        padding: 1em;
+    }
+
+    .tabs > li {
+        padding: 0 0.5em;
+    }
+
+}
+
+/*
+--------------------
+CAROUSEL
+--------------------
+*/
+
+.carousel__wrap {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel:before,
+.carousel:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.carousel:before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0));
+}
+
+.carousel:after {
+    right: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0),rgba(255, 255, 255, 1));
+}
+
+.carousel__content {
+    position: relative;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    width: 210%;
+    left: 15%;
+    margin: 0;
+}
+
+.carousel__item {
+    width: calc(100% / 3);
+    box-sizing: border-box;
+}
+
+.caroussel__nav__arrows {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.caroussel__nav__arrow {
+    position: absolute;
+    top: calc(50% - 1em);
+    z-index: 2;
+}
+
+.caroussel__nav__previous { left: 0.25em; }
+.caroussel__nav__next { right: 0.25em; }
+
+.carousel__nav__dots {
+    justify-content: center;
+}
+
+.carousel__nav__dot {
+    transition: all 0.2s ease-in-out;
+}
+
+.carousel__nav__dot:not(.is-active) { opacity: 0.3; }
+.carousel__nav__dot:not(.is-active):hover,
+.carousel__nav__dot:not(.is-active):focus { opacity: 0.5; }
+.carousel__nav__dot:not(.is-active):active { opacity: 0.8; }
+
+@media (min-width: 800px) {
+    
+    .carousel:before,
+    .carousel:after {
+        width: 8em;
+    }
+
+    .carousel__item {
+        padding: 0 2em;
+    }
+
+}
+
+@media (max-width: 799px) {
+
+    .carousel:before,
+    .carousel:after {
+        width: 4em;
+    }
+
+    .carousel__item {
+        padding: 0 1em;
+    }
+
+}
+
+@media (min-width: 700px) {
+
+    .carousel__wrap {
+        margin-left:  0;
+        margin-right:  0;
+    }
+
+    .carousel {
+        margin: 0 5em;
+    }
+
+    .carousel:before,
+    .carousel:after {
+        width: 8em;
+    }
+
+}
+
+@media (max-width: 699px) {
+
+    .carousel__wrap {
+        margin-left: -3em;
+        margin-right: -3em;
+        overflow: hidden;
+    }
+
+    .carousel {
+        font-size: 0.75em;
+    }
+
 }
 
 

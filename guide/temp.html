@@ -46,6 +46,7 @@
                     <ol class="UIsommaire">
                         <li><a href="#bubble">Bulles</a></li>
                         <li><a href="#popin">Pop in</a></li>
+                        <li><a href="#tabs">Onglets</a></li>
                         <li><a href="#accordeon">Accordéon</a></li>
                         <li><a href="#carousel">Carousel</a></li>
                         <li><a href="#"></a></li>
@@ -207,23 +208,96 @@ popin__veil</pre>
             </section>
 
             <section class="fw-section">
-                <h2 id="accordeon" class="UItitle2">Accordéons</h2>
+                <h2 id="tabs" class="UItitle2">Onglets</h2>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p></p>
+                            <p>Ils peuvent contenir de nombreux autres composants : tuiles, éléments de layout, texte...
+                            </p>
+                            <pre class="UIcode" title="Structure HTML">
+&lt;div class=&quot;<strong>tabs-wrap</strong>&quot;&gt;
+    &lt;ul class=&quot;<a href="list">list</a> <strong>tabs</strong>&quot;&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;<strong>tab__link</strong> <strong class="text_color">is-active</strong>&quot;&gt;
+    &lt;div class=&quot;<strong>tab__container</strong>&quot;&gt;</pre>
                         </article>
                     </div>
                 </div>
                 <div class="section__container">
                     <div class="chimney fluid">
-                        <div class="columns">
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title=""></pre>
-                                </div>
-                            </div>
+                        <div class="bg-l-pearl block_padding">
+                            <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="html,result"
+                                data-user="MagNadAnn" data-slug-hash="XWmLLvL"
+                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                data-pen-title="Tabs  - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/XWmLLvL">
+                                        Tabs - TdL UI guide</a> by Margot Nadot (<a
+                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode" title="Classes à utiliser">
+tabs-wrap
+tabs + list
+tab__link
+tab__container</pre>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="fw-section">
+                <h2 id="accordeon" class="UItitle2">Accordéons</h2>
+                <div class="section__container">
+                    <div class="chimney small">
+                        <article class="UIarticle">
+                            <p>Ils sont surtout destiné à accueillir des composants de texte et d'illustration, mais ils
+                                peuvent contenir de nombreux autres composants : tuiles, éléments de layout, texte...
+                            <pre class="UIcode" title="Structure HTML">
+&lt;ul class=&quot;<strong>accordeon</strong> <a href="list">list list_v</a>&quot;&gt;
+    &lt;li class=&quot;<strong class="text_color">is-expanded</strong>&quot;&gt;
+    &lt;button class=&quot;<strong>accordeon__button</strong> <a href="button">button button_basic primary</a>&quot;&gt;
+        &lt;span class=&quot;<strong>accordeon__title</strong> <a href="button">button__label</a>&quot;&gt;
+        &lt;span class=&quot;<a href="button">button__icon button_expand</a>&quot;&gt;
+    &lt;div class=&quot;<strong>accordeon__container</strong>&quot;&gt;
+        &lt;div class=&quot;<strong>accordeon__content</strong>&quot;&gt;
+                            </pre>
+                        </article>
+                    </div>
+                </div>
+                <div class="section__container">
+                    <div class="chimney fluid">
+                        <div class="bg-l-pearl block_padding">
+                            <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="html,result"
+                                data-user="MagNadAnn" data-slug-hash="RwWzXZj"
+                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                data-pen-title="RwWzXZj">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/RwWzXZj">
+                                        RwWzXZj</a> by Margot Nadot (<a
+                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode" title="Classes à utiliser">
+accordeon
+list
+list_v
+
+is-expanded / is-shrinked
+
+accordeon__button
+button
+button_basic
+primary
+
+accordeon__title
+button__label
+
+button__icon
+button_expand
+
+accordeon__container
+
+accordeon__content</pre>
                         </div>
                     </div>
             </section>
@@ -243,7 +317,7 @@ popin__veil</pre>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title=""></pre>
+                                    <pre class="UIcode" title="Classes à utiliser"></pre>
                                 </div>
                             </div>
                         </div>
@@ -265,7 +339,7 @@ popin__veil</pre>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title=""></pre>
+                                    <pre class="UIcode" title="Classes à utiliser"></pre>
                                 </div>
                             </div>
                         </div>
