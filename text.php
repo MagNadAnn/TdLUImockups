@@ -18,8 +18,8 @@
                         <li><a href="#mixin-text">Mixins de texte</a></li>
                         <li><a href="#list_simple">Liste simple améliorée</a></li>
                         <li><a href="#text_columns">Texte en colonne</a></li>
+                        <li><a href="#exergue">Exergues</a></li>
                         <li><a href="#"></a></li>
-                        
                     </ol>
                 </nav>
 
@@ -230,6 +230,32 @@ list-simple_double-arrow</pre>
                             <pre class="UIcode" title="Classes à utiliser">
 text_columns_2
 text_columns_3</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fw-section">
+                <h2 id="exergue" class="UItitle2">Exergues</h2>
+                <div class="section__container">
+                    <div class="chimney small">
+                        <article class="UIarticle">
+                            <p>Classe à placer autour du passage que l'on souhaite mettre (très) en valeur.</p>
+                            <p>La fonction d'une exergue est d'accrocher le regard et l'intérêt de l'internaute et de lui donner envie de se plonger dans le contenu.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="section__container">
+                    <div class="chimney fluid">
+                        <div class="bg-l-pearl block_padding">
+                            <h3 class="UItitle3">class="exergue"</h3>
+                            <p class="codepen" data-height="300" data-theme-id="default" data-default-tab="result" data-user="MagNadAnn" data-slug-hash="OJyKzvE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="exergue  - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/OJyKzvE">
+                                exergue  - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode" title="Classes à utiliser">exergue</pre>
                         </div>
                     </div>
                 </div>

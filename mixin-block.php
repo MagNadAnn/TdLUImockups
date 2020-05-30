@@ -17,6 +17,7 @@
                         <li><a href="#bg">Backgrounds</a></li>
                         <li><a href="#list">Listes</a></li>
                         <li><a href="#block_v">Forcer des modifications ponctuelles</a></li>
+                        <li><a href="#youtube-wrap">Youtube wrap</a></li>
                         <li><a href="#"></a></li>
                     </ol>
                 </nav>
@@ -191,6 +192,54 @@ de Ressources</a></em></pre>
                                     <pre class="UIcode" title="Classes à utiliser"></pre>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fw-section">
+                <h2 id="" class="UItitle2"></h2>
+                <div class="section__container">
+                    <div class="chimney small">
+                        <article class="UIarticle">
+                            <p></p>
+                            <pre class="UIcode" title="Structure HTML"></pre>
+                        </article>
+                    </div>
+                </div>
+                <div class="section__container">
+                    <div class="chimney fluid">
+                        <div class="columns">
+                            <div class="column column_1-2">
+                                <div class="bg-l-pearl block_padding">
+                                    <h3 class="UItitle3">class=""</h3>
+                                    <pre class="UIcode" title="Classes à utiliser"></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="fw-section">
+                <h2 id="youtube-wrap" class="UItitle2">Youtube wrap</h2>
+                <div class="section__container">
+                    <div class="chimney small">
+                        <article class="UIarticle">
+                            <p>Un composant pour entourer les iframe Youtube et les adapter à la largeur de l'espace disponible.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="section__container">
+                    <div class="chimney fluid">
+                        <div class="bg-l-pearl block_padding">
+                            <h3 class="UItitle3">class="embed-youtube-resize"</h3>
+                            <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="html,result" data-user="MagNadAnn" data-slug-hash="PoPMEJQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="embed youtube  - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/PoPMEJQ">
+                                embed youtube  - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode" title="Classes à utiliser">embed-youtube-resize</pre>
                         </div>
                     </div>
                 </div>

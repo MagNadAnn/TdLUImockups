@@ -4,38 +4,23 @@
 }
 
 /*
+-----------------------------
+FORM ID
+*/
+
+.form_id__wrap {
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 Micro components
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 */
-
-/*
------------------------------
-embed-youtube-resize
-*/
-
-.embed-youtube-resize {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
-
-.embed-youtube-resize iframe,  
-.embed-youtube-resize object,  
-.embed-youtube-resize embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-
-
 
 /*
 -----------------------------
@@ -110,7 +95,7 @@ h4.fiche__entry__title > i {
 download button
 */
 
-.download__wrap {
+.fiche__miniature__download-wrap {
     width: 100%;
     padding: 1em 10%;
     box-sizing: border-box;
@@ -119,175 +104,17 @@ download button
 }
 
 @media (min-width: 800px) {
-    .download__wrap {
+    .fiche__miniature__download-wrap {
         position: absolute;
         bottom: -3.5em;
     }
 }
 
 @media (max-width: 799px) {
-    .download__wrap {
+    .fiche__miniature__download-wrap {
         position: relative;
         margin-top: -3.5em;
     }
-}
-
-
-
-/*
------------------------------
-exergue
-*/
-
-.exergue {
-    font-size: 2em;
-    color: #a86e00;
-    border-style: solid;
-    border-width: 0 0.125em;
-    padding: 0.5em 1.5em;
-    margin: 2em -1.5em;
-    border-color: #db9500;
-}
-
-/*
------------------------------
-pagination
-*/
-
-.pagination {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 3em 0;
-}
-
-.pagination__link {
-    display: block;
-    padding: 0.25em;
-    min-width: 1.85em;
-    box-sizing: border-box;
-    text-align: center;
-    text-decoration: none;
-    color: #579ea5;
-    border-width: 1px;
-    border-style: solid;
-}
-
-span.pagination__link {
-    border-color: transparent;
-}
-
-a.pagination__link {
-    border-color: #579ea5;
-}
-
-.pagination__keyword {
-    border-color: transparent;
-    background-color: rgba(87, 158, 165, 0.1);
-}
-
-.pagination__link.is-active {
-    background-color: #42767a;
-    color: #ffffff;
-    font-style: 1.15em;
-    font-weight: bold;
-}
-
-/*
------------------------------
-box
-*/
-
-.box {
-    padding: 1.5em;
-}
-
-.box > *:first-child {
-    margin-top: 0;
-}
-
-.box > *:last-child {
-    margin-bottom: 0;
-}
-
-.box.base {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.box.info {
-    color: #ffffff;
-    background-color: #579ea5;
-}
-
-.box.success {
-    color: #ffffff;
-    background-color: #7da237;
-}
-
-.box.warning {
-    color: #ffffff;
-    background-color: #db9500;
-}
-
-.box.danger {
-    color: #ffffff;
-    background-color: #a41515;
-}
-
-
-/*
------------------------------
-Breadcrumbs
-*/
-
-.breadcrumb {
-    padding: 1em 0;
-    font-size: 0.875em;
-    flex-wrap: wrap;
-}
-
-.breadcrumb__item {
-    display: flex;
-    text-align: left;
-    margin: 0 !important;
-}
-
-.breadcrumb__item:not(:first-child):before {
-    content: ">";
-    margin: 0 0.5em;
-    color: #579ea5;
-}
-
-.breadcrumb__link {
-    display: inline-block;
-    padding: 0 0.2em;
-}
-
-a.breadcrumb__link:link,
-a.breadcrumb__link:visited {
-    text-decoration: none;
-    color: #579ea5;
-}
-
-a.breadcrumb__link:hover,
-a.breadcrumb__link:focus {
-    text-decoration: underline;
-    color: #579ea5;
-    background-color: transparent;
-}
-
-a.breadcrumb__link:active {
-    text-decoration: underline;
-    color: #579ea5;
-    background-color: transparent;
-}
-
-@media (max-width: 799px) {
-
-    .breadcrumb__item:first-child {
-        display: none;
-    }
-
 }
 
 /*
@@ -403,16 +230,7 @@ PAGE-HEADER
     margin-bottom: -2em;
 }
 
-/*
------------------------------
-FORM ID
-*/
 
-.form_id__wrap {
-    width: 20em;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /*
 -----------------------------
@@ -627,79 +445,6 @@ HERO HEADER-SITE
 
 /*
 -----------------------------
-CTA
-*/
-
-.CTA__wrap {
-    text-align: center;
-    overflow: hidden;
-}
-
-.CTA__container {
-    max-width: 600px;
-    margin: auto;
-}
-
-.CTA__title {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 0.5rem 0;
-}
-
-.CTA__subtitle {
-    font-size: 1.5em;
-    margin: 1rem 0;
-}
-
-.CTA__content {
-    margin: 0.5rem 0 1rem;
-    padding: 1px 0;
-}
-
-.CTA__content:first-child { margin-top: 0; }
-.CTA__content:last-child { margin-bottom: 0; }
-
-/* CTA thème 01 */
-
-.CTA_theme-01 {
-    background-color: #eae6cf;
-}
-
-.CTA_theme-01:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.2;
-    transition: all 0.2s ease-in-out;
-    background: url("./../img/motif_champ_white.png") repeat;
-    opacity: 0.6;
-}
-
-.CTA_theme-01 > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* CTA thème 02 */
-
-.CTA_theme-02 {
-    background-color: #579ea5;
-    color: #ffffff;
-}
-
-.CTA_theme-02 .form-label { color: #ffffff; }
-.CTA_theme-02 .button_basic.primary {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: transparent;
-}
-
-/*
------------------------------
 CTA rapport
 */
 
@@ -761,19 +506,4 @@ CTA soutien
     .CTA_soutien__container {
         margin-top: -2em;
     }  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.filters__wrap.form__wrap {
-    margin-top: 0;
 }

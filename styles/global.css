@@ -1744,15 +1744,14 @@ BACKGROUNDS
     z-index: 2;
 }
 
-[class*="bg-l"]:before { opacity: 0.6; }
-[class*="bg-d"]:before { opacity: 0.2; }
-
 .bg-trame_champs_light:before {
     background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_champ_white.png") repeat;
+    opacity: 0.25;
 }
 
 .bg-trame_champs_dark:before {
     background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_champ_black.png") repeat;
+    opacity: 0.15;
 }
 
 .bg-trame_rayures_light:before {
@@ -2078,6 +2077,23 @@ LIST SIMPLE
 .list-simple_double-arrow > li:before { content: url("http://tdlui.semaphore-communication.fr/img/icon/angle-double-right.svg"); }
 [class*="bg-d"] .list-simple_double-arrow > li:before { content: url("http://tdlui.semaphore-communication.fr/img/icon/angle-double-right_white.svg"); }
 
+
+/*
+--------------------
+EXERGUE
+--------------------
+*/
+
+.exergue {
+    font-size: 2em;
+    color: #a86e00;
+    border-style: solid;
+    border-width: 0 0.125em;
+    padding: 0.5em 1.5em;
+    margin: 2em -1.5em;
+    border-color: #db9500;
+}
+
 /*
 ==========================================================
 ==========================================================
@@ -2193,6 +2209,30 @@ LIST
 
 .list > li {
     margin: 0;
+}
+
+/*
+--------------------
+EMBED YOUTUBE RESIZE
+--------------------
+*/
+
+.youtube-wrap {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.youtube-wrap iframe,  
+.youtube-wrap object,  
+.youtube-wrap embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /*
@@ -2906,7 +2946,7 @@ PANEL
 /*
 ==========================================================
 ==========================================================
-MENUS
+NAV
 ==========================================================
 ==========================================================
 */
@@ -3041,6 +3081,107 @@ Exception/variation basée sur la class .list
 }
 
 /*
+--------------------
+PAGINATION
+--------------------
+*/
+
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+}
+
+.pagination__link {
+    display: block;
+    padding: 0.25em;
+    min-width: 1.85em;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #579ea5;
+    border-width: 1px;
+    border-style: solid;
+}
+
+span.pagination__link {
+    border-color: transparent;
+}
+
+a.pagination__link {
+    border-color: #579ea5;
+}
+
+.pagination__keyword {
+    border-color: transparent;
+    background-color: rgba(87, 158, 165, 0.1);
+}
+
+.pagination__link.is-active {
+    background-color: #42767a;
+    color: #ffffff;
+    font-style: 1.15em;
+    font-weight: bold;
+}
+
+/*
+--------------------
+BREADCRUMBS
+--------------------
+*/
+
+.breadcrumb {
+    padding: 1em 0;
+    font-size: 0.875em;
+    flex-wrap: wrap;
+}
+
+.breadcrumb__item {
+    display: flex;
+    text-align: left;
+    margin: 0 !important;
+}
+
+.breadcrumb__item:not(:first-child):before {
+    content: ">";
+    margin: 0 0.5em;
+    color: #579ea5;
+}
+
+.breadcrumb__link {
+    display: inline-block;
+    padding: 0 0.2em;
+}
+
+a.breadcrumb__link:link,
+a.breadcrumb__link:visited {
+    text-decoration: none;
+    color: #579ea5;
+}
+
+a.breadcrumb__link:hover,
+a.breadcrumb__link:focus {
+    text-decoration: underline;
+    color: #579ea5;
+    background-color: transparent;
+}
+
+a.breadcrumb__link:active {
+    text-decoration: underline;
+    color: #579ea5;
+    background-color: transparent;
+}
+
+@media (max-width: 799px) {
+
+    .breadcrumb__item:first-child {
+        display: none;
+    }
+
+}
+
+/*
 ==========================================================
 ==========================================================
 FORM
@@ -3103,7 +3244,7 @@ FORM SMALL
 --------------------
 FORM INLINE
 --------------------
-Pour des formulaire compacts qui tiennent sur une ligne, par exemple un petit menu de recherche.
+Pour des formulaire compacts qui tiennent sur une ligne, par exemple un petit menu de search.
 */
 
 .form.inline {
@@ -3584,75 +3725,6 @@ FORM INPUT SELECT
 }
 
 /*
---------------------
-FORM BIN
---------------------
-*/
-
-/*
------------------------------
-fieldset autre part, dans un parneau de tri par exemple
-
-
-*:not(.form-line) > .form-fieldset {
-    padding: 0.5em 1em;
-    margin: 1em -1em;
-    border: #42767a solid 1px;
-}
-
-/* form-line_CGV
-
-.form-line_CGV {
-    margin-top: 0.5em;
-}
-
-@media (min-width: 500px) {
-    .form-line_CGV {
-        align-items: flex-start;
-    }
-}
-
-
-
-.form-label_block {
-    line-height: 1.1em;
-}
-
-@media (max-width: 499px) {
-    .form-line > .form-button {
-        width: 100%;
-    }
-}
-
-
-*/
-
-
-/*
-==========================================================
-==========================================================
-NEXT
-==========================================================
-==========================================================
-*/
-
-/*
-==========================================================
-==========================================================
-NEXT
-==========================================================
-==========================================================
-*/
-
-/*
-==========================================================
-==========================================================
-NEXT
-==========================================================
-==========================================================
-*/
-
-/*
 ==========================================================
 ==========================================================
 SMALL COMPONENTS
@@ -3900,3 +3972,639 @@ pour des images-liens
     display: inline-block;
     padding: 0.2em;
 }
+
+/*
+==========================================================
+==========================================================
+MAIN NAV
+==========================================================
+==========================================================
+*/
+
+/*
+--------------------
+BURGER AND OVERLAY MECHANISM
+--------------------
+Inspired from Pure CSS Hamberger Menu & Overlay by Brad Traversy
+https://codepen.io/bradtraversy/pen/vMGBjQ
+*/
+
+@media (min-width: 800px) {
+    #main-nav__toggler, #main-nav__hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 799px) {
+
+    #main-nav__toggler {
+        position: fixed;
+        top: 6em;
+        left: 0.25em;
+        z-index: 51;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        box-sizing: border-box;
+        opacity: 0;
+        margin: 5px;
+        padding: 15px;
+    }
+
+    #main-nav__hamburger {
+        position: fixed;
+        top: 5em;
+        left: 0.25em;
+        z-index: 50;
+        width: 60px;
+        height: 60px;
+        box-sizing: border-box;
+        padding: 15px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    /* Hamburger Line */
+    #main-nav__hamburger__line {
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        background: #ffffff;
+    }
+
+    /* Hamburger Lines - Top & Bottom */
+    #main-nav__hamburger__line::before,
+    #main-nav__hamburger__line::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+
+    /* Moves Line Down */
+    #main-nav__hamburger__line::after {
+        top: 10px;
+    }
+
+    /* Toggler Animation */
+    #main-nav__toggler:checked + #main-nav__hamburger > #main-nav__hamburger__line {
+        transform: rotate(135deg);
+    }
+
+    /* Turns Lines Into X */
+    #main-nav__toggler:checked + #main-nav__hamburger > #main-nav__hamburger__line:before,
+    #main-nav__toggler:checked + #main-nav__hamburger > #main-nav__hamburger__line:after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* Rotate On Hover When Checked */
+    #main-nav__toggler:checked:hover + #main-nav__hamburger > #main-nav__hamburger__line {
+        transform: rotate(225deg);
+    }
+
+    /* Show Menu */
+    #main-nav__toggler:checked ~ #main-nav__splash__wrap {
+        visibility: visible;
+    }
+
+    #main-nav__toggler:checked ~ #main-nav__splash__wrap > #main-nav__splash__transform-container {
+        transform: scale(1);
+        transition-duration: 0.75s;
+    }
+
+    #main-nav__toggler:checked ~ #main-nav__splash__wrap > #main-nav__splash__transform-container > #main-nav__splash__container {
+        opacity: 1;
+        transition:  opacity 0.4s ease 0.4s;
+    }
+
+    #main-nav__splash__wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 49;
+    }
+
+    #main-nav__splash__transform-container {
+        border-radius: 50%;
+        width: 200vw;
+        height: 200vw;
+        padding: 1em;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.4s ease;
+    }
+
+}
+
+/*
+--------------------
+MAIN NAV CONTENT
+--------------------
+*/
+
+@media (max-width: 799px) {
+    .main-nav__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+    }
+}
+
+@media (max-width: 599px) {
+    .main-nav__content {
+        font-size: calc(0.035 * 100vw);
+    }
+}
+
+/*
+--------------------
+TOP BARS
+--------------------
+*/
+
+@media (max-width: 799px) {
+    .top-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 100%;
+        order: 2;
+    }
+
+    .top-bar__1,
+    .top-bar__2,
+    .top-bar__3 {
+        padding: 1em;
+        box-sizing: border-box;
+    }
+}
+
+/* ----- CHIMNEY TOP BAR ----- */
+
+@media (min-width: 800px) {
+    .chimney_top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 75em !important;
+    }
+}
+
+@media (max-width: 799px) {
+    .chimney_top-bar {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+/* ----- TOP BAR 1 ----- */
+
+@media (min-width: 800px) {
+    .top-bar__1 {
+        background-color: #ffffff;
+    }
+}
+
+@media (max-width: 799px) {
+
+    .top-bar__1 {
+        width: 50%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        padding-top: 1.5em;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    .top-bar__1:before {
+        display: none;
+    }
+}
+
+/* ----- TOP BAR 2 ----- */
+
+@media (min-width: 800px) {
+    .top-bar__2 {
+        background-color: #a41515;
+    }
+}
+
+@media (max-width: 799px) {
+    .top-bar__2 {
+        order: 3;
+        width: 50%;
+        padding-right: 0;
+        padding-bottom: 0;
+        border-left: 1px solid #ffffff;
+    }
+}
+
+/* ----- TOP BAR 3 ----- */
+
+@media (max-width: 799px) {
+    .top-bar__3 {
+        order: 1;
+        width: 100%;
+        padding: 0 1em;
+        border-bottom: 1px solid #ffffff;
+        background-color: transparent !important;
+        z-index: 3;
+    }
+}
+
+
+/*
+--------------------
+MAIN-NAV LOGO
+--------------------
+Fixe, visible seulement sur petit écran.
+*/
+
+
+@media (min-width: 800px) {
+    .main-nav__logo.logo {
+        display: none !important;
+    }
+}
+
+@media (max-width: 799px) {
+    .main-nav__logo.logo {
+        position: fixed;
+        top: 0.25em;
+        left: 0.25em;
+        width: 4.5em;
+        padding: 0;
+        z-index: 51;
+        background-color: transparent !important;
+    }
+}
+
+
+/*
+--------------------
+TOP BAR LOGO
+--------------------
+Visible seulement sur grand écran, dans la première barre de menu, intersite.
+*/
+
+@media (min-width: 800px) {
+
+    .top-bar__logo.logo {
+        width: 8em;
+        /*
+        position: relative;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 0.5em 0;
+        margin-right: 1em;
+        */
+    }
+
+}
+
+@media (max-width: 799px) {
+    .top-bar__logo.logo {
+        display: none;
+    }
+}
+
+/*
+--------------------
+MENU CORPORATE
+--------------------
+*/
+
+.menu-corporate {
+    font-size: 0.75em;
+}
+
+@media (min-width: 800px) {
+    .menu-corporate > li > .button.secundary {
+        background-color: transparent !important;
+    }
+
+    .menu-corporate > li > .button.secundary:hover,
+    .menu-corporate > li > .button.secundary:focus {
+        background-color: #42767a !important;
+    }
+
+    .menu-corporate > li > .button.secundary:active {
+        background-color: #0098a6 !important;
+    }
+
+    .menu-corporate > li {
+        margin-left: 0.5em !important;
+        margin-right: 0.5em !important;
+    }
+}
+
+@media (max-width: 799px) {
+    .menu-corporate {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu-corporate > li {
+        margin-top: 0.5em !important;
+        margin-bottom: 0.5em !important;
+    }
+
+    .menu-corporate > li > .button.secundary {
+        border-color: #ffffff !important;
+    }
+
+}
+
+/*
+--------------------
+MENU CONNEXION
+--------------------
+*/
+
+.menu-connexion {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-connexion__welcome {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    line-height: 1em;
+}
+
+.menu-connexion__last-connexion {
+    font-size: 0.75em;
+}
+
+@media (min-width: 800px) {
+
+    .menu-connexion {
+        flex-grow: 1;
+        align-items: flex-end;
+        text-align: right;
+        order: 2;
+    }
+
+    .menu-connexion__welcome {
+        align-items: flex-end;
+        color: #a41515;
+    }
+}
+
+@media (max-width: 799px) {
+
+    .menu-connexion {
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .menu-connexion__welcome {
+        align-items: flex-end;
+        color: #ffffff;
+    }
+}
+
+/*
+--------------------
+MENU SITE
+--------------------
+*/
+
+/*
+.menu-site {
+    width: 100%;
+}
+*/
+
+@media (min-width: 800px) {
+    .menu-site {
+        font-size: calc(0.75 * 100%);
+    }
+}
+
+@media (max-width: 799px) {
+    .menu-site {
+        font-size: 0.75em;
+        align-items: flex-start;
+        padding: 0 !important;
+    }
+}
+
+/* ----- MENU SITE LINKS ----- */
+
+.menu-site .menu__link {
+    font-size: 1.875em;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    letter-spacing: 0.025em;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+@media (max-width: 799px) {
+    .menu-site > .menu__item > .menu__link {
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+    }
+}
+
+/* ----- MENU SITE SECUNDARY LINKS ----- */
+
+.menu-site .secundary > .menu__link {
+    padding: 0.25em 0.5em;
+    margin: 0.25em !important;
+    font-size: 1.75em;
+}
+
+.menu-site > li.secundary > .menu__link {
+    background-color: #b34818;
+}
+
+.menu-site > li.secundary > .menu__link:hover,
+.menu-site > li.secundary > .menu__link:focus {
+    background-color: #cc5121;
+}
+
+.menu-site > li.secundary > .menu__link:active {
+    background-color: #ea5f28;
+}
+
+@media (max-width: 799px) {
+    .menu-site > .menu__item.menu__secundary > .menu__link {
+        padding: 0.5rem;
+    }
+}
+
+/*
+--------------------
+MENU SEARCH
+--------------------
+*/
+
+@media (max-width: 799px) {
+
+    .menu-search {
+        top: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-search__title {
+        text-transform: uppercase;
+        margin: 0;
+        font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+        line-height: 1.125em;
+        letter-spacing: 0.025em;
+        font-weight: normal;
+        color: #ffffff;
+        font-size: calc(0.09 * 100vw);
+    }
+
+    .menu-search .form {
+        width: 100%;
+        margin-top: 0;
+    }
+
+}
+
+/*
+--------------------
+SPLASH MENU SPECIALS
+--------------------
+*/
+
+@media (max-width: 799px) {
+    #main-nav__splash__transform-container {
+        background-color: #a41515;
+    }
+
+    #main-nav__hamburger {
+        background-color: #579ea5;
+    }
+
+    #main-nav__splash__container {
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+}
+
+
+
+
+/*
+==========================================================
+==========================================================
+FOOTER
+==========================================================
+==========================================================
+*/
+
+/*
+--------------------
+MENU INTERSITE
+--------------------
+*/
+
+@media (min-width: 800px) {
+    .menu-intersites .menu__link {
+        padding: 1em 1.25em;
+    }
+}
+
+/*
+@media (max-width: 799px) {
+    .menu-intersites {
+        align-items: flex-end;
+    }
+
+    .bottom-bar_2 > .menu-intersites {
+        align-items: flex-start;
+        padding: 2em;
+    }
+}
+*/
+
+.menu-intersites .menu__link {
+    color: #ffffff;
+}
+
+/*
+--------------------
+BOTTOM BAR 1
+--------------------
+*/
+
+.bottom-bar_1 {
+    color: #ffffff;
+    background-color: #a41515;
+}
+
+/*
+--------------------
+BOTTOM BAR 2
+--------------------
+*/
+
+.bottom-bar_2 {
+    color: #ffffff;
+    background-color: #85170f;
+}
+
+/*
+==========================================================
+==========================================================
+TEMPLATES
+==========================================================
+==========================================================
+*/
+
+
+/*
+==========================================================
+==========================================================
+NEXT
+==========================================================
+==========================================================
+*/
+
+/*
+==========================================================
+==========================================================
+NEXT
+==========================================================
+==========================================================
+*/
