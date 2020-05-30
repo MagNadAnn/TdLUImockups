@@ -28,6 +28,7 @@
                 <li><a href="tile">Tuiles</a></li>
                 <li><a href="hero">Heros</a></li>
                 <li><a href="temp">Affichages temporaires/interactifs</a></li>
+                <li><a href="form">Formulaires</a></li>
             </ul>
             <p class="UItitle4 UGnavTitle2">Maquettes</p>
         </nav>

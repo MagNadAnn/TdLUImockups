@@ -608,11 +608,11 @@ ESPACEMENTS
 --------------------
 */
 
-*:not(.section__container):not(.column):not(li):first-child:not(.form-fieldset):not(.form-line):first-child {
+*:not(.section__container):not(.column):not(li):first-child:not(.tags):not(.form-fieldset):not(.form-line):first-child {
     margin-top: 0;
 }
 
-*:not(.section__container):not(.column):not(li):last-child:not(.form-fieldset):not(.form-line):last-child {
+*:not(.section__container):not(.column):not(li):last-child:not(.tags):not(.form-fieldset):not(.form-line):last-child {
     margin-bottom: 0;
 }
 
@@ -670,6 +670,7 @@ BUTTON
     line-height: 1.125em;
     letter-spacing: 0.05em;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 /* ----- Icon (optionnal) ----- */
@@ -898,8 +899,22 @@ ICON'S VARIATIONS
 */
 
 .button_icon {
-    background-color: transparent;
+    background-color: transparent !important;
     padding: 0.5em;
+}
+
+/* BUTTON ICON TIGHT */
+/* Pour afficher dans un tag par exemple */
+
+.button_icon.button_tight {
+    padding: 0;
+}
+
+.button_tight > i,
+.button_tight > svg {
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 /*
@@ -983,19 +998,6 @@ button:focus span.button_expand {
 .is-shrinked .button_expand {
     transform: rotate(180deg);
 }
-
-
-
-/*
---------------------
-BUTTON Bin
---------------------
-
-.button_icon.button_tight {
-    padding: 0;
-}
-
-*/
 
 /*
 ==========================================================
@@ -3674,6 +3676,10 @@ FORM INPUT SELECT
     transform: rotate(-180deg);
 }
 
+.form-select > .tags > li {
+    margin: 0;
+}
+
 .form-select__prompt {
     padding: 0.5em 0;
     outline: 0;
@@ -3772,10 +3778,6 @@ fieldset autre part, dans un parneau de tri par exemple
     padding: 0.5em 1em;
     margin: 1em -1em;
     border: #42767a solid 1px;
-}
-
-.form-line_multi > .form-label {
-    margin: 0 0.25rem;
 }
 
 /* form-line_CGV
