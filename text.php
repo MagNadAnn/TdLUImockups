@@ -16,6 +16,10 @@
                     <ol class="UIsommaire">
                         <li><a href="#base">Styles de base</a></li>
                         <li><a href="#mixin-text">Mixins de texte</a></li>
+                        <li><a href="#list_simple">Liste simple améliorée</a></li>
+                        <li><a href="#text_columns">Texte en colonne</a></li>
+                        <li><a href="#"></a></li>
+                        
                     </ol>
                 </nav>
 
@@ -177,11 +181,67 @@ text_on-photo</pre>
             </section>
 
             <section class="fw-section">
+                <h2 id="list_simple" class="UItitle2">Listes simples améliorées</h2>
+                <div class="section__container">
+                    <div class="chimney small">
+                        <article class="UIarticle">
+                            <p>Les puces sont tirées des pictogrammes de <a href="https://fontawesome.com">Font Awesome</a> et sont prévues en teintes <em>charcoal</em> et <em>white</em>. Disponible en SVG, il est assez facile de les décliner en d'<a href="#text_color">autres couleurs de la charte</a>.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="section__container">
+                    <div class="chimney fluid">
+                        <div class="bg-l-pearl block_padding">
+                        <p class="codepen" data-height="400" data-theme-id="default" data-default-tab="html,result" data-user="MagNadAnn" data-slug-hash="QWjeqaj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="list simple - TdL UI guide">
+                            <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/QWjeqaj">
+                            list simple - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                        <pre class="UIcode" title="Classes à utiliser">
+list-simple_arrow
+list-simple_long-arrow
+list-simple_double-arrow</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fw-section">
+                <h2 id="text_columns" class="UItitle2">Texte en colonnes</h2>
+                <div class="section__container">
+                    <div class="chimney small">
+                        <article class="UIarticle">
+                            <p>Classes <strong class="text_color">text_columns_2</strong> ou <strong class="text_color">text_columns_3</strong> pour entourer le texte à répartir en colonnes sur les grands écrans</p>
+                            <p>⚠️ ne pas utiliser sur des sections de texte trop longue : il ne faut pas que l'internaute ait à re-scroller vers le haut pour remonter en haut de la deuxième colonne.
+                        </article>
+                    </div>
+                </div>
+                <div class="section__container">
+                    <div class="chimney fluid">
+                        <div class="bg-l-pearl block_padding">
+                            <h3 class="UItitle3">class="text_columns"</h3>
+                            <p class="codepen" data-height="700" data-theme-id="default" data-default-tab="result" data-user="MagNadAnn" data-slug-hash="dyYxZOB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="text columns  - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/dyYxZOB">
+                                text columns  - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                                </p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode" title="Classes à utiliser">
+text_columns_2
+text_columns_3</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fw-section">
                 <h2 id="" class="UItitle2"></h2>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
                             <p></p>
+                            <pre class="UIcode" title="Structure HTML"></pre>
                         </article>
                     </div>
                 </div>

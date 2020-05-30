@@ -23,7 +23,7 @@
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
-                            <p></p>
+                            <p class="page__intro">Pour ajouter ponctuellement des modifications de mise en page.</p>
                         </article>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="section__container">
                     <div class="chimney fluid">
                         <div class="bg-l-pearl block_padding">
-                            <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="result"
+                            <p class="codepen" data-height="400" data-theme-id="default" data-default-tab="result"
                                 data-user="MagNadAnn" data-slug-hash="VwvOLYg"
                                 style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
                                 data-pen-title="Background color - TdL UI guide">

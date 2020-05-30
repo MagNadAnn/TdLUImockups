@@ -52,6 +52,7 @@
                         <div class="columns">
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
+                                <h3 class="UItitle3">&lt;a&gt;</h3>
                                     <p class="codepen" data-height="265" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="zYvMQvY"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -62,6 +63,19 @@
                                             on <a href="https://codepen.io">CodePen</a>.</span>
                                     </p>
                                     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                </div>
+                            </div>
+                            <div class="column column_1-2">
+                                <div class="bg-l-pearl block_padding">
+                                    <h3 class="UItitle3">&lt;a class=&quot;img-link&quot; &gt;</h3>
+                                    <p>À placer autour de l'image qui doit porter un lien</p>
+                                    <p class="codepen" data-height="265" data-theme-id="default" data-default-tab="result" data-user="MagNadAnn" data-slug-hash="YzymEeP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="img-link  - TdL UI guide">
+                                        <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/YzymEeP">
+                                        img-link  - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                        </p>
+                                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                    <pre class="UIcode" title="Classes à utiliser">img-link</pre>
                                 </div>
                             </div>
                         </div>

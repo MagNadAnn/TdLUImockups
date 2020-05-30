@@ -597,11 +597,6 @@ ASIDE TRIGGER
     .aside__panel.right > .aside__trigger { right: calc(100% + 1em); }
 }
 
-@media (max-width: 699px) {
-    .aside__trigger {
-    }
-}
-
 /*
 --------------------
 ASIDE LEFTOVER SPACE
@@ -1009,53 +1004,6 @@ button:focus span.button_expand {
 
 .is-shrinked .button_expand {
     transform: rotate(180deg);
-}
-
-/*
-==========================================================
-==========================================================
-LIST
-==========================================================
-==========================================================
-*/
-
-/*
---------------------
-LIST
---------------------
-*/
-
-.list {
-    list-style: none;
-    padding: 0.5em 0;
-    display: flex;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-.list_v {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.list > li {
-    margin: 0;
-}
-
-/*
---------------------
-LIST SIMPLE
---------------------
-*/
-
-[class*="list_simple"] {
-    padding-left: 1em;
-    list-style-position: outside;
-    list-style-type: attr(title);
-}
-
-[class*="list_simple"] > li {
-    margin: 0.5em 0;
 }
 
 /*
@@ -1558,31 +1506,42 @@ VIGNETTE
 
 /*
 --------------------
+VIGNETTE type ROUND
+--------------------
+Format pour afficher des portraits et des avatars
+*/
+
+.vignette.round {
+    border-radius: 50%;
+}
+
+/*
+--------------------
 VIGNETTE type SOLO
 --------------------
 Image de contenu non situé dans une tuile. Ces règles régentent surtout son comportement sur petits écrans
 */
 
-.vignette_solo {
+.vignette.solo {
     margin-left: auto;
     margin-right: auto;
 }
 
 @media (min-width: 800px) {
-    .vignette_solo {
+    .vignette.solo {
         width: 80%;
     }
 }
 
 @media (max-width: 799px) {
-    .vignette_solo {
+    .vignette.solo {
         position: relative;
         width: 30%;
     }
 }
 
 @media (max-width: 499px) {
-    .vignette_solo {
+    .vignette.solo {
         width: 50%;
     }
 }
@@ -1593,7 +1552,7 @@ VIGNETTE type PHOTO
 --------------------
 */
 
-.vignette_photo::before {
+.vignette.photo::before {
     content: "";
     display: block;
     position: absolute;
@@ -1608,7 +1567,7 @@ VIGNETTE type PHOTO
     opacity: 0.15;
 }
 
-.vignette_photo::after {
+.vignette.photo::after {
     content: "";
     display: block;
     position: absolute;
@@ -1619,34 +1578,25 @@ VIGNETTE type PHOTO
     transition: all 0.2s ease-in-out;
 }
 
-.vignette_photo::after {
+.vignette.photo::after {
     background: linear-gradient(rgba(206, 71, 10, 0) 0%, rgba(206, 71, 10, 0.1) 25%, rgba(206, 71, 10, 0.3) 75%, rgba(1, 50, 73, 0.3) 100%);
     z-index: 1;
 }
 
-a:hover > .vignette_photo::before,
-a:focus > .vignette_photo::before {
+a:hover > .vignette.photo::before,
+a:focus > .vignette.photo::before {
     opacity: 0.1;
 }
 
-a:hover .vignette_photo::after,
-a:focus .vignette_photo::after {
+a:hover .vignette.photo::after,
+a:focus .vignette.photo::after {
     opacity: 0.5;
 }
 
-.vignette_photo > *:not(.vignette__image) {
+.vignette.photo > *:not(.vignette__image) {
     z-index: 2;
 }
 
-/*
---------------------
-VIGNETTE type AVATAR
---------------------
-*/
-
-.vignette_avatar {
-    border-radius: 50%;
-}
 
 /*
 --------------------
@@ -1716,6 +1666,7 @@ VIGNETTE IMAGE
     display: block;
     position: relative;
     width: 100%;
+    max-width: initial;
     margin-left: 0;
     margin-top: 0;
     z-index: 0;
@@ -2064,53 +2015,68 @@ TEXT ON PHOTO
 }
 
 /*
-==========================================================
-==========================================================
-UI IMAGES
-==========================================================
-==========================================================
+--------------------
+TEXT COLUMNS
+--------------------
 */
+
+@media (min-width: 800px) {
+
+    [class*="text_columns"] {
+        column-gap : 4rem;
+        margin: 3em 0 4em;
+    }
+
+    .text_columns_2 { columns: 2; }
+
+    .text_columns_3 { columns: 3; }
+
+    .text_columns:first-child {
+        margin-top: 0;
+    }
+
+    .text_columns:last-child {
+        margin-bottom: 0;
+    }
+
+    .text_columns > *:first-child {
+        margin-top: 0;
+    }
+
+}
 
 /*
 --------------------
-LOGO
+LIST SIMPLE
 --------------------
 */
 
-.logo {
-    display: inline-block;
-    width: 10em;
-    padding: 0.5rem;
+[class*="list-simple"] {
+    padding-left: 2em;
+    list-style: none;
 }
 
-.logo_TdL {
-    width: 10rem;
-    border-radius: 50%;
+[class*="list-simple"] > li {
+    margin: 0.5em 0;
 }
 
-.logo.vertical { width: 8em; }
-.logo.horizontal { width: 15em; }
-
-.logo:hover,
-.logo:focus {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.logo > img,
-.logo > svg {
+[class*="list-simple"] > li:before {
     display: block;
-    width: 100%;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    margin-left: -1.15em;
+    margin-top: 0.15em;
 }
 
-.logos {
-    justify-content: center;
-    align-items: center;
-}
+.list-simple_arrow > li:before { content: url("http://tdlui.semaphore-communication.fr/img/icon/arrow-right.svg"); }
+[class*="bg-d"] .list-simple_arrow > li:before { content: url("http://tdlui.semaphore-communication.fr/img/icon/arrow-right_white.svg"); }
 
-.logos > li {
-    margin-left: 1em;
-    margin-right: 1em;
-}
+.list-simple_long-arrow > li:before { content: url("http://tdlui.semaphore-communication.fr/img/icon/long-arrow-right.svg"); }
+[class*="bg-d"] .list-simple_long-arrow > li:before { content: url("http://tdlui.semaphore-communication.fr./img/icon/long-arrow-right_white.svg"); }
+
+.list-simple_double-arrow > li:before { content: url("http://tdlui.semaphore-communication.fr/img/icon/angle-double-right.svg"); }
+[class*="bg-d"] .list-simple_double-arrow > li:before { content: url("http://tdlui.semaphore-communication.fr/img/icon/angle-double-right_white.svg"); }
 
 /*
 ==========================================================
@@ -2205,35 +2171,28 @@ BLOCK POSITION RELATIVE
     position: relative !important;
 }
 
+
 /*
 --------------------
-BLOCK TEXT-COLUMNS
+LIST
 --------------------
 */
 
-@media (min-width: 800px) {
+.list {
+    list-style: none;
+    padding: 0.5em 0;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+}
 
-    [class*="text_columns"] {
-        column-gap : 4rem;
-        margin: 3em 0 4em;
-    }
+.list_v {
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-    .text_columns { columns: 2; }
-
-    .text_columns_3 { columns: 3; }
-
-    .text_columns:first-child {
-        margin-top: 0;
-    }
-
-    .text_columns:last-child {
-        margin-bottom: 0;
-    }
-
-    .text_columns > *:first-child {
-        margin-top: 0;
-    }
-
+.list > li {
+    margin: 0;
 }
 
 /*
@@ -3703,6 +3662,47 @@ SMALL COMPONENTS
 
 /*
 --------------------
+LOGO
+--------------------
+*/
+
+.logo {
+    display: inline-block;
+    width: 10em;
+    padding: 0.5rem;
+}
+
+.logo_TdL {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.logo.vertical { width: 8em; }
+.logo.horizontal { width: 15em; }
+
+.logo:hover,
+.logo:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo > img,
+.logo > svg {
+    display: block;
+    width: 100%;
+}
+
+.logos {
+    justify-content: center;
+    align-items: center;
+}
+
+.logos > li {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*
+--------------------
 TAGS
 --------------------
 */
@@ -3764,6 +3764,10 @@ TAG
     text-decoration: none;
 }
 
+.list > li.tag {
+    margin: 0.25em;
+}
+
 /*
 --------------------
 TAG SIZES
@@ -3812,8 +3816,9 @@ TAG type ICON
     background-color: transparent;
 }
 
-.tag_icon:first-child { margin-left: 0.5em; }
-.tag_icon:last-child { margin-right: 0.5em; }
+
+.list > li.tag_icon:first-child { margin-left: 0.5em; }
+.list > li.tag_icon:last-child { margin-right: 0.5em; }
 
 /*
 --------------------
@@ -3886,12 +3891,12 @@ NUMBER STICKER
 
 /*
 --------------------
-IMG WRAP
+IMG LINK
 --------------------
 pour des images-liens
 */
 
-.img-wrap {
-    display: block;
+.img-link {
+    display: inline-block;
     padding: 0.2em;
 }

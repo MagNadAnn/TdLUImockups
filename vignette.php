@@ -7,14 +7,14 @@
 <?php include 'guide-menu.php'; ?>
         <main class="UGmain">
             <section class="fw-section">
-                <div class="UIpageheader vignette vignette_photo">
+                <div class="UIpageheader vignette photo">
                     <h1 class="UItitle1">Vignettes</h1>
                 </div>
                 <nav class="UIsommaire__wrap bg-l-pearl block_padding">
                     <h3 class="UItitle3">Sommaire</h3>
                     <ol class="UIsommaire">
-                        <li><a href="#vignette_photo">Vignette photo</a></li>
-                        <li><a href="#vignette_solo">Vignette solo</a></li>
+                        <li><a href="#photo">Vignette photo</a></li>
+                        <li><a href="#solo">Vignette solo</a></li>
                         <li><a href="#vignette__ratio">Ratios</a></li>
                         <li><a href="#tile__vignette">Vignette dans des tuiles</a></li>
                     </ol>
@@ -58,12 +58,12 @@
             </section>
 
             <section class="fw-section">
-                <h2 id="vignette_photo" class="UItitle2">Vignette photo</h2>
+                <h2 id="photo" class="UItitle2">Vignette photo</h2>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
                             <h4 class="UItitle4">Filtre photo</h4>
-                            <p>En rajoutant la classe <strong>vignette_photo</strong> on rajoute à l'image un filtre
+                            <p>En rajoutant la classe <strong>photo</strong> on rajoute à l'image un filtre
                                 composé d'une trame et d'un dégradé coloré transparent.</p>
                         </article>
                     </div>
@@ -74,7 +74,7 @@
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3">class="vignette <strong
-                                            class="text_color">vignette_photo</strong>"</h3>
+                                            class="text_color">photo</strong>"</h3>
                                     <p class="codepen" data-height="500" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="wvKZREv"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -87,12 +87,24 @@
                                     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                                 </div>
                             </div>
+                            <div class="column column_1-2">
+                                <div class="bg-l-pearl block_padding">
+                                    <h3 class="UItitle3">class="vignette photo <strong
+                                            class="text_color">round</strong>"</h3>
+                                <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="result" data-user="MagNadAnn" data-slug-hash="jObgaeZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vignette round - TdL UI guide">
+                                    <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/jObgaeZ">
+                                    vignette round - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                </p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
                         </div>
                     </div>
+                </div>
             </section>
 
             <section class="fw-section">
-                <h2 id="vignette_solo" class="UItitle2">Vignette solo</h2>
+                <h2 id="solo" class="UItitle2">Vignette solo</h2>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
@@ -110,8 +122,8 @@
                             <div class="column column_3-4">
                                 <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3">class="vignette <strong
-                                            class="text_color">vignette_solo</strong>
-                                        (vignette_photo)"</h3>
+                                            class="text_color">solo</strong>
+                                        (photo)"</h3>
                                     <p class="codepen" data-height="600" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="qBOwgWM"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -142,28 +154,25 @@
                 </div>
                 <div class="section__container">
                     <div class="chimney fluid">
-                        <div class="columns">
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class="vignette__ratio_1-1"</h3>
-                                    <p class="codepen" data-height="265" data-theme-id="default"
-                                        data-default-tab="result" data-user="MagNadAnn" data-slug-hash="OJyGdJP"
-                                        style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                                        data-pen-title="Vignette ratio - TdL UI guide">
-                                        <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/OJyGdJP">
-                                                Vignette ratio - TdL UI guide</a> by Margot Nadot (<a
-                                                href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
-                                            on <a href="https://codepen.io">CodePen</a>.</span>
-                                    </p>
-                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                                    <pre class="UIcode" title="Valeurs proposées">
+                        <div class="bg-l-pearl block_padding">
+                            <h3 class="UItitle3">class="vignette__ratio_1-1"</h3>
+                            <p class="codepen" data-height="400" data-theme-id="default"
+                                data-default-tab="html, result" data-user="MagNadAnn" data-slug-hash="OJyGdJP"
+                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                                data-pen-title="Vignette ratio - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/OJyGdJP">
+                                        Vignette ratio - TdL UI guide</a> by Margot Nadot (<a
+                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <pre class="UIcode" title="Valeurs proposées">
 vignette__ratio_1-1 <em>vignette carrée</em>
 vignette__ratio_4-3 <em>vignette quatre tiers</em>
 vignette__ratio_2-1 <em>vignette deux fois plus longue que haute</em></pre>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                </div>
             </section>
 
             <section class="fw-section">
