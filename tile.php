@@ -70,7 +70,7 @@
                             <h4 class="UItitle4">Vignette, tags etc.</h4>
                             <p>Sur les tuiles avec vignette, celles-ci jouent un rôle important pour afficher des tags.
                                 Se référer aux composants <a href="vignette">vignette</a> et au composant <a
-                                    href="tag">tag</a>.</p>
+                                    href="small-components#tags">tag</a>.</p>
                         </article>
                     </div>
                 </div>
@@ -136,8 +136,13 @@ tile__intro</pre>
                             <pre class="UIcode" title="Classes à utiliser">
 tile
 tile_image
-vignette, tags, crédit...
+
+vignette
+tags
+crédit
+
 tile__container ⚠️ classe propre à ce type de tuile
+
 tile__content
 tile__title
 tile__intro
@@ -186,8 +191,12 @@ button read-more</pre>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser">
 tile
-tile_text-image_v ou tile_text-image_h
-vignette, tags, crédit...
+tile_text-image_v / tile_text-image_h
+
+vignette
+tags
+crédit
+
 tile__content
 tile__title
 tile__intro

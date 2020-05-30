@@ -43,6 +43,7 @@ a {
     padding: 0 0.2em;
     transition: all 0.2s;
     color: #579ea5;
+    cursor: pointer;
 }
 
 a:hover,
@@ -608,11 +609,11 @@ ESPACEMENTS
 --------------------
 */
 
-*:not(.section__container):not(.column):not(li):first-child:not(.tags):not(.form-fieldset):not(.form-line):first-child {
+*:not(.section__container):not(.column):not(li):not(.tags):not(.form-fieldset):not(.form-line):not(.vignette__image):first-child {
     margin-top: 0;
 }
 
-*:not(.section__container):not(.column):not(li):last-child:not(.tags):not(.form-fieldset):not(.form-line):last-child {
+*:not(.section__container):not(.column):not(li):not(.tags):not(.form-fieldset):not(.form-line):not(.vignette__image):last-child {
     margin-bottom: 0;
 }
 
@@ -903,10 +904,10 @@ ICON'S VARIATIONS
     padding: 0.5em;
 }
 
-/* BUTTON ICON TIGHT */
+/* ----- BUTTON ICON TIGHT ----- */
 /* Pour afficher dans un tag par exemple */
 
-.button_icon.button_tight {
+.button_icon.tight {
     padding: 0;
 }
 
@@ -1713,175 +1714,6 @@ VIGNETTE IMAGE
 /*
 ==========================================================
 ==========================================================
-TAG
-==========================================================
-==========================================================
-*/
-
-/*
---------------------
-TAGS
---------------------
-*/
-
-.tags {
-    margin-left: -0.25em;
-    margin-right: -0.25em;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-.vignette > .tags {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    z-index: 3;
-}
-
-.tags.list_v {
-    align-items: flex-start;
-}
-
-/*
---------------------
-TAGS POSITION
---------------------
-*/
-
-.tags.right {
-    right: 0;
-    left: initial;
-}
-
-.tags.bottom {
-    bottom: 0;
-    top: initial;
-}
-
-/*
---------------------
-TAG
---------------------
-*/
-
-.tag {
-    display: inline-block;
-    padding: 0.125em 0.25em 0.0625em;
-    margin: 0.25em;
-    color: #7da237;
-    background-color: #ffffff;
-    text-transform: uppercase;
-    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
-    letter-spacing: 0.025em;
-    font-weight: normal;
-    text-decoration: none;
-}
-
-/*
---------------------
-TAG SIZES
---------------------
-*/
-
-@media (min-width: 700px) {
-    
-    .tags.large,
-    .tag.large {
-        font-size: 1.25em;
-    }
-
-    .tags.x-large,
-    .tag.x-large {
-        font-size: 1.5em;
-    }
-
-}
-
-/*
---------------------
-TAG CLIQUABLE
---------------------
-*/
-
-a.tag { color: #ffffff; }
-
-a.tag:link { background-color: #579ea5; }
-a.tag:hover, a.tag:focus { background-color: #42767a; }
-a.tag:active { background-color: #0098a6; }
-
-/*
---------------------
-TAG type NOUVEAU
---------------------
-*/
-
-.tag_nouveau {
-    font-size: 1em;
-}
-
-/*
---------------------
-TAG type ICON
---------------------
-*/
-
-.tag_icon {
-    display: block;
-    margin: 0.125em;
-    padding: 0.125em;
-    font-size: 2em;
-    color: #fff;
-    text-shadow: 0 0 20px rgba(1, 50, 73, 0.5);
-    background-color: transparent;
-}
-
-.tag_icon:first-child { margin-left: 0.5em; }
-.tag_icon:last-child { margin-right: 0.5em; }
-
-/*
---------------------
-TAG THEMES
---------------------
-*/
-
-.tag.info {
-    color: #ffffff;
-    background-color: #579ea5;
-}
-
-.tag.success {
-    color: #ffffff;
-    background-color: #7da237;
-}
-
-.tag.warning {
-    color: #ffffff;
-    background-color: #db9500;
-}
-
-.tag.danger {
-    color: #ffffff;
-    background-color: #a41515;
-}
-
-/*
---------------------
-TAG with a BUTTON_ICON in it
---------------------
-*/
-
-.tag > .button_icon {
-    margin-left: 0.25em;
-}
-
-/*
-==========================================================
-==========================================================
 BACKGROUND
 ==========================================================
 ==========================================================
@@ -2198,6 +2030,7 @@ TEXT COLOR
 .text_yellow { color: #db9500; }
 
 .text_charcoal { color: #33383d; }
+.text_mouse { color: #999a9f; }
 .text_cream { color: #eae6cf; }
 .text_pearl { color: #f5f5f5; }
 .text_white { color: #ffffff; }
@@ -2209,7 +2042,7 @@ TEXT ON PHOTO
 */
 
 .text_on-photo {
-    text-shadow: 0 0 4em #311102,1px 1px 2em #311102,1px 1px 1em #311102,-1px -1px 1px rgba(0,0,0,0.5),1px 1px 1px rgba(0,0,0,0.5);
+    text-shadow: 0 0 4em #013249,1px 1px 2em #013249,1px 1px 1em #013249,-1px -1px 1px rgba(1,50,73,0.5),1px 1px 1px rgba(1,50,73,0.5);
     position: relative;
     z-index: 3;
 }
@@ -3839,6 +3672,156 @@ SMALL COMPONENTS
 ==========================================================
 ==========================================================
 */
+
+/*
+--------------------
+TAGS
+--------------------
+*/
+
+.tags {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+    padding: 0;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.vignette > .tags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 3;
+}
+
+.tags.list_v {
+    align-items: flex-start;
+}
+
+/*
+--------------------
+TAGS POSITION
+--------------------
+*/
+
+.tags.right {
+    right: 0;
+    left: initial;
+}
+
+.tags.bottom {
+    bottom: 0;
+    top: initial;
+}
+
+/*
+--------------------
+TAG
+--------------------
+*/
+
+.tag {
+    display: inline-block;
+    padding: 0.125em 0.25em 0.0625em;
+    margin: 0.25em;
+    color: #7da237;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    letter-spacing: 0.025em;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/*
+--------------------
+TAG SIZES
+--------------------
+*/
+
+@media (min-width: 700px) {
+    
+    .tags.large,
+    .tag.large {
+        font-size: 1.25em;
+    }
+
+    .tags.x-large,
+    .tag.x-large {
+        font-size: 1.5em;
+    }
+
+}
+
+/*
+--------------------
+TAG CLIQUABLE
+--------------------
+*/
+
+a.tag {
+    color: #ffffff;
+    background-color: #579ea5;
+}
+
+a.tag:hover, a.tag:focus { background-color: #42767a; }
+a.tag:active { background-color: #0098a6; }
+
+/*
+--------------------
+TAG type ICON
+--------------------
+*/
+
+.tag_icon {
+    display: block;
+    margin: 0.125em;
+    padding: 0.125em;
+    font-size: 2em;
+    background-color: transparent;
+}
+
+.tag_icon:first-child { margin-left: 0.5em; }
+.tag_icon:last-child { margin-right: 0.5em; }
+
+/*
+--------------------
+TAG THEMES
+--------------------
+*/
+
+.tag.info {
+    color: #ffffff;
+    background-color: #579ea5;
+}
+
+.tag.success {
+    color: #ffffff;
+    background-color: #7da237;
+}
+
+.tag.warning {
+    color: #ffffff;
+    background-color: #db9500;
+}
+
+.tag.danger {
+    color: #ffffff;
+    background-color: #a41515;
+}
+
+/*
+--------------------
+TAG with a BUTTON_ICON in it
+--------------------
+*/
+
+.tag > .button_icon {
+    margin-left: 0.25em;
+}
 
 /*
 --------------------

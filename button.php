@@ -113,7 +113,9 @@
                             </div>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class="button_icon"</h3>
+                                    <h3 id="button_icon" class="UItitle3">class="button_icon"</h3>
+                                    <p>Les <strong>button_icon</strong> sont conçu avec une marge autour qui les rend plus facilement cliquables et propose un espacement harmonieux.</p>
+                                    <p>Une version <strong>tight</strong> permet d'afficher le bouton avec encombrement minimal. Utile par exemple dans un <a href="small-components#tags">tag</a>.</p>
                                     <p class="codepen" data-height="265" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="rNOQpar"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -124,6 +126,15 @@
                                             on <a href="https://codepen.io">CodePen</a>.</span>
                                     </p>
                                     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                    <pre class="UIcode" title="Classes à utiliser">
+button
+button_icon
+tight<em>*</em>
+
+button__icon
+<em class="text_mouse">Pour contenir le pictogramme et le styler correctement</em>
+
+<em>* facultatif</em></pre>
                                     <pre class="UIcode" title="Variations affichées dans les exemples ci-dessus">
 x-large
 large
