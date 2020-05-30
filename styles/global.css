@@ -190,6 +190,17 @@ figcaption {
 }
 
 /*
+--------------------
+IMG
+--------------------
+*/
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/*
 -----------------------------
 QUOTATIONS
 */
@@ -1027,6 +1038,10 @@ LIST
     align-items: flex-start;
 }
 
+.list > li {
+    margin: 0;
+}
+
 /*
 --------------------
 LIST SIMPLE
@@ -1036,15 +1051,11 @@ LIST SIMPLE
 [class*="list_simple"] {
     padding-left: 1em;
     list-style-position: outside;
+    list-style-type: attr(title);
 }
 
 [class*="list_simple"] > li {
     margin: 0.5em 0;
-}
-
-.list_simple_arrow {
-    list-style-type: '»  ';
-    padding-left: 0.5em;
 }
 
 /*
@@ -2068,10 +2079,17 @@ LOGO
 
 .logo {
     display: inline-block;
-    width: 10rem;
+    width: 10em;
     padding: 0.5rem;
+}
+
+.logo_TdL {
+    width: 10rem;
     border-radius: 50%;
 }
+
+.logo.vertical { width: 8em; }
+.logo.horizontal { width: 15em; }
 
 .logo:hover,
 .logo:focus {
@@ -2082,6 +2100,16 @@ LOGO
 .logo > svg {
     display: block;
     width: 100%;
+}
+
+.logos {
+    justify-content: center;
+    align-items: center;
+}
+
+.logos > li {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 /*
@@ -2174,7 +2202,7 @@ BLOCK POSITION RELATIVE
 */
 
 .block_pos-relative {
-    position: relative;
+    position: relative !important;
 }
 
 /*
@@ -2185,24 +2213,24 @@ BLOCK TEXT-COLUMNS
 
 @media (min-width: 800px) {
 
-    [class*="block_text-columns"] {
+    [class*="text_columns"] {
         column-gap : 4rem;
         margin: 3em 0 4em;
     }
 
-    .block_text-columns { columns: 2; }
+    .text_columns { columns: 2; }
 
-    .block_text-columns_3 { columns: 3; }
+    .text_columns_3 { columns: 3; }
 
-    .block_text-columns:first-child {
+    .text_columns:first-child {
         margin-top: 0;
     }
 
-    .block_text-columns:last-child {
+    .text_columns:last-child {
         margin-bottom: 0;
     }
 
-    .block_text-columns > *:first-child {
+    .text_columns > *:first-child {
         margin-top: 0;
     }
 
@@ -3830,7 +3858,6 @@ NUMBER STICKER
 */
 
 .number-sticker {
-    position: absolute;
     display: inline-block;
     font-size: 0.75rem;
     min-width: 2em;
@@ -3842,8 +3869,29 @@ NUMBER STICKER
     line-height: 1.25em;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: bold;
-    background-color: #a41515;  
+    background-color: #a41515;
+    color: #ffffff; 
+}
+
+.number-sticker-wrap {
+    position: relative;
+}
+
+.number-sticker-wrap > .number-sticker {
+    position: absolute;
     z-index: 2;
-    left: calc(100% - 1em);
-    top: calc(100% - 1em);
+    left: calc(100% - 1.25em);
+    top: calc(100% - 1.25em);
+}
+
+/*
+--------------------
+IMG WRAP
+--------------------
+pour des images-liens
+*/
+
+.img-wrap {
+    display: block;
+    padding: 0.2em;
 }
