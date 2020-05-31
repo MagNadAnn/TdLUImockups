@@ -20,9 +20,6 @@
                         <li><a href="#figures">Figures (images légendées ou non)</a></li>
                         <li><a href="#tags">Tags</a></li>
                         <li><a href="#">Pastille nombre</a></li>
-                        <li><a href="#steps">Étapes</a></li>
-                        <li><a href="#"></a></li>
-
                     </ol>
                 </nav>
                 <div class="chimney small">
@@ -256,52 +253,6 @@ danger<em>*</em>
                                     <pre class="UIcode" title="Classes à utiliser">
 number-sticker-wrap
 number-sticker</pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <section class="fw-section">
-                <h2 id="steps" class="UItitle2">Étapes</h2>
-                <div class="section__container">
-                    <div class="chimney small">
-                        <article class="UIarticle">
-                            <p></p>
-                            <pre class="UIcode" title="Structure HTML"></pre>
-                        </article>
-                    </div>
-                </div>
-                <div class="section__container">
-                    <div class="chimney fluid">
-                        <div class="columns">
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title="Classes à utiliser"></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <section class="fw-section">
-                <h2 id="" class="UItitle2"></h2>
-                <div class="section__container">
-                    <div class="chimney small">
-                        <article class="UIarticle">
-                            <p></p>
-                            <pre class="UIcode" title="Structure HTML"></pre>
-                        </article>
-                    </div>
-                </div>
-                <div class="section__container">
-                    <div class="chimney fluid">
-                        <div class="columns">
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title="Classes à utiliser"></pre>
                                 </div>
                             </div>
                         </div>

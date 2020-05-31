@@ -284,12 +284,6 @@ SITE
 
 /*
 --------------------
-MAIN NAV SITE
---------------------
-*/
-
-/*
---------------------
 TPL
 --------------------
 */
@@ -705,6 +699,7 @@ BUTTON
 
 .button__label {
     font-size: 1.25em;
+    line-height: 1.125em;
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
 }
 
@@ -908,6 +903,14 @@ input.button.basic.large { font-size: 1.8em; }
 input.button.basic.small { font-size: 1.2em; }
 input.button.basic.x-small { font-size: 0.9em; }
 
+
+.button.basic > .button__icon:first-child {
+    margin-right: 0.75em;
+}
+
+.button.basic > .button__icon:last-child {
+    margin-left: 0.75em;
+}
 
 /*
 --------------------
@@ -1916,7 +1919,7 @@ BACKGROUNDS
 
 .bg-trame_champs_light:before {
     background: url("http://tdlui.semaphore-communication.fr/img/trames/motif_champ_white.png") repeat;
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .bg-trame_champs_dark:before {
@@ -2213,16 +2216,16 @@ TEXT COLOR
 --------------------
 */
 
-.text_color, .text_green { color: #7da237; }
-.text_blue { color: #579ea5; }
-.text_red { color: #a41515; }
-.text_yellow { color: #db9500; }
+.text_color, .text_green { color: #7da237 !important; }
+.text_blue { color: #579ea5 !important; }
+.text_red { color: #a41515 !important; }
+.text_yellow { color: #db9500 !important; }
 
-.text_charcoal { color: #33383d; }
-.text_mouse { color: #999a9f; }
-.text_cream { color: #eae6cf; }
-.text_pearl { color: rgba(0,0,0,0.1); }
-.text_white { color: #ffffff; }
+.text_charcoal { color: #33383d !important; }
+.text_mouse { color: #999a9f !important; }
+.text_cream { color: #eae6cf !important; }
+.text_pearl { color: rgba(0,0,0,0.1) !important; }
+.text_white { color: #ffffff !important; }
 
 /*
 --------------------
@@ -2281,6 +2284,11 @@ LIST SIMPLE
 [class*="list-simple"] {
     padding-left: 2em;
     list-style: none;
+    padding-right: 1em;
+}
+
+[class*="list-simple"].outside {
+    padding-left: 0;
 }
 
 [class*="list-simple"] > li {
@@ -2365,6 +2373,8 @@ BLOCK PADDING
 .block_padding {
     padding: 2em !important;
     box-sizing: border-box;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .block_padding.neutral { background-color: rgba(0, 0, 0, 0.04) !important; color: #33383d; }
@@ -2500,6 +2510,9 @@ POPIN
         width: 100%;
         height: 100vh;
         position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
     }
 }
 
@@ -2512,6 +2525,9 @@ POPIN
         width: 100%;
         height: 100vh;
         position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
     }
 }
 
@@ -2597,20 +2613,32 @@ POPIN CLOSE
 .popin__close {
     position: absolute;
     z-index: 2;
-    bottom: calc(100% - 0.75em);
-    left: calc(100% - 0.75em);
 }
 
 @media (min-width: 700px) {
+
+    .popin__close {
+        bottom: calc(100% - 0.75em);
+        left: calc(100% - 0.75em);
+    }
+
     .popin_small-screens > .popin__container > .popin__close {
         display: none;
     }
+
 }
 
 @media (max-width: 699px) {
+    
+    .popin__close {
+        bottom: calc(100% - 1.5em);
+        left: calc(100% - 1.5em);
+    }
+
     .popin_big-screens > .popin__container > .popin__close {
         display: none;
     }
+
 }
 
 /*
@@ -3140,7 +3168,13 @@ PANEL
     box-sizing: border-box;
     color: #ffffff;
     background-color: #579ea5;
-    height: 100%;
+    overflow-x: hidden;
+}
+
+@media (min-width: 800px) {
+    .panel {
+        height: 100%;
+    }
 }
 
 .panel__header {
@@ -5050,7 +5084,6 @@ MENU INTERSITE
     }
 }
 
-/*
 @media (max-width: 799px) {
     .menu-intersites {
         align-items: flex-end;
@@ -5061,7 +5094,7 @@ MENU INTERSITE
         padding: 2em;
     }
 }
-*/
+
 
 .menu-intersites .menu__link {
     color: #ffffff;
@@ -5211,6 +5244,103 @@ SECTION TITLE
 .section__title {
     color: #b34818;
     text-align: center;
+}
+
+
+/*
+--------------------
+FICHE
+--------------------
+*/
+
+.fiche__header {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+@media (min-width: 800px) {
+    .fiche__header {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+.fiche-entry-wrap {
+    margin: 1em 0;
+}
+
+h6.fiche-entry__title {
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 1.25em;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+h4.fiche-entry__title {
+    text-align: center;
+}
+
+h4.fiche-entry__title > i {
+    display: block;
+    margin: 0.5em 0 !important;
+}
+
+@media (min-width: 800px) {
+
+    .fiche__miniature__wrap {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: -3em;
+        z-index: 2;
+    }
+
+    .fiche__video-wrap {
+        margin: -2.5em 0 0 !important;
+        position: relative;
+        z-index: 2;
+    }
+
+    .fiche__miniature__wrap  > .vignette_deco {
+        position: relative !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 799px) {
+    .fiche__miniature__wrap,
+    .fiche__video-wrap {
+        padding: 2em 0 0;
+    }
+}
+
+
+/*
+-----------------------------
+download button
+*/
+
+.fiche__miniature__download-wrap {
+    width: 100%;
+    padding: 1em 20%;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}
+
+@media (min-width: 800px) {
+    .fiche__miniature__download-wrap {
+        position: absolute;
+        bottom: -3.5em;
+    }
+}
+
+@media (max-width: 799px) {
+    .fiche__miniature__download-wrap {
+        position: relative;
+        margin-top: -3.5em;
+    }
 }
 
 

@@ -20,7 +20,6 @@
                         <li><a href="#tabs">Onglets</a></li>
                         <li><a href="#accordeon">Accordéon</a></li>
                         <li><a href="#carousel">Carousel</a></li>
-                        <li><a href="#"></a></li>
                     </ol>
                 </nav>
                 <div class="chimney small">
@@ -349,28 +348,6 @@ carousel__nav__previous / carousel__nav__next
 
 carousel__nav__dots
 carousel__nav__dot</pre>
-                        </div>
-                    </div>
-            </section>
-
-            <section class="fw-section">
-                <h2 id="" class="UItitle2"></h2>
-                <div class="section__container">
-                    <div class="chimney small">
-                        <article class="UIarticle">
-                            <p></p>
-                        </article>
-                    </div>
-                </div>
-                <div class="section__container">
-                    <div class="chimney fluid">
-                        <div class="columns">
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title="Classes à utiliser"></pre>
-                                </div>
-                            </div>
                         </div>
                     </div>
             </section>

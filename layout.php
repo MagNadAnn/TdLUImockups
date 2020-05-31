@@ -274,28 +274,6 @@ small-screens</pre>
                     </div>
             </section>
 
-            <section class="fw-section">
-                <h2 id="" class="UItitle2"></h2>
-                <div class="section__container">
-                    <div class="chimney small">
-                        <article class="UIarticle">
-                            <p></p>
-                        </article>
-                    </div>
-                </div>
-                <div class="section__container">
-                    <div class="chimney fluid">
-                        <div class="columns">
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title=""></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
         </main>
     </div>
 

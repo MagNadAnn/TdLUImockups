@@ -8,6 +8,10 @@
 </head>
 
 <body>
+<a class="fw-section button basic primary text_left" href="../index.php">
+<span class="button__icon"><i class="fas fa-arrow-left"></i></span>
+<span class="button__label">Retour à l'index</span>
+</a>
 
     <nav class="main-nav-site">
 

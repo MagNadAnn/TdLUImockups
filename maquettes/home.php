@@ -279,7 +279,11 @@ des dernières publications !</h3>
 						<div class="columns">
 							<div class="column column_1-5">
 								<div class="block_v-center">
-									<div class="vignette photo solo"> <img src="../img/illustrations/rapport.jpg" class="vignette__image"> </div>
+									<div class="vignette photo solo">
+										<div class="vignette__image-wrap">
+											<img src="../img/illustrations/rapport.jpg" class="vignette__image">
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="column column_1-2">

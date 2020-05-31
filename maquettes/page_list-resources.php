@@ -27,7 +27,7 @@
 					</div>
 					<div class="aside__panel__container popin__container">
 						<div class="popin__close">
-							<button class="button button_round small primary"> <span class="button__icon"><i class="fas fa-times"></i></span> </button>
+							<button class="button round small primary"> <span class="button__icon"><i class="fas fa-times"></i></span> </button>
 						</div>
 						<div class="aside__panel__content popin__content">
 							<div class="panel">

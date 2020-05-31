@@ -215,6 +215,13 @@ UI NAV
     text-align: center;
 }
 
+.UGnav > div {
+    padding-bottom: 5em;
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
 .UGnavTitle1,
 .UGnavTitle2 {
     line-height: 1em;
@@ -253,7 +260,7 @@ UI NAV
     display: block;
     width: 100%;
     box-sizing: border-box;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
     text-decoration: none;
 }
 
