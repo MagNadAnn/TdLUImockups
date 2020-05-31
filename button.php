@@ -294,14 +294,6 @@ CTA__content</pre>
             <section class="fw-section">
                 <h2 id="CTA_specials" class="UItitle2">Call to action spécifiques</h2>
                 <div class="section__container">
-                    <div class="chimney small">
-                        <article class="UIarticle">
-                            <p></p>
-                            <pre class="UIcode" title="Structure HTML"></pre>
-                        </article>
-                    </div>
-                </div>
-                <div class="section__container">
                     <div class="chimney fluid">
                         <div class="bg-l-pearl block_padding">
                             <h3 class="UItitle3">class="CTA_soutien"</h3>

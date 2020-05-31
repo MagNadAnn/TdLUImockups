@@ -106,7 +106,7 @@ bg-trame_champs_dark
                             <p>Une mixin qui transforme une liste en container flex horizontal sans puces.</p>
                             <p>Cette liste peut être ordonnée ou désordonnée, ça peut aussi être une <em>&lt;div&gt;</em> avec des <em>&lt;p&gt;</em>, ou toute autre structure de ce type.</p>
                             <p>La classe <strong class="text_color">list_v</strong> permet de passer la liste en format vertical</p>
-                            <p class="block_padding bg-d-yellow_light">⚠️ Cette mixin est très utilisée dans ces feuilles de style : <a href="nav#menu">menus</a>, <a href="tile">tuiles</a>, <a href="small-components#tags">tags</a>...</p>
+                            <p class="block_padding warning">⚠️ Cette mixin est très utilisée dans ces feuilles de style : <a href="nav#menu">menus</a>, <a href="tile">tuiles</a>, <a href="small-components#tags">tags</a>...</p>
                         </article>
                     </div>
                 </div>
@@ -144,7 +144,7 @@ list_v<em>*</em>
                         <div class="columns">
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">Alignement vertical</h3>
+                                    <h3 class="UItitle3" id="block_v">Alignement vertical</h3>
                                     <p>à utiliser sur le container de ce qu'on veut positionner verticalement. Cela ne fonctionne que si ce container a une hauteur</p>
                                     <pre class="UIcode" title="Classes à utiliser">
 block_v-center
@@ -160,15 +160,17 @@ block_v-bottom</pre>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3">Modification du padding</h3>
+                                    <p>On peut ajouter à cette classe un classe afin d'en modifier la couleur de fond, pour des notifications/instructions utilisateurices par exemple </p>
                                     <pre class="UIcode" title="Classes à utiliser">
 block_no-padding
-block_padding</pre>
-                                </div>
-                            </div>
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">Enlever les contours</h3>
-                                    <pre class="UIcode" title="Classes à utiliser">block_no-border</pre>
+block_padding
+
+<em class="text_pearl text_size small"><i class="fas fa-circle"></i></em> neutral
+<em class="text_blue text_size small"><i class="fas fa-circle"></i></em> info
+<em class="text_yellow text_size small"><i class="fas fa-circle"></i></em> warning
+<em class="text_green text_size small"><i class="fas fa-circle"></i></em> success
+<em class="text_red text_size small"><i class="fas fa-circle"></i></em> danger
+</pre>
                                 </div>
                             </div>
                             <div class="column column_1-2">
@@ -188,6 +190,12 @@ de Ressources</a></em></pre>
                             </div>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
+                                    <h3 class="UItitle3">Enlever les contours</h3>
+                                    <pre class="UIcode" title="Classes à utiliser">block_no-border</pre>
+                                </div>
+                            </div>
+                            <div class="column column_1-2">
+                                <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3"></h3>
                                     <pre class="UIcode" title="Classes à utiliser"></pre>
                                 </div>
@@ -195,29 +203,6 @@ de Ressources</a></em></pre>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="fw-section">
-                <h2 id="" class="UItitle2"></h2>
-                <div class="section__container">
-                    <div class="chimney small">
-                        <article class="UIarticle">
-                            <p></p>
-                            <pre class="UIcode" title="Structure HTML"></pre>
-                        </article>
-                    </div>
-                </div>
-                <div class="section__container">
-                    <div class="chimney fluid">
-                        <div class="columns">
-                            <div class="column column_1-2">
-                                <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class=""</h3>
-                                    <pre class="UIcode" title="Classes à utiliser"></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
             </section>
 
             <section class="fw-section">

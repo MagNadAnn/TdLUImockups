@@ -706,21 +706,10 @@ BUTTON
 
 /* ----- Size (optionnal) ----- */
 
-.button.x-large {
-    font-size: 1.75em !important;
-}
-
-.button.large {
-    font-size: 1.5em;
-}
-
-.button.small {
-    font-size: 1em;
-}
-
-.button.x-small {
-    font-size: 0.75em;
-}
+.button.x-large { font-size: 1.75em;; }
+.button.large { font-size: 1.5em; }
+.button.small { font-size: 1em; }
+.button.x-small { font-size: 0.75em; }
 
 /*
 --------------------
@@ -903,6 +892,12 @@ input.button.basic {
     line-height: 0.9375em;
 }
 
+input.button.basic.x-large { font-size: 2.1em; }
+input.button.basic.large { font-size: 1.8em; }
+input.button.basic.small { font-size: 1.2em; }
+input.button.basic.x-small { font-size: 0.9em; }
+
+
 /*
 --------------------
 ICON'S VARIATIONS
@@ -941,6 +936,11 @@ ROUND'S VARIATION
     border: none !important;
     font-family: "Source Sans Pro", sans-serif;
 }
+
+.button.round.x-large { font-size: 2.1em; }
+.button.round.large { font-size: 1.8em; }
+.button.round.small { font-size: 1.2em; }
+.button.round.x-small { font-size: 0.9em; }
 
 .button.round > .button__icon {
     display: block;
@@ -2051,7 +2051,7 @@ TEXT COLOR
 .text_charcoal { color: #33383d; }
 .text_mouse { color: #999a9f; }
 .text_cream { color: #eae6cf; }
-.text_pearl { color: #f5f5f5; }
+.text_pearl { color: rgba(0,0,0,0.1); }
 .text_white { color: #ffffff; }
 
 /*
@@ -2202,6 +2202,13 @@ BLOCK PADDING
 .block_padding.success { background-color: #7da237 !important; color: #ffffff; }
 .block_padding.danger { background-color: #a41515 !important; color: #ffffff; }
 .block_padding.warning { background-color: #db9500 !important; color: #ffffff; }
+
+.block_padding.info a,
+.block_padding.success a,
+.block_padding.danger a,
+.block_padding.warning a {
+    color: #ffffff;
+}
 
 /*
 --------------------
@@ -2568,11 +2575,11 @@ BUBBLE POSITION
 
 @media (min-width: 700px) {
 
-    .bubble.left { right: -2em; }
+    .bubble.left { right: -2em; left: initial; }
     .bubble.right { left: -2em; }
 
-    .bubble.left:before { left: calc(100% - 3.5em); }
-    .bubble.right:before { left: 2.5em; }
+    .bubble.left:before { left: calc(100% - 3.7em); }
+    .bubble.right:before { left: 2.7em; }
 
 }
 
@@ -3093,12 +3100,8 @@ SOUS-MENU
     font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
 }
 
-.bubble__scrollable > .menu-submenu {
-    padding: 0.5em 0 !important;
-}
-
-.menu-submenu > li {
-    font-size: 1.5em;
+.menu-submenu:not(.tiles) > li {
+    font-size: 2em;
     text-align: center;
 }
 
@@ -3634,7 +3637,7 @@ FORM INPUT CHECKBOX & RADIO
 
 .form-check-wrap {
     line-height: 1.25em;
-    margin: 0.5em;
+    margin: 0.5em !important;
     text-indent: -1.5rem;
     padding-left: 1.5rem;
 }
@@ -4696,7 +4699,7 @@ HERO HEADER-SITE
 
 @media (min-width: 800px) {
 
-    .header-site.is-shrinked .header-site__vignette__wrap > .vignette__image {
+    .header-site.is-shrinked .vignette__image {
         width: 120%;
         margin-left: -10%;
         margin-top: -5%;
@@ -4780,7 +4783,11 @@ HERO HEADER-SITE
 
     .header-site.is-shrinked {
         display: none;
-    }   
+    }
+    
+    .header-site .vignette {
+        width: calc(100% - 2.5em);
+    }
 
 }
 
@@ -4804,7 +4811,7 @@ HERO HEADER-SITE
 }
 
 @media (max-width: 499px) {
-    .header-site__vignette__wrap > .vignette__image {
+    .header-site .vignette__image {
         position: absolute;
         min-height: 100%;
         min-width: 100%;
@@ -4927,7 +4934,7 @@ PAGE-HEADER
 
 @media (max-width: 799px) {
 
-    .page-header__container {
+    *:not(.header-site) > .page-header__container {
         padding-top: 1em;
         padding-bottom: 3em;
     }
@@ -4936,7 +4943,7 @@ PAGE-HEADER
         padding-top: 1em;
     }
 
-    .hero_header-site > .page-header__container {
+    .header-site > .page-header__container {
         padding-top: 0;
         padding-bottom: 0;
     }

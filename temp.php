@@ -26,11 +26,13 @@
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
-                            <p>Les affichages temporaires sont des composants affichés pour un temps limité.</p>
-                            <p>En général, ils apparaissent et disparaissent après une action de l'utilisateur.</p>
-                            <p>En général également, les affichage temporaires ont deux états : l'un qui les cache et
-                                l'un qui les montre.
-                            </p>
+                            <div class="page__intro">
+                                <p>Les affichages temporaires sont des composants affichés pour un temps limité.</p>
+                                <p>En général, ils apparaissent et disparaissent après une action de l'utilisateur.</p>
+                                <p>En général également, les affichage temporaires ont deux états : l'un qui les cache et
+                                    l'un qui les montre.
+                                </p>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -95,7 +97,7 @@ fluid<em>*</em>
 
 <em>* facultatif</em></pre>
 
-                            <p class="bg-d-red_light block_padding">⚠️ La flasse <strong>fluid</strong> se règlera sur
+                            <p class="block_padding warning">⚠️ La classe <strong>fluid</strong> se règlera sur
                                 la largeur du bouton. D'autres réglages de largeurs seront à réaliser par vos soins.
                             </p>
                         </div>
@@ -135,7 +137,7 @@ bubble__content</pre>
 &lt;div class=&quot;<strong>popin</strong> <strong class="text_color">is-visible</strong> <em>popin_big-screens ou popin_small-screens</em>&quot;&gt;
     &lt;div class=&quot;<strong>popin__container</strong>&quot;&gt;
         &lt;div class=&quot;<strong>popin__close</strong>&quot;&gt;
-            &lt;button class=&quot;<a href="button">button button_round small primary</a>&quot;&gt;
+            &lt;button class=&quot;<a href="button">button round small primary</a>&quot;&gt;
         &lt;div class=&quot;<strong>popin__content</strong>&quot;&gt;
     &lt;button class=&quot;<strong>popin__veil</strong>&quot;&gt;&lt;/button&gt;</pre>
                         </article>
@@ -190,7 +192,7 @@ popin__veil</pre>
                             </p>
                             <pre class="UIcode" title="Structure HTML">
 &lt;div class=&quot;<strong>tabs-wrap</strong>&quot;&gt;
-    &lt;ul class=&quot;<a href="list">list</a> <strong>tabs</strong>&quot;&gt;
+    &lt;ul class=&quot;<a href="mixin-block#list">list</a> <strong>tabs</strong>&quot;&gt;
         &lt;li&gt;
             &lt;a class=&quot;<strong>tab__link</strong> <strong class="text_color">is-active</strong>&quot;&gt;
     &lt;div class=&quot;<strong>tab__container</strong>&quot;&gt;</pre>
@@ -212,7 +214,7 @@ popin__veil</pre>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser">
 tabs-wrap
-tabs + list
+tabs + <a href="mixin-block#list">list</a>
 tab__link
 tab__container</pre>
                         </div>
@@ -228,11 +230,11 @@ tab__container</pre>
                                 peuvent contenir de nombreux autres composants : tuiles, éléments de layout, texte...
                             </p>
                             <pre class="UIcode" title="Structure HTML">
-&lt;ul class=&quot;<strong>accordeon</strong> <a href="list">list list_v</a>&quot;&gt;
+&lt;ul class=&quot;<strong>accordeon</strong> <a href="mixin-block#list">list list_v</a>&quot;&gt;
     &lt;li class=&quot;<strong class="text_color">is-expanded</strong>&quot;&gt;
-    &lt;button class=&quot;<strong>accordeon__button</strong> <a href="button">button button_basic primary</a>&quot;&gt;
+    &lt;button class=&quot;<strong>accordeon__button</strong> <a href="button">button basic primary</a>&quot;&gt;
         &lt;span class=&quot;<strong>accordeon__title</strong> <a href="button">button__label</a>&quot;&gt;
-        &lt;span class=&quot;<a href="button">button__icon button_expand</a>&quot;&gt;
+        &lt;span class=&quot;<a href="button#expand">button icon expand</a>&quot;&gt;
     &lt;div class=&quot;<strong>accordeon__container</strong>&quot;&gt;
         &lt;div class=&quot;<strong>accordeon__content</strong>&quot;&gt;
                             </pre>
@@ -254,21 +256,24 @@ tab__container</pre>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser">
 accordeon
-list
-list_v
+<a href="mixin-block#list">list</a>
+<a href="mixin-block#list">list_v</a>
 
 is-expanded / is-shrinked
 
 accordeon__button
-button
-button_basic
-primary
+<a href="button#basic">button</a>
+<a href="button#basic">basic</a>
+<a href="button#basic">primary</a>
 
 accordeon__title
-button__label
+<a href="button#basic">button__label</a>
 
-button__icon
-button_expand
+<a href="button#icon">button</a>
+<a href="button#icon">icon</a>
+<a href="button#expand">expand</a>
+
+<a href="button">button__icon</a>
 
 accordeon__container
 
@@ -295,15 +300,15 @@ accordeon__content</pre>
     &lt;nav class=&quot;<strong>carousel__nav</strong>&quot;&gt;
         &lt;ul class=&quot;<strong>carousel__nav__arrows</strong>&quot;&gt;
             &lt;li class=&quot;<strong>carousel__nav__previous</strong>&quot;&gt;
-                &lt;span class=&quot;<a href="button">button button_round secundary</a>&quot;&gt;
+                &lt;span class=&quot;<a href="button">button round secundary</a>&quot;&gt;
                     &lt;span class=&quot;<a href="button">button__icon</a>&quot;&gt;&lt;i class=&quot;fas fa-arrow-left&quot;&gt;&lt;/i&gt;
             &lt;li class=&quot;<strong>carousel__nav__next</strong>&quot;&gt;
-                &lt;span class=&quot;<a href="button">button button_round secundary</a>&quot;&gt;
+                &lt;span class=&quot;<a href="button">button round secundary</a>&quot;&gt;
                     &lt;span class=&quot;<a href="button">button__icon</a>&quot;&gt;&lt;i class=&quot;fas fa-arrow-right&quot;&gt;
         &lt;ul class=&quot;<strong>carousel__nav__dots</strong> <a href="list">list</a>&quot;&gt;
             &lt;li class=&quot;<strong>carousel__nav__dot</strong> is-active&quot;&gt;
-                &lt;button class=&quot;<a href="button">button button_icon x-small primary</a>&quot;&gt;
-                    &lt;span class=&quot;<a href="button">button__label</a>&quot;&gt;&lt;i class=&quot;fas fa-circle&quot;&gt;</pre>
+                &lt;button class=&quot;<a href="button">button icon x-small primary</a>&quot;&gt;
+                    &lt;span class=&quot;<a href="button">button__icon</a>&quot;&gt;&lt;i class=&quot;fas fa-circle&quot;&gt;</pre>
                             <p>L'architecture HTML proposée est prévue pour un défilement horizontal d'un long container
                                 <strong>carousel__slides</strong> <strong class="text_color">à compléter en Js</strong>
                                 en jouant sur :</p>

@@ -24,7 +24,7 @@
                     <div class="section__container">
                         <article class="UIarticle">
                             <p></p>
-                            <div class="bg-d-red_light block_padding">
+                            <div class="block_padding warning">
                                 <p>⚠️ Cette page n'a pas vocation a refonder une librairie de composants de formulaire,
                                     mais bien à donner des directions graphiques à appliquer au mieux sur la librairie
                                     de formulaire que vous utilisez.

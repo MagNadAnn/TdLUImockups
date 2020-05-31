@@ -22,17 +22,12 @@
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
-                            <p>Une vignette est un système de balises qui vise à garantir une <strong>homogénéité dans
-                                    le traitement des images du sites</strong>, notamment dans les tuiles et dans le
-                                contenu des pages. Un élément <em>Vignette</em> a vocation à :</p>
+                            <p class="page__intro">Une vignette est un système de balises qui vise à garantir une <strong>homogénéité dans le traitement des images du sites</strong>, notamment dans les tuiles et dans le contenu des pages. Un élément <em>Vignette</em> a vocation à :</p>
                             <ul>
                                 <li>Proposer un <strong>filtre photo</strong></li>
-                                <li>Permettre de donner rapidement un <strong>ratio</strong> à une image (carré, 4/3,
-                                    2/1...)</li>
+                                <li>Permettre de donner rapidement un <strong>ratio</strong> à une image (carré, 4/3, 2/1...)</li>
                                 <li>Permettre d'afficher un <strong>crédit</strong> pour le visuel.</li>
-                                <li>Proposer l'<strong>affichage de tags</strong> dans le cas d'une vignette comprise
-                                    dans une tuile.
-                                </li>
+                                <li>Proposer l'<strong>affichage de tags</strong> dans le cas d'une vignette comprise dans une tuile.</li>
                             </ul>
                             <h4 class="UItitle4">Architecture</h4>
                             <p>Une vignette est basiquement composée ainsi :</p>
@@ -41,7 +36,7 @@
     &lt;div class=&quot;<strong>vignette__image-wrap</strong>&quot;&gt;
         &lt;img class=&quot;<strong>vignette__image</strong>&quot; /&gt;
     &lt;p class=&quot;<strong>vignette__credit</strong>&quot;&gt;
-    &lt;ul class=&quot;<a href="tag">tags</a>&quot;&gt;<em>*</em>
+    &lt;ul class=&quot;<a href="small-components#tags">tags</a>&quot;&gt;<em>*</em>
 
 <em>* facultatif</em></pre>
                             <h4 class="UItitle4">Crédit</h4>
@@ -145,7 +140,7 @@
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p class="bg-d-red_light block_padding">⚠️ Le système de ratio ne permet de redimensionner
+                            <p class="block_padding warning">⚠️ Le système de ratio ne permet de redimensionner
                                 grossièrement les images pour les mettre au bon format. L'affinage est vous est laissé à
                                 partir de la librairie Js de votre choix. Il est bien entendu conseillé de
                                 redimensionner les images côté back.</p>
@@ -182,7 +177,7 @@ vignette__ratio_2-1 <em>vignette deux fois plus longue que haute</em></pre>
                         <article class="UIarticle">
                             <h4 class="UItitle4">Tags</h4>
                             <p>Les <em>vignettes</em> sont très utilisées pour les <a href="tile">tuiles</a>. C'est
-                                pourquoi elles sont conçu de manière à abriter également les <a href="tag">tags</a>
+                                pourquoi elles sont conçu de manière à abriter également les <a href="small-components#tags">tags</a>
                                 liés à la tuile.</p>
                             <p>Le contenant avec la balise tag est automatiquement placé <strong>en haut à
                                     gauche</strong> de la

@@ -15,16 +15,9 @@
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <h4 class="UItitle4">Structure</h4>
-                            <p>Un <strong>hero</strong> est un composant qui s'appuie sur le composant <a
-                                    href="layout#section">section</a> et fait
-                                la part belle à l'image (contenue dans une <a href="vignette">vignette</a>) et à des
-                                textes courts. Il fait donc appel aux balisage de ces deux composants.</p>
+                            <p class="page__intro">Un <strong>hero</strong> est un composant qui s'appuie sur le composant <a href="layout#section">section</a> et fait la part belle à l'image (contenue dans une <a href="vignette">vignette</a>) et à des textes courts. Il fait donc appel aux balisage de ces deux composants.</p>
                             <h4 class="UItitle4">Et à l'intérieur ?</h4>
-                            <p>Un hero peut contenir des éléments de layout comme <a href="layout#chimney">une
-                                    cheminée</a> ou des <a href="layout#column">colonnes</a>, mais aussi bien
-                                entendu des éléments de contenus comme des <a href="tile">tuiles</a>, des <a
-                                    href="text#text_on-photo">textes avec une ombre dessus</a>...</p>
+                            <p>Un hero peut contenir des éléments de layout comme <a href="layout#chimney">une cheminée</a> ou des <a href="layout#column">colonnes</a>, mais aussi bien entendu des éléments de contenus comme des <a href="tile">tuiles</a>, des <a href="text#text_on-photo">textes avec une ombre dessus</a>...</p>
                         </article>
                     </div>
                 </div>
@@ -59,13 +52,13 @@
                             </p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser pour le hero">
-fw-section<em>*</em>
+<a href="layout#section">fw-section</a><em>*</em>
 hero
 
+<a href="layout#section">section__container</a>
+hero__container
+
 <em>* on peut aussi placer le hero DANS une balise fw-section</em></pre>
-                            <pre class="UIcode" title="Classes à utiliser pour le container">
-section__container
-hero__container</pre>
                         </div>
                     </div>
             </section>
@@ -102,15 +95,15 @@ hero__container</pre>
                             </p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser autour du hero">
-fw-section
-fh-section</pre>
-                            <pre class="UIcode" title="Classes à utiliser pour le hero">
+<a href="layout#section">fw-section</a>
+<a href="layout#section">fh-section</a>
+
 hero
 hero_v
-block_v-center</pre>
-                            <pre class="UIcode" title="Classes à utiliser dans le hero">
+<a href="mixin-block#block_v">block_v-center</a>
+
 hero__container
-section__container</pre>
+<a href="layout#section">section__container</a></pre>
                         </div>
                     </div>
                 </div>

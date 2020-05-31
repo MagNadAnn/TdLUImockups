@@ -28,7 +28,7 @@
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
-                            <p></p>
+                            <p class="page__intro">Des composants ponctuels pour agrémenter l'interface.</p>
                         </article>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
 &lt;a class=&quot;<strong>logo logo_TdL</strong>&quot;&gt;
     &lt;img /&gt;
 
-&lt;ul class=&quot;<strong>logos list</strong>&quot;&gt;
+&lt;ul class=&quot;<strong>logos</strong> <a href="mixin-block#list">list</a>&quot;&gt;
   &lt;li&gt;
     &lt;a class=&quot;<strong>logo</strong>&quot;&gt;
       &lt;img /&gt;</pre>
@@ -71,7 +71,7 @@ logo_TdL</pre>
                         </div>
                         <div class="bg-l-pearl block_padding">
                             <h3 class="UItitle3">class="logos"</h3>
-                            <p>On peut utilier la <a href="text">mixin <strong>text_size</strong></a> pour diminuer ou
+                            <p>On peut utilier la <a href="text#text_size">mixin <strong>text_size</strong></a> pour diminuer ou
                                 augmenter la taille des logos de toute la ligne.</p>
                             <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="result"
                                 data-user="MagNadAnn" data-slug-hash="abveyOb"
@@ -98,7 +98,7 @@ horizontal</pre>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Pour le site de Terre de lien et les appli qui n'ont pas d'icone.</p>
+                            <p>Pour le site de Terre de liens et ses applications qui n'ont pas d'icone.</p>
                             <p class="bg-l-pearl block_padding text_center">
                                 <img
                                     src="http://tdlui.semaphore-communication.fr/img/favicon/originaux/favicon_01.png" />
@@ -179,8 +179,8 @@ horizontal</pre>
         &lt;i class=&quot;<a href="https://fontawesome.com/icons/times?style=light">fas fa-file-pdf</a>&quot;&gt;&lt;/i&gt;
 
 &lt;span class=&quot;<strong>tag</strong>&gt;
-    &lt;a class=&quot;<a href="button#button_icon">button button_icon tight primary</a>&quot;&gt;
-        &lt;span class=&quot;<a href="button#button_icon">button__icon</a>&quot;&gt;
+    &lt;a class=&quot;<a href="button#icon">button icon tight primary</a>&quot;&gt;
+        &lt;span class=&quot;<a href="button#icon">button__icon</a>&quot;&gt;
             &lt;i class=&quot;<a href="https://fontawesome.com/icons/file-pdf?style=solid">fal fa-times</a>&quot;&gt;</pre>
                         </article>
                     </div>
@@ -215,7 +215,7 @@ danger<em>*</em>
 
 <strong>&lt;a&gt;</strong><em>*</em>
 <em class="text_mouse">Pour pouvoir retirer le tag (d'une liste par exemple)</em>
-<a href="button#button_icon">button_icon</a>
+<a href="button#icon">icon</a>
 
 
 <em>* facultatif</em></pre>

@@ -24,9 +24,7 @@
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
-                            <p>Les tuiles sont une façon élégante et souvent imagée de mettre en valeur un lien vers une
-                                autre page, en complément des <a href="button">liens, boutons et call to
-                                    action</a>.</p>
+                            <p class="page__intro">Les tuiles sont une façon élégante et souvent imagée de mettre en valeur un lien vers une autre page, en complément des <a href="button">liens, boutons et call to action</a>.</p>
                         </article>
                     </div>
                 </div>
@@ -37,7 +35,7 @@
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Une liste de tuile utilise <a href="list">les mixins list</a> :
+                            <p>Une liste de tuile utilise <a href="mixin-block#list">les mixins list</a> :
                                 <strong>list</strong> à minima et <strong>list_v</strong> pour une liste verticale.</p>
                             <h4 class="UItitle4">Composition d'une tuile</h4>
                             <ul>
@@ -54,7 +52,7 @@
                                 </li>
                             </ul>
                             <pre class="UIcode" title="Structure HTML">
-&lt;ul class=&quot;<a href="list">list</a> <strong>tiles</strong>&quot;&gt;
+&lt;ul class=&quot;<a href="mixin-block#list">list</a> <strong>tiles</strong>&quot;&gt;
     &lt;li class=&quot;<strong>tile</strong>&quot;&gt;
         &lt;a class=&quot;<strong>tile__link</strong>&quot;&gt;
             &lt;div class=&quot;<a href="vignette">vignette</a>&quot;&gt;<em>*</em>
@@ -63,7 +61,7 @@
                 &lt;p class=&quot;<strong>tile__title</strong>&quot;&gt;<em>**</em>
                 &lt;div class=&quot;<strong>tile__intro</strong>&quot;&gt;<em>*</em>
                 &lt;p class=&quot;<a href="button">button__wrap</a>&quot;&gt;<em>*</em>
-                    &lt;span class=&quot;<a href="button#button_read-more">button button_round small warning button_read-more</a>&quot;&gt;<em>*</em>
+                    &lt;span class=&quot;<a href="button#read-more">button button_round small warning button_read-more</a>&quot;&gt;<em>*</em>
 
 <em>* factultatif</em>
 <em>** p ou h4 en fonction de l'effet recherché, de la taille des tuiles...</em></pre>
@@ -89,8 +87,8 @@
                             </p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser pour la liste">
-list
-list_v (optionnel)
+<a href="mixin-block#list">list</a>
+<a href="mixin-block#list">list_v</a><em>*</em>
 tiles</pre>
                             <pre class="UIcode" title="Classes à utiliser pour les tuiles">
 tile
@@ -98,7 +96,9 @@ tile_1-2, tile_1-3, tile_2-3, tile_1-4, tile_3-4
 tile__link
 tile__content
 tile__title
-tile__intro</pre>
+tile__intro
+
+<em>* facultatif</em></pre>
                         </div>
                     </div>
                 </div>
@@ -114,8 +114,8 @@ tile__intro</pre>
                             <p>On les utilise sur les pages importantes comme la page d'accueil, en ouverture vers des
                                 contenus selectionnés, en rapport avec la page où elles sont situées, généralement sur
                                 une seule ligne.</p>
-                            <p>On ne les utilise pas au sein de grandes listes. Pour cet usage on préfèrera les tuile <a
-                                    href="#tile_text-image">texte-image</a>.</p>
+                            <p>On ne les utilise pas au sein de grandes listes. Pour cet usage on préfèrera les <a
+                                    href="#tile_text-image">tuiles texte-image</a>.</p>
                         </article>
                     </div>
                 </div>
@@ -137,16 +137,16 @@ tile__intro</pre>
 tile
 tile_image
 
-vignette
-tags
-crédit
+<a href="vignette#photo">vignette</a>
+<a href="vignette#photo">crédit</a>
+<a href="small-components#tags">tags</a>
 
 tile__container ⚠️ classe propre à ce type de tuile
 
 tile__content
 tile__title
 tile__intro
-button read-more</pre>
+<a href="button#read-more">button read-more</a></pre>
                         </div>
                     </div>
                 </div>
@@ -193,14 +193,14 @@ button read-more</pre>
 tile
 tile_text-image_v / tile_text-image_h
 
-vignette
-tags
-crédit
+<a href="vignette#photo">vignette</a>
+<a href="vignette#photo">crédit</a>
+<a href="small-components#tags">tags</a>
 
 tile__content
 tile__title
 tile__intro
-button read-more</pre>
+<a href="button#read-more">button read-more</a></pre>
                         </div>
                     </div>
                 </div>
@@ -251,8 +251,7 @@ tile_hero
 tile__content
 tile__title
 tile__intro
-button read-more
-                                </pre>
+<a href="button#read-more">button read-more</a></pre>
                             </div>
                         </div>
                     </div>
@@ -264,7 +263,7 @@ button read-more
                     <div class="chimney small">
                         <article class="UIarticle">
                             <p>Petite tuile simple utile pour donner accès à des ressources, des sites, des pages ou des
-                                applis (comme dans le <a href="menu">lanceur d'appli).</a></p>
+                                applis (comme dans le <a href="nav#launcher">lanceur d'appli).</a></p>
                             <p>À gauche, on peut utiliser une icon Font Awesome ou bien une petite image.</p>
                         </article>
                     </div>
