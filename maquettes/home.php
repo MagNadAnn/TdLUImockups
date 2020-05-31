@@ -15,7 +15,7 @@
 
       <div class="vignette photo">
         <div class="vignette__image-wrap">
-          <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_08_bandeau-maous_1920.jpg" class="vignette__image" />
+          <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_08_bandeau-maous_1920.jpg" class="vignette__image">
         </div>
         <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
       </div>
@@ -79,13 +79,13 @@
       <a class="tile__link">
         <div class="vignette photo">
           <div class="vignette__image-wrap vignette__ratio_4-3">
-            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_01_4-3_600.jpg" class="vignette__image" />
+            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_01_4-3_600.jpg" class="vignette__image">
           </div>
           <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
           <ul class="tags list list_v">
             <li class="tag">Campagne</li>
             <li class="tag">Alimentation</li>
-            <li class="tag danger"><i class="fas fa-star"></i> Nouveau</li>
+            <li class="tag danger"><i class="fas fa-star" aria-hidden="true"></i> Nouveau</li>
           </ul>
         </div>
         <div class="tile__container">
@@ -102,7 +102,7 @@
             </div>
             <p class="button-wrap">
             <span class="button round small warning read-more">
-              <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+              <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </span>
 </p>
           </div>
@@ -113,7 +113,7 @@
       <a class="tile__link">
         <div class="vignette photo">
           <div class="vignette__image-wrap vignette__ratio_4-3">
-            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_02_4-3_600.jpg" class="vignette__image" />
+            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_02_4-3_600.jpg" class="vignette__image">
           </div>
           <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
           <ul class="tags list list_v">
@@ -135,7 +135,7 @@
             </div>
             <p class="button-wrap">
             <span class="button round small warning read-more">
-              <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+              <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </span>
 </p>
           </div>
@@ -174,7 +174,7 @@
       <a class="tile__link">
         <div class="vignette photo">
           <div class="vignette__image-wrap vignette__ratio_1-1">
-            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_03_1-1_400.jpg" class="vignette__image" />
+            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_03_1-1_400.jpg" class="vignette__image">
           </div>
           <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
         </div>
@@ -185,7 +185,7 @@
                                                 </div>
           <p class="button__wrap">
             <span class="button round small warning read-more">
-              <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+              <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </span>
           </p>
         </div>
@@ -195,7 +195,7 @@
       <a class="tile__link">
         <div class="vignette">
           <div class="vignette__image-wrap vignette__ratio_1-1">
-          <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_04_1-1_300.jpg" class="vignette__image" />
+          <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_04_1-1_300.jpg" class="vignette__image">
           </div>
           <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
         </div>
@@ -206,7 +206,7 @@
                                                 </div>
           <p class="button__wrap">
             <span class="button round small warning read-more">
-              <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+              <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </span>
           </p>
         </div>
@@ -216,7 +216,7 @@
       <a class="tile__link">
         <div class="vignette photo">
           <div class="vignette__image-wrap vignette__ratio_1-1">
-            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_05_1-1_400.jpg" class="vignette__image" />
+            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_05_1-1_400.jpg" class="vignette__image">
           </div>
           <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
         </div>
@@ -227,7 +227,7 @@
                                                 </div>
           <p class="button__wrap">
             <span class="button round small warning read-more">
-              <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+              <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </span>
           </p>
         </div>
@@ -249,11 +249,11 @@
 <section class="fw-section hero">
     <div class="vignette photo">
         <div class="vignette__image-wrap">
-            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_06_bandeau_1920.jpg" class="vignette__image" />
+            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_06_bandeau_1920.jpg" class="vignette__image">
         </div>
         <p class="vignette__credit">Crédit photo Jeanne Cianovitch</p>
         <ul class="tags x-large">
-            <li class="tag warning"><i class="fas fa-heart"></i> Le dossier du mois</li>
+            <li class="tag warning"><i class="fas fa-heart" aria-hidden="true"></i> Le dossier du mois</li>
         </ul>
     </div>
     <div class="hero__container section__container">
@@ -267,7 +267,7 @@
                             environnementale (MUSE) de Terre de Liens. Cette dynamique...</p>
                     </div>
                     <span class="button round small warning read-more">
-                        <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+                        <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                     </span>
                 </a>
             </div>
@@ -308,7 +308,7 @@ des dernières publications !</h3>
 <section class="fw-section hero">
     <div class="vignette photo">
         <div class="vignette__image-wrap">
-            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_07_bandeau_1920.jpg" class="vignette__image" />
+            <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_07_bandeau_1920.jpg" class="vignette__image">
         </div>
     </div>
     <div class="hero__container section__container">
@@ -321,7 +321,7 @@ des dernières publications !</h3>
                             <p>Publication semestrielle de Terre de Liens à destination de ses membres. Au sommaire : - Dossier : Élevage, sortons des caricatures !... </p>
                         </div>
                         <span class="button round small warning read-more">
-                            <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+                            <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </span>
                     </a>
                 </li>    
@@ -334,7 +334,7 @@ des dernières publications !</h3>
                             </p>
                         </div>
                         <span class="button round small warning read-more">
-                            <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+                            <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </span>
                     </a>
                 </li>
@@ -350,7 +350,7 @@ des dernières publications !</h3>
                             </p>
                         </div>
                         <span class="button round small warning read-more">
-                            <span class="button__icon"><i class="fas fa-arrow-right"></i></span>
+                            <span class="button__icon"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </span>
                     </a>
                 </li>
@@ -366,7 +366,7 @@ des dernières publications !</h3>
         <div class="column column_1-5">
           <div class="block_v-center">
             <div class="vignette photo solo">
-              <img src="http://tdlui.semaphore-communication.fr/img/illustrations/rapport.jpg" class="vignette__image" />
+              <img src="http://tdlui.semaphore-communication.fr/img/illustrations/rapport.jpg" class="vignette__image">
             </div>
           </div>
         </div>
@@ -379,7 +379,7 @@ des dernières publications !</h3>
             </div>
             <p class="button__wrap text_left">
               <a href="#" class="button basic primary">
-                <span class="button__icon"><i class="fas fa-download"></i></span>
+                <span class="button__icon"><i class="fas fa-download" aria-hidden="true"></i></span>
                 <span class="button__label">Télécharger</span>
               </a>
             </p>
@@ -393,14 +393,14 @@ des dernières publications !</h3>
 <section class="fw-section hero CTA CTA_soutien">
   <div class="vignette photo">
     <div class="vignette__image-wrap">
-      <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_09_bandeau_1920.jpg" class="vignette__image" />
+      <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_09_bandeau_1920.jpg" class="vignette__image">
     </div>
   </div>
   <div class="chimney">
     <div class="hero__container section__container">
       <div class="columns">
         <div class="column column_1-2">
-          <h2 class="CTA__title CTA_soutien__title text_white">Soutenir<br />Terre de Liens<br />c'est préserver notre avenir ! </h2>
+          <h2 class="CTA__title CTA_soutien__title text_white">Soutenir<br>Terre de Liens<br>c'est préserver notre avenir ! </h2>
           <h5 class="CTA__subtitle CTA_soutien__subtitle text_white">Notre force, c’est vous :<br>Adhérez à Terre de Liens et participez au changement !</h5>
         </div>
         <div class="column column_1-2">
@@ -417,19 +417,19 @@ des dernières publications !</h3>
           <ul class="list menu-buttons CTA_soutien__buttons">
             <li>
               <a href="#" class="button basic secundary">
-                <span class="button__icon"><i class="fas fa-address-card"></i></span>
+                <span class="button__icon"><i class="fas fa-address-card" aria-hidden="true"></i></span>
                 <span class="button__label">J'adhère</span>
               </a>
             </li>
             <li>
               <a href="#" class="button basic secundary">
-                <span class="button__icon"><i class="fas fa-hand-holding-heart"></i></span>
+                <span class="button__icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
                 <span class="button__label">Je fais un don</span>
               </a>
             </li>
             <li>
               <a href="#" class="button basic secundary">
-                <span class="button__icon"><i class="fas fa-piggy-bank"></i></span>
+                <span class="button__icon"><i class="fas fa-piggy-bank" aria-hidden="true"></i></span>
                 <span class="button__label">Epargne solidaire</span>
               </a>
             </li>
@@ -439,8 +439,6 @@ des dernières publications !</h3>
     </div>
   </div>
 </section>
-
-
 
 </main>
 

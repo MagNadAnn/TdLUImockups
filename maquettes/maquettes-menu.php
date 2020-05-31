@@ -2,9 +2,9 @@
 <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
-<link href="../styles/global.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="img/favicon/favicon_04/favicon-32x32.png" />
-<!-- <link rel="icon" type="image/png" href="img/favicon/favicon_05/favicon-32x32.png" /> -->
+<link href="../global.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="../img/favicon/favicon-32x32.png" />
+<link rel="icon" href="../img/favicon/favicon.ico" />
 </head>
 
 <body>

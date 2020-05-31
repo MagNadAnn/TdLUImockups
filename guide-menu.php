@@ -3,10 +3,11 @@
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
-    <link href="styles/global.css" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
     <link href="style-guide.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicon/favicon_04/favicon-32x32.png" />
-    <!-- <link rel="icon" type="image/png" href="img/favicon/favicon_05/favicon-32x32.png" /> -->
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" href="img/favicon/favicon.ico" />
+
 </head>
 
 <body>
@@ -20,17 +21,20 @@
             </a>
             <p class="UItitle4 UGnavTitle2">Composants</p>
             <ul class="list list_v UGnavMenu">
-                <li><a href="layout">Layout</a></li>
-                <li><a href="text">Styles de texte</a></li>
-                <li><a href="button">Boutons, liens, etc.</a></li> 
-                <li><a href="mixin-block">Mixins de blocs</a></li>
-                <li><a href="vignette">Vignettes</a></li>
-                <li><a href="tile">Tuiles</a></li>
-                <li><a href="hero">Heros</a></li>
-                <li><a href="temp">Affichages temporaires/interactifs</a></li>
-                <li><a href="form">Formulaires</a></li>
-                <li><a href="small-components">Petits composants</a></li>
-                <li><a href="nav">Navigations</a></li>
+                <li><a href="layout.php">Layout</a></li>
+                <li><a href="text.php">Styles de texte</a></li>
+                <li><a href="button.php">Boutons, liens, etc.</a></li> 
+                <li><a href="mixin-block.php">Mixins de blocs</a></li>
+                <li><a href="vignette.php">Vignettes</a></li>
+                <li><a href="tile.php">Tuiles</a></li>
+                <li><a href="hero.php">Heros</a></li>
+                <li><a href="temp.php">Affichages temporaires/interactifs</a></li>
+                <li><a href="form.php">Formulaires</a></li>
+                <li><a href="small-components.php">Petits composants</a></li>
+                <li><a href="nav.php">Navigations</a></li>
             </ul>
             <p class="UItitle4 UGnavTitle2">Maquettes</p>
+            <ul class="list list_v UGnavMenu">
+                <li><a href="maquettes/home.php">Page d'accueil</a></li>
+            </ul>
         </nav>
