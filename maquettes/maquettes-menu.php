@@ -11,7 +11,7 @@
 
     <nav class="main-nav-site">
 
-        <a href="#" class="main-nav__logo logo">
+        <a href="#" class="main-nav__logo logo logo_TdL">
             <img src="http://tdlui.semaphore-communication.fr/img/logo/logo_TdL_cartouche_blanc-rouge_500.png" />
         </a>
 
@@ -31,7 +31,7 @@
 
                                 <div class="chimney fluid chimney_top-bar">
 
-                                    <a class="top-bar__logo logo" href="#">
+                                    <a class="top-bar__logo logo logo_TdL" href="#">
                                         <img
                                             src="http://tdlui.semaphore-communication.fr/img/logo/logo_TdL_cartouche_blanc-rouge_500.png" />
                                     </a>

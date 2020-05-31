@@ -145,7 +145,7 @@ list_v<em>*</em>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
                                     <h3 class="UItitle3" id="block_v">Alignement vertical</h3>
-                                    <p>à utiliser sur le container de ce qu'on veut positionner verticalement. Cela ne fonctionne que si ce container a une hauteur</p>
+                                    <p>à utiliser sur le container de ce qu'on veut positionner verticalement.</p>
                                     <pre class="UIcode" title="Classes à utiliser">
 block_v-center
 block_v-bottom</pre>

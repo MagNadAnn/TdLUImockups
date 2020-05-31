@@ -30,7 +30,7 @@
             <p class="header-site__argument">Fiable / Exhaustif / Gratuit</p>
           </div>
 
-          <form class="form text_white header-site__form_search">
+          <form class="form text_white header-site__form">
             <ul class="form-line list nowrap">
               <li class="form-line__item_field">
                 <label class="form-label form-label_bottom" for="search">1 238 documents
@@ -390,58 +390,4 @@ des dernières publications !</h3>
   </div>
 </section>
 
-<section class="fw-section hero CTA CTA_soutien">
-  <div class="vignette photo">
-    <div class="vignette__image-wrap">
-      <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_09_bandeau_1920.jpg" class="vignette__image">
-    </div>
-  </div>
-  <div class="chimney">
-    <div class="hero__container section__container">
-      <div class="columns">
-        <div class="column column_1-2">
-          <h2 class="CTA__title CTA_soutien__title text_white">Soutenir<br>Terre de Liens<br>c'est préserver notre avenir ! </h2>
-          <h5 class="CTA__subtitle CTA_soutien__subtitle text_white">Notre force, c’est vous :<br>Adhérez à Terre de Liens et participez au changement !</h5>
-        </div>
-        <div class="column column_1-2">
-          <div class="CTA__content">
-            <blockquote class="light">
-              <p>Nous n’héritons pas de la terre de nos parents : nous l’empruntons à nos enfants.</p>
-              <cite>Antoine de Saint-Exupéry</cite>
-            </blockquote>
-            <p class="text_white">L’association Terre de Liens, reconnue d’utilité publique, est un mouvement citoyen qui œuvre pour préserver les terres agricoles, faciliter l’accès des paysans à la terre et developper une agriculture biologique paysanne.
-            </p>
-          </div>
-        </div>
-        <div class="column column_1-1">
-          <ul class="list menu-buttons CTA_soutien__buttons">
-            <li>
-              <a href="#" class="button basic secundary">
-                <span class="button__icon"><i class="fas fa-address-card" aria-hidden="true"></i></span>
-                <span class="button__label">J'adhère</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="button basic secundary">
-                <span class="button__icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
-                <span class="button__label">Je fais un don</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="button basic secundary">
-                <span class="button__icon"><i class="fas fa-piggy-bank" aria-hidden="true"></i></span>
-                <span class="button__label">Epargne solidaire</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
 <?php include 'maquettes-footer.php'; ?>
-
-
