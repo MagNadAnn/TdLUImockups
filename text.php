@@ -26,7 +26,9 @@
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
-                            <p>Tout ce qu'il faut pour mettre en forme sobrement des contenus texte.</p>
+                            <div class="page__intro">
+                                <p>Tout ce qu'il faut pour mettre en forme sobrement des contenus texte.</p>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -37,9 +39,7 @@
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Les éléments de base ont été stylés de façon la plus légre possible afin de premettre
-                                d'en faire une base solide et stable au reste du CSS, et de pouvoir être utilisé sans
-                                ajout de classe dans le corps des pages.</p>
+                            <p>Les éléments de base ont été stylés de façon la plus légre possible afin de premettre d'en faire une base solide et stable au reste du CSS, et de pouvoir être utilisé sans ajout de classe dans le corps des pages.</p>
                         </article>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ blockquote, cite</pre>
                         <div class="columns">
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class="text_size"</h3>
+                                    <h3 class="UItitle3" id="text_size">class="text_size"</h3>
                                     <p class="codepen" data-height="265" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="xxwNLQP"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -107,7 +107,7 @@ x-large</pre>
                             </div>
                             <div class="column column_1-2">
                                 <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">Text color</h3>
+                                    <h3 class="UItitle3" id="text_color">Text color</h3>
                                     <p>La classe a privilégier est <strong>text_color</strong> qui est plus résiliente.
                                     </p>
                                     <p>Les autres classes sont mises à disposition au cas où il faudrait faire
@@ -160,7 +160,7 @@ text_right</pre>
                             
                             <div class="column column_1-1">
                                 <div class="bg-l-pearl block_padding">
-                                    <h3 class="UItitle3">class="text_on-photo"</h3>
+                                    <h3 class="UItitle3" id="text_on-photo">class="text_on-photo"</h3>
                                     <p>Mise en scène ici dans un <a href="hero.html">hero</a>.</p>
                                     <p class="codepen" data-height="265" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="xxwNXbj"
@@ -172,8 +172,7 @@ text_right</pre>
                                             on <a href="https://codepen.io">CodePen</a>.</span>
                                     </p>
                                     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                                    <pre class="UIcode" title="Classes à utiliser">
-text_on-photo</pre>
+                                    <pre class="UIcode" title="Classes à utiliser">text_on-photo</pre>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +212,7 @@ list-simple_double-arrow</pre>
                     <div class="chimney small">
                         <article class="UIarticle">
                             <p>Classes <strong class="text_color">text_columns_2</strong> ou <strong class="text_color">text_columns_3</strong> pour entourer le texte à répartir en colonnes sur les grands écrans</p>
-                            <p>⚠️ ne pas utiliser sur des sections de texte trop longue : il ne faut pas que l'internaute ait à re-scroller vers le haut pour remonter en haut de la deuxième colonne.
+                            <p class="block_padding warning">⚠️ Ne pas utiliser sur des sections de texte trop longue : il ne faut pas que l'internaute ait à re-scroller vers le haut pour remonter en haut de la deuxième colonne.
                         </article>
                     </div>
                 </div>

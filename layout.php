@@ -20,16 +20,15 @@
                         <li><a href="#column">Colonnes</a></li>
                         <li><a href="#aside">Panneau latéral</a></li>
                         <li><a href="#responsive-exceptions">Big and small screen exclusivities</a></li>
-                        <li><a href="#"></a></li>
                     </ol>
                 </nav>
                 <div class="chimney small">
                     <div class="section__container">
                         <article class="UIarticle">
-                            <p>Evidemment, il sera certainement plus intéressant de récupérer les éléments de layout de
-                                votre framework CSS.</p>
-                            <p>Pour concevoir les maquettes de manière agnostique, une architecture la plus simple
-                                possible a tout de même été conçue.</p>
+                            <div class="page__intro">
+                                <p>Evidemment, il sera certainement plus intéressant de récupérer les éléments de layout de votre framework CSS.</p>
+                                <p>Pour concevoir les maquettes de manière agnostique, une architecture la plus simple possible a tout de même été conçue.</p>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -43,9 +42,9 @@
                             <p>Le but du traitement de la balise body et de la classe <strong>site-wrap</strong> est de
                                 ménager une base stable et saine pour le layout.</p>
                             <ul>
-                                <li>La balise <strong>&lt;nav class=&quot;main-nav-site&quot;&gt;</strong> qui contient les 3 barres de menus en haut de la page</li>
-                                <li>La balise <strong>&lt;main&gt;</strong> qui contient le contenu original de la page.</li>
-                                <li>La balise <strong>&lt;footer class=&quot;footer-site&quot;&gt;</strong> qui contient classiquement le footer, c'est à dire 2 barres de menu, l'une contextuelle en fonction des sites, l'autre inter-sites.</li>
+                                <li>La balise <strong>&lt;nav class=&quot;main-nav-site&quot;&gt;</strong> qui contient <a href="nav#main-nav">2 des 3 barres de menus en haut de chaque page</a>.</li>
+                                <li>La balise <strong>&lt;main&gt;</strong> qui contient <a href="nav#header-site">la 3e barre de menu</a> et le contenu original de la page.</li>
+                                <li>La balise <strong>&lt;footer class=&quot;footer-site&quot;&gt;</strong> qui contient classiquement le <a href="nav#footer-site">footer</a>, c'est à dire 2 barres de menu, l'une contextuelle en fonction des sites, l'autre inter-sites.</li>
                             </ul>
                         </article>
                     </div>
@@ -82,12 +81,12 @@ footer-site</pre>
                             <p>Son objet est de découper les pages et objets en section occupant 100% de la largeur
                                 disponible dans son contenant.</p>
                             <p>Elle sert notamment de support aux <a href="hero">heros</a> et aux <a
-                                    href="button#CTA">call to action</a>.</p>
+                                    href="button#CTA">call to action</a>, aux <a href="button#CTA_specials">call to action spécifiques</a>, au <a href="nav#header-site">header du site</a>...</p>
                             <h4 class="UItitle4">Container</h4>
                             Afin d'avoir pour toutes les sections des marges et des comportements homogènes, il est
-                            conseiller d'utiliser à l'intérieur la classe <strong>section__containe</strong></strong>
+                            conseillé d'utiliser à l'intérieur la classe <strong>section__container</strong>.
                             <h4 class="UItitle4">full height section</h4>
-                            <p>On peut aussi ajouter la classe <strong>fh-section</strong>pour créer des sections qui
+                            <p>On peut aussi ajouter la classe <strong>fh-section</strong> pour créer des sections qui
                                 font la même hauteur que l'espace visible de la page.</p>
                         </article>
                     </div>
@@ -153,8 +152,8 @@ fluid</pre>
                         <article class="UIarticle">
                             <p>Des colonnes souples et responsives.</p>
                             <pre class="UIcode" title="Structure HTML">
-&lt;div class=&quot;columns&quot;&gt;
-    &lt;div class=&quot;column column_1-2&quot;&gt;</pre>
+&lt;div class=&quot;<strong>columns</strong>&quot;&gt;
+    &lt;div class=&quot;<strong>column column_1-2</strong>&quot;&gt;</pre>
                         </article>
                     </div>
                 </div>
@@ -237,7 +236,7 @@ column_4-5
 
                             <pre class="UIcode" title="Classe à utiliser">
 aside
-aside__panel + left/right + (is-visible) + popin + popin_small-screens
+aside__panel + left/right + (is-visible) + <a href="temp#popin">popin</a> + <a href="temp#popin">popin_small-screens</a>
 aside__trigger
 aside__panel__container
 aside__panel__content
@@ -251,8 +250,7 @@ aside__leftover-space</pre>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Outil de layout responsive pour faire disparaître des éléments inutiles ou gênant en
-                                version mobile ou desktop.</p>
+                            <p>Outil de layout responsive pour faire disparaître des éléments inutiles ou gênants en version mobile ou desktop.</p>
                         </article>
                     </div>
                 </div>
@@ -269,7 +267,9 @@ aside__leftover-space</pre>
                                     on <a href="https://codepen.io">CodePen</a>.</span>
                             </p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                            <pre class="UIcode" title="Classe à utiliser"></pre>
+                            <pre class="UIcode" title="Classe à utiliser">
+big-screens
+small-screens</pre>
                         </div>
                     </div>
             </section>

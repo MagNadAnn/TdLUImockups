@@ -3,41 +3,9 @@
 
 <head>
     <title>Navigations - Guide UI</title>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap"
-        rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
-    <link href="../styles/global.css" rel="stylesheet">
-    <link href="../style-guide.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicon/favicon_04/favicon-32x32.png" />
-    <!-- <link rel="icon" type="image/png" href="img/favicon/favicon_05/favicon-32x32.png" /> -->
-</head>
 
-<body>
+<?php include 'guide-menu.php'; ?>
 
-    <div class="UGwrap">
-        <nav class="UGnav bg-l-cream bg-trame_champs_light">
-            <a href="index" class="UItitle3 UGnavTitle1">
-                <span class="logo logo_TdL"><img src="../img/logo/logo_TdL_cartouche_blanc-rouge_500.png"></span>
-                <span>UI style guide</span>
-                <span class="text_size small">Sites et applications<br>Terre de Liens</span>
-            </a>
-            <p class="UItitle4 UGnavTitle2">Composants</p>
-            <ul class="list list_v UGnavMenu">
-                <li><a href="layout">Layout</a></li>
-                <li><a href="text">Styles de texte</a></li>
-                <li><a href="button">Boutons, liens, etc.</a></li>
-                <li><a href="mixin-block">Mixins de blocs</a></li>
-                <li><a href="vignette">Vignettes</a></li>
-                <li><a href="tile">Tuiles</a></li>
-                <li><a href="hero">Heros</a></li>
-                <li><a href="temp">Affichages temporaires/interactifs</a></li>
-                <li><a href="form">Formulaires</a></li>
-                <li><a href="small-components">Petits composants</a></li>
-            </ul>
-            <p class="UItitle4 UGnavTitle2">Maquettes</p>
-        </nav>
         <main class="UGmain">
             <section class="fw-section">
                 <div class="UIpageheader vignette vignette_photo">
@@ -52,7 +20,7 @@
                         <li><a href="#footer-site">Footer</a></li>
                         <li><a href="#pagination">Pagination</a></li>
                         <li><a href="#breadcrumbs">Fil d'ariane</a></li>
-                        <li><a href="#panel">Panel</a></li>
+                        <li><a href="#panel">Panneaux de menu</a></li>
                         <li><a href="#"></a></li>
                     </ol>
                 </nav>
@@ -255,14 +223,8 @@ is-expanded / is-shrinked</pre>
                     <div class="chimney fluid">
                         <div class="bg-l-pearl block_padding">
                             <h3 class="UItitle3">class="breadcrumb"</h3>
-                            <p class="codepen" data-height="150" data-theme-id="default" data-default-tab="result"
-                                data-user="MagNadAnn" data-slug-hash="wvKVjXE"
-                                style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                                data-pen-title="breadcrumb - TdL UI guide">
-                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/wvKVjXE">
-                                        breadcrumb - TdL UI guide</a> by Margot Nadot (<a
-                                        href="https://codepen.io/MagNadAnn">@MagNadAnn</a>)
-                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                            <p class="codepen" data-height="150" data-theme-id="default" data-default-tab="result" data-user="MagNadAnn" data-slug-hash="wvKVjXE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="breadcrumb - TdL UI guide">
+                                <span>See the Pen <a href="https://codepen.io/MagNadAnn/pen/wvKVjXE">breadcrumb - TdL UI guide</a> by Margot Nadot (<a href="https://codepen.io/MagNadAnn">@MagNadAnn</a>) on <a href="https://codepen.io">CodePen</a>.</span>
                             </p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser">
@@ -276,14 +238,11 @@ breadcrumb__link</pre>
             </section>
 
             <section class="fw-section">
-                <h2 id="panel" class="UItitle2"></h2>
+                <h2 id="panel" class="UItitle2">Panneaux de menu</h2>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Ce panneau peut assez facilement se combiner avec un composant <strong>form
-                                    small</strong> et une <strong>popin small-screens</strong> comme sur <a
-                                    href="maquettes/list_all-resources.html">la maquette de la page liste
-                                    ressources</a>.</p>
+                            <p>Ce panneau peut assez facilement se combiner avec un composant <strong>form small</strong> et une <strong>popin small-screens</strong> comme sur <a href="maquettes/list_all-resources">la maquette de la page liste ressources</a>.</p>
                             <pre class="UIcode" title="Structure HTML">
 &lt;div class=&quot;<strong>panel</strong>&quot;&gt;
     &lt;section class=&quot;<strong>panel__header panel__title</strong>&quot;&gt;<em>*</em>
@@ -291,7 +250,7 @@ breadcrumb__link</pre>
     &lt;section class=&quot;<strong>panel__section</strong> <strong clas="text_color">is-visible</strong>&quot;&gt;
         &lt;div class=&quot;<strong>panel__header</strong>&quot;&gt;
             &lt;h6&gt;
-            &lt;button class=&quot;<a ref="button#button_expand">button button_icon x-small secundary button_expand</a>&quot;&gt;&lt;i class=&quot;<a href="https://fontawesome.com/icons/chevron-up?style=solid">fas fa-chevron-up</a>&quot;&gt;
+            &lt;button class=&quot;<a href="button#button_expand">button button_icon x-small secundary button_expand</a>&quot;&gt;&lt;i class=&quot;<a href="https://fontawesome.com/icons/chevron-up?style=solid">fas fa-chevron-up</a>&quot;&gt;
         &lt;div class=&quot;<strong>panel__content</strong>&quot;&gt;
                             
 <em>* facultatif</em></pre>

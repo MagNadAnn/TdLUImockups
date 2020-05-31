@@ -30,6 +30,7 @@
                 <li><a href="temp">Affichages temporaires/interactifs</a></li>
                 <li><a href="form">Formulaires</a></li>
                 <li><a href="small-components">Petits composants</a></li>
+                <li><a href="nav">Navigations</a></li>
             </ul>
             <p class="UItitle4 UGnavTitle2">Maquettes</p>
         </nav>
