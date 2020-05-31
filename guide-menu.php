@@ -37,5 +37,6 @@
             <ul class="list list_v UGnavMenu">
                 <li><a href="maquettes/home.php">Page d'accueil</a></li>
                 <li><a href="maquettes/page_content.php">Page standard</a></li>
+                <li><a href="maquettes/page_list-resources.php">Page liste ressources</a></li>
             </ul>
         </nav>

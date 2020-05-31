@@ -1,7 +1,7 @@
 <section class="fw-section hero CTA CTA_soutien">
   <div class="vignette photo">
     <div class="vignette__image-wrap">
-      <img src="http://tdlui.semaphore-communication.fr/img/vignettes/photo_09_bandeau_1920.jpg" class="vignette__image">
+      <img src="../img/vignettes/photo_09_bandeau_1920.jpg" class="vignette__image">
     </div>
   </div>
   <div class="chimney">

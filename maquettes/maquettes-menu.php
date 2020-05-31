@@ -12,7 +12,7 @@
     <nav class="main-nav-site">
 
         <a href="#" class="main-nav__logo logo logo_TdL">
-            <img src="http://tdlui.semaphore-communication.fr/img/logo/logo_TdL_cartouche_blanc-rouge_500.png" />
+            <img src="../img/logo/logo_TdL_cartouche_blanc-rouge_500.png" />
         </a>
 
         <input type="checkbox" id="main-nav__toggler" />
@@ -33,7 +33,7 @@
 
                                     <a class="top-bar__logo logo logo_TdL" href="#">
                                         <img
-                                            src="http://tdlui.semaphore-communication.fr/img/logo/logo_TdL_cartouche_blanc-rouge_500.png" />
+                                            src="../img/logo/logo_TdL_cartouche_blanc-rouge_500.png" />
                                     </a>
 
                                     <div class="menu-connexion">
@@ -68,7 +68,7 @@
                                                                         <a href="#" class="menu__link tile__link"
                                                                             title="Consulter mes notifications">
                                                                             <span class="tile__icon"><img
-                                                                                    src="http://tdlui.semaphore-communication.fr/img/icon/picto_app_1.PNG"></span>
+                                                                                    src="../img/icon/picto_app_1.PNG"></span>
                                                                             <div class="tile__content">
                                                                                 <p class="tile__title">
                                                                                     terredeliens.org</p>
@@ -81,7 +81,7 @@
                                                                         <a href="#" class="menu__link tile__link"
                                                                             title="Consulter mes notifications">
                                                                             <span class="tile__icon"><img
-                                                                                    src="http://tdlui.semaphore-communication.fr/img/icon/picto_app_4.png"></i></span>
+                                                                                    src="../img/icon/picto_app_4.png"></i></span>
                                                                             <div class="tile__content">
                                                                                 <p class="tile__title">
                                                                                     accesstoland.eu</p>
@@ -97,7 +97,7 @@
                                                                         <a href="#" class="menu__link tile__link"
                                                                             title="Consulter mes notifications">
                                                                             <span class="tile__icon"><img
-                                                                                    src="http://tdlui.semaphore-communication.fr/img/icon/picto_app_2.png"></span>
+                                                                                    src="../img/icon/picto_app_2.png"></span>
                                                                             <div class="tile__content">
                                                                                 <p class="tile__title">
                                                                                     Parcel
@@ -114,7 +114,7 @@
                                                                         <a href="#" class="menu__link tile__link"
                                                                             title="Consulter mes notifications">
                                                                             <span class="tile__icon"><img
-                                                                                    src="http://tdlui.semaphore-communication.fr/img/icon/diagnostic-ferme.png"></span>
+                                                                                    src="../img/icon/diagnostic-ferme.png"></span>
                                                                             <div class="tile__content">
                                                                                 <p class="tile__title"> Diaganostic
                                                                                     Ferme</p>
@@ -128,7 +128,7 @@
                                                                         <a href="#" class="menu__link tile__link"
                                                                             title="Consulter mes notifications">
                                                                             <span class="tile__icon"><img
-                                                                                    src="http://tdlui.semaphore-communication.fr/img/icon/phototheque.png"></span>
+                                                                                    src="../img/icon/phototheque.png"></span>
                                                                             <div class="tile__content">
                                                                                 <p class="tile__title"> Photothèque </p>
                                                                                 <p class="tile__intro"> Partager les
@@ -141,7 +141,7 @@
                                                                         <a href="#" class="menu__link tile__link"
                                                                             title="Consulter mes notifications">
                                                                             <span class="tile__icon"><img
-                                                                                    src="http://tdlui.semaphore-communication.fr/img/icon/objectif-terre.png"></span>
+                                                                                    src="../img/icon/objectif-terre.png"></span>
                                                                             <div class="tile__content">
                                                                                 <p class="tile__title">
                                                                                     Objectif Terre
