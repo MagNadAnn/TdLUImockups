@@ -1,0 +1,178 @@
+/*
+--------------------
+VIGNETTE
+--------------------
+*/
+
+.vignette {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*
+--------------------
+VIGNETTE type DECO
+--------------------
+image de contenu non situé dans une tuile. Ces règles régente surtout son comportement sur petits écrans
+*/
+
+.vignette_solo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 800px) {
+    .vignette_solo {
+        width: 80%;
+    }
+}
+
+@media (max-width: 799px) {
+    .vignette_solo {
+        position: relative;
+        width: 30%;
+    }
+}
+
+@media (max-width: 499px) {
+    .vignette_solo {
+        width: 50%;
+    }
+}
+
+/*
+--------------------
+VIGNETTE type PHOTO
+--------------------
+*/
+
+.vignette_photo::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+    transition: all 0.2s ease-in-out;
+    background: url("https://previews.dropbox.com/p/thumb/AAzSmF0YvrAH418mom_USYM6TH-H8WtgMlen4i90ftpge85dRfAKU69O58cw9ooXrqtPffBUD82DZZ2zpXvZ7FjERqRoVcbLuduq5R-PhsJlCRvT4bjim8ekT6RYag4fbNfw41a_yhVjwOYWI9I-sktllfaxZ4MBbxdqSgLXQigELOV7b90cY1HDlGhF-I_kcHZ-wLCbQ8nrgBpuFAhL7kMTY97Axf0GGKS16JmZLKSmo9LA5RwxgMXpIjqBwm1zK1-OGnIr4UWtqWQWHYPfEUT7nxNY1BSJaqFJ5OSskDBatUIoIXX05QmjM3bPIuNcsLo5AW2vXQPr0XoKogbazO4m/p.png") repeat;
+    opacity: 0.15;
+}
+
+.vignette_photo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.vignette_photo::after {
+    background: linear-gradient(rgba(206, 71, 10, 0) 0%, rgba(206, 71, 10, 0.1) 25%, rgba(206, 71, 10, 0.3) 75%, rgba(1, 50, 73, 0.3) 100%);
+    z-index: 1;
+}
+
+a:hover > .vignette_photo::before,
+a:focus > .vignette_photo::before {
+    opacity: 0.1;
+}
+
+a:hover .vignette_photo::after,
+a:focus .vignette_photo::after {
+    opacity: 0.5;
+}
+
+.vignette_photo > *:not(.vignette__image) {
+    z-index: 2;
+}
+
+/*
+--------------------
+VIGNETTE type AVATAR
+--------------------
+*/
+
+.vignette_avatar {
+    border-radius: 50%;
+}
+
+/*
+--------------------
+VIGNETTE CREDIT
+--------------------
+*/
+
+.vignette__credit {
+    position: absolute;
+    transition: opacity 0.2s ease-in-out;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 0.5em;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px #013249, -1px -1px 3px #013249;
+    background: linear-gradient(rgba(1, 50, 73, 0), rgba(1, 50, 73, 0.3));
+}
+
+.vignette__credit { opacity: 0; }
+*:hover > .vignette > .vignette__credit { opacity: 1; }
+
+/*
+--------------------
+VIGNETTE RATIO
+--------------------
+*/
+
+[class*="vignette__ratio"] {
+    background-color: #579ea5;
+}
+
+.vignette__ratio_1-1 { padding-top: 100%; }
+.vignette__ratio_4-3 { padding-top: 75%; }
+.vignette__ratio_2-1 { padding-top: 50%; }
+
+
+[class*="vignette__ratio"] > .vignette__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*
+--------------------
+VIGNETTE IMAGE WRAP
+--------------------
+*/
+
+.vignette__image-wrap {
+    position: relative;
+    overflow: hidden;
+    z-index: 0 !important;
+}
+
+/*
+--------------------
+VIGNETTE IMAGE
+--------------------
+*/
+
+.vignette__image {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    z-index: 0;
+    transition: all 0.2s ease-out;
+}

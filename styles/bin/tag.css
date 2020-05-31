@@ -1,0 +1,160 @@
+/*
+--------------------
+TAGS
+--------------------
+*/
+
+.tags {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.vignette > .tags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 3;
+}
+
+.tags.list_v {
+    align-items: flex-start;
+}
+
+/*
+--------------------
+TAGS POSITION
+--------------------
+*/
+
+.tags.right {
+    right: 0;
+    left: initial;
+}
+
+.tags.bottom {
+    bottom: 0;
+    top: initial;
+}
+
+/*
+--------------------
+TAG
+--------------------
+*/
+
+.tag {
+    display: inline-block;
+    padding: 0.125em 0.25em 0.0625em;
+    margin: 0.25em;
+    color: #7da237;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    letter-spacing: 0.025em;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/*
+--------------------
+TAG SIZES
+--------------------
+*/
+
+@media (min-width: 700px) {
+    
+    .tags.large,
+    .tag.large {
+        font-size: 1.25em;
+    }
+
+    .tags.x-large,
+    .tag.x-large {
+        font-size: 1.5em;
+    }
+
+}
+
+/*
+--------------------
+TAG CLIQUABLE
+--------------------
+*/
+
+a.tag { color: #ffffff; }
+
+a.tag:link { background-color: #579ea5; }
+a.tag:hover, a.tag:focus { background-color: #42767a; }
+a.tag:active { background-color: #0098a6; }
+
+/*
+--------------------
+TAG type NOUVEAU
+--------------------
+*/
+
+.tag_nouveau {
+    font-size: 1em;
+}
+
+/*
+--------------------
+TAG type ICON
+--------------------
+*/
+
+.tag_icon {
+    display: block;
+    margin: 0.125em;
+    padding: 0.125em;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(1, 50, 73, 0.5);
+    background-color: transparent;
+}
+
+.tag_icon:first-child { margin-left: 0.5em; }
+.tag_icon:last-child { margin-right: 0.5em; }
+
+/*
+--------------------
+TAG THEMES
+--------------------
+*/
+
+.tag.info {
+    color: #ffffff;
+    background-color: #579ea5;
+}
+
+.tag.success {
+    color: #ffffff;
+    background-color: #7da237;
+}
+
+.tag.warning {
+    color: #ffffff;
+    background-color: #db9500;
+}
+
+.tag.danger {
+    color: #ffffff;
+    background-color: #a41515;
+}
+
+/*
+--------------------
+TAG with a BUTTON_ICON in it
+--------------------
+*/
+
+.tag > .button_icon {
+    margin-left: 0.25em;
+}

@@ -1,0 +1,275 @@
+/*
+--------------------
+UI LAYOUT
+--------------------
+*/
+
+.UGwrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color:yellow;
+}
+
+.UGnav {
+    position: relative;
+    width: 15em;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.UGmain {
+    position: relative;
+    width: calc(100% - 15em);
+    height: 100%;
+    overflow-y: auto;
+    background-color:white;
+}
+
+.UGmain .chimney.fluid { margin: 0 3em; }
+
+/*
+--------------------
+UI PAGE HEADER
+--------------------
+*/
+
+.UIpageheader {
+    padding: 2em 0;
+    background-image: url('img/guide/background-h1.jpg');
+}
+
+/*
+--------------------
+UI ARTICLE
+--------------------
+*/
+
+.UIarticle {
+    margin: 2em 0;
+}
+
+[class*="UItitle"] {
+    font-family: "Bebas Neue", "Source Sans Pro", sans-serif;
+    letter-spacing: 0.025em;
+    font-weight: normal;
+    margin: 0.75em 0;
+}
+
+[class*="UItitle"] > span {
+    display: block;
+}
+
+/*
+--------------------
+UI TITLES
+--------------------
+*/
+
+.UItitle1 {
+    position: relative;
+    font-size: 6em;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 1em rgba(1, 50, 73, 0.75);
+}
+
+.UItitle2 {
+    font-size: 4em;
+    padding: 0.25em;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    background-color: #7da237;
+}
+
+.UItitle3 {
+    font-size: 2em; 
+    text-align: center;
+    color: #555555;
+}
+
+.UItitle4 {
+    font-size: 1.5em; 
+    margin: 1em 0 0.25em;
+    color: #555555;
+}
+
+/*
+--------------------
+UI CODE
+--------------------
+*/
+
+.UIcode__wrap {
+    padding: 1em;
+}
+
+.UIcode {
+    position: relative;
+    overflow-x: auto;
+    border-radius: 3px;
+    padding: 3em 1em 1em;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75em;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: solid 1px #555555;
+}
+
+.bg-l-pearl .UIcode {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.UIcode::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.25em;
+    box-sizing: border-box;
+    background-color: #555555;
+    color: #ffffff;
+    content: attr(title);
+}
+
+.codepen,
+.cp_embed_wrapper {
+    width: 100%;
+}
+
+/*
+--------------------
+UI CODE
+--------------------
+*/
+
+pre > strong {
+    color: #e10000;
+}
+
+pre > em {
+    color: #a86e00;
+}
+
+/*
+--------------------
+UI SOMMAIRE
+--------------------
+*/
+
+.UIsommaire__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.UIsommaire__wrap > * {
+    margin: 0 !important;
+}
+
+.UIsommaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-position: inside;
+    padding-left: 1em;
+    font-size: 1.25em;
+}
+
+.UIsommaire > li {
+    position: relative;
+    bottom: 0.125em;
+    padding: 0 1em;
+    margin: 0.25em;
+}
+
+/*
+--------------------
+ESPACEMENTS
+--------------------
+*/
+
+*:not(.section__container):not(.column):not(li):first-child {
+    margin-top: 0;
+}
+
+*:not(.section__container):not(.column):not(li):last-child {
+    margin-bottom: 0;
+}
+
+/*
+--------------------
+UI NAV
+--------------------
+*/
+
+.UGnav {
+    text-align: center;
+}
+
+.UGnav > div {
+    padding-bottom: 5em;
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.UGnavTitle1,
+.UGnavTitle2 {
+    line-height: 1em;
+}
+
+.UGnavTitle1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 0 1rem 0 !important;
+    text-decoration: none;
+    color: #a41515;
+}
+
+.UGnavTitle2 {
+    padding: 0.5rem 1rem;
+    margin: 0 !important;
+}
+
+.UGnavTitle2:before,
+.UGnavTitle2:after {
+    content: " ― "
+}
+
+.UGnavMenu {
+    margin: 0 !important;
+}
+
+.UGnavMenu > li {
+    width: 100%;
+    margin: 0;
+}
+
+.UGnavMenu > li > a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+}
+
+.UGnavMenu > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #33383d;
+}
+
+.UGnavMenu > li > a:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #33383d;
+}
