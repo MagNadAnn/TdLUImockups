@@ -35,7 +35,7 @@
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Une liste de tuile utilise <a href="mixin-block#list">les mixins list</a> :
+                            <p>Une liste de tuile utilise <a href="mixin-block.php#list">les mixins list</a> :
                                 <strong>list</strong> à minima et <strong>list_v</strong> pour une liste verticale.</p>
                             <h4 class="UItitle4">Composition d'une tuile</h4>
                             <ul>
@@ -52,7 +52,7 @@
                                 </li>
                             </ul>
                             <pre class="UIcode" title="Structure HTML">
-&lt;ul class=&quot;<a href="mixin-block#list">list</a> <strong>tiles</strong>&quot;&gt;
+&lt;ul class=&quot;<a href="mixin-block.php#list">list</a> <strong>tiles</strong>&quot;&gt;
     &lt;li class=&quot;<strong>tile</strong>&quot;&gt;
         &lt;a class=&quot;<strong>tile__link</strong>&quot;&gt;
             &lt;div class=&quot;<a href="vignette">vignette</a>&quot;&gt;<em>*</em>
@@ -61,14 +61,14 @@
                 &lt;p class=&quot;<strong>tile__title</strong>&quot;&gt;<em>**</em>
                 &lt;div class=&quot;<strong>tile__intro</strong>&quot;&gt;<em>*</em>
                 &lt;p class=&quot;<a href="button">button__wrap</a>&quot;&gt;<em>*</em>
-                    &lt;span class=&quot;<a href="button#read-more">button button_round small warning button_read-more</a>&quot;&gt;<em>*</em>
+                    &lt;span class=&quot;<a href="button.php#read-more">button button_round small warning button_read-more</a>&quot;&gt;<em>*</em>
 
 <em>* factultatif</em>
 <em>** p ou h4 en fonction de l'effet recherché, de la taille des tuiles...</em></pre>
                             <h4 class="UItitle4">Vignette, tags etc.</h4>
                             <p>Sur les tuiles avec vignette, celles-ci jouent un rôle important pour afficher des tags.
                                 Se référer aux composants <a href="vignette">vignette</a> et au composant <a
-                                    href="small-components#tags">tag</a>.</p>
+                                    href="small-components.php#tags">tag</a>.</p>
                         </article>
                     </div>
                 </div>
@@ -87,8 +87,8 @@
                             </p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser pour la liste">
-<a href="mixin-block#list">list</a>
-<a href="mixin-block#list">list_v</a><em>*</em>
+<a href="mixin-block.php#list">list</a>
+<a href="mixin-block.php#list">list_v</a><em>*</em>
 tiles</pre>
                             <pre class="UIcode" title="Classes à utiliser pour les tuiles">
 tile
@@ -115,7 +115,7 @@ tile__intro
                                 contenus selectionnés, en rapport avec la page où elles sont situées, généralement sur
                                 une seule ligne.</p>
                             <p>On ne les utilise pas au sein de grandes listes. Pour cet usage on préfèrera les <a
-                                    href="#tile_text-image">tuiles texte-image</a>.</p>
+                                    href=".php#tile_text-image">tuiles texte-image</a>.</p>
                         </article>
                     </div>
                 </div>
@@ -137,16 +137,16 @@ tile__intro
 tile
 tile_image
 
-<a href="vignette#photo">vignette</a>
-<a href="vignette#photo">crédit</a>
-<a href="small-components#tags">tags</a>
+<a href="vignette.php#photo">vignette</a>
+<a href="vignette.php#photo">crédit</a>
+<a href="small-components.php#tags">tags</a>
 
 tile__container ⚠️ classe propre à ce type de tuile
 
 tile__content
 tile__title
 tile__intro
-<a href="button#read-more">button read-more</a></pre>
+<a href="button.php#read-more">button read-more</a></pre>
                         </div>
                     </div>
                 </div>
@@ -193,14 +193,14 @@ tile__intro
 tile
 tile_text-image_v / tile_text-image_h
 
-<a href="vignette#photo">vignette</a>
-<a href="vignette#photo">crédit</a>
-<a href="small-components#tags">tags</a>
+<a href="vignette.php#photo">vignette</a>
+<a href="vignette.php#photo">crédit</a>
+<a href="small-components.php#tags">tags</a>
 
 tile__content
 tile__title
 tile__intro
-<a href="button#read-more">button read-more</a></pre>
+<a href="button.php#read-more">button read-more</a></pre>
                         </div>
                     </div>
                 </div>
@@ -251,7 +251,7 @@ tile_hero
 tile__content
 tile__title
 tile__intro
-<a href="button#read-more">button read-more</a></pre>
+<a href="button.php#read-more">button read-more</a></pre>
                             </div>
                         </div>
                     </div>
@@ -263,7 +263,7 @@ tile__intro
                     <div class="chimney small">
                         <article class="UIarticle">
                             <p>Petite tuile simple utile pour donner accès à des ressources, des sites, des pages ou des
-                                applis (comme dans le <a href="nav#launcher">lanceur d'appli).</a></p>
+                                applis (comme dans le <a href="nav.php#launcher">lanceur d'appli).</a></p>
                             <p>À gauche, on peut utiliser une icon Font Awesome ou bien une petite image.</p>
                         </article>
                     </div>

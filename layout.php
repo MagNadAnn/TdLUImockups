@@ -42,9 +42,9 @@
                             <p>Le but du traitement de la balise body et de la classe <strong>site-wrap</strong> est de
                                 ménager une base stable et saine pour le layout.</p>
                             <ul>
-                                <li>La balise <strong>&lt;nav class=&quot;main-nav-site&quot;&gt;</strong> qui contient <a href="nav#main-nav">2 des 3 barres de menus en haut de chaque page</a>.</li>
-                                <li>La balise <strong>&lt;main&gt;</strong> qui contient <a href="nav#header-site">la 3e barre de menu</a> et le contenu original de la page.</li>
-                                <li>La balise <strong>&lt;footer class=&quot;footer-site&quot;&gt;</strong> qui contient classiquement le <a href="nav#footer-site">footer</a>, c'est à dire 2 barres de menu, l'une contextuelle en fonction des sites, l'autre inter-sites.</li>
+                                <li>La balise <strong>&lt;nav class=&quot;main-nav-site&quot;&gt;</strong> qui contient <a href="nav.php#main-nav">2 des 3 barres de menus en haut de chaque page</a>.</li>
+                                <li>La balise <strong>&lt;main&gt;</strong> qui contient <a href="nav.php#header-site">la 3e barre de menu</a> et le contenu original de la page.</li>
+                                <li>La balise <strong>&lt;footer class=&quot;footer-site&quot;&gt;</strong> qui contient classiquement le <a href="nav.php#footer-site">footer</a>, c'est à dire 2 barres de menu, l'une contextuelle en fonction des sites, l'autre inter-sites.</li>
                             </ul>
                         </article>
                     </div>
@@ -81,7 +81,7 @@ footer-site</pre>
                             <p>Son objet est de découper les pages et objets en section occupant 100% de la largeur
                                 disponible dans son contenant.</p>
                             <p>Elle sert notamment de support aux <a href="hero">heros</a> et aux <a
-                                    href="button#CTA">call to action</a>, aux <a href="button#CTA_specials">call to action spécifiques</a>, au <a href="nav#header-site">header du site</a>...</p>
+                                    href="button.php#CTA">call to action</a>, aux <a href="button.php#CTA_specials">call to action spécifiques</a>, au <a href="nav.php#header-site">header du site</a>...</p>
                             <h4 class="UItitle4">Container</h4>
                             Afin d'avoir pour toutes les sections des marges et des comportements homogènes, il est
                             conseillé d'utiliser à l'intérieur la classe <strong>section__container</strong>.
@@ -195,16 +195,16 @@ column_4-5
                         <article class="UIarticle">
                             <p>Ce système permet d'afficher un panneau contextuel, contenant par exemple un menu de
                                 filtres.</p>
-                            <p>Il utilise le composant d'affichange temporaire <a href="temp#popin">popin</a> dans sa
+                            <p>Il utilise le composant d'affichange temporaire <a href="temp.php#popin">popin</a> dans sa
                                 version <strong>small-screens</strong> uniquement.</p>
                             <pre class="UIcode" title="Structure HTML">
 &lt;div class=&quot;<strong>aside</strong>&quot;&gt;
-    &lt;div class=&quot;<strong>aside__panel is-visible left</strong> <a href="temp#popin">popin popin_small-screens</a>&quot;&gt;
+    &lt;div class=&quot;<strong>aside__panel is-visible left</strong> <a href="temp.php#popin">popin popin_small-screens</a>&quot;&gt;
         &lt;div class=&quot;<strong>aside__trigger</strong>&quot;&gt;
             &lt;button class=&quot;<a href="button">button</a>&quot;&gt;
-        &lt;div class=&quot;<strong>aside__panel__container</strong> <a href="temp#popin">popin__container</a>&quot;&gt;
-        &lt;div class=&quot;<a href="temp#popin">popin__close</a>&quot;&gt;
-            &lt;div class=&quot;<strong>aside__panel__content</strong> <a href="temp#popin">popin__veil</a>&quot;&gt;
+        &lt;div class=&quot;<strong>aside__panel__container</strong> <a href="temp.php#popin">popin__container</a>&quot;&gt;
+        &lt;div class=&quot;<a href="temp.php#popin">popin__close</a>&quot;&gt;
+            &lt;div class=&quot;<strong>aside__panel__content</strong> <a href="temp.php#popin">popin__veil</a>&quot;&gt;
     &lt;div class=&quot;<strong>aside__leftover-space</strong>&quot;&gt;</pre>
                         </article>
                     </div>
@@ -236,7 +236,7 @@ column_4-5
 
                             <pre class="UIcode" title="Classe à utiliser">
 aside
-aside__panel + left/right + (is-visible) + <a href="temp#popin">popin</a> + <a href="temp#popin">popin_small-screens</a>
+aside__panel + left/right + (is-visible) + <a href="temp.php#popin">popin</a> + <a href="temp.php#popin">popin_small-screens</a>
 aside__trigger
 aside__panel__container
 aside__panel__content

@@ -192,7 +192,7 @@ popin__veil</pre>
                             </p>
                             <pre class="UIcode" title="Structure HTML">
 &lt;div class=&quot;<strong>tabs-wrap</strong>&quot;&gt;
-    &lt;ul class=&quot;<a href="mixin-block#list">list</a> <strong>tabs</strong>&quot;&gt;
+    &lt;ul class=&quot;<a href="mixin-block.php#list">list</a> <strong>tabs</strong>&quot;&gt;
         &lt;li&gt;
             &lt;a class=&quot;<strong>tab__link</strong> <strong class="text_color">is-active</strong>&quot;&gt;
     &lt;div class=&quot;<strong>tab__container</strong>&quot;&gt;</pre>
@@ -214,7 +214,7 @@ popin__veil</pre>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser">
 tabs-wrap
-tabs + <a href="mixin-block#list">list</a>
+tabs + <a href="mixin-block.php#list">list</a>
 tab__link
 tab__container</pre>
                         </div>
@@ -230,11 +230,11 @@ tab__container</pre>
                                 peuvent contenir de nombreux autres composants : tuiles, éléments de layout, texte...
                             </p>
                             <pre class="UIcode" title="Structure HTML">
-&lt;ul class=&quot;<strong>accordeon</strong> <a href="mixin-block#list">list list_v</a>&quot;&gt;
+&lt;ul class=&quot;<strong>accordeon</strong> <a href="mixin-block.php#list">list list_v</a>&quot;&gt;
     &lt;li class=&quot;<strong class="text_color">is-expanded</strong>&quot;&gt;
     &lt;button class=&quot;<strong>accordeon__button</strong> <a href="button">button basic primary</a>&quot;&gt;
         &lt;span class=&quot;<strong>accordeon__title</strong> <a href="button">button__label</a>&quot;&gt;
-        &lt;span class=&quot;<a href="button#expand">button icon expand</a>&quot;&gt;
+        &lt;span class=&quot;<a href="button.php#expand">button icon expand</a>&quot;&gt;
     &lt;div class=&quot;<strong>accordeon__container</strong>&quot;&gt;
         &lt;div class=&quot;<strong>accordeon__content</strong>&quot;&gt;
                             </pre>
@@ -256,22 +256,22 @@ tab__container</pre>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             <pre class="UIcode" title="Classes à utiliser">
 accordeon
-<a href="mixin-block#list">list</a>
-<a href="mixin-block#list">list_v</a>
+<a href="mixin-block.php#list">list</a>
+<a href="mixin-block.php#list">list_v</a>
 
 is-expanded / is-shrinked
 
 accordeon__button
-<a href="button#basic">button</a>
-<a href="button#basic">basic</a>
-<a href="button#basic">primary</a>
+<a href="button.php#basic">button</a>
+<a href="button.php#basic">basic</a>
+<a href="button.php#basic">primary</a>
 
 accordeon__title
-<a href="button#basic">button__label</a>
+<a href="button.php#basic">button__label</a>
 
-<a href="button#icon">button</a>
-<a href="button#icon">icon</a>
-<a href="button#expand">expand</a>
+<a href="button.php#icon">button</a>
+<a href="button.php#icon">icon</a>
+<a href="button.php#expand">expand</a>
 
 <a href="button">button__icon</a>
 

@@ -186,7 +186,7 @@ is-expanded / is-shrinked</pre>
                         <article class="UIarticle">
                             <p></p>
                             <pre class="UIcode" title="Structure HTML">
-&lt;ul class=&quot;<strong>pagination</strong> <a href="mixin-block#list">list</a>&quot;&gt;
+&lt;ul class=&quot;<strong>pagination</strong> <a href="mixin-block.php#list">list</a>&quot;&gt;
     &lt;li&gt;
         &lt;span class=&quot;<strong>pagination__link pagination__keyword</strong>&quot;&gt;
     &lt;li&gt;
@@ -222,7 +222,7 @@ is-expanded / is-shrinked</pre>
                         <article class="UIarticle">
                             <p></p>
                             <pre class="UIcode" title="Structure HTML">
-&lt;ul class=&quot;<strong>breadcrumb</strong> <a href="mixin-block#list">list</a>&quot;&gt;
+&lt;ul class=&quot;<strong>breadcrumb</strong> <a href="mixin-block.php#list">list</a>&quot;&gt;
     &lt;li&gt;
       &lt;a class=&quot;<strong>breadcrumb__link</strong>&quot;&gt;</pre>
                         </article>
@@ -259,7 +259,7 @@ breadcrumb__link</pre>
     &lt;section class=&quot;<strong>panel__section</strong> <strong clas="text_color">is-visible</strong>&quot;&gt;
         &lt;div class=&quot;<strong>panel__header</strong>&quot;&gt;
             &lt;h6&gt;
-            &lt;button class=&quot;<a href="button#button_expand">button button_icon x-small secundary button_expand</a>&quot;&gt;&lt;i class=&quot;<a href="https://fontawesome.com/icons/chevron-up?style=solid">fas fa-chevron-up</a>&quot;&gt;
+            &lt;button class=&quot;<a href="button.php#button_expand">button button_icon x-small secundary button_expand</a>&quot;&gt;&lt;i class=&quot;<a href="https://fontawesome.com/icons/chevron-up?style=solid">fas fa-chevron-up</a>&quot;&gt;
         &lt;div class=&quot;<strong>panel__content</strong>&quot;&gt;
                             
 <em>* facultatif</em></pre>

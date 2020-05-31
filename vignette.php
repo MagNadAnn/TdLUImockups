@@ -36,7 +36,7 @@
     &lt;div class=&quot;<strong>vignette__image-wrap</strong>&quot;&gt;
         &lt;img class=&quot;<strong>vignette__image</strong>&quot; /&gt;
     &lt;p class=&quot;<strong>vignette__credit</strong>&quot;&gt;
-    &lt;ul class=&quot;<a href="small-components#tags">tags</a>&quot;&gt;<em>*</em>
+    &lt;ul class=&quot;<a href="small-components.php#tags">tags</a>&quot;&gt;<em>*</em>
 
 <em>* facultatif</em></pre>
                             <h4 class="UItitle4">Crédit</h4>
@@ -177,7 +177,7 @@ vignette__ratio_2-1 <em>vignette deux fois plus longue que haute</em></pre>
                         <article class="UIarticle">
                             <h4 class="UItitle4">Tags</h4>
                             <p>Les <em>vignettes</em> sont très utilisées pour les <a href="tile">tuiles</a>. C'est
-                                pourquoi elles sont conçu de manière à abriter également les <a href="small-components#tags">tags</a>
+                                pourquoi elles sont conçu de manière à abriter également les <a href="small-components.php#tags">tags</a>
                                 liés à la tuile.</p>
                             <p>Le contenant avec la balise tag est automatiquement placé <strong>en haut à
                                     gauche</strong> de la

@@ -106,7 +106,7 @@ bg-trame_champs_dark
                             <p>Une mixin qui transforme une liste en container flex horizontal sans puces.</p>
                             <p>Cette liste peut être ordonnée ou désordonnée, ça peut aussi être une <em>&lt;div&gt;</em> avec des <em>&lt;p&gt;</em>, ou toute autre structure de ce type.</p>
                             <p>La classe <strong class="text_color">list_v</strong> permet de passer la liste en format vertical</p>
-                            <p class="block_padding warning">⚠️ Cette mixin est très utilisée dans ces feuilles de style : <a href="nav#menu">menus</a>, <a href="tile">tuiles</a>, <a href="small-components#tags">tags</a>...</p>
+                            <p class="block_padding warning">⚠️ Cette mixin est très utilisée dans ces feuilles de style : <a href="nav.php#menu">menus</a>, <a href="tile">tuiles</a>, <a href="small-components.php#tags">tags</a>...</p>
                         </article>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ block_margin-big-screens_left
 block_margin-big-screens_right
 <em class="text_mouse">Les deux mixins ci-dessus servent à faire des espacements
 plus harmonieux sur les grands écrans lors de colonages
-un peu spéciaux, comme <a href="maquettes/home">le paragraphe "Agriculture et
+un peu spéciaux, comme <a href="maquettes/home.php">le paragraphe "Agriculture et
 biodiversite" sur la maquette de la page d'accueil du Centre
 de Ressources</a></em></pre>
                                 </div>

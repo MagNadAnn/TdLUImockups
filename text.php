@@ -184,7 +184,7 @@ text_right</pre>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Les puces sont tirées des pictogrammes de <a href="https://fontawesome.com">Font Awesome</a> et sont prévues en teintes <em>charcoal</em> et <em>white</em>. Disponible en SVG, il est assez facile de les décliner en d'<a href="#text_color">autres couleurs de la charte</a>.</p>
+                            <p>Les puces sont tirées des pictogrammes de <a href="https://fontawesome.com">Font Awesome</a> et sont prévues en teintes <em>charcoal</em> et <em>white</em>. Disponible en SVG, il est assez facile de les décliner en d'<a href=".php#text_color">autres couleurs de la charte</a>.</p>
                         </article>
                     </div>
                 </div>

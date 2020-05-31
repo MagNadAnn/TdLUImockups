@@ -27,7 +27,7 @@
                         <article class="UIarticle">
                             <div class="page__intro">
                                 <p>La possibilité de relier les pages les unes aux autres est la fonctionnalité qui est au coeur de la naissance du web au début des années 1990.</p>
-                                <p>Pour ce faire, les interfaces sont outillées de liens plus ou moins sophistiqués : <a href="#a">du simple lien dans un texte</a>, au <em><a href="#CTA">Call to action</a></em>, en passant par le lien proposé dans un menu et de nombreux types de boutons.</p>
+                                <p>Pour ce faire, les interfaces sont outillées de liens plus ou moins sophistiqués : <a href=".php#a">du simple lien dans un texte</a>, au <em><a href=".php#CTA">Call to action</a></em>, en passant par le lien proposé dans un menu et de nombreux types de boutons.</p>
                             </div>
                         </article>
                     </div>
@@ -90,9 +90,9 @@
                             <ul>
                                 <li>fonctionne avec la balise <strong>&lt;a&gt;</strong> et la
                                     <strong>&lt;button&gt;</strong></li>
-                                <li>existe sous<strong>3 formes </strong> : <a href="button#basic">basic</a>, <a href="button#icon">icon</a> et <a href="button#round">round</a></li>
+                                <li>existe sous<strong>3 formes </strong> : <a href="button.php#basic">basic</a>, <a href="button.php#icon">icon</a> et <a href="button.php#round">round</a></li>
                                 <li>comporte <strong>2 extentions</strong> le
-                                <a href="button#read-more">read-more</a> et le <a href="button#expand">expand</a></li>
+                                <a href="button.php#read-more">read-more</a> et le <a href="button.php#expand">expand</a></li>
                                 <li>propose <strong>5 déclinaisons colorées</strong> : primary, secundary, success,
                                     warning,
                                     danger</li>
@@ -127,7 +127,7 @@
                                 <div class="bg-l-pearl block_padding">
                                     <h3 id="icon" class="UItitle3">class="button icon"</h3>
                                     <p>Les <strong>button icon</strong> sont conçu avec une marge autour qui les rend plus facilement cliquables et propose un espacement harmonieux.</p>
-                                    <p>Une version <strong>tight</strong> permet d'afficher le bouton avec encombrement minimal. Utile par exemple dans un <a href="small-components#tags">tag</a>.</p>
+                                    <p>Une version <strong>tight</strong> permet d'afficher le bouton avec encombrement minimal. Utile par exemple dans un <a href="small-components.php#tags">tag</a>.</p>
                                     <p class="codepen" data-height="265" data-theme-id="default"
                                         data-default-tab="result" data-user="MagNadAnn" data-slug-hash="rNOQpar"
                                         style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -235,7 +235,7 @@ expand</pre>
                                     n'est pas
                                     souhaitable de placer coup sur coup deux sections avec une trame.</strong></p>
                             <p>Nous proposons ici de n'utiliser que ces deux thèmes. En cas de besoin, consultez <a
-                                    href="mixin-block#bg">les mixins d'arrière plan</a> pour d'autres déclinaisons.
+                                    href="mixin-block.php#bg">les mixins d'arrière plan</a> pour d'autres déclinaisons.
                             </p>
                             <h4 class="UItitle4">Thèmes et couleur du texte</h4>
                             <p>Les composants plus complexe que les &lt;a&gt;, les &lt;p&gt; ou les titres (&lt;h3&gt;,
@@ -243,9 +243,9 @@ expand</pre>
                                 <strong>dark</strong>. Se référer à la documentation de chaque composant.</strong></p>
                             <p>Par exemple ici, sur fond bleu, le bouton utilise son thème <em>secundary</em>.</p>
                             <pre class="UIcode" title="Structure HTML">
-&lt;section class=&quot;<a href="layout#section">fw-section</a> <strong>CTA__wrap</strong> <a href="mixin-block#bg">bg-trame_champs_light bg-l-cream</a>&quot;&gt;
-    &lt;div class=&quot;<a href="layout#chimney">chimney</a>&quot;&gt;<em>*</em>
-        &lt;div class=&quot;<a href="layout#section">section__container</a> <strong>CTA__container</strong>&quot;&gt;
+&lt;section class=&quot;<a href="layout.php#section">fw-section</a> <strong>CTA__wrap</strong> <a href="mixin-block.php#bg">bg-trame_champs_light bg-l-cream</a>&quot;&gt;
+    &lt;div class=&quot;<a href="layout.php#chimney">chimney</a>&quot;&gt;<em>*</em>
+        &lt;div class=&quot;<a href="layout.php#section">section__container</a> <strong>CTA__container</strong>&quot;&gt;
             &lt;h3 class=&quot;<strong>CTA__title</strong>&quot;&gt;
             &lt;div class=&quot;<strong>CTA__content</strong>&quot;&gt;
 

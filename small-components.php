@@ -44,7 +44,7 @@
 &lt;a class=&quot;<strong>logo logo_TdL</strong>&quot;&gt;
     &lt;img /&gt;
 
-&lt;ul class=&quot;<strong>logos</strong> <a href="mixin-block#list">list</a>&quot;&gt;
+&lt;ul class=&quot;<strong>logos</strong> <a href="mixin-block.php#list">list</a>&quot;&gt;
   &lt;li&gt;
     &lt;a class=&quot;<strong>logo</strong>&quot;&gt;
       &lt;img /&gt;</pre>
@@ -71,7 +71,7 @@ logo_TdL</pre>
                         </div>
                         <div class="bg-l-pearl block_padding">
                             <h3 class="UItitle3">class="logos"</h3>
-                            <p>On peut utilier la <a href="text#text_size">mixin <strong>text_size</strong></a> pour diminuer ou
+                            <p>On peut utilier la <a href="text.php#text_size">mixin <strong>text_size</strong></a> pour diminuer ou
                                 augmenter la taille des logos de toute la ligne.</p>
                             <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="result"
                                 data-user="MagNadAnn" data-slug-hash="abveyOb"
@@ -168,19 +168,19 @@ horizontal</pre>
                             <p>A utiliser dans les tuiles, les champs select multiples, avec du texte à l'intérieur ou
                                 des pictogrammes.</p>
                             <pre class="UIcode" title="Structure HTML">
-&lt;ul class=&quot;<strong>tags</strong> <a href="mixin-block#list">list</a>&quot;&gt;
+&lt;ul class=&quot;<strong>tags</strong> <a href="mixin-block.php#list">list</a>&quot;&gt;
     &lt;li class=&quot;<strong>tag</strong>&gt;
 
 &lt;p class=&quot;<strong>tags</strong>&quot;&gt;
     &lt;a class=&quot;<strong>tag</strong>&gt;
 
-&lt;ul class=&quot;<strong>tags</strong> <a href="mixin-block#list">list</a>&quot;&gt;
+&lt;ul class=&quot;<strong>tags</strong> <a href="mixin-block.php#list">list</a>&quot;&gt;
     &lt;li class=&quot;<strong>tag tag_icon</strong>&gt;
         &lt;i class=&quot;<a href="https://fontawesome.com/icons/times?style=light">fas fa-file-pdf</a>&quot;&gt;&lt;/i&gt;
 
 &lt;span class=&quot;<strong>tag</strong>&gt;
-    &lt;a class=&quot;<a href="button#icon">button icon tight primary</a>&quot;&gt;
-        &lt;span class=&quot;<a href="button#icon">button__icon</a>&quot;&gt;
+    &lt;a class=&quot;<a href="button.php#icon">button icon tight primary</a>&quot;&gt;
+        &lt;span class=&quot;<a href="button.php#icon">button__icon</a>&quot;&gt;
             &lt;i class=&quot;<a href="https://fontawesome.com/icons/file-pdf?style=solid">fal fa-times</a>&quot;&gt;</pre>
                         </article>
                     </div>
@@ -215,7 +215,7 @@ danger<em>*</em>
 
 <strong>&lt;a&gt;</strong><em>*</em>
 <em class="text_mouse">Pour pouvoir retirer le tag (d'une liste par exemple)</em>
-<a href="button#icon">icon</a>
+<a href="button.php#icon">icon</a>
 
 
 <em>* facultatif</em></pre>
