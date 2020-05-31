@@ -543,6 +543,7 @@ ASIDE PANEL
 .aside__panel {
     position: relative;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 .aside__panel.right {
@@ -554,6 +555,11 @@ ASIDE PANEL
 ASIDE PANEL CONTAINER & CONTENT
 --------------------
 */
+
+.aside__panel__container,
+.aside__panel__content {
+    height: 100%;
+}
 
 @media (min-width: 700px) {
 
@@ -584,7 +590,12 @@ ASIDE TRIGGER
 */
 
 .aside__trigger > .button {
-    padding: 0.5em;
+    padding: 0.5em !important;
+    border-radius: 50%;
+}
+
+.aside__panel.is-visible > .aside__trigger > button {
+    border-radius: 0;
 }
 
 @media (min-width: 700px) {
@@ -1331,7 +1342,7 @@ TILE type TEXT-IMAGE
         transition: background-color 0.2s ease-in-out;
     }
 
-    .bg-pearl [class*=tile_text-image]:hover {
+    .bg-l-pearl [class*=tile_text-image]:hover {
         background-color: #ffffff;
     }
 
@@ -1367,11 +1378,11 @@ TILE type TEXT-IMAGE
         transition: background-color 0.2s ease-in-out;
     }
 
-    .bg-pearl [class*=tile_text-image] .tile__content:before {
+    .bg-l-pearl [class*=tile_text-image] .tile__content:before {
         background-color: #f5f5f5;
     }
 
-    .bg-pearl [class*=tile_text-image] > .tile__link:hover > .tile__content:before {
+    .bg-l-pearl [class*=tile_text-image] > .tile__link:hover > .tile__content:before {
         background-color: #ffffff;
     }
 
@@ -1474,8 +1485,8 @@ TILE type IMAGE et TEXT-IMAGE sur petits écrans
         transition: background-color 0.2s ease-in-out;
     }
 
-    .bg-pearl [class*=tile_text-image]:hover,
-    .bg-pearl .tile_image:hover {
+    .bg-l-pearl [class*=tile_text-image]:hover,
+    .bg-l-pearl .tile_image:hover {
         background-color: #ffffff;
     }
 
@@ -1514,13 +1525,13 @@ TILE type IMAGE et TEXT-IMAGE sur petits écrans
         transition: background-color 0.2s ease-in-out;
     }
 
-    .bg-pearl [class*=tile_text-image] .tile__content:before,
-    .bg-pearl .tile_image .tile__content:before {
+    .bg-l-pearl [class*=tile_text-image] .tile__content:before,
+    .bg-l-pearl .tile_image .tile__content:before {
         background-color: #f5f5f5;
     }
 
-    .bg-pearl [class*=tile_text-image] > .tile__link:hover > .tile__content:before,
-    .bg-pearl .tile_image > .tile__link:hover > .tile__content:before {
+    .bg-l-pearl [class*=tile_text-image] > .tile__link:hover > .tile__content:before,
+    .bg-l-pearl .tile_image > .tile__link:hover > .tile__content:before {
         background-color: #ffffff;
     }
 
@@ -1837,6 +1848,20 @@ BACKGROUNDS
 .bg-d-blue_light { background-color: #579ea5 !important; color: #ffffff; }
 .bg-d-blue_dark { background-color: #42767a !important; color: #ffffff; }
 .bg-d-blue_bright { background-color: #00c3d6 !important; color: #ffffff; }
+
+.bg-d-blue_light .button.basic.primary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+}
+
+.bg-d-blue_light .button.basic.primary:hover,
+.bg-d-blue_light .button.basic.primary:focus {
+    background-color: #42767a;
+}
+
+.bg-d-blue_light .button.basic.primary:active {
+    background-color: #00c3d6;
+}
 
 /* ----- Backgrounds vert ----- */
 
@@ -3115,6 +3140,7 @@ PANEL
     box-sizing: border-box;
     color: #ffffff;
     background-color: #579ea5;
+    height: 100%;
 }
 
 .panel__header {
@@ -3465,7 +3491,11 @@ FORM TIGHT
     margin-bottom: 0 !important;
 }
 
-.form.tight > .form-line {
+.form.tight .form-line {
+    margin: 0 !important;
+}
+
+.form-line.tight {
     margin: 0 !important;
 }
 
@@ -3515,9 +3545,8 @@ FORM FIELDSET
 /* ----- aside fieldset ----- */
 
 .aside .form-fieldset {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
+    padding: 0 0.5em !important;
+    margin: 0 -1em !important;
 }
 
 /* ----- fieldset inline ----- */
@@ -3625,7 +3654,7 @@ FORM LINE MULTI-FIELD
     }
 }
 
-.bg-pearl .form-line__item_field,
+.bg-l-pearl .form-line__item_field,
 .form-fieldset .form-line__item_field {
     background-color: #ffffff;
     
@@ -3640,11 +3669,6 @@ FORM LINE MULTI-FIELD
 .form-line__item_button > .form-button {
     border-width: 0 0 0.2em;
 }
-
-.form-line_multi__check {
-    margin: 0 0.5em;
-}
-
 
 /*
 --------------------
@@ -3757,7 +3781,7 @@ FORM INPUT FIELD
     background-color: #f5f5f5;
 }
 
-.bg-pearl .form-field {
+.bg-l-pearl .form-field {
     border-top-color: #ffffff;
     background-color: #ffffff;
 }
@@ -3941,8 +3965,8 @@ FORM INPUT SELECT
     background-color: #f5f5f5;
 }
 
-.bg-pearl .form-select__option__item:hover,
-.bg-pearl .form-select__option__item:focus {
+.bg-l-pearl .form-select__option__item:hover,
+.bg-l-pearl .form-select__option__item:focus {
     background-color: #ffffff;
 }
 

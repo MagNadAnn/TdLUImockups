@@ -251,7 +251,7 @@ breadcrumb__link</pre>
                 <div class="section__container">
                     <div class="chimney small">
                         <article class="UIarticle">
-                            <p>Ce panneau peut assez facilement se combiner avec un composant <strong>form small</strong> et une <strong>popin small-screens</strong> comme sur <a href="maquettes/list_all-resources">la maquette de la page liste ressources</a>.</p>
+                            <p>Ce panneau peut assez facilement se combiner avec un composant <strong>form small</strong> et une <strong>popin small-screens</strong> comme sur <a href="maquettes/page_list-resources">la maquette de la page liste ressources</a>.</p>
                             <pre class="UIcode" title="Structure HTML">
 &lt;div class=&quot;<strong>panel</strong>&quot;&gt;
     &lt;section class=&quot;<strong>panel__header panel__title</strong>&quot;&gt;<em>*</em>
