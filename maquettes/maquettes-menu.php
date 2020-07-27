@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Kalam:700|Source+Sans+Pro&display=swap" rel="stylesheet"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://kit.fontawesome.com/c97506cdaa.js" crossorigin="anonymous"></script>
 <link href="../global.css" rel="stylesheet">

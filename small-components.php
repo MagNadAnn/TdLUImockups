@@ -112,6 +112,7 @@ horizontal</pre>
                         <article class="UIarticle">
                             <p>Les maquettes ont été réalisées avec la librairie de pictogrammes <a
                                     href="https://fontawesome.com/">Font Awesome</a>.</p>
+                            <p>La version utilisée ici est la <strong>5 Pro</strong>, mais une version de base peut faire l'affaire si vous n'avez besoin que de pictogrammes relativement standards.</p>
                             <p>
                                 <a href="https://fontawesome.com/" class="img-link">
                                     <img
